@@ -117,6 +117,16 @@
        </property>
       </item>
      </item>
+     <item>
+      <property name="text">
+       <string>Flat Metal Belt</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>exp(fΦ)</string>
+       </property>
+      </item>
+     </item>
     </item>
    </widget>
    <widget class="QStackedWidget" name="stackedWidget">
