@@ -132,7 +132,24 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         if item.text(column) == "dip":
             self.pushButton_20.clicked.connect(self.dip)
+            self.stackedWidget.setCurrentIndex(14)
+        
+        if item.text(column) == "Sf":
+            self.pushButton_23.clicked.connect(self.sfnp)
+            self.pushButton_22.clicked.connect(self.sfsy)
             self.stackedWidget.setCurrentIndex(13)
+    
+
+    def sfnp(self):
+        np = self.DoubleSpinBox_17.value()
+        ans = str(funcs.sfnp(np))
+        self.textBrowser.setText(ans)
+
+         
+    def sfsy(self):
+        sy = self.DoubleSpinBox_16.value()
+        ans = str(funcs.sfsy(sy))
+        self.textBrowser.setText(ans)
 
 
     def open_belt(self):
@@ -270,9 +287,6 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         else:
             self.textBrowser.setText("INVALID ITEM YOU SELECT")
             
-
-    
-
     
     def Torque_Belt(self):
         H_nom = self.DoubleSpinBox_2.value()
@@ -325,6 +339,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         ans = str(ans)
         self.textBrowser.setText(ans)
 
+
     def fprime(self):   
         phi = self.DoubleSpinBox_14.value()
         f1a_p = self.fDoubleSpinBox_17.value()
@@ -333,6 +348,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         ans = funcs.f_prime(phi,f1a_p,fc,f_2)
         ans = str(ans)
         self.textBrowser.setText(ans)
+
 
     def dip(self):   
         c = self.DoubleSpinBox_15.value()

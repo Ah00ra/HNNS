@@ -89,3 +89,13 @@ def dip(c,w,fi_p,):
     return ans
 
 
+def sfnp(np):
+    ans = 14.17*1000000*(1000000)**-0.407
+    return ans
+
+def sfsy(sy):
+    ans = sy/3
+    return ans
+
+
+print(sfnp(10^6))
