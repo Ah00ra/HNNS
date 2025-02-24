@@ -143,7 +143,54 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_25.clicked.connect(self.minibi)
             self.stackedWidget.setCurrentIndex(14)
 
-    
+        if item.text(column) == "(F1)a":
+            self.pushButton_26.clicked.connect(self.f1pa)
+            self.stackedWidget.setCurrentIndex(16)
+        if item.text(column) == "ΔF":
+            self.pushButton_24.clicked.connect(self.delltaf)
+            self.stackedWidget.setCurrentIndex(17)
+
+        if item.parent() is not None:
+            parent = item.parent()
+            parent_name = parent.text(0)
+            ind = parent.indexOfChild(item)
+            if parent_name == "Flat Metal Belt":
+                if ind == 5:
+                    self.pushButton_27.clicked.connect(self.f2metalbelt)
+                    self.stackedWidget.setCurrentIndex(18)
+
+    def f2metalbelt(self):
+        sf = self.DoubleSpinBox_31.value()
+        et = self.DoubleSpinBox_34.value()
+        nu = self.DoubleSpinBox_35.value()
+        dcap = self.DoubleSpinBox_36.value()
+        tcap = self.DoubleSpinBox_37.value()
+        t = self.DoubleSpinBox_38.value()
+        b = self.DoubleSpinBox_45.value()
+        ans = str(funcs.f2metalbelt(sf, et, nu, dcap, tcap, t, b))
+
+        self.textBrowser.setText(ans)
+
+
+
+    def delltaf(self):
+        capt = self.DoubleSpinBox_4.value()
+        capd = self.fDoubleSpinBox_6.value() 
+        ans = str(funcs.deltaf(capt, capd))
+        self.textBrowser.setText(ans)
+        
+
+    def f1pa(self):
+        sf = self.DoubleSpinBox_27.value()
+        et = self.DoubleSpinBox_28.value()
+        nu = self.DoubleSpinBox_29.value()
+        dcap = self.DoubleSpinBox_30.value()
+        t = self.DoubleSpinBox_32.value()
+        b = self.DoubleSpinBox_33.value()
+
+        ans = str(funcs.f1pa(sf, et, nu, dcap, t, b))
+        self.textBrowser.setText(ans)
+
 
     def minibi(self):
         sf = self.DoubleSpinBox_19.value()

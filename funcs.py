@@ -110,6 +110,22 @@ def minibi(sf,et,nu,dcap,tcap,t,f,phi):
     minb = deltaf / a*math.exp(f*radianphi)/(math.exp(f*radianphi)-1)
     return minb
 
+def f1pa(sf, et, nu, dcap, t, b):
+    x = et/((1-nu**2)*dcap)
+    ab = (sf - x)*t*b
+    return ab
 
 
+def deltaf(capt, capd):
+    ans = 2*capt/capd
+    return ans 
 
+
+def f2metalbelt(sf,et,nu,dcap,tcap,t,b):
+    x = et/((1-nu**2)*dcap)
+    ab = (sf - x)*t*b
+    delf = 2*tcap/dcap
+    ans = ab - delf
+    return ans
+
+#print(f2metalbelt(51210, 84000, 0.285, 4, 30, 0.003, 0.75))

@@ -136,6 +136,21 @@
         <string>b(min)</string>
        </property>
       </item>
+      <item>
+       <property name="text">
+        <string>(F1)a</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ΔF</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>F2</string>
+       </property>
+      </item>
      </item>
     </item>
    </widget>
@@ -145,8 +160,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>10</y>
+      <x>250</x>
+      <y>0</y>
       <width>1171</width>
       <height>641</height>
      </rect>
@@ -170,7 +185,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>14</number>
+     <number>18</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QTextBrowser" name="textBrowser_2">
@@ -4545,6 +4560,504 @@ p, li { white-space: pre-wrap; }
         <widget class="QPushButton" name="pushButton_20">
          <property name="text">
           <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="f1aa">
+     <widget class="QWidget" name="formLayoutWidget_16">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>361</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout_15">
+       <item row="0" column="0">
+        <widget class="QLabel" name="htext_70">
+         <property name="text">
+          <string>Sf</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_27">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="htext_72">
+         <property name="text">
+          <string>Et</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_28">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="htext_73">
+         <property name="text">
+          <string>ν</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_29">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="htext_74">
+         <property name="text">
+          <string>D</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_30">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="htext_76">
+         <property name="text">
+          <string>t</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_32">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="erLabel_2">
+         <property name="text">
+          <string>b</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_33">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QPushButton" name="pushButton_26">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="deltaf">
+     <widget class="QWidget" name="formLayoutWidget_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>361</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout_16">
+       <item row="0" column="0">
+        <widget class="QLabel" name="htext_30">
+         <property name="text">
+          <string>T</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_4">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="htext_31">
+         <property name="text">
+          <string>D</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_6">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="pushButton_24">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="f22">
+     <widget class="QWidget" name="formLayoutWidget_17">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>361</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout_17">
+       <item row="0" column="0">
+        <widget class="QLabel" name="htext_75">
+         <property name="text">
+          <string>Sf</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_31">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="htext_77">
+         <property name="text">
+          <string>Et</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_34">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="htext_78">
+         <property name="text">
+          <string>ν</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_35">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="htext_79">
+         <property name="text">
+          <string>D</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="htext_80">
+         <property name="text">
+          <string>T</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_37">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="htext_87">
+         <property name="text">
+          <string>t</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_38">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="erLabel_3">
+         <property name="text">
+          <string>b</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_45">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QPushButton" name="pushButton_27">
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_36">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
          </property>
         </widget>
        </item>
