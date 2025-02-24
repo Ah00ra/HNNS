@@ -132,13 +132,33 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         if item.text(column) == "dip":
             self.pushButton_20.clicked.connect(self.dip)
-            self.stackedWidget.setCurrentIndex(14)
+            self.stackedWidget.setCurrentIndex(15)
         
         if item.text(column) == "Sf":
             self.pushButton_23.clicked.connect(self.sfnp)
             self.pushButton_22.clicked.connect(self.sfsy)
             self.stackedWidget.setCurrentIndex(13)
+
+        if item.text(column) == "b(min)":
+            self.pushButton_25.clicked.connect(self.minibi)
+            self.stackedWidget.setCurrentIndex(14)
+
     
+
+    def minibi(self):
+        sf = self.DoubleSpinBox_19.value()
+        et = self.DoubleSpinBox_20.value()
+        nu = self.DoubleSpinBox_21.value()
+        dcap = self.DoubleSpinBox_22.value()
+        tcap = self.DoubleSpinBox_24.value()
+        t = self.DoubleSpinBox_23.value()
+        f = self.DoubleSpinBox_25.value()
+        phi = self.DoubleSpinBox_26.value()
+        
+
+        ans = str(funcs.minibi(sf, et, nu, dcap, tcap, t,f,phi))
+        self.textBrowser.setText(ans)
+
 
     def sfnp(self):
         np = self.DoubleSpinBox_17.value()

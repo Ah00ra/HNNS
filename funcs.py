@@ -98,4 +98,18 @@ def sfsy(sy):
     return ans
 
 
-print(sfnp(10^6))
+def minibi(sf,et,nu,dcap,tcap,t,f,phi):
+    def degrees_to_radians(degrees):
+        return degrees * (math.pi / 180)
+
+    deltaf = (2*tcap)/dcap
+    #a = (sf-(et/((1-(nu**2))*dcap))) * t
+    x = et/((1-nu**2)*dcap)
+    a = (sf - x)*t
+    radianphi = degrees_to_radians(phi)
+    minb = deltaf / a*math.exp(f*radianphi)/(math.exp(f*radianphi)-1)
+    return minb
+
+
+
+
