@@ -146,10 +146,15 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if item.text(column) == "(F1)a":
             self.pushButton_26.clicked.connect(self.f1pa)
             self.stackedWidget.setCurrentIndex(16)
+
         if item.text(column) == "ΔF":
             self.pushButton_24.clicked.connect(self.delltaf)
             self.stackedWidget.setCurrentIndex(17)
-    
+
+        if item.text(column) == "H(link-plate limited)":
+            self.pushButton_30.clicked.connect(self.h_link_plate)
+            self.stackedWidget.setCurrentIndex(21)
+
         if item.parent() is not None:
             parent = item.parent()
             parent_name = parent.text(0)
@@ -168,6 +173,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                     self.pushButton_29.clicked.connect(self.fprime2)
                     self.stackedWidget.setCurrentIndex(20)
         
+    def h_link_plate(self):
+        N = self.DoubleSpinBox_55.value()
+        n = self.DoubleSpinBox_56.value()
+        p = self.DoubleSpinBox_57.value()
+        ans = str(funcs.h_link_plate(N, n, p,))
+        self.textBrowser.setText(ans)
+
+
 
     def fprime2(self):
         sf = self.DoubleSpinBox_47.value()

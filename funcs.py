@@ -145,4 +145,11 @@ def fprime2(sf,et,nu,dcap,tcap,t,b, phi):
     return ans
 
 
-#print(fprime2(51210, 84000, 0.285, 4, 30, 0.003, 0.75, phi=180))
+def h_link_plate(N,n,p):
+    a = N**1.08
+    b = (n**0.9)
+    c = 3-(0.07*p)
+    ans = 0.004*a*b*(p**c)
+    return ans
+
+print(h_link_plate(17, 1000, 0.5))
