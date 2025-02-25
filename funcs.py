@@ -152,4 +152,9 @@ def h_link_plate(N,n,p):
     ans = 0.004*a*b*(p**c)
     return ans
 
-print(h_link_plate(17, 1000, 0.5))
+def center_distance(n1,n2,p,L):
+    a = ((n1+n2)/2)-(L/p) 
+    ans = (p/4)*(-a+math.sqrt((a**2)-(8*(((n2-n1)/(2*math.pi))**2))))
+    return ans
+
+    print(center_distance(17,34,1.75,5))

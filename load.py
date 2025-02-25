@@ -155,6 +155,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_30.clicked.connect(self.h_link_plate)
             self.stackedWidget.setCurrentIndex(21)
 
+        if item.text(column) == "C":
+            self.pushButton_31.clicked.connect(self.center_distance)
+            self.stackedWidget.setCurrentIndex(22)    
+
         if item.parent() is not None:
             parent = item.parent()
             parent_name = parent.text(0)
@@ -172,7 +176,15 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 if ind == 7:
                     self.pushButton_29.clicked.connect(self.fprime2)
                     self.stackedWidget.setCurrentIndex(20)
-        
+
+    def center_distance(self):
+        n1 = self.DoubleSpinBox_58.value()
+        n2 = self.DoubleSpinBox_59.value()
+        p = self.DoubleSpinBox_60.value()
+        L = self.DoubleSpinBox_61.value()
+        ans = str(funcs.center_distance(n1, n2, p, L))
+        self.textBrowser.setText(ans)
+
     def h_link_plate(self):
         N = self.DoubleSpinBox_55.value()
         n = self.DoubleSpinBox_56.value()
