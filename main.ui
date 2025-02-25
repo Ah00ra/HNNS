@@ -176,6 +176,11 @@
         <string>C</string>
        </property>
       </item>
+      <item>
+       <property name="text">
+        <string>L/p:No. Pitches</string>
+       </property>
+      </item>
      </item>
     </item>
    </widget>
@@ -210,7 +215,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>22</number>
+     <number>23</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QTextBrowser" name="textBrowser_2">
@@ -314,10 +319,10 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="formLayoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>40</y>
+        <x>40</x>
+        <y>20</y>
         <width>361</width>
-        <height>261</height>
+        <height>161</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout_2">
@@ -444,14 +449,20 @@ p, li { white-space: pre-wrap; }
          </property>
         </widget>
        </item>
-       <item row="6" column="1">
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
       </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>180</y>
+        <width>312</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="Simple_Gear">
@@ -5820,6 +5831,156 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>20</x>
         <y>170</y>
+        <width>361</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Np">
+     <widget class="QWidget" name="formLayoutWidget_22">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>361</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout_22">
+       <item row="0" column="0">
+        <widget class="QLabel" name="htext_101">
+         <property name="text">
+          <string>N1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_62">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="htext_102">
+         <property name="text">
+          <string>N2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_63">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_64">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="htext_103">
+         <property name="text">
+          <string>p</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_65">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="htext_104">
+         <property name="text">
+          <string>C</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QCheckBox" name="checkBox_3">
+         <property name="text">
+          <string>CheckBox</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_32">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>180</y>
         <width>361</width>
         <height>28</height>
        </rect>

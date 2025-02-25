@@ -159,6 +159,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_31.clicked.connect(self.center_distance)
             self.stackedWidget.setCurrentIndex(22)    
 
+        if item.text(column) == "L/p:No. Pitches":
+            self.pushButton_32.clicked.connect(self.np_rc)
+            self.stackedWidget.setCurrentIndex(23)
+
         if item.parent() is not None:
             parent = item.parent()
             parent_name = parent.text(0)
@@ -176,6 +180,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 if ind == 7:
                     self.pushButton_29.clicked.connect(self.fprime2)
                     self.stackedWidget.setCurrentIndex(20)
+
+    def np_rc(self):
+        n1 = self.DoubleSpinBox_62.value()
+        n2 = self.DoubleSpinBox_63.value()
+        p = self.DoubleSpinBox_64.value()
+        c = self.DoubleSpinBox_65.value()
+        ans = str(funcs.np_rc(n1, n2, p, c))
+        self.textBrowser.setText(ans)
 
     def center_distance(self):
         n1 = self.DoubleSpinBox_58.value()

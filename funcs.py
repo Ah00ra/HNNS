@@ -152,9 +152,15 @@ def h_link_plate(N,n,p):
     ans = 0.004*a*b*(p**c)
     return ans
 
-def center_distance(n1,n2,p,L):
-    a = ((n1+n2)/2)-(L/p) 
+def center_distance(n1,n2,p,l):
+    a = ((n1+n2)/2)-(l/p) 
     ans = (p/4)*(-a+math.sqrt((a**2)-(8*(((n2-n1)/(2*math.pi))**2))))
     return ans
 
+def np_rc(n1,n2,p,c):
+    a = (n2-n1)**2
+    b = (4*(math.pi**2))*(c/p) 
+    d = (2*c/p)+((n1+n2)/2)+(a/b)
+    ans = round(d)
+    return ans
     print(center_distance(17,34,1.75,5))
