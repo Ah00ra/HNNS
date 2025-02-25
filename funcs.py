@@ -97,10 +97,10 @@ def sfsy(sy):
     ans = sy/3
     return ans
 
+def degrees_to_radians(degrees):
+    return degrees * (math.pi / 180)
 
 def minibi(sf,et,nu,dcap,tcap,t,f,phi):
-    def degrees_to_radians(degrees):
-        return degrees * (math.pi / 180)
 
     deltaf = (2*tcap)/dcap
     #a = (sf-(et/((1-(nu**2))*dcap))) * t
@@ -128,4 +128,28 @@ def f2metalbelt(sf,et,nu,dcap,tcap,t,b):
     ans = ab - delf
     return ans
 
-#print(f2metalbelt(51210, 84000, 0.285, 4, 30, 0.003, 0.75))
+def fi_2(sf,et,nu,dcap,tcap,t,b):
+    x = et/((1-nu**2)*dcap)
+    ab = (sf - x)*t*b
+    delf = 2*tcap/dcap
+    ans = ab - (delf/2)
+    return ans
+
+
+
+def fprime2(sf,et,nu,dcap,tcap,t,b, phi):
+    f1a = f1pa(sf,et,nu,dcap,t,b) 
+    f2 = f2metalbelt(sf,et,nu,dcap,tcap,t,b)
+    radian_phi = degrees_to_radians(phi)
+    ans = (1/radian_phi)*math.log(f1a/f2)
+    return ans
+
+
+def h_link_plate(N,n,p):
+    a = N**1.08
+    b = (n**0.9)
+    c = 3-(0.07*p)
+    ans = 0.004*a*b*(p**c)
+    return ans
+
+print(h_link_plate(17, 1000, 0.5))
