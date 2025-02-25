@@ -171,6 +171,11 @@
         <string>H(link-plate limited)</string>
        </property>
       </item>
+      <item>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </item>
      </item>
     </item>
    </widget>
@@ -205,7 +210,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>21</number>
+     <number>22</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QTextBrowser" name="textBrowser_2">
@@ -5567,12 +5572,12 @@ p, li { white-space: pre-wrap; }
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="H_linl_plate">
+    <widget class="QWidget" name="H_link_plate">
      <widget class="QPushButton" name="pushButton_30">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>110</y>
+        <y>130</y>
         <width>361</width>
         <height>28</height>
        </rect>
@@ -5585,7 +5590,7 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>10</y>
+        <y>30</y>
         <width>361</width>
         <height>91</height>
        </rect>
@@ -5679,6 +5684,149 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
       </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Center_d">
+     <widget class="QWidget" name="formLayoutWidget_21">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>361</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout_21">
+       <item row="0" column="0">
+        <widget class="QLabel" name="htext_97">
+         <property name="text">
+          <string>N1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_58">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="htext_98">
+         <property name="text">
+          <string>N2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_59">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_60">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="htext_99">
+         <property name="text">
+          <string>p</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="DoubleSpinBox_61">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="htext_100">
+         <property name="text">
+          <string>L</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButton_31">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>361</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
      </widget>
     </widget>
    </widget>
