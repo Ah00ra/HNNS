@@ -149,7 +149,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if item.text(column) == "ΔF":
             self.pushButton_24.clicked.connect(self.delltaf)
             self.stackedWidget.setCurrentIndex(17)
-
+    
         if item.parent() is not None:
             parent = item.parent()
             parent_name = parent.text(0)
@@ -158,6 +158,42 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 if ind == 5:
                     self.pushButton_27.clicked.connect(self.f2metalbelt)
                     self.stackedWidget.setCurrentIndex(18)
+                if ind == 6:
+                    #!TODO: TAB JUMP D
+                    print("IM IN")
+                    self.pushButton_28.clicked.connect(self.fi_2)
+                    self.stackedWidget.setCurrentIndex(19)
+
+                if ind == 7:
+                    self.pushButton_29.clicked.connect(self.fprime2)
+                    self.stackedWidget.setCurrentIndex(20)
+        
+
+    def fprime2(self):
+        sf = self.DoubleSpinBox_47.value()
+        et = self.DoubleSpinBox_48.value()
+        nu = self.DoubleSpinBox_49.value()
+        dcap = self.DoubleSpinBox_50.value()
+        tcap = self.DoubleSpinBox_51.value()
+        t = self.DoubleSpinBox_52.value()
+        b = self.DoubleSpinBox_53.value()
+        phi = self.DoubleSpinBox_54.value()
+        ans = str(funcs.fprime2(sf, et, nu, dcap, tcap, t, b, phi))
+        self.textBrowser.setText(ans)
+
+
+    def fi_2(self):
+        sf = self.DoubleSpinBox_39.value()
+        et = self.DoubleSpinBox_40.value()
+        nu = self.DoubleSpinBox_41.value()
+        dcap = self.DoubleSpinBox_42.value()
+        tcap = self.DoubleSpinBox_43.value()
+        t = self.DoubleSpinBox_44.value()
+        b = self.DoubleSpinBox_46.value()
+        ans = str(funcs.fi_2(sf, et, nu, dcap, tcap, t, b))
+
+        self.textBrowser.setText(ans)
+
 
     def f2metalbelt(self):
         sf = self.DoubleSpinBox_31.value()
