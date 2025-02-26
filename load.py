@@ -163,6 +163,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_32.clicked.connect(self.np_rc)
             self.stackedWidget.setCurrentIndex(23)
 
+        if item.text(column) == "Ha":
+            self.pushButton_34.clicked.connect(self.ha_roller_chain)
+            self.stackedWidget.setCurrentIndex(24)
+
+
         if item.parent() is not None:
             parent = item.parent()
             parent_name = parent.text(0)
@@ -180,6 +185,18 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 if ind == 7:
                     self.pushButton_29.clicked.connect(self.fprime2)
                     self.stackedWidget.setCurrentIndex(20)
+
+
+    def ha_roller_chain(self):
+        nd = self.DoubleSpinBox_70.value()
+        ks = self.DoubleSpinBox_71.value()
+        hnom = self.DoubleSpinBox_72.value()
+        ncap = self.DoubleSpinBox_73.value()
+        pre_or_post = self.comboBox.currentText()
+
+        ans = str(funcs.ha_roller_chain(nd, ks, hnom, ncap, pre_or_post))
+        self.textBrowser.setText(ans)
+
 
     def np_rc(self):
         n1 = self.DoubleSpinBox_62.value()
