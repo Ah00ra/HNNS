@@ -168,19 +168,21 @@ def np_rc(n1,n2,p,c):
 
 def ha_roller_chain(nd, ks, hnom, ncap, pre_or_post):
     k2s = [1, 1.7, 2.5, 3.3, 3.9, 4.6, 6]
-    ans = "" 
+    ans = [] 
     a = nd * ks * hnom
     if pre_or_post == "Pre-extreme Horsepower":
         k1 = (ncap/17)**1.08
         for i in range(len(k2s)):
             k2 = k2s[i]
-            result = str(a / (k1 * k2))
-            ans += result+ " "
+            result = str(round(a / (k1 * k2), 3))
+            ans.append(result)
     else:
         k1 = (ncap/17)**1.5
         for i in range(len(k2s)):
             k2 = k2s[i]
-            result = str(a / (k1 * k2))
-            ans += result+" "
+            result = str(round(a / (k1 * k2),3))
+            ans.append(result)
 
     return ans 
+
+

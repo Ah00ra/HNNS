@@ -1,4 +1,6 @@
 from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QTableWidgetItem
 from PyQt5.uic import loadUi
 import funcs
 
@@ -15,6 +17,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         super(Ui_MainWindow, self).__init__()
         loadUi('main.ui', self)
 
+
+        # roller chain table
+        self.tableWidget_4.setColumnWidth(0, 200)
+        self.tableWidget_4.setColumnWidth(1, 150)
+        self.tableWidget_4.setColumnWidth(2, 150)
+        self.tableWidget_4.setColumnWidth(3, 150)
 
         self.stackedWidget.setCurrentIndex(0)
 
@@ -53,6 +61,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.DdoubleSpinBox_15.setHidden(True)
         self.DdoubleSpinBox_16.setHidden(True)
         self.pushButton_8.setHidden(True)
+
 
 
 
@@ -164,6 +173,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.stackedWidget.setCurrentIndex(23)
 
         if item.text(column) == "Ha":
+
             self.pushButton_34.clicked.connect(self.ha_roller_chain)
             self.stackedWidget.setCurrentIndex(24)
 
@@ -194,8 +204,19 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         ncap = self.DoubleSpinBox_73.value()
         pre_or_post = self.comboBox.currentText()
 
-        ans = str(funcs.ha_roller_chain(nd, ks, hnom, ncap, pre_or_post))
-        self.textBrowser.setText(ans)
+        #print(self.tableWidget_4.item(3,4))
+        #print(self.tableWidget_4.row())
+        ans = funcs.ha_roller_chain(nd, ks, hnom, ncap, pre_or_post)
+
+        row_count = self.tableWidget_4.rowCount()
+        col_count = self.tableWidget_4.columnCount() 
+        for i in range(row_count): 
+            item = QTableWidgetItem(ans[i])  
+            item.setTextAlignment(Qt.AlignCenter)
+            ind = i
+            self.tableWidget_4.setItem(ind,1, item)
+
+        #self.textBrowser.setText(ans)
 
 
     def np_rc(self):
