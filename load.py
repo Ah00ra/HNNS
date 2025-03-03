@@ -202,6 +202,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         ks = self.DoubleSpinBox_71.value()
         hnom = self.DoubleSpinBox_72.value()
         ncap = self.DoubleSpinBox_73.value()
+        v = self.DoubleSpinBox_74.value()
+
         pre_or_post = self.comboBox.currentText()
 
         #print(self.tableWidget_4.item(3,4))
