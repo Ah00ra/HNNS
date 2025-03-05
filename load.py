@@ -208,9 +208,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         #print(self.tableWidget_4.item(3,4))
         #print(self.tableWidget_4.row())
-        ans, chain = funcs.ha_roller_chain(nd, ks, hnom, ncap, pre_or_post, v)
-        print(chain)
-
+        ans, chain, types = funcs.ha_roller_chain(nd, ks, hnom, ncap, pre_or_post, v)
+        print(types)
 
         row_count = self.tableWidget_4.rowCount()
         col_count = self.tableWidget_4.columnCount() 
@@ -221,9 +220,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             item1 = QTableWidgetItem(chain[i]) 
             item1.setTextAlignment(Qt.AlignCenter)
 
+            item2 = QTableWidgetItem(types[i]) 
+            item2.setTextAlignment(Qt.AlignCenter)
+
             ind = i
+
             self.tableWidget_4.setItem(ind,1, item)
             self.tableWidget_4.setItem(ind,2, item1)
+            self.tableWidget_4.setItem(ind,3, item2)
 
 
         #self.textBrowser.setText(ans)

@@ -190,7 +190,7 @@ table =[
 [1.56, 5.28, 5.51, 1.10, 6.58, 7.57, 9.56, 0.40, 0, 0, 0, 0, 0, 0], 
 [1.84, 5.64, 4.17, 0.83, 4.98, 5.76, 7.25, 0, 0, 0, 0, 0, 0, 0]] 
 
-types = [
+table_types = [
 ["A","A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B","B"],
 ["A","A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B"],
 ["A","A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B"],
@@ -227,32 +227,30 @@ def chain_selection(hps, v):
             
             if hp < r_nozero[0]:
                 chain_answers.append(ansi_chain_number[0])
-                type_answers.append(types[row_ind][0])
+                type_answers.append(table_types[row_ind][0])
                 break
             elif hp==r_nozero[-1]:
                 chain_answers.append(ansi_chain_number[-1])
-                type_answers.append(types[row_ind][-1])
+                type_answers.append(table_types[row_ind][-1])
                 break
             elif hp > r_nozero[-1]:
-                chain_answers.append(-1)
-                type_answers.appned("ERROR")
+                chain_answers.append("Not Found")
+                type_answers.append("ERROR")
                 break
             elif i != 13:
                last = i+1
                if hp < r[last]:
-                   type_answers.append(types[row_ind][last])
+                   type_answers.append(table_types[row_ind][last])
                    chain_answers.append(ansi_chain_number[last])
                    break
-    return chain_answers
+    return chain_answers, type_answers
 # TYPES return chain load.py
 
 
-lst =[0.1, 103, 70, 53, 45, 39, 30]
+#lst =[0.1, 103, 70, 53, 45, 39, 30]
 #lst =[0.1, 100/1.7, 100/2.5, 100/3.3, 100/3.9, 100/4.6, 100/6]
-x = [i for i in lst]
-print(x)
-a = chain_selection(lst , 300)
-print(a)
+#x = [i for i in lst]
+#a = chain_selection(lst , 300)
 
 def ha_roller_chain(nd, ks, hnom, ncap, pre_or_post, v):
     k2s = [1, 1.7, 2.5, 3.3, 3.9, 4.6, 6]
@@ -271,9 +269,13 @@ def ha_roller_chain(nd, ks, hnom, ncap, pre_or_post, v):
             result = round(a / (k1 * k2),3)
             ans.append(result)
 
-    chains = chain_selection(ans, v)
+    chains, types = chain_selection(ans, v)
     chains = [str(item) for item in chains]
+    types = [str(item) for item in types]
     ans = [str(item) for item in ans]
-    return ans, chains
+    return ans, chains, types
 
 
+
+hp, chain, types = ha_roller_chain(1.5, 1.3, 90, 17,"**", 300 )
+print(hp, chain, types)
