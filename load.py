@@ -1,6 +1,6 @@
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtCore, QtWidgets, uic
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtWidgets import QTableWidgetItem, QWidget
 from PyQt5.uic import loadUi
 import funcs
 
@@ -11,7 +11,26 @@ def is_float_value(value):
         return True
     except ValueError:
         return False
-        
+
+
+
+
+class Wire_Rope_Tables(QWidget):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi('wire_rope_tables.ui', self)
+        self.textBrowser.setText("TEST")
+        #self.table_widget = QtWidgets.QTableWidget(self)
+        #self.table_widget.setRowCount(5)  
+        #self.table_widget.setColumnCount(3) 
+        #self.table_widget.setHorizontalHeaderLabels(['Column 1', 'Column 2', 'Column 3'])
+        ##self.table_widget.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustToContents)
+        ##self.table_widget.setFixedSize(self.table_widget.sizeHint())
+        #self.table_widget.setColumnWidth(0, 200)
+        #self.table_widget.setColumnWidth(1, 150)
+        #self.table_widget.setColumnWidth(2, 150)
+        #self.table_widget.setColumnWidth(3, 150)
+
 class Ui_MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(Ui_MainWindow, self).__init__()
@@ -177,6 +196,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_34.clicked.connect(self.ha_roller_chain)
             self.stackedWidget.setCurrentIndex(24)
 
+        if item.text(column) == "Ft":
+            self.stackedWidget.setCurrentIndex(25)
+            self.pushButton_35.clicked.connect(self.open_wire_rope_tables)
+            self.pushButton_35.clicked.connect(self.wire_rope)
+
+
 
         if item.parent() is not None:
             parent = item.parent()
@@ -196,6 +221,33 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                     self.pushButton_29.clicked.connect(self.fprime2)
                     self.stackedWidget.setCurrentIndex(20)
 
+
+    def open_wire_rope_tables(self):
+            # Create an instance of the second window
+            self.wire_window = Wire_Rope_Tables()
+            # Show the second window
+            self.wire_window.textBrowser.append("dynamically text test")
+
+
+            self.wire_window.show()
+
+    def wire_rope(self):
+        wcap = self.DoubleSpinBox_75.value()
+        w = self.DoubleSpinBox_77.value()
+        lcap = self.DoubleSpinBox_78.value()
+        a = self.DoubleSpinBox_79.value()
+        psu = self.DoubleSpinBox_80.value()
+        dcap = self.DoubleSpinBox_81.value()
+        er = self.DoubleSpinBox_83.value()
+        dw = self.DoubleSpinBox_84.value()
+        am = self.DoubleSpinBox_85.value()
+
+        m = self.comboBox_2.currentText()
+        d = self.comboBox_3.currentText()
+        ans = wcap, w,lcap, a, psu, dcap, er, dw, am, m, d
+        ans = str(ans)
+        self.textBrowser.setText(ans)
+        
 
     def ha_roller_chain(self):
         nd = self.DoubleSpinBox_70.value()
