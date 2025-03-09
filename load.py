@@ -81,10 +81,36 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.DdoubleSpinBox_16.setHidden(True)
         self.pushButton_8.setHidden(True)
 
+        # wire_rope Ft
+        #self.widget.setHidden(True)
+        self.htext_152.setHidden(True)
+        self.htext_153.setHidden(True)
+        self.htext_154.setHidden(True)
+        self.htext_154.setHidden(True)
+        self.htext_155.setHidden(True)
+        self.htext_156.setHidden(True)
+        self.htext_157.setHidden(True)
+        self.htext_158.setHidden(True)
+        self.htext_159.setHidden(True)
+        self.htext_160.setHidden(True)
+        self.htext_161.setHidden(True)
 
 
+        self.DoubleSpinBox_152.setHidden(True)
+        self.DoubleSpinBox_153.setHidden(True)
+        self.DoubleSpinBox_154.setHidden(True)
+        self.DoubleSpinBox_155.setHidden(True)
+        self.DoubleSpinBox_156.setHidden(True)
+        self.DoubleSpinBox_157.setHidden(True)
+        self.DoubleSpinBox_158.setHidden(True)
+        self.DoubleSpinBox_159.setHidden(True)
+        self.DoubleSpinBox_160.setHidden(True)
+        self.DoubleSpinBox_161.setHidden(True)
 
         self.treeWidget.itemClicked['QTreeWidgetItem*','int'].connect(self.item_clicked)
+
+        # wire_rope
+        self.commandLinkButton.clicked.connect(self.number_of_d)
 
 
 
@@ -241,14 +267,30 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         er = self.DoubleSpinBox_83.value()
         dw = self.DoubleSpinBox_84.value()
         am = self.DoubleSpinBox_85.value()
-
-        m = self.comboBox_2.currentText()
         d = self.comboBox_3.currentText()
+        m = self.comboBox_2.currentText()
+
+        d = 4
+
         ans = wcap, w,lcap, a, psu, dcap, er, dw, am, m, d
         ans = str(ans)
         self.textBrowser.setText(ans)
-        
 
+    def number_of_d(self):
+        d = int(self.comboBox_3.currentText())
+        for i in range(10):
+            ind = 152+i
+            getattr(self, f'htext_{ind}').hide()
+            getattr(self, f'DoubleSpinBox_{ind}').hide()
+
+        for i in range(d):
+            ind = 152+i
+            getattr(self, f'htext_{ind}').show()
+            getattr(self, f'DoubleSpinBox_{ind}').show()
+
+
+        
+        
     def ha_roller_chain(self):
         nd = self.DoubleSpinBox_70.value()
         ks = self.DoubleSpinBox_71.value()
