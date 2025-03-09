@@ -230,7 +230,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>25</number>
+     <number>24</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QTextBrowser" name="textBrowser_2">
@@ -6330,7 +6330,7 @@ p, li { white-space: pre-wrap; }
        <rect>
         <x>10</x>
         <y>270</y>
-        <width>671</width>
+        <width>791</width>
         <height>231</height>
        </rect>
       </property>
@@ -6944,7 +6944,7 @@ p, li { white-space: pre-wrap; }
          <x>10</x>
          <y>31</y>
          <width>169</width>
-         <height>331</height>
+         <height>332</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
