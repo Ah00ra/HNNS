@@ -252,8 +252,29 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             # Create an instance of the second window
             self.wire_window = Wire_Rope_Tables()
             # Show the second window
-            self.wire_window.textBrowser.append("dynamically text test")
 
+            #row_position = self.wire_window.tableWidget.rowCount()
+            row_position = 1
+            col_position = 1
+
+            no_d = int(self.comboBox_3.currentText())
+            no_d -=1
+            col_c = int(self.comboBox_2.currentText())
+            col_c -=1
+            
+            if no_d != 1:
+                for i in range(no_d):
+                    print("**")
+                    self.wire_window.tableWidget.insertRow(row_position)
+                    row_position += 1
+
+            if col_c != 1:
+                for i in range(col_c):
+                    print("**")
+                    self.wire_window.tableWidget.insertColumn(col_position)
+                    col_position += 1
+
+            #:self.wire_window.textBrowser.append(f"{r},{c}")
 
             self.wire_window.show()
 
@@ -269,12 +290,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         am = self.DoubleSpinBox_85.value()
         d = self.comboBox_3.currentText()
         m = self.comboBox_2.currentText()
-
         d = 4
 
         ans = wcap, w,lcap, a, psu, dcap, er, dw, am, m, d
         ans = str(ans)
         self.textBrowser.setText(ans)
+
 
     def number_of_d(self):
         d = int(self.comboBox_3.currentText())
