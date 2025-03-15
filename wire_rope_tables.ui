@@ -50,12 +50,12 @@
      </property>
      <row>
       <property name="text">
-       <string>New Row</string>
+       <string>1</string>
       </property>
      </row>
      <column>
       <property name="text">
-       <string>New Column</string>
+       <string>d</string>
       </property>
      </column>
     </widget>

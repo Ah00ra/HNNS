@@ -247,32 +247,40 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                     self.pushButton_29.clicked.connect(self.fprime2)
                     self.stackedWidget.setCurrentIndex(20)
 
-
     def open_wire_rope_tables(self):
             # Create an instance of the second window
             self.wire_window = Wire_Rope_Tables()
             # Show the second window
+
+
 
             #row_position = self.wire_window.tableWidget.rowCount()
             row_position = 1
             col_position = 1
 
             no_d = int(self.comboBox_3.currentText())
-            no_d -=1
             col_c = int(self.comboBox_2.currentText())
-            col_c -=1
+            #col_c -=1
+
+            d_values = [] 
+            for i in range(no_d):
+                ind = 152+i
+                d_values.append(getattr(self, f'DoubleSpinBox_{ind}').value())
             
-            if no_d != 1:
-                for i in range(no_d):
-                    print("**")
-                    self.wire_window.tableWidget.insertRow(row_position)
-                    row_position += 1
+            #just create 
+            for i in range(no_d-1):
+                self.wire_window.tableWidget.insertRow(row_position)
+                row_position += 1
 
             if col_c != 1:
                 for i in range(col_c):
-                    print("**")
                     self.wire_window.tableWidget.insertColumn(col_position)
+                    self.wire_window.tableWidget.setHorizontalHeaderItem(col_position, QTableWidgetItem(f"m = {i+1}"))
                     col_position += 1
+
+            for i in range(no_d):
+                self.wire_window.tableWidget.setItem(i, 0, QTableWidgetItem(f"{d_values[i]}"))
+
 
             #:self.wire_window.textBrowser.append(f"{r},{c}")
 
@@ -308,6 +316,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             ind = 152+i
             getattr(self, f'htext_{ind}').show()
             getattr(self, f'DoubleSpinBox_{ind}').show()
+
 
 
         
