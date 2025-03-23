@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>798</width>
-    <height>518</height>
+    <width>1185</width>
+    <height>562</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <rect>
      <x>10</x>
      <y>0</y>
-     <width>781</width>
+     <width>911</width>
      <height>501</height>
     </rect>
    </property>
@@ -34,7 +34,7 @@
       <rect>
        <x>40</x>
        <y>400</y>
-       <width>691</width>
+       <width>871</width>
        <height>41</height>
       </rect>
      </property>
@@ -44,7 +44,7 @@
       <rect>
        <x>10</x>
        <y>0</y>
-       <width>741</width>
+       <width>901</width>
        <height>381</height>
       </rect>
      </property>
@@ -68,54 +68,19 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>10</y>
-       <width>581</width>
-       <height>211</height>
+       <y>0</y>
+       <width>901</width>
+       <height>381</height>
       </rect>
      </property>
      <row>
       <property name="text">
-       <string>New Row</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>New Row</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>New Row</string>
-      </property>
-     </row>
-     <row>
-      <property name="text">
-       <string>New Row</string>
+       <string>1</string>
       </property>
      </row>
      <column>
       <property name="text">
-       <string>New Column</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>New Column</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>New Column</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>New Column</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>New Column</string>
+       <string>d</string>
       </property>
      </column>
     </widget>

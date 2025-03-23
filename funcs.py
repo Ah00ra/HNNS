@@ -277,13 +277,16 @@ def ha_roller_chain(nd, ks, hnom, ncap, pre_or_post, v):
 
 
 
-hp, chain, types = ha_roller_chain(1.5, 1.3, 90, 17,"**", 300 )
-print(hp, chain, types)
-
-def f_t_wire_rope(cap_w, w, l, m, a):
-
-    ans = ((cap_w/m) +(w*l))*(1+(a/32.2))
+def f_t_wire_rope(cap_w, w, l, a, d):
+    # m = 1..10
+    ans = []
+    for this_d in d:
+        row_ans = []
+        for this_m in range(1, 11):
+            row_ans.append(((cap_w/this_m) +(w*l*this_d**2))*(1+(a/32.2)))
+        ans.append(row_ans)
     return ans
+
 
 def f_f_wire_rope(ps, s, cap_d, d):
 
@@ -295,11 +298,14 @@ def f_b_wire_rope(er, dw, am, cap_d):
     ans = ((er*dw*am)/(cap_d))
     return ans
 
-def nf_wire_rope(cap_w, w, l, m, a, ps, s, cap_d, d, er, dw, am):
-
-    a = ((ps*s*d*cap_d)/2)
-    b = ((er*dw*am)/(cap_d))
-    c = ((cap_w/m) +(w*l))*(1+(a/32.2))
-
-    ans = ((a-b)/c)
+def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
+    ans = []
+    for this_d in d:
+        row_ans = []
+        a = ((ps*su*this_d*cap_d)/2)
+        b = ((er*dw*am)/(cap_d))
+        for this_m in range(1, 11):
+            c = ((cap_w/this_m) +(w*l))*(1+(a/32.2))
+            row_ans.append((a-b)/c)
+        ans.append(row_ans)
     return ans

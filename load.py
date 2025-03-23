@@ -20,6 +20,8 @@ class Wire_Rope_Tables(QWidget):
         super().__init__()
         uic.loadUi('wire_rope_tables.ui', self)
         self.textBrowser.setText("TEST")
+        self.tabWidget.setTabText(0, "f_t")
+        self.tabWidget.setTabText(1, "nf")
         #self.table_widget = QtWidgets.QTableWidget(self)
         #self.table_widget.setRowCount(5)  
         #self.table_widget.setColumnCount(3) 
@@ -30,6 +32,7 @@ class Wire_Rope_Tables(QWidget):
         #self.table_widget.setColumnWidth(1, 150)
         #self.table_widget.setColumnWidth(2, 150)
         #self.table_widget.setColumnWidth(3, 150)
+
 
 class Ui_MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -247,20 +250,16 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                     self.pushButton_29.clicked.connect(self.fprime2)
                     self.stackedWidget.setCurrentIndex(20)
 
+
     def open_wire_rope_tables(self):
-            # Create an instance of the second window
             self.wire_window = Wire_Rope_Tables()
             # Show the second window
-
-
 
             #row_position = self.wire_window.tableWidget.rowCount()
             row_position = 1
             col_position = 1
-
             no_d = int(self.comboBox_3.currentText())
             col_c = int(self.comboBox_2.currentText())
-            #col_c -=1
 
             d_values = [] 
             for i in range(no_d):
@@ -270,16 +269,51 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             #just create 
             for i in range(no_d-1):
                 self.wire_window.tableWidget.insertRow(row_position)
+                self.wire_window.tableWidget_2.insertRow(row_position)
                 row_position += 1
 
             if col_c != 1:
                 for i in range(col_c):
                     self.wire_window.tableWidget.insertColumn(col_position)
                     self.wire_window.tableWidget.setHorizontalHeaderItem(col_position, QTableWidgetItem(f"m = {i+1}"))
+
+                    self.wire_window.tableWidget_2.insertColumn(col_position)
+                    self.wire_window.tableWidget_2.setHorizontalHeaderItem(col_position, QTableWidgetItem(f"m = {i+1}"))
                     col_position += 1
 
-            for i in range(no_d):
+
+
+            wcap = self.DoubleSpinBox_75.value()
+            w = self.DoubleSpinBox_77.value()
+            lcap = self.DoubleSpinBox_78.value()
+            a = self.DoubleSpinBox_79.value()
+            psu = self.DoubleSpinBox_80.value()
+            su = self.DoubleSpinBox_82.value()
+            dcap = self.DoubleSpinBox_81.value()
+            er = self.DoubleSpinBox_83.value()
+            dw = self.DoubleSpinBox_84.value()
+            am = self.DoubleSpinBox_85.value()
+            no_d = self.comboBox_3.currentText()
+            m = self.comboBox_2.currentText()
+            
+            table_of_ans_ft = funcs.f_t_wire_rope(cap_w=wcap, w=w, l=lcap, a=a, d=d_values)
+            table_of_ans_nf = funcs.nf_wire_rope(cap_w=wcap, w=w, l=lcap,
+                                                a=a, ps=psu, d=d_values, 
+                                                cap_d=dcap, 
+                                                er=er, dw=dw, am=am, su=su)
+            print(table_of_ans_nf)
+            # write
+            for i in range(int(no_d)):
                 self.wire_window.tableWidget.setItem(i, 0, QTableWidgetItem(f"{d_values[i]}"))
+                self.wire_window.tableWidget_2.setItem(i, 0, QTableWidgetItem(f"{d_values[i]}"))
+                for j in range(0, 10):
+                    self.wire_window.tableWidget.setItem(i, j+1, QTableWidgetItem(f"{table_of_ans_ft[i][j]}"))
+                    self.wire_window.tableWidget_2.setItem(i, j+1, QTableWidgetItem(f"{table_of_ans_nf[i][j]}"))
+                    #print(table_of_ans[i][j])
+
+
+            self.textBrowser.setText(str(table_of_ans_ft))
+
 
 
             #:self.wire_window.textBrowser.append(f"{r},{c}")
@@ -296,11 +330,16 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         er = self.DoubleSpinBox_83.value()
         dw = self.DoubleSpinBox_84.value()
         am = self.DoubleSpinBox_85.value()
-        d = self.comboBox_3.currentText()
+        no_d = self.comboBox_3.currentText()
         m = self.comboBox_2.currentText()
-        d = 4
 
-        ans = wcap, w,lcap, a, psu, dcap, er, dw, am, m, d
+        d_values = []
+        for i in range(int(no_d)):
+                ind = 152+i
+                d_values.append(getattr(self, f'DoubleSpinBox_{ind}').value())
+
+        #ans = wcap, w,lcap, a, psu, dcap, er, dw, am, m, no_d, d_values
+        ans = funcs.f_t_wire_rope(cap_w=wcap, w=w, l=lcap, a=a, d=d_values)
         ans = str(ans)
         self.textBrowser.setText(ans)
 
