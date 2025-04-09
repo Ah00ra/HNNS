@@ -259,7 +259,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             row_position = 1
             col_position = 1
             no_d = int(self.comboBox_3.currentText())
-            col_c = int(self.comboBox_2.currentText())
+            col_c = 10# int(self.comboBox_2.currentText())
 
             d_values = [] 
             for i in range(no_d):
@@ -294,7 +294,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             dw = self.DoubleSpinBox_84.value()
             am = self.DoubleSpinBox_85.value()
             no_d = self.comboBox_3.currentText()
-            m = self.comboBox_2.currentText()
+            #m = self.comboBox_2.currentText()
             
             table_of_ans_ft = funcs.f_t_wire_rope(cap_w=wcap, w=w, l=lcap, a=a, d=d_values)
             table_of_ans_nf = funcs.nf_wire_rope(cap_w=wcap, w=w, l=lcap,
@@ -331,7 +331,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         dw = self.DoubleSpinBox_84.value()
         am = self.DoubleSpinBox_85.value()
         no_d = self.comboBox_3.currentText()
-        m = self.comboBox_2.currentText()
+        #m = self.comboBox_2.currentText()
 
         d_values = []
         for i in range(int(no_d)):

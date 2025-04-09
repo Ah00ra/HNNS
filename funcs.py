@@ -553,15 +553,20 @@ def f_t_wire_rope(cap_w, w, l, a, d):
     return ans
 
 
+
+
+# TODO: edit lable, dynamic m 
 def f_f_wire_rope(ps, s, cap_d, d):
 
     ans = ((ps*s*d*cap_d)/2)
     return ans
 
-def f_b_wire_rope(er, dw, am, cap_d):
-
-    ans = ((er*dw*am)/(cap_d))
+def f_b_wire_rope(er, dw, am, cap_d, d):
+    for this_d in d:
+        ans = ((er*dw*this_d*am*this_d**2)/(cap_d))
     return ans
+
+print(f_b_wire_rope(12000000, 0.067, 0.4, 72, [0.25]))
 
 def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
     ans = []
