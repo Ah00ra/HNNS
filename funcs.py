@@ -214,7 +214,6 @@ table_types = [
 ["B","B", "B", "B", "C", "C", "C", "C′", "ERROR","ERROR", "ERROR", "ERROR", "ERROR", "ERROR"],
 ["B","B", "B", "B", "C", "C", "C′", "ERROR","ERROR","ERROR", "ERROR", "ERROR", "ERROR", "ERROR"]]
 
-
 def chain_selection(hps, v):
     chain_answers = []
     type_answers = []
@@ -263,20 +262,24 @@ def ha_roller_chain(nd, ks, hnom, ncap, pre_or_post, v):
             k2 = k2s[i]
             result = round(a / (k1 * k2),3)
             ans.append(result)
+    try:
+        ind = speed.index(v)
+        chains, types = chain_selection(ans, v)
+    except ValueError:
+        chains, types = chain_selection_int_speed(v, ans)
 
-    chains, types = chain_selection(ans, v)
     chains = [str(item) for item in chains]
     types = [str(item) for item in types]
     ans = [str(item) for item in ans]
     return ans, chains, types
 
 
-
-def chain_selection_int_speed(v):
+def chain_selection_int_speed(v, hps):
     chain_answers = []
     type_answers = []
     
     if v > 50 and v < 100:
+        print('IM IN')
         a = (v/1250) + 1/100
         b = ((13*v)/5000) + (3/100)
         c = ((4*v)/625) + (1/20)
@@ -318,10 +321,11 @@ def chain_selection_int_speed(v):
 
         ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i, j, k, l, m, n]
         ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100, 120, 140, 160, 180, 200, 240]
-        hp = [.01, 67 ,5 , 87, 60]
+        #hp = [.01, 67 ,5 , 87, 60]
 
-        chain = selection(ansi_chain_hp_int_speed, hp)
-        print(chain)
+        result = selection(ansi_chain_hp_int_speed, hps)
+        return result
+         
 
     elif v > 100 and v < 150:
         a = (1291*v)/5000 - 2573/100    
@@ -367,10 +371,9 @@ def chain_selection_int_speed(v):
 
         ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i, j, k, l, m, n]
         ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100, 120, 140, 160, 180, 200, 240]
-        hp = [.01, 67 ,5 , 87, 60, 200]
 
-        chain = selection(ansi_chain_hp_int_speed, hp)
-        print(chain)    
+        result = selection(ansi_chain_hp_int_speed, hps)
+        return result 
     
     elif v > 150 and v < 200:
         a = (3*v)/5000 + 1/25    
@@ -414,11 +417,9 @@ def chain_selection_int_speed(v):
 
         ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i, j, k, l, m, n]
         ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100, 120, 140, 160, 180, 200, 240]
-        hp = [.01, 67 ,5 , 87, 60, 200]
-
-        chain = selection(ansi_chain_hp_int_speed, hp)
-        print(ansi_chain_hp_int_speed)
-        print(chain)
+        
+        result = selection(ansi_chain_hp_int_speed, hps)
+        return result 
         
     elif v > 200 and v < 300:
 
@@ -472,11 +473,10 @@ def chain_selection_int_speed(v):
 
         ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i, j, k, l, m, n]
         ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100, 120, 140, 160, 180, 200, 240]
-        hp = [.01, 67 ,5 , 87, 60, 290]
 
-        chain = selection(ansi_chain_hp_int_speed, hp)
-        print(ansi_chain_hp_int_speed)
-        print(chain)
+        
+        result = selection(ansi_chain_hp_int_speed, hps)
+        return result 
 
     elif v > 300 and v < 400:
 
@@ -531,16 +531,17 @@ def chain_selection_int_speed(v):
 
         ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i, j, k, l, m, n]
         ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100, 120, 140, 160, 180, 200, 240]
-        hp = [0.01, 67 ,5 , 87, 150, 390]
 
-        chain = selection(ansi_chain_hp_int_speed, hp)
         print(ansi_chain_hp_int_speed)
-        print(chain)
 
-chain_selection_int_speed(350)
+        result = selection(ansi_chain_hp_int_speed, hps)
+        return result
+
+#print(chain_selection_int_speed(v=150, hps=[0.01, 67 ,5 , 87, 150, 390]))
+#print(ha_roller_chain(v=150, hps=[0.01, 67 ,5 , 87, 150, 390]))
     
-
-
+#a= chain_selection_int_speed(60, [20])
+#print(a)
 
 def f_t_wire_rope(cap_w, w, l, a, d):
     # m = 1..10
@@ -557,25 +558,28 @@ def f_t_wire_rope(cap_w, w, l, a, d):
 
 # TODO: edit lable, dynamic m 
 def f_f_wire_rope(ps, s, cap_d, d):
-
-    ans = ((ps*s*d*cap_d)/2)
+    # TODO: WRITE IN TABLE
+    ans = []
+    for this_d in d:
+        ans.append((ps*s*this_d*cap_d)/2)
     return ans
 
 def f_b_wire_rope(er, dw, am, cap_d, d):
-    for this_d in d:
-        ans = ((er*dw*this_d*am*this_d**2)/(cap_d))
-    return ans
-
-print(f_b_wire_rope(12000000, 0.067, 0.4, 72, [0.25]))
-
-def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
+    # TODO: WRITE IN TABLE
     ans = []
     for this_d in d:
-        row_ans = []
-        a = ((ps*su*this_d*cap_d)/2)
-        b = ((er*dw*am)/(cap_d))
-        for this_m in range(1, 11):
-            c = ((cap_w/this_m) +(w*l))*(1+(a/32.2))
-            row_ans.append((a-b)/c)
-        ans.append(row_ans)
+        ans.append((er*dw*this_d*am*this_d**2)/(cap_d))
     return ans
+
+# print(f_b_wire_rope(12000000, 0.067, 0.4, 72, [0.25]))
+
+def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
+    ff = f_f_wire_rope(ps, su, cap_d, d) 
+    fb = f_b_wire_rope(er, dw, am , cap_d, d)
+    ft = f_t_wire_rope(cap_w, w, l, a, d)
+    print(fb)
+
+
+
+#a = nf_wire_rope(2000, 1.6, 531.5, 2, 0.0014, 240000, 72, [0.25], 12000000, 0.067, 0.4)
+#print(a)
