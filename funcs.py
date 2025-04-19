@@ -829,29 +829,33 @@ def f_t_wire_rope(cap_w, w, l, a, d):
     return ans
 
 
-
-
 # TODO: edit lable, dynamic m 
-def f_f_wire_rope(ps, s, cap_d, d):
-
-    ans = ((ps*s*d*cap_d)/2)
-    return ans
-
-def f_b_wire_rope(er, dw, am, cap_d, d):
+def f_f_wire_rope(ps, s, cap_d, d): 
+    # TODO: WRITE IN TABLE
+    ans = []
     for this_d in d:
-        ans = ((er*dw*this_d*am*this_d**2)/(cap_d))
-    return ans
+        ans.append((ps*s*this_d*cap_d)/2)
+    return ans 
+
+
+def f_b_wire_rope(er, dw, am, cap_d, d): 
+    # TODO: WRITE IN TABLE
+    ans = []
+    for this_d in d:
+        ans.append((er*dw*this_d*am*this_d**2)/(cap_d))
+    return ans 
 
 print(f_b_wire_rope(12000000, 0.067, 0.4, 72, [0.25]))
+
 
 def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
     ans = []
     for this_d in d:
-        row_ans = []
-        a = ((ps*su*this_d*cap_d)/2)
-        b = ((er*dw*am)/(cap_d))
-        for this_m in range(1, 11):
-            c = ((cap_w/this_m) +(w*l))*(1+(a/32.2))
-            row_ans.append((a-b)/c)
-        ans.append(row_ans)
-    return ans
+        d1_ans = []
+        ff = (ps*su*this_d*cap_d)/2
+        fb = (er*dw*this_d*am*this_d**2)/(cap_d)
+        for this_m in range(1,11):
+            ft = ((cap_w/this_m) +(w*l*this_d**2))*(1+(a/32.2))
+            d1_ans.append((ff-fb)/ft)
+        ans.append(d1_ans)
+    return ans 

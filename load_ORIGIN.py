@@ -20,11 +20,8 @@ class Wire_Rope_Tables(QWidget):
         super().__init__()
         uic.loadUi('wire_rope_tables.ui', self)
         self.textBrowser.setText("TEST")
-        self.tabWidget.setTabText(0, "ft")
+        self.tabWidget.setTabText(0, "f_t")
         self.tabWidget.setTabText(1, "nf")
-        self.tabWidget.setTabText(2, "fb")
-        self.tabWidget.setTabText(3, "ff")
-
         #self.table_widget = QtWidgets.QTableWidget(self)
         #self.table_widget.setRowCount(5)  
         #self.table_widget.setColumnCount(3) 
@@ -273,17 +270,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             for i in range(no_d-1):
                 self.wire_window.tableWidget.insertRow(row_position)
                 self.wire_window.tableWidget_2.insertRow(row_position)
-                self.wire_window.tableWidget_3.insertRow(row_position)
-                self.wire_window.tableWidget_4.insertRow(row_position)
                 row_position += 1
-
-
-            # ff and fb
-            self.wire_window.tableWidget_3.insertColumn(1)
-            self.wire_window.tableWidget_4.insertColumn(1)
-###########
-            self.wire_window.tableWidget_3.setHorizontalHeaderItem(1, QTableWidgetItem(f"RESULT"))
-            self.wire_window.tableWidget_4.setHorizontalHeaderItem(1, QTableWidgetItem(f"RESULT"))
 
             if col_c != 1:
                 for i in range(col_c):
@@ -310,24 +297,15 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             #m = self.comboBox_2.currentText()
             
             table_of_ans_ft = funcs.f_t_wire_rope(cap_w=wcap, w=w, l=lcap, a=a, d=d_values)
-
             table_of_ans_nf = funcs.nf_wire_rope(cap_w=wcap, w=w, l=lcap,
                                                 a=a, ps=psu, d=d_values, 
                                                 cap_d=dcap, 
                                                 er=er, dw=dw, am=am, su=su)
-            table_of_ans_fb = funcs.f_b_wire_rope(er=er, dw=dw, am=am, cap_d=dcap, d=d_values)
-            table_of_ans_ff = funcs.f_f_wire_rope(ps=psu, s=su,cap_d=dcap, d=d_values)
-
+            print(table_of_ans_nf)
             # write
             for i in range(int(no_d)):
                 self.wire_window.tableWidget.setItem(i, 0, QTableWidgetItem(f"{d_values[i]}"))
                 self.wire_window.tableWidget_2.setItem(i, 0, QTableWidgetItem(f"{d_values[i]}"))
-                self.wire_window.tableWidget_3.setItem(i, 0, QTableWidgetItem(f"{d_values[i]}"))
-                self.wire_window.tableWidget_4.setItem(i, 0, QTableWidgetItem(f"{d_values[i]}"))
-                # col for ff fb
-                self.wire_window.tableWidget_3.setItem(i, 1, QTableWidgetItem(f"{table_of_ans_fb[i]}"))
-                self.wire_window.tableWidget_4.setItem(i, 1, QTableWidgetItem(f"{table_of_ans_ff[i]}"))
-
                 for j in range(0, 10):
                     self.wire_window.tableWidget.setItem(i, j+1, QTableWidgetItem(f"{table_of_ans_ft[i][j]}"))
                     self.wire_window.tableWidget_2.setItem(i, j+1, QTableWidgetItem(f"{table_of_ans_nf[i][j]}"))
