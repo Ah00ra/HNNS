@@ -124,9 +124,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.treeWidget.itemClicked['QTreeWidgetItem*','int'].connect(self.item_clicked)
 
         # wire_rope
-        self.commandLinkButton.clicked.connect(self.number_of_d)
-
-
+        self.comboBox_3.currentIndexChanged.connect(self.number_of_d)
 
 
     def item_clicked(self, item, column):
