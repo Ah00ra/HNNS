@@ -230,7 +230,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>25</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QTextBrowser" name="textBrowser_2">
@@ -270,12 +270,15 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_3">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_3">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
          <property name="specialValueText">
-          <string>0</string>
+          <string comment="0">0</string>
+         </property>
+         <property name="accelerated">
+          <bool>false</bool>
          </property>
          <property name="decimals">
           <number>3</number>
@@ -287,7 +290,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -7273,6 +7276,13 @@ p, li { white-space: pre-wrap; }
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomDoubleSpinBox</class>
+   <extends>QDoubleSpinBox</extends>
+   <header location="global">load</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>

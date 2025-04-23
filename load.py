@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtWidgets, uic
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QTableWidgetItem, QWidget
+from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox
 from PyQt5.uic import loadUi
 import funcs
 
@@ -11,6 +11,14 @@ def is_float_value(value):
         return True
     except ValueError:
         return False
+
+
+class CustomDoubleSpinBox(QDoubleSpinBox):
+    def textFromValue(self, value):
+        if value == 0:
+            return "0"
+        else:
+            return f"{value:.3f}".rstrip('0').rstrip('.')
 
 
 
