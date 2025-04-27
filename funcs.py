@@ -1,4 +1,22 @@
 import math
+
+
+def error_handling_decorator(func):
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except ZeroDivisionError:
+            error = "Error: Division by zero is not allowed."
+            return error      # or handle it as needed
+        except ValueError:
+            error = "Error: Invalid value provided."
+            return error  # or handle it as needed
+        except Exception as e:
+            error = f"An error occurred: {e}"
+            return error  # or handle other exceptions as needed
+    return wrapper
+
+
 def torque(a,b,c,d):
     #a=int(a)
     #b=int(b)
@@ -50,7 +68,7 @@ def omg(y,b,t):
     ans = 12*y*b*t
     return ans
 
-
+@error_handling_decorator
 def expphi(phi, f):
     ans = math.exp(phi*f)
     return ans
@@ -59,47 +77,73 @@ def TorqueBelt(H_nom,K_s,n_d,n):
     ans = ((63025*H_nom*K_s*n_d))/n
     return ans
 
+
+@error_handling_decorator
+#TODO: check if it wasn't error
 def f1a_f2(T,d):
-    ans = ((2*T)/d)
+    ans = (2*T)/d
+    ans =f"{ans} N" 
+    
     return ans
 
+
+
+@error_handling_decorator
 def fi(t,d,f,phi,):
     ans = (t/d*(((math.exp(f*phi)+1)/((math.exp(f*phi)-1)))))
+    ans =f"{ans} N" 
     return ans
 
+
+@error_handling_decorator
 def fi2(fc,f2_p,f1a_p):
     ans = (((f2_p+f1a_p)/2)-fc)
+    ans =f"{ans} N" 
     return ans
 
-
+@error_handling_decorator
 def f2(f1a_p,f1ap_f2):
     ans = ((f1a_p)-(f1ap_f2))
+    ans =f"{ans} N" 
     return ans
 
+@error_handling_decorator
 def f1a(b,fa,cv,cp):
     ans = (b*fa*cv*cp)
+    ans =f"{ans} N" 
     return ans
 
+@error_handling_decorator
 def f_prime(phi,f1a_p,fc,f2):
     ans =((1/phi)*(math.log((f1a_p-fc)/(f2-fc))))    
     return ans
 
+
+@error_handling_decorator
 def dip(c,w,fi_p,):
     ans =(((c**2)*w)/(96*fi_p))   
+    ans =f"{ans} in" 
     return ans
 
 
+error_handling_decorator
 def sfnp(np):
     ans = 14.17*1000000*(1000000)**-0.407
+    ans =f"{ans} Psi" 
     return ans
 
+
+error_handling_decorator
 def sfsy(sy):
     ans = sy/3
+    ans =f"{ans} Psi" 
     return ans
 
 def degrees_to_radians(degrees):
     return degrees * (math.pi / 180)
 
+
+@error_handling_decorator
 def minibi(sf,et,nu,dcap,tcap,t,f,phi):
 
     deltaf = (2*tcap)/dcap
@@ -108,35 +152,43 @@ def minibi(sf,et,nu,dcap,tcap,t,f,phi):
     a = (sf - x)*t
     radianphi = degrees_to_radians(phi)
     minb = deltaf / a*math.exp(f*radianphi)/(math.exp(f*radianphi)-1)
-    return minb
+    ans =f"{minb} in" 
+    return ans
 
+@error_handling_decorator
 def f1pa(sf, et, nu, dcap, t, b):
     x = et/((1-nu**2)*dcap)
     ab = (sf - x)*t*b
-    return ab
+    ans =f"{ab} N" 
+    return ans
 
 
+@error_handling_decorator
 def deltaf(capt, capd):
     ans = 2*capt/capd
+    ans =f"{ans} N" 
     return ans 
 
-
+@error_handling_decorator
 def f2metalbelt(sf,et,nu,dcap,tcap,t,b):
     x = et/((1-nu**2)*dcap)
     ab = (sf - x)*t*b
     delf = 2*tcap/dcap
     ans = ab - delf
+    ans =f"{ans} N" 
     return ans
 
+@error_handling_decorator
 def fi_2(sf,et,nu,dcap,tcap,t,b):
     x = et/((1-nu**2)*dcap)
     ab = (sf - x)*t*b
     delf = 2*tcap/dcap
     ans = ab - (delf/2)
+    ans =f"{ans} N" 
     return ans
 
 
-
+@error_handling_decorator
 def fprime2(sf,et,nu,dcap,tcap,t,b, phi):
     f1a = f1pa(sf,et,nu,dcap,t,b) 
     f2 = f2metalbelt(sf,et,nu,dcap,tcap,t,b)
@@ -145,25 +197,29 @@ def fprime2(sf,et,nu,dcap,tcap,t,b, phi):
     return ans
 
 
+@error_handling_decorator
 def h_link_plate(N,n,p):
     a = N**1.08
     b = (n**0.9)
     c = 3-(0.07*p)
     ans = 0.004*a*b*(p**c)
+    ans =f"{ans} Hp" 
     return ans
 
+@error_handling_decorator
 def center_distance(n1,n2,p,l):
     a = ((n1+n2)/2)-(l/p) 
     ans = (p/4)*(-a+math.sqrt((a**2)-(8*(((n2-n1)/(2*math.pi))**2))))
+    ans =f"{ans} in" 
     return ans
 
+@error_handling_decorator
 def np_rc(n1,n2,p,c):
     a = (n2-n1)**2
     b = (4*(math.pi**2))*(c/p) 
     d = (2*c/p)+((n1+n2)/2)+(a/b)
     ans = round(d)
     return ans
-    print(center_distance(17,34,1.75,5))
 
 
 ansi_chain_number = [25, 35, 40, 41, 50, 60, 80, 100, 120, 140, 160, 180, 200, 240]                                                             

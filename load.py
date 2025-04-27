@@ -4,7 +4,6 @@ from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox
 from PyQt5.uic import loadUi
 import funcs
 
-
 def is_float_value(value):
     try:
         float(value)
@@ -49,8 +48,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(Ui_MainWindow, self).__init__()
         loadUi('main.ui', self)
-
-
+        self.txtbrowser = self.textBrowser
+        
         # roller chain table
         self.tableWidget_4.setColumnWidth(0, 200)
         self.tableWidget_4.setColumnWidth(1, 150)
@@ -483,7 +482,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         tcap = self.DoubleSpinBox_37.value()
         t = self.DoubleSpinBox_38.value()
         b = self.DoubleSpinBox_45.value()
-        ans = str(funcs.f2metalbelt(sf, et, nu, dcap, tcap, t, b))
+        ans = funcs.f2metalbelt(sf, et, nu, dcap, tcap, t, b)
 
         self.textBrowser.setText(ans)
 
@@ -519,7 +518,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         phi = self.DoubleSpinBox_26.value()
         
 
-        ans = str(funcs.minibi(sf, et, nu, dcap, tcap, t,f,phi))
+        ans = funcs.minibi(sf, et, nu, dcap, tcap, t,f,phi)
         self.textBrowser.setText(ans)
 
 
@@ -644,8 +643,6 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
 
     def get_selected_data(self):
-        # TODO: dont let select Strings
-        # TODO; user shouldnt can resize
         selected_items = self.tableWidget_2.selectedItems()
         #row = selected_items[0].row()
         #data_org = [self.tableWidget.item(row, col).text() for col in range(self.tableWidget.columnCount())]
@@ -680,13 +677,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         ans = str(ans)  
         self.textBrowser.setText(ans)
        
-
     def f1a_f2(self):
         T = self.DoubleSpinBox_3.value()
         d = self.fDoubleSpinBox_5.value()   
         ans = funcs.f1a_f2(T,d)
         ans = str(ans)
         self.textBrowser.setText(ans)
+
+
     
     def fi(self):
         t = self.DoubleSpinBox_6.value()
@@ -721,6 +719,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         ans = funcs.f1a(b,fa,cp,cv)
         ans = str(ans)
         self.textBrowser.setText(ans)
+
 
 
     def fprime(self):   
