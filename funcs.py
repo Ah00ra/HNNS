@@ -977,9 +977,303 @@ def chain_selection_int_speed(v, hps):
         chain_answers, type_answers = selection(ansi_chain_hp_int_speed, hps)
         return chain_answers, type_answers 
     
+    elif v > 1200 and v < 1400:
+
+        a = (3*v)/5000 + 9/100
+        b = v/500 + 33/100
+        c = (3*v)/625 + 69/100
+        d = 737/100 - (17*v)/5000
+        e = (9*v)/1000 + 9/5
+        f = 213/5 - (7*v)/400
+        g = 647/10 - (3*v)/100
+        h = 769/10 - (71*v)/2000
+        i = 441/5 - (81*v)/2000
+        j = 1007/10 - (93*v)/2000
+        k = 1111/10 - (51*v)/1000
+
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i, j, k]
+
+        def selection(ansi_chain_hp_int_speed, hp_list):
+            for hp in hp_list:  
+                if hp < ansi_chain_hp_int_speed[0]:  
+                    chain_answers.append(ansi_chain_number_int_speed[0])  
+                    type_answers.append("A")
+
+                elif hp > ansi_chain_hp_int_speed[-1]:
+                    chain_answers.append("Not found")  
+                    type_answers.append("ERROR")
+
+                else:
+                    for i, num in enumerate(ansi_chain_hp_int_speed):
+                        if num > hp:
+                            chain_answers.append(ansi_chain_number_int_speed[i])
+                            break  
+                    if i < 1:
+                        type_answers.append("A")   
+                    elif i > 0 and i < 6 : 
+                        type_answers.append("B")
+                    elif i > 5 and i < 9 :
+                        type_answers.append("C")        
+                    else:
+                        type_answers.append("C'")
+    
+
+            return chain_answers,type_answers
 
 
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i, j, k]
+        ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100, 120, 140, 160]
 
+        chain_answers, type_answers = selection(ansi_chain_hp_int_speed, hps)
+        return chain_answers, type_answers
+    
+    elif v > 1400 and v < 1600:
+
+        a = (3*v)/5000 + 9/100
+        b = v/500 + 33/100
+        c = (19*v)/4000 + 19/25
+        d = 59/10 - (47*v)/20000
+        e = 128/5 - v/125
+        f = 206/5 - (33*v)/2000
+        g = 257/5 - (41*v)/2000
+        h = 123/2 - (49*v)/2000
+        i =357/5 - (57*v)/2000
+        j =797/10 - (63*v)/2000
+ 
+
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i, j]
+
+        def selection(ansi_chain_hp_int_speed, hp_list):
+            for hp in hp_list:  
+                if hp < ansi_chain_hp_int_speed[0]:  
+                    chain_answers.append(ansi_chain_number_int_speed[0])  
+                    type_answers.append("A")
+
+                elif hp > ansi_chain_hp_int_speed[-1]:
+                    chain_answers.append("Not found")  
+                    type_answers.append("ERROR")
+
+                else:
+                    for i, num in enumerate(ansi_chain_hp_int_speed):
+                        if num > hp:
+                            chain_answers.append(ansi_chain_number_int_speed[i])
+                            break  
+                    if i < 1:
+                        type_answers.append("A")   
+                    elif i > 0 and i < 6 : 
+                        type_answers.append("B")
+                    elif i == 6 and i == 7:
+                        type_answers.append("C") 
+                    elif i == 8:
+                        type_answers.append("C or C'")           
+                    else:
+                        type_answers.append("C'")
+    
+
+            return chain_answers,type_answers
+
+
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i, j]
+        ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100, 120, 140]
+
+        chain_answers, type_answers = selection(ansi_chain_hp_int_speed, hps)
+        return chain_answers, type_answers
+    
+    elif v > 1600 and v < 1800:
+
+        a = (11*v)/20000 + 17/100
+        b = v/500 + 33/100
+        c = (3*v)/1000 + 89/25
+        d = 247/50 - (7*v)/4000
+        e = 148/5 - (21*v)/2000
+        f = 34 - (3*v)/250
+        g = 213/5 - (3*v)/200
+        h = 511/10 - (9*v)/500
+        i = 297/5 - (21*v)/1000
+ 
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i]
+
+        def selection(ansi_chain_hp_int_speed, hp_list):
+            for hp in hp_list:  
+                if hp < ansi_chain_hp_int_speed[0]:  
+                    chain_answers.append(ansi_chain_number_int_speed[0])  
+                    type_answers.append("B")
+
+                elif hp > ansi_chain_hp_int_speed[-1]:
+                    chain_answers.append("Not found")  
+                    type_answers.append("ERROR")
+
+                else:
+                    for i, num in enumerate(ansi_chain_hp_int_speed):
+                        if num > hp:
+                            chain_answers.append(ansi_chain_number_int_speed[i])
+                            break  
+                    if i < 1:
+                        type_answers.append("A or B")   
+                    elif i > 0 and i < 5 : 
+                        type_answers.append("B")
+                    elif i == 5 :
+                        type_answers.append("B or C") 
+                    elif i == 6:
+                        type_answers.append("C")
+                    elif i == 7:
+                        type_answers.append("C or C'")               
+                    else:
+                        type_answers.append("C'")
+    
+
+            return chain_answers,type_answers
+
+
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i]
+        ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100, 120]
+
+        chain_answers, type_answers = selection(ansi_chain_hp_int_speed, hps)
+        return chain_answers, type_answers
+
+    elif v > 1800 and v < 2000:
+
+        a = (11*v)/20000 + 17/100
+        b = (39*v)/20000 + 0.419
+        c = 503/25 - (31*v)/5000
+        d = 211/50 - (27*v)/20000
+        e = 2393/100 - (147*v)/20000
+        f = 143/5 - (9*v)/1000
+        g = 363/10 - (23*v)/2000
+        h = 439/10 - (7*v)/500
+        i = 252/5 - (2*v)/125
+
+ 
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i]
+
+        def selection(ansi_chain_hp_int_speed, hp_list):
+            for hp in hp_list:  
+                if hp < ansi_chain_hp_int_speed[0]:  
+                    chain_answers.append(ansi_chain_number_int_speed[0])  
+                    type_answers.append("B")
+
+                elif hp > ansi_chain_hp_int_speed[-1]:
+                    chain_answers.append("Not found")  
+                    type_answers.append("ERROR")
+
+                else:
+                    for i, num in enumerate(ansi_chain_hp_int_speed):
+                        if num > hp:
+                            chain_answers.append(ansi_chain_number_int_speed[i])
+                            break  
+                    if i < 5:
+                        type_answers.append("B")   
+                    elif i > 0 and i < 6 : 
+                        type_answers.append("B")
+                    elif i == 6 and i == 7:
+                        type_answers.append("C")            
+                    else:
+                        type_answers.append("C'")
+    
+
+            return chain_answers,type_answers
+
+
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h, i]
+        ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100, 120]
+
+        chain_answers, type_answers = selection(ansi_chain_hp_int_speed, hps)
+        return chain_answers, type_answers
+
+    elif v > 2000 and v < 2500:
+
+        a = (29*v)/50000 + 11/100
+        b = (6*v)/3125 + 12/25
+        c = 414/25 - (221*v)/50000
+        d = 16/5 - (21*v)/25000
+        e = 1983/100 - (53*v)/10000
+        f = 568/25 - (303*v)/50000
+        g = 1413/50 - (187*v)/25000
+        h = 779/10 - (31*v)/1000
+
+ 
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h]
+
+        def selection(ansi_chain_hp_int_speed, hp_list):
+            for hp in hp_list:  
+                if hp < ansi_chain_hp_int_speed[0]:  
+                    chain_answers.append(ansi_chain_number_int_speed[0])  
+                    type_answers.append("B")
+
+                elif hp > ansi_chain_hp_int_speed[-1]:
+                    chain_answers.append("Not found")  
+                    type_answers.append("ERROR")
+
+                else:
+                    for i, num in enumerate(ansi_chain_hp_int_speed):
+                        if num > hp:
+                            chain_answers.append(ansi_chain_number_int_speed[i])
+                            break  
+                    if i < 5:
+                        type_answers.append("B")   
+                    elif i == 4 : 
+                        type_answers.append("B or C")
+                    elif i == 5 or i == 6:
+                        type_answers.append("C")            
+                    else:
+                        type_answers.append("C'")
+    
+
+            return chain_answers,type_answers
+
+
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h,]
+        ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100]
+
+        chain_answers, type_answers = selection(ansi_chain_hp_int_speed, hps)
+        return chain_answers, type_answers
+
+    elif v > 2500 and v < 3000:
+
+        a = (7*v)/12500 + 4/25
+        b = (9*v)/12500 + 87/25
+        c = 1221/100 - (67*v)/25000
+        d = 49/20 - (27*v)/50000
+        e = 729/50 - (2*v)/625
+        f = 831/50 - (181*v)/50000
+        g = 2111/100 - (231*v)/50000
+        h = (103*v)/6250 - 204/5
+
+
+ 
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h]
+
+        def selection(ansi_chain_hp_int_speed, hp_list):
+            for hp in hp_list:  
+                if hp < ansi_chain_hp_int_speed[0]:  
+                    chain_answers.append(ansi_chain_number_int_speed[0])  
+                    type_answers.append("B")
+
+                elif hp > ansi_chain_hp_int_speed[-1]:
+                    chain_answers.append("Not found")  
+                    type_answers.append("ERROR")
+
+                else:
+                    for i, num in enumerate(ansi_chain_hp_int_speed):
+                        if num > hp:
+                            chain_answers.append(ansi_chain_number_int_speed[i])
+                            break  
+                    if i < 4:
+                        type_answers.append("B")   
+                    elif i == 4 or i == 5: 
+                        type_answers.append("C")         
+                    else:
+                        type_answers.append("C'")
+    
+
+            return chain_answers,type_answers
+
+
+        ansi_chain_hp_int_speed = [a, b, c, d, e, f, g, h,]
+        ansi_chain_number_int_speed = [25, 35, 40, 41, 50, 60, 80, 100]
+
+        chain_answers, type_answers = selection(ansi_chain_hp_int_speed, hps)
+        return chain_answers, type_answers
 def f_t_wire_rope(cap_w, w, l, a, d):
     # m = 1..10
     ans = []
