@@ -246,8 +246,8 @@
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:72pt; font-weight:600;&quot;&gt;HNNS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; font-weight:600;&quot;&gt;HNNS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
@@ -302,7 +302,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_5">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_5">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -319,7 +319,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -352,7 +352,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_2">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_2">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -369,7 +369,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -381,7 +381,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_2">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_2">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -398,7 +398,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -410,7 +410,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_3">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_3">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -427,7 +427,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -439,7 +439,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_4">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_4">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -456,7 +456,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -497,8 +497,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;n&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;n&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="dtext_4">
@@ -514,8 +514,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;d&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;d&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="htext_5">
@@ -602,8 +602,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;H&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;H&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QDoubleSpinBox" name="HdoubleSpinBox">
@@ -807,8 +807,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;D&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="htext_7">
@@ -895,8 +895,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;d&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;d&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="htext_8">
@@ -983,8 +983,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;C&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QDoubleSpinBox" name="DdoubleSpinBox_2">
@@ -1170,8 +1170,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;D&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="htext_10">
@@ -1258,8 +1258,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;d&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;d&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="htext_11">
@@ -1346,8 +1346,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;C&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QDoubleSpinBox" name="DdoubleSpinBox_5">
@@ -1533,8 +1533,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;d&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;d&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="htext_13">
@@ -1621,8 +1621,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;n&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;n&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QDoubleSpinBox" name="DdoubleSpinBox_8">
@@ -1780,8 +1780,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;w&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;w&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="htext_16">
@@ -1868,8 +1868,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;v&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;v&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_6">
@@ -1995,8 +1995,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;y&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;y&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="htext_18">
@@ -2083,8 +2083,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;b&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;b&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QDoubleSpinBox" name="DdoubleSpinBox_10">
@@ -2296,8 +2296,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;t&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;t&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QDoubleSpinBox" name="DdoubleSpinBox_14">
@@ -2412,8 +2412,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;d&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;d&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QTextBrowser" name="htext_21">
@@ -2500,8 +2500,8 @@ p, li { white-space: pre-wrap; }
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;n&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:10pt;&quot;&gt;n&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QDoubleSpinBox" name="DdoubleSpinBox_15">
@@ -2705,7 +2705,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -2719,7 +2719,7 @@ p, li { white-space: pre-wrap; }
           <double>-1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -2731,7 +2731,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -2745,7 +2745,7 @@ p, li { white-space: pre-wrap; }
           <double>-1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -2785,7 +2785,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_6">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_6">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -2802,12 +2802,12 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_8">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_8">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -2824,7 +2824,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -2850,7 +2850,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_7">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_7">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -2867,7 +2867,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -2879,7 +2879,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_8">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_8">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -2896,7 +2896,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -2927,7 +2927,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_12">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_12">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -2944,7 +2944,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -2956,7 +2956,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_16">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_16">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -2973,7 +2973,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -2985,7 +2985,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_13">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_13">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3002,7 +3002,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -3030,7 +3030,7 @@ p, li { white-space: pre-wrap; }
         <x>30</x>
         <y>20</y>
         <width>361</width>
-        <height>261</height>
+        <height>278</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout_5">
@@ -3038,6 +3038,35 @@ p, li { white-space: pre-wrap; }
         <widget class="QLabel" name="htext_32">
          <property name="text">
           <string>F1a</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_5">
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="specialValueText">
+          <string>0</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1000000000000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000000000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="checkBox_13">
+         <property name="text">
+          <string>CheckBox</string>
          </property>
         </widget>
        </item>
@@ -3049,7 +3078,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_7">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_7">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3066,41 +3095,12 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="4" column="1">
         <widget class="QCheckBox" name="checkBox_9">
-         <property name="text">
-          <string>CheckBox</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_5">
-         <property name="buttonSymbols">
-          <enum>QAbstractSpinBox::NoButtons</enum>
-         </property>
-         <property name="specialValueText">
-          <string>0</string>
-         </property>
-         <property name="decimals">
-          <number>3</number>
-         </property>
-         <property name="minimum">
-          <double>-1000000000000.000000000000000</double>
-         </property>
-         <property name="maximum">
-          <double>1000000000000.000000000000000</double>
-         </property>
-         <property name="value">
-          <double>-1000000000000.000000000000000</double>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QCheckBox" name="checkBox_13">
          <property name="text">
           <string>CheckBox</string>
          </property>
@@ -3121,7 +3121,7 @@ p, li { white-space: pre-wrap; }
         <x>90</x>
         <y>180</y>
         <width>301</width>
-        <height>261</height>
+        <height>151</height>
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout_8">
@@ -3133,7 +3133,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_10">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_10">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3150,12 +3150,12 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_12">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_12">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3172,7 +3172,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -3217,7 +3217,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_11">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_11">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3234,7 +3234,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -3246,7 +3246,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_13">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_13">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3263,7 +3263,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -3282,7 +3282,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_14">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_14">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3299,7 +3299,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -3325,7 +3325,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_15">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_15">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3342,7 +3342,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -3626,7 +3626,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_9">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_9">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3643,7 +3643,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -3662,7 +3662,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_10">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_10">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3679,7 +3679,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -3698,7 +3698,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_11">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_11">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3715,7 +3715,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -3727,7 +3727,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_9">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_9">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -3744,7 +3744,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4015,7 +4015,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_17">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_17">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4032,7 +4032,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4044,7 +4044,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_18">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_18">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4061,7 +4061,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4080,7 +4080,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_14">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_14">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4097,12 +4097,12 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_19">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_19">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4119,7 +4119,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4152,7 +4152,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_16">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_16">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4169,7 +4169,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4214,7 +4214,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_17">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_17">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4231,7 +4231,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4271,7 +4271,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_19">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_19">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4288,7 +4288,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4300,7 +4300,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_20">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_20">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4317,7 +4317,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4329,7 +4329,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_21">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_21">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4346,7 +4346,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4358,7 +4358,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_22">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_22">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4375,7 +4375,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4387,7 +4387,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_24">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_24">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4404,7 +4404,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4416,7 +4416,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_23">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_23">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4433,7 +4433,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4459,7 +4459,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_25">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_25">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4476,12 +4476,12 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="7" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_26">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_26">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4498,7 +4498,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4524,7 +4524,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_15">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_15">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4541,7 +4541,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4553,7 +4553,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_20">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_20">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4570,7 +4570,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4589,7 +4589,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_21">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_21">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4606,7 +4606,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4639,7 +4639,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_27">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_27">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4656,7 +4656,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4668,7 +4668,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_28">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_28">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4685,7 +4685,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4697,7 +4697,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_29">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_29">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4714,7 +4714,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4726,7 +4726,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_30">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_30">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4743,7 +4743,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4755,7 +4755,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_32">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_32">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4772,7 +4772,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4784,7 +4784,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_33">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_33">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4801,7 +4801,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4834,7 +4834,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_4">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_4">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4851,7 +4851,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4863,7 +4863,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="fDoubleSpinBox_6">
+        <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_6">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4880,7 +4880,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4913,7 +4913,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_31">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_31">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4930,7 +4930,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4942,7 +4942,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_34">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_34">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4959,7 +4959,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -4971,7 +4971,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_35">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_35">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -4988,7 +4988,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5007,7 +5007,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_37">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_37">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5024,7 +5024,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5036,7 +5036,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_38">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_38">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5053,7 +5053,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5065,7 +5065,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_45">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_45">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5082,7 +5082,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5094,7 +5094,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_36">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_36">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5111,7 +5111,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5137,7 +5137,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_39">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_39">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5154,7 +5154,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5166,7 +5166,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_40">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_40">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5183,7 +5183,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5195,7 +5195,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_41">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_41">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5212,7 +5212,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5231,7 +5231,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_43">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_43">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5248,7 +5248,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5260,7 +5260,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_44">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_44">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5277,7 +5277,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5289,7 +5289,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_46">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_46">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5306,7 +5306,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5318,7 +5318,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_42">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_42">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5335,7 +5335,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5361,7 +5361,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_47">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_47">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5378,7 +5378,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5390,7 +5390,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_48">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_48">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5407,7 +5407,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5419,7 +5419,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_49">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_49">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5436,7 +5436,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5448,7 +5448,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_50">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_50">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5465,7 +5465,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5477,7 +5477,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_51">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_51">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5494,7 +5494,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5506,7 +5506,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_52">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_52">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5523,7 +5523,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5535,7 +5535,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_53">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_53">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5552,12 +5552,12 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="7" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_54">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_54">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5574,7 +5574,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5633,7 +5633,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_55">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_55">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5650,7 +5650,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5662,7 +5662,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_56">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_56">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5679,12 +5679,12 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_57">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_57">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5701,7 +5701,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5734,7 +5734,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_58">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_58">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5751,7 +5751,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5763,7 +5763,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_59">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_59">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5780,12 +5780,12 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_60">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_60">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5802,7 +5802,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5814,7 +5814,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_61">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_61">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5831,7 +5831,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5877,7 +5877,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_62">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_62">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5894,7 +5894,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5906,7 +5906,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_63">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_63">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5923,12 +5923,12 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_64">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_64">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5945,7 +5945,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -5957,7 +5957,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_65">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_65">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -5974,7 +5974,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6038,7 +6038,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_66">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_66">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6055,7 +6055,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6067,7 +6067,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_67">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_67">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6084,12 +6084,12 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_68">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_68">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6106,7 +6106,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6118,7 +6118,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_69">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_69">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6135,7 +6135,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6168,7 +6168,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_70">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_70">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6185,7 +6185,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6197,7 +6197,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_71">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_71">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6214,7 +6214,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6226,7 +6226,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_72">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_72">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6243,7 +6243,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6255,7 +6255,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_73">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_73">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6272,7 +6272,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6284,7 +6284,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_74">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_74">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6301,7 +6301,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6567,7 +6567,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_75">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_75">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6584,7 +6584,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6596,7 +6596,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_77">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_77">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6613,7 +6613,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6628,7 +6628,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_78">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_78">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6645,7 +6645,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6657,7 +6657,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_79">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_79">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6674,7 +6674,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6686,7 +6686,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_80">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_80">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6703,7 +6703,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6715,7 +6715,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_82">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_82">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6732,7 +6732,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6744,7 +6744,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_81">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_81">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6761,7 +6761,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6773,7 +6773,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="7" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_83">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_83">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6790,7 +6790,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6802,7 +6802,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="8" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_84">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_84">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6819,7 +6819,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6831,7 +6831,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item row="9" column="1">
-        <widget class="QDoubleSpinBox" name="DoubleSpinBox_85">
+        <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_85">
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
          </property>
@@ -6848,7 +6848,7 @@ p, li { white-space: pre-wrap; }
           <double>1000000000000.000000000000000</double>
          </property>
          <property name="value">
-          <double>-1000000000000.000000000000000</double>
+          <double>0.000000000000000</double>
          </property>
         </widget>
        </item>
@@ -6936,7 +6936,7 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>10</x>
          <y>31</y>
-         <width>169</width>
+         <width>177</width>
          <height>332</height>
         </rect>
        </property>
@@ -6949,7 +6949,7 @@ p, li { white-space: pre-wrap; }
          </widget>
         </item>
         <item row="4" column="1">
-         <widget class="QDoubleSpinBox" name="DoubleSpinBox_155">
+         <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_155">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -6966,7 +6966,7 @@ p, li { white-space: pre-wrap; }
            <double>1000000000000.000000000000000</double>
           </property>
           <property name="value">
-           <double>-1000000000000.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -6978,7 +6978,7 @@ p, li { white-space: pre-wrap; }
          </widget>
         </item>
         <item row="7" column="1">
-         <widget class="QDoubleSpinBox" name="DoubleSpinBox_158">
+         <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_158">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -6995,7 +6995,7 @@ p, li { white-space: pre-wrap; }
            <double>1000000000000.000000000000000</double>
           </property>
           <property name="value">
-           <double>-1000000000000.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -7028,7 +7028,7 @@ p, li { white-space: pre-wrap; }
          </widget>
         </item>
         <item row="3" column="1">
-         <widget class="QDoubleSpinBox" name="DoubleSpinBox_154">
+         <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_154">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -7045,12 +7045,12 @@ p, li { white-space: pre-wrap; }
            <double>1000000000000.000000000000000</double>
           </property>
           <property name="value">
-           <double>-1000000000000.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
          </widget>
         </item>
         <item row="9" column="1">
-         <widget class="QDoubleSpinBox" name="DoubleSpinBox_160">
+         <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_160">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -7067,7 +7067,7 @@ p, li { white-space: pre-wrap; }
            <double>1000000000000.000000000000000</double>
           </property>
           <property name="value">
-           <double>-1000000000000.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -7093,7 +7093,7 @@ p, li { white-space: pre-wrap; }
          </widget>
         </item>
         <item row="6" column="1">
-         <widget class="QDoubleSpinBox" name="DoubleSpinBox_157">
+         <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_157">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -7110,7 +7110,7 @@ p, li { white-space: pre-wrap; }
            <double>1000000000000.000000000000000</double>
           </property>
           <property name="value">
-           <double>-1000000000000.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -7129,7 +7129,7 @@ p, li { white-space: pre-wrap; }
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QDoubleSpinBox" name="DoubleSpinBox_152">
+         <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_152">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -7146,12 +7146,12 @@ p, li { white-space: pre-wrap; }
            <double>1000000000000.000000000000000</double>
           </property>
           <property name="value">
-           <double>-1000000000000.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
          </widget>
         </item>
         <item row="8" column="1">
-         <widget class="QDoubleSpinBox" name="DoubleSpinBox_159">
+         <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_159">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -7168,12 +7168,12 @@ p, li { white-space: pre-wrap; }
            <double>1000000000000.000000000000000</double>
           </property>
           <property name="value">
-           <double>-1000000000000.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
          </widget>
         </item>
         <item row="10" column="1">
-         <widget class="QDoubleSpinBox" name="DoubleSpinBox_161">
+         <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_161">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -7190,12 +7190,12 @@ p, li { white-space: pre-wrap; }
            <double>1000000000000.000000000000000</double>
           </property>
           <property name="value">
-           <double>-1000000000000.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QDoubleSpinBox" name="DoubleSpinBox_153">
+         <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_153">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -7212,12 +7212,12 @@ p, li { white-space: pre-wrap; }
            <double>1000000000000.000000000000000</double>
           </property>
           <property name="value">
-           <double>-1000000000000.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
          </widget>
         </item>
         <item row="5" column="1">
-         <widget class="QDoubleSpinBox" name="DoubleSpinBox_156">
+         <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_156">
           <property name="buttonSymbols">
            <enum>QAbstractSpinBox::NoButtons</enum>
           </property>
@@ -7234,7 +7234,7 @@ p, li { white-space: pre-wrap; }
            <double>1000000000000.000000000000000</double>
           </property>
           <property name="value">
-           <double>-1000000000000.000000000000000</double>
+           <double>0.000000000000000</double>
           </property>
          </widget>
         </item>
@@ -7260,7 +7260,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1180</width>
-     <height>23</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
