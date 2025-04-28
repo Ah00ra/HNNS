@@ -143,10 +143,6 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton.clicked.connect(self.Torque_Belt)
 
 
-        if item.text(column) == "Spur Gear":
-            self.pushButton_2.clicked.connect(self.super_gear)
-            self.stackedWidget.setCurrentIndex(3)
-
         if item.text(column) == "Open Belt":
             self.pushButton_3.clicked.connect(self.open_belt)
             self.stackedWidget.setCurrentIndex(4)
@@ -549,21 +545,19 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         pass
 
     def open_belt(self):
-        cd = self.DdoubleSpinBox_2.value()
-        d = self.DdoubleSpinBox_4.value()
-        c = self.DdoubleSpinBox_3.value()
+        cd = self.DoubleSpinBox_18.value()
+        d = self.fDoubleSpinBox_22.value()
+        c = self.fDoubleSpinBox_23.value()
 
-        print(cd, d, c)
         ans= funcs.open_belt(cd,d,c)
-
         self.textBrowser.setText(ans)
 
     
     def crossed_belt(self):
-        cd = self.DdoubleSpinBox_5.value()
-        d = self.DdoubleSpinBox_7.value()
-        c = self.DdoubleSpinBox_6.value()
-        ans= funcs.open_belt(cd,d,c)
+        cd = self.DoubleSpinBox_76.value()
+        d = self.fDoubleSpinBox_24.value()
+        c = self.fDoubleSpinBox_25.value()
+        ans= funcs.crossed_belt(cd,d,c)
         self.textBrowser.setText(ans)
 
 

@@ -35,17 +35,21 @@ def open_belt(cd, d, c):
     td = math.pi + math.asin((cd+d)/(2*c))
     l = math.sqrt(4*cd ** 2 - (cd - d) ** 2) + 1/2 * (cd*tcd + d*td)
     #TODO: write andis
+    tcd = round(tcd,3)
+    td = round(td,3)
+    l = round(l,3)
     ans = f"""theta D = {tcd}
 θd = ϕ = {td}  
 L = {l}
 """
     return ans
 
-
-def open_belt(cd, d, c):
+@error_handling_decorator
+def crossed_belt(cd, d, c):
     td = math.pi + math.asin((cd+d)/(2*c))
     l = math.sqrt(4*cd ** 2 - (cd - d) ** 2) + 1/2 * ((cd + d)*td)
-
+    td = round(td,3)
+    l = round(l,3)
     ans = f"""θ = {td}
 L = {l}
 """
