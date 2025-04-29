@@ -77,10 +77,10 @@ def expphi(phi, f):
     ans = math.exp(phi*f)
     return ans
 
+@error_handling_decorator
 def TorqueBelt(H_nom,K_s,n_d,n):
     ans = ((63025*H_nom*K_s*n_d))/n
     return ans
-
 
 @error_handling_decorator
 #TODO: check if it wasn't error
@@ -91,13 +91,11 @@ def f1a_f2(T,d):
     return ans
 
 
-
 @error_handling_decorator
 def fi(t,d,f,phi,):
     ans = (t/d*(((math.exp(f*phi)+1)/((math.exp(f*phi)-1)))))
     ans =f"{ans} N" 
     return ans
-
 
 @error_handling_decorator
 def fi2(fc,f2_p,f1a_p):
@@ -1289,23 +1287,21 @@ def f_t_wire_rope(cap_w, w, l, a, d):
     return ans
 
 
-# TODO: edit lable, dynamic m 
 def f_f_wire_rope(ps, s, cap_d, d): 
-    # TODO: WRITE IN TABLE
     ans = []
     for this_d in d:
-        ans.append((ps*s*this_d*cap_d)/2)
+        this_ans = round(((ps*s*this_d*cap_d)/2), 3)
+        ans.append(this_ans)
     return ans 
 
 
 def f_b_wire_rope(er, dw, am, cap_d, d): 
-    # TODO: WRITE IN TABLE
     ans = []
     for this_d in d:
-        ans.append((er*dw*this_d*am*this_d**2)/(cap_d))
+        this_ans = round((er*dw*this_d*am*this_d**2)/(cap_d), 3)
+        ans.append(this_ans)
     return ans 
 
-print(f_b_wire_rope(12000000, 0.067, 0.4, 72, [0.25]))
 
 
 def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
@@ -1316,6 +1312,7 @@ def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
         fb = (er*dw*this_d*am*this_d**2)/(cap_d)
         for this_m in range(1,11):
             ft = ((cap_w/this_m) +(w*l*this_d**2))*(1+(a/32.2))
-            d1_ans.append((ff-fb)/ft)
+            this_ans = round(((ff-fb)/ft), 3)
+            d1_ans.append(this_ans)
         ans.append(d1_ans)
     return ans 
