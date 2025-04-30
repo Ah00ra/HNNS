@@ -1,8 +1,14 @@
+from csv import excel_tab
+from multiprocessing import Value
 from PyQt5 import QtCore, QtWidgets, uic
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox
+from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox, QPushButton
 from PyQt5.uic import loadUi
 import funcs
+
+
+history = []
+
 
 def is_float_value(value):
     try:
@@ -52,7 +58,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         
         # roller chain table
         self.tableWidget_4.setColumnWidth(0, 200)
-        self.tableWidget_4.setColumnWidth(1, 150)
+        self.tableWidget_4.setColumnWidth(1, 200)
         self.tableWidget_4.setColumnWidth(2, 150)
         self.tableWidget_4.setColumnWidth(3, 150)
 
@@ -78,21 +84,20 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.htext_45.setHidden(True)
         self.htext_46.setHidden(True)
         self.htext_47.setHidden(True)
-
-        self.htext_17.setHidden(True)
-        self.htext_18.setHidden(True)
-        self.htext_19.setHidden(True)
-        self.DdoubleSpinBox_10.setHidden(True)
-        self.DdoubleSpinBox_11.setHidden(True)
-        self.DdoubleSpinBox_14.setHidden(True)
+        
+        # fc belt
+        self.DoubleSpinBox_87.setHidden(True)
+        self.fDoubleSpinBox_29.setHidden(True)
+        self.fDoubleSpinBox_30.setHidden(True)
+        self.DoubleSpinBox_88.setHidden(True)
+        self.DoubleSpinBox_89.setHidden(True)
         self.pushButton_7.setHidden(True)
-
-
-        self.htext_20.setHidden(True)
-        self.htext_21.setHidden(True)
-        self.DdoubleSpinBox_15.setHidden(True)
-        self.DdoubleSpinBox_16.setHidden(True)
         self.pushButton_8.setHidden(True)
+        self.htext_132.setHidden(True)
+        self.htext_133.setHidden(True)
+        self.htext_134.setHidden(True)
+        self.htext_135.setHidden(True)
+        self.htext_136.setHidden(True)
 
         # wire_rope Ft
         #self.widget.setHidden(True)
@@ -109,7 +114,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.htext_161.setHidden(True)
 
 
-        self.DoubleSpinBox_152.setHidden(True)
+        #self.DoubleSpinBox_152.setHidden(True)
+
         self.DoubleSpinBox_153.setHidden(True)
         self.DoubleSpinBox_154.setHidden(True)
         self.DoubleSpinBox_155.setHidden(True)
@@ -122,9 +128,41 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         self.treeWidget.itemClicked['QTreeWidgetItem*','int'].connect(self.item_clicked)
 
-        # wire_rope
-        self.comboBox_3.currentIndexChanged.connect(self.number_of_d)
+        self.textBrowser.textChanged.connect(self.append_text_to_history)
+        self.textBrowser.textChanged.connect(self.write_history_to_table)
+        # for btn in self.findChildren(QPushButton):
+        #     btn.clicked.connect(self.write_history_to_table)
 
+
+
+        # wire rope
+        self.comboBox_3.currentIndexChanged.connect(self.number_of_d)
+        self.pushButton_2.clicked.connect(self.clear_table_and_history)
+    
+
+    def clear_table_and_history(self):
+        history.clear()
+        self.tableWidget_6.clearContents()
+        pass
+        
+    def write_history_to_table(self):
+        # rows = self.tableWidget_6.rowCount()
+        # columns = self.tableWidget_6.columnCount()
+        # sender = self.sender()
+        for row, item in enumerate(history):
+            self.tableWidget_6.setItem(row, 0, QTableWidgetItem(item))
+
+
+    def append_text_to_history(self):
+        text = self.textBrowser.toPlainText()
+        if text.split()[0] != "Error:":
+            if len(history) == 0:
+                history.append(text)
+            elif history[-1] != text:
+                if len(history) == 10:
+                    history.pop(0)
+                history.append(text)
+                            
 
     def item_clicked(self, item, column):
         if item.text(column) == "Chapter17":
@@ -389,7 +427,6 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         hnom = self.DoubleSpinBox_72.value()
         ncap = self.DoubleSpinBox_73.value()
         v = self.DoubleSpinBox_74.value()
-
         pre_or_post = self.comboBox.currentText()
 
         #print(self.tableWidget_4.item(3,4))
@@ -416,7 +453,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.tableWidget_4.setItem(ind,3, item2)
 
 
-        #self.textBrowser.setText(ans)
+    #self.textBrowser.setText(ans)
 
 
     def np_rc(self):
@@ -564,18 +601,18 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
 
     def belt_speed(self):
-        cd = self.DdoubleSpinBox_8.value()
-        d = self.DdoubleSpinBox_9.value()
+        cd = self.fDoubleSpinBox_26.value()
+        d = self.fDoubleSpinBox_27.value()
         bs= funcs.belt_speed(cd, d)
         ans = f"V = {bs}"
         self.textBrowser.setText(ans)
 
     def omg(self):
-        y = self.DdoubleSpinBox_10.value()
-        b = self.DdoubleSpinBox_11.value()
-        t = self.DdoubleSpinBox_14.value()
+        y = self.DoubleSpinBox_87.value()
+        b = self.DoubleSpinBox_88.value()
+        t = self.fDoubleSpinBox_29.value()
         ans = funcs.omg(y, b, t)
-        self.DdoubleSpinBox_12.setValue(ans)
+        self.DoubleSpinBox_86.setValue(ans)
         pass
 
     def f1a_fromf2(self):
@@ -589,10 +626,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
     
     def fc_belt_speed(self):
-        d = self.DdoubleSpinBox_16.value()
-        n = self.DdoubleSpinBox_15.value()
+        d = self.fDoubleSpinBox_30.value()
+        n = self.DoubleSpinBox_89.value()
         ans = funcs.belt_speed(d, n)
-        self.DdoubleSpinBox_13.setValue(ans)
+        self.fDoubleSpinBox_28.setValue(ans)
         pass
     
 
@@ -610,8 +647,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         #     self.textBrowser.setText(ans)
         # else:
 
-        w = self.DdoubleSpinBox_12.value()
-        v = self.DdoubleSpinBox_13.value()
+        w = self.DoubleSpinBox_86.value()
+        v = self.fDoubleSpinBox_28.value()
         ans = funcs.fc_belt(w,v) 
         ans = str(ans)
         self.textBrowser.setText(ans)

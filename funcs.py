@@ -12,7 +12,7 @@ def error_handling_decorator(func):
             error = "Error: Invalid value provided."
             return error  # or handle it as needed
         except Exception as e:
-            error = f"An error occurred: {e}"
+            error = f"Error: {e}"
             return error  # or handle other exceptions as needed
     return wrapper
 
@@ -21,7 +21,7 @@ def torque(a,b,c,d):
     #a=int(a)
     #b=int(b)
     #c=int(c)
-    #a=int(d)
+    #a=int(d)``
     return str(a+b+c+d)
 
 
@@ -30,6 +30,7 @@ def spur_gear(h, d, n):
     return str(ans)
 
 
+@error_handling_decorator
 def open_belt(cd, d, c):
     tcd = math.pi - math.asin((cd-d)/(2*c))
     td = math.pi + math.asin((cd+d)/(2*c))
@@ -56,18 +57,21 @@ L = {l}
     return ans
 
 
+@error_handling_decorator
 def belt_speed(d, n):
     ans = (math.pi * d * n)/12
 
     return ans
 
 
+@error_handling_decorator
 def fc_belt(w, v):
     g =32.17 
     ans = (w/g)*((v/60)**2)
     return ans
 
 
+@error_handling_decorator
 def omg(y,b,t):
     ans = 12*y*b*t
     return ans
@@ -1312,7 +1316,10 @@ def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
         fb = (er*dw*this_d*am*this_d**2)/(cap_d)
         for this_m in range(1,11):
             ft = ((cap_w/this_m) +(w*l*this_d**2))*(1+(a/32.2))
+            print(ft)
             this_ans = round(((ff-fb)/ft), 3)
             d1_ans.append(this_ans)
         ans.append(d1_ans)
     return ans 
+
+# print(nf_wire_rope(1,0,0,0,0,0,1,[0],0,0,0))
