@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1352</width>
-    <height>838</height>
+    <width>1646</width>
+    <height>889</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,10 +50,10 @@
        </property>
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>20</x>
          <y>10</y>
-         <width>921</width>
-         <height>601</height>
+         <width>1081</width>
+         <height>631</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -87,11 +87,17 @@
         <widget class="QTextBrowser" name="textBrowser_2">
          <property name="geometry">
           <rect>
-           <x>260</x>
-           <y>190</y>
+           <x>360</x>
+           <y>170</y>
            <width>331</width>
            <height>161</height>
           </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>331</width>
+           <height>161</height>
+          </size>
          </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -103,244 +109,244 @@ p, li { white-space: pre-wrap; }
         </widget>
        </widget>
        <widget class="QWidget" name="F1a_F2">
-        <widget class="QFrame" name="frame_5">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>181</width>
-           <height>171</height>
+           <x>10</x>
+           <y>10</y>
+           <width>161</width>
+           <height>151</height>
           </rect>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_5">
+         <layout class="QFormLayout" name="formLayout_3">
           <item row="0" column="0">
-           <layout class="QFormLayout" name="formLayout_3">
-            <item row="0" column="0">
-             <widget class="QLabel" name="htext_28">
-              <property name="text">
-               <string>T</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_3">
-              <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::NoButtons</enum>
-              </property>
-              <property name="specialValueText">
-               <string comment="0">0</string>
-              </property>
-              <property name="accelerated">
-               <bool>false</bool>
-              </property>
-              <property name="decimals">
-               <number>3</number>
-              </property>
-              <property name="minimum">
-               <double>-1000000000000.000000000000000</double>
-              </property>
-              <property name="maximum">
-               <double>1000000000000.000000000000000</double>
-              </property>
-              <property name="value">
-               <double>0.000000000000000</double>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="htext_29">
-              <property name="text">
-               <string>d</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_5">
-              <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::NoButtons</enum>
-              </property>
-              <property name="specialValueText">
-               <string>0</string>
-              </property>
-              <property name="decimals">
-               <number>3</number>
-              </property>
-              <property name="minimum">
-               <double>-1000000000000.000000000000000</double>
-              </property>
-              <property name="maximum">
-               <double>1000000000000.000000000000000</double>
-              </property>
-              <property name="value">
-               <double>0.000000000000000</double>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="pushButton_9">
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QLabel" name="htext_28">
+            <property name="text">
+             <string>T</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_3">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string comment="0">0</string>
+            </property>
+            <property name="accelerated">
+             <bool>false</bool>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>-1000000000000.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="htext_29">
+            <property name="text">
+             <string>d</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_5">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>-1000000000000.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="text">
+             <string>pushbutton</string>
+            </property>
+            <property name="icon">
+             <iconset resource="icons.qrc">
+              <normaloff>:/images/images/submit.png</normaloff>:/images/images/submit.png</iconset>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
        </widget>
        <widget class="QWidget" name="Torque">
-        <layout class="QGridLayout" name="gridLayout_9">
-         <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_8">
-           <item row="2" column="1">
-            <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_3">
-             <property name="buttonSymbols">
-              <enum>QAbstractSpinBox::NoButtons</enum>
-             </property>
-             <property name="specialValueText">
-              <string>0</string>
-             </property>
-             <property name="decimals">
-              <number>3</number>
-             </property>
-             <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
-             </property>
-             <property name="maximum">
-              <double>1000000000000.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>0.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_2">
-             <property name="buttonSymbols">
-              <enum>QAbstractSpinBox::NoButtons</enum>
-             </property>
-             <property name="specialValueText">
-              <string>0</string>
-             </property>
-             <property name="decimals">
-              <number>3</number>
-             </property>
-             <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
-             </property>
-             <property name="maximum">
-              <double>1000000000000.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>0.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_4">
-             <property name="buttonSymbols">
-              <enum>QAbstractSpinBox::NoButtons</enum>
-             </property>
-             <property name="specialValueText">
-              <string>0</string>
-             </property>
-             <property name="decimals">
-              <number>3</number>
-             </property>
-             <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
-             </property>
-             <property name="maximum">
-              <double>1000000000000.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>0.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="htext_25">
-             <property name="text">
-              <string>K_s</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QCheckBox" name="checkBox_6">
-             <property name="text">
-              <string>CheckBox</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0" colspan="2">
-            <widget class="QPushButton" name="pushButton">
-             <property name="text">
-              <string>PushButton</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="htext_27">
-             <property name="text">
-              <string>n</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_2">
-             <property name="buttonSymbols">
-              <enum>QAbstractSpinBox::NoButtons</enum>
-             </property>
-             <property name="specialValueText">
-              <string>0</string>
-             </property>
-             <property name="decimals">
-              <number>3</number>
-             </property>
-             <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
-             </property>
-             <property name="maximum">
-              <double>1000000000000.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>0.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="htext_26">
-             <property name="text">
-              <string>n_d</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="htext_24">
-             <property name="text">
-              <string>H_nom</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>190</width>
+           <height>190</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="htext_24">
+            <property name="text">
+             <string>H_nom</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_2">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>-1000000000000.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="htext_25">
+            <property name="text">
+             <string>K_s</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_2">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>-1000000000000.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="htext_26">
+            <property name="text">
+             <string>n_d</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_3">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>-1000000000000.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="htext_27">
+            <property name="text">
+             <string>n</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_4">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>-1000000000000.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QCheckBox" name="checkBox_6">
+            <property name="text">
+             <string>CheckBox</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0" colspan="2">
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
        <widget class="QWidget" name="DONOTdelete"/>
        <widget class="QWidget" name="Open_Belt">
-        <widget class="QWidget" name="formLayoutWidget_27">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>30</y>
-           <width>361</width>
-           <height>261</height>
+           <x>51</x>
+           <y>31</y>
+           <width>156</width>
+           <height>127</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout_26">
@@ -405,14 +411,14 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="htext_64">
             <property name="text">
              <string>C</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="2" column="1">
            <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_23">
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::NoButtons</enum>
@@ -434,7 +440,7 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="3" column="1">
            <widget class="QPushButton" name="pushButton_3">
             <property name="text">
              <string>PushButton</string>
@@ -445,13 +451,13 @@ p, li { white-space: pre-wrap; }
         </widget>
        </widget>
        <widget class="QWidget" name="Cross_Belt">
-        <widget class="QWidget" name="formLayoutWidget_28">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>40</y>
-           <width>361</width>
-           <height>261</height>
+           <x>41</x>
+           <y>41</y>
+           <width>156</width>
+           <height>127</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout_27">
@@ -516,14 +522,14 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="htext_126">
             <property name="text">
              <string>C</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="2" column="1">
            <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_25">
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::NoButtons</enum>
@@ -545,7 +551,7 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="3" column="1">
            <widget class="QPushButton" name="pushButton_4">
             <property name="text">
              <string>PushButton</string>
@@ -556,13 +562,13 @@ p, li { white-space: pre-wrap; }
         </widget>
        </widget>
        <widget class="QWidget" name="Belt_Speed">
-        <widget class="QWidget" name="formLayoutWidget_29">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>30</x>
-           <y>40</y>
-           <width>361</width>
-           <height>261</height>
+           <x>31</x>
+           <y>41</y>
+           <width>155</width>
+           <height>94</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout_28">
@@ -595,14 +601,14 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
+          <item row="1" column="0">
            <widget class="QLabel" name="htext_130">
             <property name="text">
              <string>n</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="1" column="1">
            <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_27">
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::NoButtons</enum>
@@ -624,7 +630,7 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="2" column="1">
            <widget class="QPushButton" name="pushButton_5">
             <property name="text">
              <string>PushButton</string>
@@ -1364,8 +1370,8 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>30</x>
            <y>20</y>
-           <width>361</width>
-           <height>278</height>
+           <width>220</width>
+           <height>160</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout_5">
@@ -1453,9 +1459,9 @@ p, li { white-space: pre-wrap; }
         <widget class="QWidget" name="formLayoutWidget_7">
          <property name="geometry">
           <rect>
-           <x>90</x>
-           <y>180</y>
-           <width>301</width>
+           <x>30</x>
+           <y>210</y>
+           <width>231</width>
            <height>151</height>
           </rect>
          </property>
@@ -1486,6 +1492,13 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="value">
              <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="htext_43">
+            <property name="text">
+             <string>d</string>
             </property>
            </widget>
           </item>
@@ -1525,22 +1538,15 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="htext_43">
-            <property name="text">
-             <string>d</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </widget>
         <widget class="QWidget" name="formLayoutWidget_8">
          <property name="geometry">
           <rect>
-           <x>90</x>
-           <y>380</y>
-           <width>301</width>
-           <height>261</height>
+           <x>30</x>
+           <y>370</y>
+           <width>231</width>
+           <height>226</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout_9">
@@ -1638,24 +1644,17 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="htext_47">
-            <property name="text">
-             <string>Cv</string>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="1">
-           <widget class="QPushButton" name="pushButton_16">
-            <property name="text">
-             <string>PushButton</string>
-            </property>
-           </widget>
-          </item>
           <item row="5" column="1">
            <widget class="QCheckBox" name="checkBox_15">
             <property name="text">
              <string>CheckBox</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="htext_47">
+            <property name="text">
+             <string>Cv</string>
             </property>
            </widget>
           </item>
@@ -1681,6 +1680,13 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
+          <item row="7" column="1">
+           <widget class="QPushButton" name="pushButton_16">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
         <widget class="QTableWidget" name="tableWidget_2">
@@ -1689,10 +1695,10 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="geometry">
           <rect>
-           <x>420</x>
-           <y>0</y>
-           <width>721</width>
-           <height>401</height>
+           <x>320</x>
+           <y>10</y>
+           <width>711</width>
+           <height>241</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -1912,8 +1918,8 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>160</y>
-           <width>361</width>
+           <y>190</y>
+           <width>231</width>
            <height>20</height>
           </rect>
          </property>
@@ -1924,8 +1930,8 @@ p, li { white-space: pre-wrap; }
         <widget class="QPushButton" name="pushButton_11">
          <property name="geometry">
           <rect>
-           <x>420</x>
-           <y>410</y>
+           <x>320</x>
+           <y>260</y>
            <width>71</width>
            <height>31</height>
           </rect>
@@ -4666,8 +4672,8 @@ p, li { white-space: pre-wrap; }
         <widget class="QTableWidget" name="tableWidget_4">
          <property name="geometry">
           <rect>
-           <x>10</x>
-           <y>280</y>
+           <x>20</x>
+           <y>290</y>
            <width>701</width>
            <height>291</height>
           </rect>
@@ -5917,7 +5923,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1352</width>
+     <width>1646</width>
      <height>23</height>
     </rect>
    </property>
@@ -5931,7 +5937,9 @@ p, li { white-space: pre-wrap; }
    <header location="global">load</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>treeWidget</sender>
