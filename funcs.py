@@ -1316,7 +1316,6 @@ def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
         fb = (er*dw*this_d*am*this_d**2)/(cap_d)
         for this_m in range(1,11):
             ft = ((cap_w/this_m) +(w*l*this_d**2))*(1+(a/32.2))
-            print(ft)
             this_ans = round(((ff-fb)/ft), 3)
             d1_ans.append(this_ans)
         ans.append(d1_ans)

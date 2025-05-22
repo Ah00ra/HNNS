@@ -32,7 +32,6 @@ class Wire_Rope_Tables(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('wire_rope_tables.ui', self)
-        self.textBrowser.setText("TEST")
         self.tabWidget.setTabText(0, "ft")
         self.tabWidget.setTabText(1, "nf")
         self.tabWidget.setTabText(2, "fb")
@@ -283,8 +282,6 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                     self.pushButton_27.clicked.connect(self.f2metalbelt)
                     self.stackedWidget.setCurrentIndex(18)
                 if ind == 6:
-                    #!TODO: TAB JUMP D
-                    print("IM IN")
                     self.pushButton_28.clicked.connect(self.fi_2)
                     self.stackedWidget.setCurrentIndex(19)
 
@@ -373,7 +370,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                     #print(table_of_ans[i][j])
 
 
-            self.textBrowser.setText(str(table_of_ans_ft))
+            ##self.textBrowser.setText(str(table_of_ans_ft))
 
 
 
@@ -401,8 +398,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         #ans = wcap, w,lcap, a, psu, dcap, er, dw, am, m, no_d, d_values
         ans = funcs.f_t_wire_rope(cap_w=wcap, w=w, l=lcap, a=a, d=d_values)
-        ans = str(ans)
-        self.textBrowser.setText(ans)
+        ###ans = str(ans)
+        ###self.textBrowser.setText(ans)
 
 
     def number_of_d(self):
