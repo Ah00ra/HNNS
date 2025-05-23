@@ -81,7 +81,7 @@
         <bool>true</bool>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>25</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -103,8 +103,8 @@
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:72pt; font-weight:600;&quot;&gt;HNNS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; font-weight:600;&quot;&gt;HNNS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </widget>
@@ -114,7 +114,7 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>10</x>
            <y>10</y>
-           <width>161</width>
+           <width>164</width>
            <height>151</height>
           </rect>
          </property>
@@ -200,7 +200,7 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>10</x>
            <y>10</y>
-           <width>190</width>
+           <width>196</width>
            <height>190</height>
           </rect>
          </property>
@@ -345,7 +345,7 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>51</x>
            <y>31</y>
-           <width>156</width>
+           <width>164</width>
            <height>127</height>
           </rect>
          </property>
@@ -456,7 +456,7 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>41</x>
            <y>41</y>
-           <width>156</width>
+           <width>164</width>
            <height>127</height>
           </rect>
          </property>
@@ -567,7 +567,7 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>31</x>
            <y>41</y>
-           <width>155</width>
+           <width>163</width>
            <height>94</height>
           </rect>
          </property>
@@ -1370,7 +1370,7 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>30</x>
            <y>20</y>
-           <width>220</width>
+           <width>232</width>
            <height>160</height>
           </rect>
          </property>
@@ -4520,13 +4520,13 @@ p, li { white-space: pre-wrap; }
              <number>3</number>
             </property>
             <property name="minimum">
-             <double>-1000000000000.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="maximum">
              <double>1000000000000.000000000000000</double>
             </property>
             <property name="value">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -4549,13 +4549,13 @@ p, li { white-space: pre-wrap; }
              <number>3</number>
             </property>
             <property name="minimum">
-             <double>-1000000000000.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="maximum">
              <double>1000000000000.000000000000000</double>
             </property>
             <property name="value">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -4578,13 +4578,13 @@ p, li { white-space: pre-wrap; }
              <number>3</number>
             </property>
             <property name="minimum">
-             <double>-1000000000000.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="maximum">
              <double>1000000000000.000000000000000</double>
             </property>
             <property name="value">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -4919,13 +4919,13 @@ p, li { white-space: pre-wrap; }
              <number>3</number>
             </property>
             <property name="minimum">
-             <double>-1000000000000.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="maximum">
              <double>1000000000000.000000000000000</double>
             </property>
             <property name="value">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -5038,13 +5038,13 @@ p, li { white-space: pre-wrap; }
              <number>4</number>
             </property>
             <property name="minimum">
-             <double>-1000000000000.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="maximum">
              <double>1000000000000.000000000000000</double>
             </property>
             <property name="value">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -5067,13 +5067,13 @@ p, li { white-space: pre-wrap; }
              <number>4</number>
             </property>
             <property name="minimum">
-             <double>-1000000000000.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="maximum">
              <double>1000000000000.000000000000000</double>
             </property>
             <property name="value">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -5096,13 +5096,13 @@ p, li { white-space: pre-wrap; }
              <number>3</number>
             </property>
             <property name="minimum">
-             <double>-1000000000000.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="maximum">
              <double>1000000000000.000000000000000</double>
             </property>
             <property name="value">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -5125,13 +5125,13 @@ p, li { white-space: pre-wrap; }
              <number>3</number>
             </property>
             <property name="minimum">
-             <double>-1000000000000.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="maximum">
              <double>1000000000000.000000000000000</double>
             </property>
             <property name="value">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -5154,13 +5154,13 @@ p, li { white-space: pre-wrap; }
              <number>3</number>
             </property>
             <property name="minimum">
-             <double>-1000000000000.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="maximum">
              <double>1000000000000.000000000000000</double>
             </property>
             <property name="value">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -5183,13 +5183,13 @@ p, li { white-space: pre-wrap; }
              <number>3</number>
             </property>
             <property name="minimum">
-             <double>-1000000000000.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
             <property name="maximum">
              <double>1000000000000.000000000000000</double>
             </property>
             <property name="value">
-             <double>0.000000000000000</double>
+             <double>1.000000000000000</double>
             </property>
            </widget>
           </item>
@@ -5301,13 +5301,13 @@ p, li { white-space: pre-wrap; }
               <number>3</number>
              </property>
              <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
              <property name="maximum">
               <double>1000000000000.000000000000000</double>
              </property>
              <property name="value">
-              <double>0.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -5330,13 +5330,13 @@ p, li { white-space: pre-wrap; }
               <number>3</number>
              </property>
              <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
              <property name="maximum">
               <double>1000000000000.000000000000000</double>
              </property>
              <property name="value">
-              <double>0.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -5380,13 +5380,13 @@ p, li { white-space: pre-wrap; }
               <number>3</number>
              </property>
              <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
              <property name="maximum">
               <double>1000000000000.000000000000000</double>
              </property>
              <property name="value">
-              <double>0.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -5402,13 +5402,13 @@ p, li { white-space: pre-wrap; }
               <number>3</number>
              </property>
              <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
              <property name="maximum">
               <double>1000000000000.000000000000000</double>
              </property>
              <property name="value">
-              <double>0.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -5445,13 +5445,13 @@ p, li { white-space: pre-wrap; }
               <number>3</number>
              </property>
              <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
              <property name="maximum">
               <double>1000000000000.000000000000000</double>
              </property>
              <property name="value">
-              <double>0.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -5481,13 +5481,13 @@ p, li { white-space: pre-wrap; }
               <number>3</number>
              </property>
              <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
              <property name="maximum">
               <double>1000000000000.000000000000000</double>
              </property>
              <property name="value">
-              <double>0.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -5503,13 +5503,13 @@ p, li { white-space: pre-wrap; }
               <number>3</number>
              </property>
              <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
              <property name="maximum">
               <double>1000000000000.000000000000000</double>
              </property>
              <property name="value">
-              <double>0.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -5525,13 +5525,13 @@ p, li { white-space: pre-wrap; }
               <number>3</number>
              </property>
              <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
              <property name="maximum">
               <double>1000000000000.000000000000000</double>
              </property>
              <property name="value">
-              <double>0.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -5547,13 +5547,13 @@ p, li { white-space: pre-wrap; }
               <number>3</number>
              </property>
              <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
              <property name="maximum">
               <double>1000000000000.000000000000000</double>
              </property>
              <property name="value">
-              <double>0.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -5569,13 +5569,13 @@ p, li { white-space: pre-wrap; }
               <number>3</number>
              </property>
              <property name="minimum">
-              <double>-1000000000000.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
              <property name="maximum">
               <double>1000000000000.000000000000000</double>
              </property>
              <property name="value">
-              <double>0.000000000000000</double>
+              <double>1.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -5924,7 +5924,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1646</width>
-     <height>23</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
@@ -5937,6 +5937,197 @@ p, li { white-space: pre-wrap; }
    <header location="global">load</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>treeWidget</tabstop>
+  <tabstop>DoubleSpinBox_2</tabstop>
+  <tabstop>fDoubleSpinBox_2</tabstop>
+  <tabstop>fDoubleSpinBox_3</tabstop>
+  <tabstop>fDoubleSpinBox_4</tabstop>
+  <tabstop>checkBox_6</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>DoubleSpinBox_18</tabstop>
+  <tabstop>fDoubleSpinBox_22</tabstop>
+  <tabstop>fDoubleSpinBox_23</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>fDoubleSpinBox_5</tabstop>
+  <tabstop>DoubleSpinBox_76</tabstop>
+  <tabstop>fDoubleSpinBox_24</tabstop>
+  <tabstop>DoubleSpinBox_3</tabstop>
+  <tabstop>pushButton_9</tabstop>
+  <tabstop>fDoubleSpinBox_25</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>fDoubleSpinBox_26</tabstop>
+  <tabstop>fDoubleSpinBox_27</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>DoubleSpinBox_86</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>fDoubleSpinBox_28</tabstop>
+  <tabstop>checkBox_2</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>DoubleSpinBox_87</tabstop>
+  <tabstop>fDoubleSpinBox_29</tabstop>
+  <tabstop>textBrowser_2</tabstop>
+  <tabstop>DoubleSpinBox_88</tabstop>
+  <tabstop>pushButton_7</tabstop>
+  <tabstop>fDoubleSpinBox_30</tabstop>
+  <tabstop>DoubleSpinBox_89</tabstop>
+  <tabstop>pushButton_8</tabstop>
+  <tabstop>DoubleSpinBox</tabstop>
+  <tabstop>fDoubleSpinBox</tabstop>
+  <tabstop>checkBox_5</tabstop>
+  <tabstop>pushButton_19</tabstop>
+  <tabstop>tableWidget</tabstop>
+  <tabstop>pushButton_10</tabstop>
+  <tabstop>DoubleSpinBox_6</tabstop>
+  <tabstop>fDoubleSpinBox_8</tabstop>
+  <tabstop>DoubleSpinBox_7</tabstop>
+  <tabstop>DoubleSpinBox_8</tabstop>
+  <tabstop>checkBox_10</tabstop>
+  <tabstop>pushButton_13</tabstop>
+  <tabstop>DoubleSpinBox_12</tabstop>
+  <tabstop>fDoubleSpinBox_16</tabstop>
+  <tabstop>DoubleSpinBox_13</tabstop>
+  <tabstop>checkBox_15</tabstop>
+  <tabstop>checkBox_16</tabstop>
+  <tabstop>pushButton_17</tabstop>
+  <tabstop>DoubleSpinBox_5</tabstop>
+  <tabstop>checkBox_13</tabstop>
+  <tabstop>fDoubleSpinBox_7</tabstop>
+  <tabstop>checkBox_9</tabstop>
+  <tabstop>pushButton_12</tabstop>
+  <tabstop>DoubleSpinBox_10</tabstop>
+  <tabstop>fDoubleSpinBox_12</tabstop>
+  <tabstop>checkBox_7</tabstop>
+  <tabstop>pushButton_15</tabstop>
+  <tabstop>DoubleSpinBox_11</tabstop>
+  <tabstop>fDoubleSpinBox_13</tabstop>
+  <tabstop>checkBox_14</tabstop>
+  <tabstop>fDoubleSpinBox_14</tabstop>
+  <tabstop>tableWidget_2</tabstop>
+  <tabstop>pushButton_11</tabstop>
+  <tabstop>fDoubleSpinBox_15</tabstop>
+  <tabstop>pushButton_16</tabstop>
+  <tabstop>DoubleSpinBox_9</tabstop>
+  <tabstop>fDoubleSpinBox_9</tabstop>
+  <tabstop>tableWidget_4</tabstop>
+  <tabstop>checkBox_11</tabstop>
+  <tabstop>fDoubleSpinBox_10</tabstop>
+  <tabstop>checkBox_12</tabstop>
+  <tabstop>fDoubleSpinBox_11</tabstop>
+  <tabstop>pushButton_14</tabstop>
+  <tabstop>tableWidget_3</tabstop>
+  <tabstop>pushButton_21</tabstop>
+  <tabstop>DoubleSpinBox_14</tabstop>
+  <tabstop>fDoubleSpinBox_17</tabstop>
+  <tabstop>fDoubleSpinBox_18</tabstop>
+  <tabstop>fDoubleSpinBox_19</tabstop>
+  <tabstop>pushButton_18</tabstop>
+  <tabstop>DoubleSpinBox_17</tabstop>
+  <tabstop>pushButton_23</tabstop>
+  <tabstop>DoubleSpinBox_16</tabstop>
+  <tabstop>pushButton_22</tabstop>
+  <tabstop>DoubleSpinBox_19</tabstop>
+  <tabstop>DoubleSpinBox_20</tabstop>
+  <tabstop>DoubleSpinBox_21</tabstop>
+  <tabstop>DoubleSpinBox_22</tabstop>
+  <tabstop>DoubleSpinBox_24</tabstop>
+  <tabstop>DoubleSpinBox_23</tabstop>
+  <tabstop>DoubleSpinBox_25</tabstop>
+  <tabstop>DoubleSpinBox_26</tabstop>
+  <tabstop>pushButton_25</tabstop>
+  <tabstop>DoubleSpinBox_15</tabstop>
+  <tabstop>fDoubleSpinBox_20</tabstop>
+  <tabstop>checkBox_17</tabstop>
+  <tabstop>fDoubleSpinBox_21</tabstop>
+  <tabstop>pushButton_20</tabstop>
+  <tabstop>DoubleSpinBox_27</tabstop>
+  <tabstop>DoubleSpinBox_28</tabstop>
+  <tabstop>DoubleSpinBox_29</tabstop>
+  <tabstop>DoubleSpinBox_30</tabstop>
+  <tabstop>DoubleSpinBox_32</tabstop>
+  <tabstop>DoubleSpinBox_33</tabstop>
+  <tabstop>pushButton_26</tabstop>
+  <tabstop>DoubleSpinBox_4</tabstop>
+  <tabstop>fDoubleSpinBox_6</tabstop>
+  <tabstop>pushButton_24</tabstop>
+  <tabstop>DoubleSpinBox_31</tabstop>
+  <tabstop>DoubleSpinBox_34</tabstop>
+  <tabstop>DoubleSpinBox_35</tabstop>
+  <tabstop>DoubleSpinBox_36</tabstop>
+  <tabstop>DoubleSpinBox_37</tabstop>
+  <tabstop>DoubleSpinBox_38</tabstop>
+  <tabstop>DoubleSpinBox_45</tabstop>
+  <tabstop>pushButton_27</tabstop>
+  <tabstop>DoubleSpinBox_39</tabstop>
+  <tabstop>DoubleSpinBox_40</tabstop>
+  <tabstop>DoubleSpinBox_41</tabstop>
+  <tabstop>DoubleSpinBox_42</tabstop>
+  <tabstop>DoubleSpinBox_43</tabstop>
+  <tabstop>DoubleSpinBox_44</tabstop>
+  <tabstop>DoubleSpinBox_46</tabstop>
+  <tabstop>pushButton_28</tabstop>
+  <tabstop>DoubleSpinBox_47</tabstop>
+  <tabstop>DoubleSpinBox_48</tabstop>
+  <tabstop>DoubleSpinBox_49</tabstop>
+  <tabstop>DoubleSpinBox_50</tabstop>
+  <tabstop>DoubleSpinBox_51</tabstop>
+  <tabstop>DoubleSpinBox_52</tabstop>
+  <tabstop>DoubleSpinBox_53</tabstop>
+  <tabstop>DoubleSpinBox_54</tabstop>
+  <tabstop>pushButton_29</tabstop>
+  <tabstop>DoubleSpinBox_55</tabstop>
+  <tabstop>DoubleSpinBox_56</tabstop>
+  <tabstop>DoubleSpinBox_57</tabstop>
+  <tabstop>pushButton_30</tabstop>
+  <tabstop>DoubleSpinBox_58</tabstop>
+  <tabstop>DoubleSpinBox_59</tabstop>
+  <tabstop>DoubleSpinBox_60</tabstop>
+  <tabstop>DoubleSpinBox_61</tabstop>
+  <tabstop>pushButton_31</tabstop>
+  <tabstop>DoubleSpinBox_62</tabstop>
+  <tabstop>DoubleSpinBox_63</tabstop>
+  <tabstop>DoubleSpinBox_64</tabstop>
+  <tabstop>DoubleSpinBox_65</tabstop>
+  <tabstop>checkBox_3</tabstop>
+  <tabstop>pushButton_32</tabstop>
+  <tabstop>DoubleSpinBox_66</tabstop>
+  <tabstop>DoubleSpinBox_67</tabstop>
+  <tabstop>DoubleSpinBox_68</tabstop>
+  <tabstop>DoubleSpinBox_69</tabstop>
+  <tabstop>pushButton_33</tabstop>
+  <tabstop>DoubleSpinBox_70</tabstop>
+  <tabstop>DoubleSpinBox_71</tabstop>
+  <tabstop>DoubleSpinBox_72</tabstop>
+  <tabstop>DoubleSpinBox_73</tabstop>
+  <tabstop>DoubleSpinBox_74</tabstop>
+  <tabstop>comboBox</tabstop>
+  <tabstop>pushButton_34</tabstop>
+  <tabstop>DoubleSpinBox_75</tabstop>
+  <tabstop>DoubleSpinBox_77</tabstop>
+  <tabstop>DoubleSpinBox_78</tabstop>
+  <tabstop>DoubleSpinBox_79</tabstop>
+  <tabstop>DoubleSpinBox_80</tabstop>
+  <tabstop>DoubleSpinBox_82</tabstop>
+  <tabstop>DoubleSpinBox_81</tabstop>
+  <tabstop>DoubleSpinBox_83</tabstop>
+  <tabstop>DoubleSpinBox_84</tabstop>
+  <tabstop>DoubleSpinBox_85</tabstop>
+  <tabstop>comboBox_3</tabstop>
+  <tabstop>pushButton_35</tabstop>
+  <tabstop>DoubleSpinBox_152</tabstop>
+  <tabstop>DoubleSpinBox_153</tabstop>
+  <tabstop>DoubleSpinBox_154</tabstop>
+  <tabstop>DoubleSpinBox_155</tabstop>
+  <tabstop>DoubleSpinBox_156</tabstop>
+  <tabstop>DoubleSpinBox_157</tabstop>
+  <tabstop>DoubleSpinBox_158</tabstop>
+  <tabstop>DoubleSpinBox_159</tabstop>
+  <tabstop>DoubleSpinBox_160</tabstop>
+  <tabstop>DoubleSpinBox_161</tabstop>
+  <tabstop>tableWidget_6</tabstop>
+ </tabstops>
  <resources>
   <include location="icons.qrc"/>
  </resources>
