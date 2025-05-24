@@ -157,15 +157,15 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
     def append_text_to_history(self):
         text = self.textBrowser.toPlainText()
-        split_text = text.split()
-        if split_text[0] != "Error:":
+        if text.split()[0] != "Error:":
+            split_text = text.split("=")
 
-            formula_name = split_text[0]
-            unit = split_text[1]
-            value = str(round(float(split_text[3]), 3))
+            formula_name_unit = split_text[0]
+            value = str(round(float(split_text[1]), 3))
 
 
-            item_to_add = [f"{formula_name} {unit}", value]
+            item_to_add = [formula_name_unit, value]
+
             if len(history) == 0:
                 history.append(item_to_add)
             elif history[-1][1] != value:
