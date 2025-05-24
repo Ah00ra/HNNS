@@ -1,3 +1,4 @@
+from decimal import ROUND_UP
 import math
 
 
@@ -18,10 +19,7 @@ def error_handling_decorator(func):
 
 
 def torque(a,b,c,d):
-    #a=int(a)
-    #b=int(b)
-    #c=int(c)
-    #a=int(d)``
+    
     return str(a+b+c+d)
 
 
@@ -51,9 +49,8 @@ def crossed_belt(cd, d, c):
     l = math.sqrt(4*cd ** 2 - (cd - d) ** 2) + 1/2 * ((cd + d)*td)
     td = round(td,3)
     l = round(l,3)
-    ans = f"""θ = {td}
-L = {l}
-"""
+    ans = f"θ,L = {td}, {l}"
+
     return ans
 
 
@@ -90,33 +87,27 @@ def TorqueBelt(H_nom,K_s,n_d,n):
 #TODO: check if it wasn't error
 def f1a_f2(T,d):
     ans = (2*T)/d
-    ans =f"f1a f2 (N) = {ans}" 
-    
     return ans
 
 
 @error_handling_decorator
 def fi(t,d,f,phi,):
-    ans = (t/d*(((math.exp(f*phi)+1)/((math.exp(f*phi)-1)))))
-    ans =f"{ans} N" 
+    ans = (t/d*(((math.exp(f*phi)+1)/((math.exp(f*phi)-1))))) 
     return ans
 
 @error_handling_decorator
 def fi2(fc,f2_p,f1a_p):
     ans = (((f2_p+f1a_p)/2)-fc)
-    ans =f"{ans} N" 
     return ans
 
 @error_handling_decorator
 def f2(f1a_p,f1ap_f2):
     ans = ((f1a_p)-(f1ap_f2))
-    ans =f"{ans} N" 
     return ans
 
 @error_handling_decorator
 def f1a(b,fa,cv,cp):
     ans = (b*fa*cv*cp)
-    ans =f"{ans} N" 
     return ans
 
 @error_handling_decorator
@@ -128,7 +119,6 @@ def f_prime(phi,f1a_p,fc,f2):
 @error_handling_decorator
 def dip(c,w,fi_p,):
     ans =(((c**2)*w)/(96*fi_p))   
-    ans =f"{ans} in" 
     return ans
 
 
@@ -190,7 +180,6 @@ def fi_2(sf,et,nu,dcap,tcap,t,b):
     ab = (sf - x)*t*b
     delf = 2*tcap/dcap
     ans = ab - (delf/2)
-    ans =f"{ans} N" 
     return ans
 
 
@@ -1321,4 +1310,90 @@ def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
         ans.append(d1_ans)
     return ans 
 
-# print(nf_wire_rope(1,0,0,0,0,0,1,[0],0,0,0))
+def center_distance_vbelt(lp, cd, d):
+    a = lp-((math.pi/2) * (cd + d))
+    b = a**2
+    c = 2 * ((cd - d)**2)
+    d = math.sqrt(b-c)
+    ans = 0.25*(a+d)
+    return ans
+print(center_distance_vbelt(113.8, 11 , 7.4))
+
+
+def ha_vbelt(k1, k2, h_tab):
+    ans = k1 *k2 *h_tab
+    return ans 
+
+def hd_vbelt(h_nom, ks, ns):
+    ans = h_nom*ks*ns
+    return ans
+
+def nb_vbelt(ha, hd):
+    nb = hd/ha
+    ans = math.ceil(nb)
+    return ans
+
+def fc_vbelt(kc, v):
+    ans = kc * ((v/1000)**2)
+    return ans
+print(fc_vbelt(.965, 3390))
+
+
+def delta_f_vbelt(hd, nb, n , d):
+    ans = (63025*hd/nb)/(n*(d/2))
+    return ans
+print(delta_f_vbelt(13,3,1750,7.4))
+
+def f1_vbelt(fc, detaf, exp):
+    ans = fc + ((detaf*exp)/(exp-1))
+    return ans
+print(f1_vbelt(11.1, 42.2, 4.788))
+
+def f2_vbelt(f1, deltaf):
+    ans = f1 - deltaf
+    return ans 
+
+def fi_vbelt(f1, f2, fc):
+    ans = ((f1+f2)/2)-fc
+    return ans
+print(fi_vbelt(64.4,22.2,11.1))
+
+def nfs_vbelt(ha, nb, hnom, ks):
+    ans = (ha*nb)/(hnom*ks)
+    return ans
+print(nfs_vbelt(4.878,3,10,1.3))
+
+def fb1_vbelt(kb, d):
+    ans = kb/d
+    return ans
+
+def fb2_vbelt(kb, cd):
+    ans = kb/cd
+    return ans
+
+def t1_vbelt(f1,fb1):
+    ans = f1+fb1
+    return ans
+
+def t2_vbelt(f2,fb2):
+    ans = f2 + fb2
+    return ans
+
+def np_vbelt(k, t1, t2, b):
+    a = (k/t1)**(-b)
+    b = (k/t2)**(-b)
+    ans = ((a+b)**-1)
+    fans = "{:.3e}".format(ans)
+    return fans
+print(np_vbelt(1193,142,116.8,10.926))
+
+def t_vbelt(np, lp, v):
+#combobox,hide np if np>10e9
+    if np > 10e9:
+        ans = (10e9*lp)/(720*v)
+
+    else:
+        ans = (np*lp)/(720*v)
+
+    return ans            
+

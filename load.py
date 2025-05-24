@@ -1,6 +1,4 @@
-from csv import excel_tab
-from multiprocessing import Value
-from re import split
+import re
 from PyQt5 import QtCore, QtWidgets, uic
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox, QPushButton
@@ -157,12 +155,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
     def append_text_to_history(self):
         text = self.textBrowser.toPlainText()
-        if text.split()[0] != "Error:":
+        
+        if not re.search(r"\bError\b", text):
             split_text = text.split("=")
 
             formula_name_unit = split_text[0]
-            value = str(round(float(split_text[1]), 3))
-
+            value = str(round(float(split_text[1]), 3))  
 
             item_to_add = [formula_name_unit, value]
 
@@ -525,8 +523,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         t = self.DoubleSpinBox_38.value()
         b = self.DoubleSpinBox_45.value()
         ans = funcs.f2metalbelt(sf, et, nu, dcap, tcap, t, b)
-
-        self.textBrowser.setText(ans)
+        fans = f"F_2 Metalbelt = {ans}"
+        self.textBrowser.setText(fans)
 
 
 
@@ -534,7 +532,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         capt = self.DoubleSpinBox_4.value()
         capd = self.fDoubleSpinBox_6.value() 
         ans = str(funcs.deltaf(capt, capd))
-        self.textBrowser.setText(ans)
+        fans = f"ΔF Belt = {ans}"
+        self.textBrowser.setText(fans)
         
 
     def f1pa(self):
@@ -603,7 +602,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         cd = self.DoubleSpinBox_76.value()
         d = self.fDoubleSpinBox_24.value()
         c = self.fDoubleSpinBox_25.value()
-        ans= funcs.crossed_belt(cd,d,c)
+        ans = funcs.crossed_belt(cd,d,c)
+        ans = str(ans)
         self.textBrowser.setText(ans)
 
 
@@ -613,7 +613,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         cd = self.fDoubleSpinBox_26.value()
         d = self.fDoubleSpinBox_27.value()
         bs= funcs.belt_speed(cd, d)
-        ans = f"V = {bs}"
+        ans = f"Speed Belt = {bs}"
         self.textBrowser.setText(ans)
 
     def omg(self):
@@ -643,24 +643,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
     
 
     def fc_belt(self):
-        # if self.checkBox.isChecked():
-        #     print("ok")
-        #     y = self.DdoubleSpinBox_10.value()
-        #     b = self.DdoubleSpinBox_11.value()
-        #     t = self.DdoubleSpinBox_14.value()
-        #     ans = funcs.omg(y,b,t)
-
-        #     self.DdoubleSpinBox_12.setValue(ans)
-
-        #     ans = str(ans)
-        #     self.textBrowser.setText(ans)
-        # else:
-
         w = self.DoubleSpinBox_86.value()
         v = self.fDoubleSpinBox_28.value()
         ans = funcs.fc_belt(w,v) 
-        ans = str(ans)
-        self.textBrowser.setText(ans)
+        fans = f"Fc belt = {ans}"
+        self.textBrowser.setText(fans)
         pass
 
 
@@ -669,7 +656,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         f = self.fDoubleSpinBox.value()
         ans = funcs.expphi(phi, f)
         ans = str(ans)
-        self.textBrowser.setText(ans)
+        fans = f"Expo(fΦ) Belt = {ans}"
+        self.textBrowser.setText(fans)
 
 
     def get_selected_row_data(self):
@@ -714,15 +702,17 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         K_s = self.fDoubleSpinBox_2.value()
         n = self.fDoubleSpinBox_4.value()
         ans = funcs.TorqueBelt(H_nom,K_s,n_d,n)
-        ans = str(ans)  
-        self.textBrowser.setText(ans)
+        ans = str(ans)
+        fans = f"Torque Belt = {ans}"  
+        self.textBrowser.setText(fans)
        
     def f1a_f2(self):
         T = self.DoubleSpinBox_3.value()
         d = self.fDoubleSpinBox_5.value()   
         ans = funcs.f1a_f2(T,d)
         ans = str(ans)
-        self.textBrowser.setText(ans)
+        fans = f"(F_1)_a - F_2 Belt = {ans}"
+        self.textBrowser.setText(fans)
 
 
     
@@ -733,7 +723,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         phi = self.DoubleSpinBox_8.value()  
         ans = funcs.fi(t,d,f,phi)
         ans = str(ans)
-        self.textBrowser.setText(ans)
+        fans = f"F_i Belt = {ans}"
+        self.textBrowser.setText(fans)
 
     def fi2(self):
         fc =   self.DoubleSpinBox_13.value() 
@@ -741,14 +732,16 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         f1a_p = self.DoubleSpinBox_12.value()
         ans = funcs.fi2(fc,f2_p,f1a_p)
         ans = str(ans)
-        self.textBrowser.setText(ans)
+        fans = f"F_i Belt = {ans}"
+        self.textBrowser.setText(fans)
 
     def f2(self):
         f1a = self.DoubleSpinBox_5.value()
         f1a_f2 = self.fDoubleSpinBox_7.value()
         ans = funcs.f2(f1a,f1a_f2)  
         ans = str(ans)
-        self.textBrowser.setText(ans)
+        fans = f"F_2 Belt = {ans}"
+        self.textBrowser.setText(fans)
 
 
     def f1a(self):
@@ -758,7 +751,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         cv = self.fDoubleSpinBox_11.value()
         ans = funcs.f1a(b,fa,cp,cv)
         ans = str(ans)
-        self.textBrowser.setText(ans)
+        fans = f"(F_1)_a Belt = {ans}"
+        self.textBrowser.setText(fans)
 
 
 
@@ -769,7 +763,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         fc = self.fDoubleSpinBox_19.value()
         ans = funcs.f_prime(phi,f1a_p,fc,f_2)
         ans = str(ans)
-        self.textBrowser.setText(ans)
+        fans = f"f' Belt = {ans}"
+        self.textBrowser.setText(fans)
 
 
     def dip(self):   
@@ -777,8 +772,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         w = self.fDoubleSpinBox_20.value()
         fi_p = self.fDoubleSpinBox_21.value()
         ans = funcs.dip(c,w,fi_p)
-        ans = str(ans)
-        self.textBrowser.setText(ans)
+        fans = f"dip Belt = {ans}"
+        self.textBrowser.setText(fans)
 
 
 if __name__ == "__main__":
