@@ -1,5 +1,6 @@
 from csv import excel_tab
 from multiprocessing import Value
+from re import split
 from PyQt5 import QtCore, QtWidgets, uic
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox, QPushButton
@@ -147,20 +148,31 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
     def write_history_to_table(self):
         # rows = self.tableWidget_6.rowCount()
         # columns = self.tableWidget_6.columnCount()
-        # sender = self.sender()
+        # sender = self.sender(o)
         for row, item in enumerate(history):
-            self.tableWidget_6.setItem(row, 0, QTableWidgetItem(item))
+            self.tableWidget_6.setItem(row, 0, QTableWidgetItem(item[0]))
+
+            self.tableWidget_6.setItem(row, 1, QTableWidgetItem(item[1]))
 
 
     def append_text_to_history(self):
         text = self.textBrowser.toPlainText()
-        if text.split()[0] != "Error:":
+        split_text = text.split()
+        if split_text[0] != "Error:":
+
+            formula_name = split_text[0]
+            unit = split_text[1]
+            value = str(round(float(split_text[3]), 3))
+
+
+            item_to_add = [f"{formula_name} {unit}", value]
             if len(history) == 0:
-                history.append(text)
-            elif history[-1] != text:
+                history.append(item_to_add)
+            elif history[-1][1] != value:
+                print(history[-1])
                 if len(history) == 10:
                     history.pop(0)
-                history.append(text)
+                history.append(item_to_add)
                             
 
     def item_clicked(self, item, column):

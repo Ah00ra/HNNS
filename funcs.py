@@ -90,7 +90,7 @@ def TorqueBelt(H_nom,K_s,n_d,n):
 #TODO: check if it wasn't error
 def f1a_f2(T,d):
     ans = (2*T)/d
-    ans =f"{ans} N" 
+    ans =f"f1a_f2 (N) = {ans}" 
     
     return ans
 
