@@ -124,6 +124,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.DoubleSpinBox_160.setHidden(True)
         self.DoubleSpinBox_161.setHidden(True)
 
+        self.comboBox_5.setHidden(True)
+        self.comboBox_6.setHidden(True)
+        self.comboBox_7.setHidden(True)
+        self.comboBox_8.setHidden(True)
+
+
         self.treeWidget.itemClicked['QTreeWidgetItem*','int'].connect(self.item_clicked)
 
         self.textBrowser.textChanged.connect(self.append_text_to_history)
@@ -136,6 +142,9 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         # wire rope
         self.comboBox_3.currentIndexChanged.connect(self.number_of_d)
         self.pushButton_2.clicked.connect(self.clear_table_and_history)
+
+        # dynamic combo for LP vbelt
+        self.comboBox_2.currentIndexChanged.connect(self.dynamic_combo_lp)
     
 
     def clear_table_and_history(self):
@@ -284,6 +293,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if item.text(column) == "LP":
             self.stackedWidget.setCurrentIndex(26)
             self.pushButton_36.clicked.connect(self.lengh_pitch_vbelt)
+
+            self.pushButton_37.clicked.connect(self.combo_lengh_pitch_vbelt)
 
 
 
@@ -789,6 +800,85 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         ans = funcs.lengh_pitch_vbelt(c, capd, d)
         fans = f"Lengh of pitch = {ans}"
         self.textBrowser.setText(fans)
+
+    def combo_lengh_pitch_vbelt(self):
+        selected_type = self.comboBox_2.currentText()
+        if selected_type == "A":
+            value = self.comboBox_4.currentText()
+            value = int(value)
+            ans = 1.3 + value
+            fans = f"lengh of pitch (A{value}) = {ans}"
+            self.textBrowser.setText(fans)
+        elif selected_type == "B":
+            value = self.comboBox_5 .currentText()
+            value = int(value)
+            ans = 1.8 + value
+            fans = f"lengh of pitch (B{value}) = {ans}"
+            self.textBrowser.setText(fans)
+        elif selected_type == "C":
+            value = self.comboBox_6 .currentText()
+            value = int(value)
+            ans = 2.9 + value
+            fans = f"lengh of pitch (C{value}) = {ans}"
+            self.textBrowser.setText(fans)
+        elif selected_type == "D":
+            value = self.comboBox_7 .currentText()
+            value = int(value)
+            ans = 3.3 + value
+            fans = f"lengh of pitch (D{value}) = {ans}"
+            self.textBrowser.setText(fans)
+        elif selected_type == "E":
+            value = self.comboBox_8 .currentText()
+            value = int(value)
+            ans = 4.5 + value
+            fans = f"lengh of pitch (E{value}) = {ans}"
+            self.textBrowser.setText(fans)
+
+
+    def dynamic_combo_lp(self):
+        selected_type = self.comboBox_2.currentText()
+        if selected_type == "A":
+            self.comboBox_4.show()
+            self.comboBox_5.hide()
+            self.comboBox_6.hide()
+            self.comboBox_7.hide()
+            self.comboBox_8.hide()
+        if selected_type == "B":
+            self.comboBox_4.hide()
+            self.comboBox_5.show()
+            self.comboBox_6.hide()
+            self.comboBox_7.hide()
+            self.comboBox_8.hide()
+        if selected_type == "C":
+            self.comboBox_4.hide()
+            self.comboBox_5.hide()
+            self.comboBox_6.show()
+            self.comboBox_7.hide()
+            self.comboBox_8.hide()
+        if selected_type == "D":
+            self.comboBox_4.hide()
+            self.comboBox_5.hide()
+            self.comboBox_6.hide()
+            self.comboBox_7.show()
+            self.comboBox_8.hide()
+        if selected_type == "E":
+            self.comboBox_4.hide()
+            self.comboBox_5.hide()
+            self.comboBox_6.hide()
+            self.comboBox_7.hide()
+            self.comboBox_8.show()
+
+# def number_of_d(self):
+#     d = int(self.comboBox_3.currentText())
+#     for i in range(10):
+#         ind = 152+i
+#         getattr(self, f'htext_{ind}').hide()
+#         getattr(self, f'DoubleSpinBox_{ind}').hide()
+
+#     for i in range(d):
+#         ind = 152+i
+#         getattr(self, f'htext_{ind}').show()
+#         getattr(self, f'DoubleSpinBox_{ind}').show()
 
 if __name__ == "__main__":
     import sys
