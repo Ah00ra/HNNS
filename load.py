@@ -293,9 +293,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if item.text(column) == "LP":
             self.stackedWidget.setCurrentIndex(26)
             self.pushButton_36.clicked.connect(self.lengh_pitch_vbelt)
-
             self.pushButton_37.clicked.connect(self.combo_lengh_pitch_vbelt)
 
+        if item.text(column) == "Center Distance":
+            self.stackedWidget.setCurrentIndex(27)
+            self.pushButton_38.clicked.connect(self.cente_distance_vbelt)
 
 
 
@@ -314,8 +316,6 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 if ind == 7:
                     self.pushButton_29.clicked.connect(self.fprime2)
                     self.stackedWidget.setCurrentIndex(20)
-
-
     def open_wire_rope_tables(self):
             self.wire_window = Wire_Rope_Tables()
             # Show the second window
@@ -828,7 +828,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             fans = f"lengh of pitch (D{value}) = {ans}"
             self.textBrowser.setText(fans)
         elif selected_type == "E":
-            value = self.comboBox_8 .currentText()
+            value = self.comboBox_8.currentText()
             value = int(value)
             ans = 4.5 + value
             fans = f"lengh of pitch (E{value}) = {ans}"
@@ -868,17 +868,16 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.comboBox_7.hide()
             self.comboBox_8.show()
 
-# def number_of_d(self):
-#     d = int(self.comboBox_3.currentText())
-#     for i in range(10):
-#         ind = 152+i
-#         getattr(self, f'htext_{ind}').hide()
-#         getattr(self, f'DoubleSpinBox_{ind}').hide()
 
-#     for i in range(d):
-#         ind = 152+i
-#         getattr(self, f'htext_{ind}').show()
-#         getattr(self, f'DoubleSpinBox_{ind}').show()
+    def cente_distance_vbelt(self):
+        # dont write center_dist.... fullname!
+        lp = self.DoubleSpinBox_93.value()
+        capd = self.DoubleSpinBox_94.value()
+        d = self.DoubleSpinBox_95.value() 
+        ans = funcs.center_distance_vbelt(lp, capd, d)
+        fans = f"Center to center pulley = {ans}"
+        self.textBrowser.setText(fans)
+
 
 if __name__ == "__main__":
     import sys

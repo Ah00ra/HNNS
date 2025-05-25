@@ -81,7 +81,7 @@
         <bool>true</bool>
        </property>
        <property name="currentIndex">
-        <number>26</number>
+        <number>27</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -5870,6 +5870,114 @@ p, li { white-space: pre-wrap; }
          </layout>
         </widget>
        </widget>
+       <widget class="QWidget" name="center_distance_vbelt">
+        <widget class="QWidget" name="layoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>173</width>
+           <height>127</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_34">
+          <item row="0" column="0">
+           <widget class="QLabel" name="htext_140">
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L&lt;span style=&quot; vertical-align:sub;&quot;&gt;P&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_93">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>0.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="htext_141">
+            <property name="text">
+             <string>D</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_94">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>0.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="htext_142">
+            <property name="text">
+             <string>d</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_95">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>0.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QPushButton" name="pushButton_38">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -6129,6 +6237,11 @@ p, li { white-space: pre-wrap; }
            <item>
             <property name="text">
              <string>LP</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Center Distance</string>
             </property>
            </item>
           </item>
