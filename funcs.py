@@ -1319,6 +1319,11 @@ def center_distance_vbelt(lp, cd, d):
     return ans
 print(center_distance_vbelt(113.8, 11 , 7.4))
 
+def lengh_pitch_vbelt(c, capd, d):
+    ans = (2 * c) + (math.pi*(capd+d)/2) + (((capd-d)**2)/(4*c))
+    return ans
+
+print(lengh_pitch_vbelt(c=42.4, capd=11, d=7.4))
 
 def ha_vbelt(k1, k2, h_tab):
     ans = k1 *k2 *h_tab
