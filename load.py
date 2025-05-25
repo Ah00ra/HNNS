@@ -280,6 +280,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.stackedWidget.setCurrentIndex(25)
             self.pushButton_35.clicked.connect(self.open_wire_rope_tables)
             self.pushButton_35.clicked.connect(self.wire_rope)
+        
+        if item.text(column) == "LP":
+            self.stackedWidget.setCurrentIndex(26)
+            self.pushButton_36.clicked.connect(self.lengh_pitch_vbelt)
+
 
 
 
@@ -775,6 +780,15 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         fans = f"dip Belt = {ans}"
         self.textBrowser.setText(fans)
 
+
+    def lengh_pitch_vbelt(self):
+        print("IM IN")
+        c = self.DoubleSpinBox_90.value()
+        capd = self.DoubleSpinBox_91.value()
+        d = self.DoubleSpinBox_92.value()
+        ans = funcs.lengh_pitch_vbelt(c, capd, d)
+        fans = f"Lengh of pitch = {ans}"
+        self.textBrowser.setText(fans)
 
 if __name__ == "__main__":
     import sys

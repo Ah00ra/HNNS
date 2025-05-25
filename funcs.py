@@ -1319,6 +1319,7 @@ def center_distance_vbelt(lp, cd, d):
     return ans
 print(center_distance_vbelt(113.8, 11 , 7.4))
 
+@error_handling_decorator
 def lengh_pitch_vbelt(c, capd, d):
     ans = (2 * c) + (math.pi*(capd+d)/2) + (((capd-d)**2)/(4*c))
     return ans

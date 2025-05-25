@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1646</width>
-    <height>889</height>
+    <width>1681</width>
+    <height>884</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -52,7 +52,7 @@
         <rect>
          <x>20</x>
          <y>10</y>
-         <width>1081</width>
+         <width>1171</width>
          <height>631</height>
         </rect>
        </property>
@@ -81,7 +81,7 @@
         <bool>true</bool>
        </property>
        <property name="currentIndex">
-        <number>11</number>
+        <number>26</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -103,8 +103,8 @@
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; font-weight:600;&quot;&gt;HNNS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:72pt; font-weight:600;&quot;&gt;HNNS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </widget>
@@ -2099,8 +2099,8 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>430</x>
            <y>20</y>
-           <width>721</width>
-           <height>401</height>
+           <width>731</width>
+           <height>321</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -5583,6 +5583,114 @@ p, li { white-space: pre-wrap; }
          </widget>
         </widget>
        </widget>
+       <widget class="QWidget" name="LP_vbelt">
+        <widget class="QWidget" name="">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>11</y>
+           <width>152</width>
+           <height>127</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_32">
+          <item row="0" column="0">
+           <widget class="QLabel" name="htext_137">
+            <property name="text">
+             <string>C</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_90">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>0.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="htext_138">
+            <property name="text">
+             <string>D</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_91">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>0.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="htext_139">
+            <property name="text">
+             <string>d</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_92">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::NoButtons</enum>
+            </property>
+            <property name="specialValueText">
+             <string>0</string>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="minimum">
+             <double>0.000000000000000</double>
+            </property>
+            <property name="maximum">
+             <double>1000000000000.000000000000000</double>
+            </property>
+            <property name="value">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QPushButton" name="pushButton_36">
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -5837,6 +5945,16 @@ p, li { white-space: pre-wrap; }
           </item>
           <item>
            <property name="text">
+            <string>V-belt</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>LP</string>
+            </property>
+           </item>
+          </item>
+          <item>
+           <property name="text">
             <string>Flat Metal Belt</string>
            </property>
            <item>
@@ -5928,8 +6046,8 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1646</width>
-     <height>26</height>
+     <width>1681</width>
+     <height>23</height>
     </rect>
    </property>
   </widget>
