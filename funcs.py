@@ -1310,6 +1310,7 @@ def nf_wire_rope(cap_w, w, l, a, ps, su,cap_d, d, er, dw, am):
         ans.append(d1_ans)
     return ans 
 
+@error_handling_decorator
 def center_distance_vbelt(lp, cd, d):
     a = lp-((math.pi/2) * (cd + d))
     b = a**2
@@ -1317,15 +1318,15 @@ def center_distance_vbelt(lp, cd, d):
     d = math.sqrt(b-c)
     ans = 0.25*(a+d)
     return ans
-print(center_distance_vbelt(113.8, 11 , 7.4))
+
 
 @error_handling_decorator
 def lengh_pitch_vbelt(c, capd, d):
     ans = (2 * c) + (math.pi*(capd+d)/2) + (((capd-d)**2)/(4*c))
     return ans
 
-print(lengh_pitch_vbelt(c=42.4, capd=11, d=7.4))
 
+@error_handling_decorator
 def ha_vbelt(k1, k2, h_tab):
     ans = k1 *k2 *h_tab
     return ans 
