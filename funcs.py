@@ -1,5 +1,6 @@
 from decimal import ROUND_UP
 import math
+from operator import index
 
 
 def error_handling_decorator(func):
@@ -1454,8 +1455,49 @@ def h_table_vbelt_int_speed(v, sheave_d, selected_type):
 
                 return linear_int(speed1, speed2, v, hp1, hp2)
         
+def linear_int_pulley(pulley1, pulley2, input_pulley, hp1, hp2):
+    ans = (input_pulley-pulley1)/(pulley2-pulley1)*(hp2-hp1)+hp1
+    return ans
 
-print(h_table_vbelt_int_speed(2500, 2.6, "A"))
+
+
+def h_table_vbelt_int_pulley(v, sheave_d, selected_type):
+    #TODO: out of the range not found!
+    vind = (v//1000)-1
+    if selected_type == "A":
+        if sheave_d < 2.6:
+            # TODO: Edit message error
+            return "Error: selected sheave diameter is not allowable"
+        if sheave_d > 5:
+            return "Error: ...."
+        index_pulley = 0
+        for i in range(len(standard_sheave_d_vbelt_A)):
+            if sheave_d > standard_sheave_d_vbelt_A[i]:
+                index_pulley = i
+        pulley1 = (standard_sheave_d_vbelt_A[index_pulley])
+        pulley2 = (standard_sheave_d_vbelt_A[index_pulley+1])
+
+        hp1= table_vbelt_standard_hp_type_A[index_pulley][vind]
+        hp2 = table_vbelt_standard_hp_type_A[index_pulley+1][vind]
+        return linear_int_pulley(pulley1, pulley2, sheave_d, hp1, hp2)
+                
+
+
+
+print(h_table_vbelt_int_pulley(2000, 3.2, "A"))
+
+def h_table_vnelt_int_pulley_and_speed(v, sheave_d, selected_type):
+    if selected_type == "A":
+        row = standard_sheave_d_vbelt_A.index(sheave_d)
+        for i in range(len(standard_speed_vbelt)):
+            if v < standard_speed_vbelt[i]:
+                speed2 = standard_speed_vbelt[i]
+                speed1 = standard_speed_vbelt[i-1]
+                print(speed1, speed2)
+        pass
+    pass
+print(h_table_vnelt_int_pulley_and_speed(2500, 3, "A"))
+#print(h_table_vbelt_int_speed(2500, 2.6, "A"))
 
 def hd_vbelt(h_nom, ks, ns):
     ans = h_nom*ks*ns
