@@ -1435,8 +1435,27 @@ def h_table_vbelt(v,sheave_d,selected_type):
             hp = table_vbelt_standard_hp_type_E[row][(v//1000)-1]
             return hp
 
+def linear_int(speed1, speed2, v, hp1, hp2):
+    ans = ((hp2-hp1)*((v-speed1)/(speed2-speed1)))+hp1
+    return ans
 
+def h_table_vbelt_int_speed(v, sheave_d, selected_type):
+    if selected_type == "A":
+        row = standard_sheave_d_vbelt_A.index(sheave_d)
+        for i in range(len(standard_speed_vbelt)):
+            if v < standard_speed_vbelt[i]:
+                speed2 = standard_speed_vbelt[i]
+                speed1 = standard_speed_vbelt[i-1]
+                print(speed1, speed2)
+                row = standard_sheave_d_vbelt_A.index(sheave_d)
+                hp2 = table_vbelt_standard_hp_type_A[row][i]
+                hp1 = table_vbelt_standard_hp_type_A[row][i-1]
+                print(hp2, hp1)
 
+                return linear_int(speed1, speed2, v, hp1, hp2)
+        
+
+print(h_table_vbelt_int_speed(2500, 2.6, "A"))
 
 def hd_vbelt(h_nom, ks, ns):
     ans = h_nom*ks*ns
