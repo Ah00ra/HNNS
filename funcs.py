@@ -1387,20 +1387,53 @@ table_vbelt_standard_hp_type_E = [
     [13.4, 23.7, 31.8, 37.1, 39.1]]
 
 def h_table_vbelt(v,sheave_d,selected_type):
-
-
+    # TODO NOT found handle error
+    vind = (v//1000)-1
     if selected_type == "A" :
+        if sheave_d >= 5:
+            hp = table_vbelt_standard_hp_type_A[-1][vind]
+            return hp
 
-        if sheave_d in standard_sheave_d_vbelt_A:
+        elif sheave_d in standard_sheave_d_vbelt_A:
             row = standard_sheave_d_vbelt_A.index(sheave_d)
-            hp = table_vbelt_standard_hp_type_A[row][(v//1000)-1]
-            print(hp)
+            hp = table_vbelt_standard_hp_type_A[row][vind]
+            return hp
 
+    elif selected_type == "B" :
+        if sheave_d >= 7:
+            hp = table_vbelt_standard_hp_type_B[-1][vind]
+            return hp
+        elif sheave_d in standard_sheave_d_vbelt_B:
+            row = standard_sheave_d_vbelt_B.index(sheave_d)
+            hp = table_vbelt_standard_hp_type_B[row][(v//1000)-1]
+            return hp
 
-h_table_vbelt(2000, 3, "A")
+    elif selected_type == "C" :
+        if sheave_d >= 12:
+            hp = table_vbelt_standard_hp_type_C[-1][vind]
+            return hp
+        elif sheave_d in standard_sheave_d_vbelt_C:
+            row = standard_sheave_d_vbelt_C.index(sheave_d)
+            hp = table_vbelt_standard_hp_type_C[row][(v//1000)-1]
+            return hp
 
+    elif selected_type == "D" :
+        if sheave_d >= 17:
+            hp = table_vbelt_standard_hp_type_D[-1][vind]
+            return hp
+        if sheave_d in standard_sheave_d_vbelt_D:
+            row = standard_sheave_d_vbelt_D.index(sheave_d)
+            hp = table_vbelt_standard_hp_type_D[row][(v//1000)-1]
+            return hp
 
-
+    elif selected_type == "E" :
+        if sheave_d >= 28:
+            hp = table_vbelt_standard_hp_type_E[-1][vind]
+            return hp
+        if sheave_d in standard_sheave_d_vbelt_E:
+            row = standard_sheave_d_vbelt_E.index(sheave_d)
+            hp = table_vbelt_standard_hp_type_E[row][(v//1000)-1]
+            return hp
 
 
 
