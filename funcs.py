@@ -1331,6 +1331,80 @@ def ha_vbelt(k1, k2, h_tab):
     ans = k1 *k2 *h_tab
     return ans 
 
+standard_speed_vbelt = [1000,2000,3000,4000,5000]
+
+standard_sheave_d_vbelt_A = [2.6, 3, 3.4, 3.8, 4.2, 4.6, 5]
+standard_sheave_d_vbelt_B = [4.2, 4.6, 5, 5.4, 5.8, 6.2, 6.6, 7]
+standard_sheave_d_vbelt_C = [6, 7, 8, 9, 10, 11, 12]
+standard_sheave_d_vbelt_D = [10, 11, 12, 13, 14, 15, 16, 17]
+standard_sheave_d_vbelt_E = [16, 18 ,20, 22, 24, 26, 28]
+
+table_vbelt_standard_hp_type_A = [
+    [0.47, 0.62, 0.53, 0.15, 0.10],
+    [0.66, 1.01, 1.12, 0.93, 0.38],
+    [0.81, 1.31, 1.57, 1.53, 1.12],
+    [0.93, 1.55, 1.92, 2.00, 1.71],
+    [1.03, 1.74, 2.20, 2.38, 2.19],
+    [1.11, 1.89, 2.44, 2.69, 2.58],
+    [1.17, 2.03, 2.64, 2.96, 2.89],]
+
+table_vbelt_standard_hp_type_B = [
+    [1.07, 1.58, 1.68, 1.26, 0.22],
+    [1.27, 1.99, 2.29, 2.08, 1.24],
+    [1.44, 2.33, 2.80, 2.76, 2.10],
+    [1.59, 2.62, 3.24, 3.34, 2.82],
+    [1.72, 2.87, 3.61, 3.85, 3.45],
+    [1.82, 3.09, 3.94, 4.28, 4.00],
+    [1.92, 3.29, 4.23, 4.67, 4.48],
+    [2.01, 3.46, 4.49, 5.01, 4.90]]
+
+table_vbelt_standard_hp_type_C = [
+    [6.00, 1.84, 2.66, 2.72, 1.87],
+    [2.48, 3.94, 4.64, 4.44, 3.12],
+    [2.96, 4.90, 6.09, 6.36, 5.52],
+    [3.34, 5.65, 7.21, 7.86, 7.39],
+    [3.64, 6.25, 8.11, 9.06, 8.89],
+    [3.88, 6.74, 8.84, 10.0, 10.1],
+    [4.09, 7.15, 9.46, 10.9, 11.1]]
+
+table_vbelt_standard_hp_type_D = [
+    [4.14, 6.13, 6.55, 5.09, 1.35],
+    [5.00, 7.83, 9.11, 8.50, 5.62],
+    [5.71, 9.26, 11.2, 11.4, 9.18],
+    [6.31, 10.5, 13.0, 13.8, 12.2],
+    [6.82, 11.5, 14.6, 15.8, 14.8],
+    [7.27, 12.4, 15.9, 17.6, 17.0],
+    [7.66, 13.2, 17.1, 19.2, 19.0],
+    [8.01, 13.9, 18.1, 20.6, 20.7]]
+
+table_vbelt_standard_hp_type_E = [
+    [8.68, 14.0, 17.5, 18.1, 15.3],
+    [9.92, 16.7, 21.2, 23.0, 21.5],
+    [10.9, 18.7, 24.2, 26.9, 26.4],
+    [11.7, 20.3, 26.6, 30.2, 30.5],
+    [12.4, 21.6, 28.6, 32.9, 33.8],
+    [13.0, 22.8, 30.3, 35.1, 36.7],
+    [13.4, 23.7, 31.8, 37.1, 39.1]]
+
+def h_table_vbelt(v,sheave_d,selected_type):
+
+
+    if selected_type == "A" :
+
+        if sheave_d in standard_sheave_d_vbelt_A:
+            row = standard_sheave_d_vbelt_A.index(sheave_d)
+            hp = table_vbelt_standard_hp_type_A[row][(v//1000)-1]
+            print(hp)
+
+
+h_table_vbelt(2000, 3, "A")
+
+
+
+
+
+
+
 def hd_vbelt(h_nom, ks, ns):
     ans = h_nom*ks*ns
     return ans
@@ -1343,18 +1417,18 @@ def nb_vbelt(ha, hd):
 def fc_vbelt(kc, v):
     ans = kc * ((v/1000)**2)
     return ans
-print(fc_vbelt(.965, 3390))
+#print(fc_vbelt(.965, 3390))
 
 
 def delta_f_vbelt(hd, nb, n , d):
     ans = (63025*hd/nb)/(n*(d/2))
     return ans
-print(delta_f_vbelt(13,3,1750,7.4))
+#print(delta_f_vbelt(13,3,1750,7.4))
 
 def f1_vbelt(fc, detaf, exp):
     ans = fc + ((detaf*exp)/(exp-1))
     return ans
-print(f1_vbelt(11.1, 42.2, 4.788))
+#print(f1_vbelt(11.1, 42.2, 4.788))
 
 def f2_vbelt(f1, deltaf):
     ans = f1 - deltaf
@@ -1363,12 +1437,12 @@ def f2_vbelt(f1, deltaf):
 def fi_vbelt(f1, f2, fc):
     ans = ((f1+f2)/2)-fc
     return ans
-print(fi_vbelt(64.4,22.2,11.1))
+#print(fi_vbelt(64.4,22.2,11.1))
 
 def nfs_vbelt(ha, nb, hnom, ks):
     ans = (ha*nb)/(hnom*ks)
     return ans
-print(nfs_vbelt(4.878,3,10,1.3))
+#print(nfs_vbelt(4.878,3,10,1.3))
 
 def fb1_vbelt(kb, d):
     ans = kb/d
@@ -1392,7 +1466,7 @@ def np_vbelt(k, t1, t2, b):
     ans = ((a+b)**-1)
     fans = "{:.3e}".format(ans)
     return fans
-print(np_vbelt(1193,142,116.8,10.926))
+#print(np_vbelt(1193,142,116.8,10.926))
 
 def t_vbelt(np, lp, v):
 #combobox,hide np if np>10e9
