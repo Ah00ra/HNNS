@@ -1610,14 +1610,26 @@ def h_table_vbelt_int_pulley(v, sheave_d, selected_type):
 
 def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
     if selected_type == "A":
-        row = standard_sheave_d_vbelt_A.index(sheave_d)
-        for i in range(len(standard_speed_vbelt)):
-            if v < standard_speed_vbelt[i]:
-                speed2 = standard_speed_vbelt[i]
-                speed1 = standard_speed_vbelt[i-1]
-                print(speed1, speed2)
+    #standard_sheave_d_vbelt_A = [2.6, 3, 3.4, 3.8, 4.2, 4.6, 5]   
+        pulley_index = 0
+        for ind in range(len(standard_sheave_d_vbelt_A)):
+            if sheave_d > standard_sheave_d_vbelt_A[ind]:
+                pulley_index = ind
         
-print(h_table_vbelt_int_pulley_and_speed(2500,2.8,"A"))    
+        pulley1_index=pulley_index
+        pulley3_index=pulley_index+1
+
+        speed_index = 0
+        for ind in range(len(standard_speed_vbelt)):
+            if v > standard_speed_vbelt[ind]:
+                speed_index = ind
+        speed1_index = speed_index
+        speed3_index = speed_index+1
+        print(standard_speed_vbelt[speed1_index])
+        print(standard_speed_vbelt[speed3_index])
+
+
+print(h_table_vbelt_int_pulley_and_speed(2500,3.5,"A"))    
 #print(h_table_vbelt_int_speed(2500, 2.6, "A"))
 
 def hd_vbelt(h_nom, ks, ns):
