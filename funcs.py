@@ -1436,7 +1436,7 @@ def h_table_vbelt(v,sheave_d,selected_type):
             hp = table_vbelt_standard_hp_type_E[row][(v//1000)-1]
             return hp
 
-def linear_int(speed1, speed2, v, hp1, hp2):
+def linear_int_speed(speed1, speed2, v, hp1, hp2):
     ans = ((hp2-hp1)*((v-speed1)/(speed2-speed1)))+hp1
     return ans
 
@@ -1453,23 +1453,78 @@ def h_table_vbelt_int_speed(v, sheave_d, selected_type):
                 hp1 = table_vbelt_standard_hp_type_A[row][i-1]
                 print(hp2, hp1)
 
-                return linear_int(speed1, speed2, v, hp1, hp2)
+                return linear_int_speed(speed1, speed2, v, hp1, hp2)
         
+    if selected_type == "B":
+        row = standard_sheave_d_vbelt_A.index(sheave_d)
+        for i in range(len(standard_speed_vbelt)):
+            if v < standard_speed_vbelt[i]:
+                speed2 = standard_speed_vbelt[i]
+                speed1 = standard_speed_vbelt[i-1]
+                print(speed1, speed2)
+                row = standard_sheave_d_vbelt_B.index(sheave_d)
+                hp2 = table_vbelt_standard_hp_type_B[row][i]
+                hp1 = table_vbelt_standard_hp_type_B[row][i-1]
+                print(hp2, hp1)
+
+                return linear_int_speed(speed1, speed2, v, hp1, hp2)
+            
+    if selected_type == "C":
+        row = standard_sheave_d_vbelt_C.index(sheave_d)
+        for i in range(len(standard_speed_vbelt)):
+            if v < standard_speed_vbelt[i]:
+                speed2 = standard_speed_vbelt[i]
+                speed1 = standard_speed_vbelt[i-1]
+                print(speed1, speed2)
+                row = standard_sheave_d_vbelt_C.index(sheave_d)
+                hp2 = table_vbelt_standard_hp_type_C[row][i]
+                hp1 = table_vbelt_standard_hp_type_C[row][i-1]
+                print(hp2, hp1)
+
+                return linear_int_speed(speed1, speed2, v, hp1, hp2)
+
+    if selected_type == "D":
+        row = standard_sheave_d_vbelt_D.index(sheave_d)
+        for i in range(len(standard_speed_vbelt)):
+            if v < standard_speed_vbelt[i]:
+                speed2 = standard_speed_vbelt[i]
+                speed1 = standard_speed_vbelt[i-1]
+                print(speed1, speed2)
+                row = standard_sheave_d_vbelt_D.index(sheave_d)
+                hp2 = table_vbelt_standard_hp_type_D[row][i]
+                hp1 = table_vbelt_standard_hp_type_D[row][i-1]
+                print(hp2, hp1)
+
+                return linear_int_speed(speed1, speed2, v, hp1, hp2)
+
+    if selected_type == "E":
+        row = standard_sheave_d_vbelt_E.index(sheave_d)
+        for i in range(len(standard_speed_vbelt)):
+            if v < standard_speed_vbelt[i]:
+                speed2 = standard_speed_vbelt[i]
+                speed1 = standard_speed_vbelt[i-1]
+                print(speed1, speed2)
+                row = standard_sheave_d_vbelt_E.index(sheave_d)
+                hp2 = table_vbelt_standard_hp_type_E[row][i]
+                hp1 = table_vbelt_standard_hp_type_E[row][i-1]
+                print(hp2, hp1)
+
+                return linear_int_speed(speed1, speed2, v, hp1, hp2)                                    
+
+
 def linear_int_pulley(pulley1, pulley2, input_pulley, hp1, hp2):
     ans = (input_pulley-pulley1)/(pulley2-pulley1)*(hp2-hp1)+hp1
     return ans
-
-
 
 def h_table_vbelt_int_pulley(v, sheave_d, selected_type):
     #TODO: out of the range not found!
     vind = (v//1000)-1
     if selected_type == "A":
         if sheave_d < 2.6:
-            # TODO: Edit message error
-            return "Error: selected sheave diameter is not allowable"
+            # TODO: Edit message error d>5
+            return "Error: selected Sheave Pitch Diameter is not allowable."
         if sheave_d > 5:
-            return "Error: ...."
+            return "Error:For Sheave Pitch Diameters larger than (7 in) in "" Belt Section; Use Standard (7 in) Sheave Pitch Diameter."
         index_pulley = 0
         for i in range(len(standard_sheave_d_vbelt_A)):
             if sheave_d > standard_sheave_d_vbelt_A[i]:
@@ -1479,14 +1534,81 @@ def h_table_vbelt_int_pulley(v, sheave_d, selected_type):
 
         hp1= table_vbelt_standard_hp_type_A[index_pulley][vind]
         hp2 = table_vbelt_standard_hp_type_A[index_pulley+1][vind]
+
         return linear_int_pulley(pulley1, pulley2, sheave_d, hp1, hp2)
-                
+
+    if selected_type == "B":
+        if sheave_d < 4.2 :
+            return "Error: selected Sheave Pitch Diameter is not allowable; Select another Belt Section."
+        if sheave_d > 7:
+            return "Error:For Sheave Pitch Diameters larger than (7 in) in "" Belt Section; Use Standard (7 in) Sheave Pitch Diameter."
+        index_pulley = 0
+        for i in range(len(standard_sheave_d_vbelt_B)):
+            if sheave_d > standard_sheave_d_vbelt_B[i]:
+                index_pulley = i
+        pulley1 = (standard_sheave_d_vbelt_B[index_pulley])
+        pulley2 = (standard_sheave_d_vbelt_B[index_pulley+1])
+
+        hp1= table_vbelt_standard_hp_type_B[index_pulley][vind]
+        hp2 = table_vbelt_standard_hp_type_B[index_pulley+1][vind]
+
+        return linear_int_pulley(pulley1, pulley2, sheave_d, hp1, hp2)                
+
+    if selected_type == "C":
+        if sheave_d < 6 :
+            return "Error: selected Sheave Pitch Diameter is not allowable; Select another Belt Section."
+        if sheave_d > 12 :
+            return "Error:For Sheave Pitch Diameters larger than (7 in) in "" Belt Section; Use Standard (7 in) Sheave Pitch Diameter."
+        index_pulley = 0
+        for i in range(len(standard_sheave_d_vbelt_C)):
+            if sheave_d > standard_sheave_d_vbelt_C[i]:
+                index_pulley = i
+        pulley1 = (standard_sheave_d_vbelt_C[index_pulley])
+        pulley2 = (standard_sheave_d_vbelt_C[index_pulley+1])
+
+        hp1= table_vbelt_standard_hp_type_C[index_pulley][vind]
+        hp2 = table_vbelt_standard_hp_type_C[index_pulley+1][vind]
+
+        return linear_int_pulley(pulley1, pulley2, sheave_d, hp1, hp2)
 
 
+    if selected_type == "D":
+        if sheave_d < 10 :
+            return "Error: selected Sheave Pitch Diameter is not allowable; Select another Belt Section."
+        if sheave_d > 17 :
+            return "Error:For Sheave Pitch Diameters larger than (7 in) in "" Belt Section; Use Standard (7 in) Sheave Pitch Diameter."
+        index_pulley = 0
+        for i in range(len(standard_sheave_d_vbelt_D)):
+            if sheave_d > standard_sheave_d_vbelt_D[i]:
+                index_pulley = i
+        pulley1 = (standard_sheave_d_vbelt_D[index_pulley])
+        pulley2 = (standard_sheave_d_vbelt_D[index_pulley+1])
 
-print(h_table_vbelt_int_pulley(2000, 3.2, "A"))
+        hp1= table_vbelt_standard_hp_type_D[index_pulley][vind]
+        hp2 = table_vbelt_standard_hp_type_D[index_pulley+1][vind]
 
-def h_table_vnelt_int_pulley_and_speed(v, sheave_d, selected_type):
+        return linear_int_pulley(pulley1, pulley2, sheave_d, hp1, hp2)
+
+    if selected_type == "E":
+        if sheave_d < 16 :
+            return "Error: selected Sheave Pitch Diameter is not allowable; Select another Belt Section."
+        if sheave_d > 28 :
+            return "Error:For Sheave Pitch Diameters larger than (7 in) in "" Belt Section; Use Standard (7 in) Sheave Pitch Diameter."
+        index_pulley = 0
+        for i in range(len(standard_sheave_d_vbelt_E)):
+            if sheave_d > standard_sheave_d_vbelt_E[i]:
+                index_pulley = i
+        pulley1 = (standard_sheave_d_vbelt_E[index_pulley])
+        pulley2 = (standard_sheave_d_vbelt_E[index_pulley+1])
+
+        hp1= table_vbelt_standard_hp_type_E[index_pulley][vind]
+        hp2 = table_vbelt_standard_hp_type_E[index_pulley+1][vind]
+
+        return linear_int_pulley(pulley1, pulley2, sheave_d, hp1, hp2)
+    
+#print(h_table_vbelt_int_pulley(2000, 16.4, "E"))
+
+def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
     if selected_type == "A":
         row = standard_sheave_d_vbelt_A.index(sheave_d)
         for i in range(len(standard_speed_vbelt)):
@@ -1494,9 +1616,8 @@ def h_table_vnelt_int_pulley_and_speed(v, sheave_d, selected_type):
                 speed2 = standard_speed_vbelt[i]
                 speed1 = standard_speed_vbelt[i-1]
                 print(speed1, speed2)
-        pass
-    pass
-print(h_table_vnelt_int_pulley_and_speed(2500, 3, "A"))
+        
+print(h_table_vbelt_int_pulley_and_speed(2500,2.8,"A"))    
 #print(h_table_vbelt_int_speed(2500, 2.6, "A"))
 
 def hd_vbelt(h_nom, ks, ns):
