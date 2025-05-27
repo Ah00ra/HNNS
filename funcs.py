@@ -1616,20 +1616,45 @@ def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
             if sheave_d > standard_sheave_d_vbelt_A[ind]:
                 pulley_index = ind
         
-        pulley1_index=pulley_index
+        pulley1_index=pulley_index # row ind
         pulley3_index=pulley_index+1
 
+        pulley1 = standard_sheave_d_vbelt_A[pulley1_index]
+        pulley3 = standard_sheave_d_vbelt_A[pulley3_index]
+        print("00000000000000")
+        print(pulley1, pulley3)
         speed_index = 0
         for ind in range(len(standard_speed_vbelt)):
             if v > standard_speed_vbelt[ind]:
                 speed_index = ind
-        speed1_index = speed_index
+        speed1_index = speed_index # col ind
         speed3_index = speed_index+1
-        print(standard_speed_vbelt[speed1_index])
-        print(standard_speed_vbelt[speed3_index])
+
+        speed1 = standard_speed_vbelt[speed1_index]
+        speed3 = standard_speed_vbelt[speed3_index] # second speed! not third one!
+
+        hp1 = table_vbelt_standard_hp_type_A[pulley1_index][speed1_index]
+        hp2 = table_vbelt_standard_hp_type_A[pulley1_index][speed3_index]
+        hp3 = table_vbelt_standard_hp_type_A[pulley3_index][speed1_index]
+        hp4 = table_vbelt_standard_hp_type_A[pulley3_index][speed3_index]
 
 
-print(h_table_vbelt_int_pulley_and_speed(2500,3.5,"A"))    
+        hp12 = linear_int_speed(speed1, speed3, v, hp1, hp2)
+        hp34 = linear_int_speed(speed1, speed3, v, hp3, hp4)
+        
+        final_answer = linear_int_pulley(pulley1, pulley3, sheave_d, hp12, hp34)
+        return final_answer
+
+# table_vbelt_standard_hp_type_A = [
+#     [0.47, 0.62, 0.53, 0.15, 0.10],
+#     [0.66, 1.01, 1.12, 0.93, 0.38],
+#     [0.81, 1.31, 1.57, 1.53, 1.12],
+#     [0.93, 1.55, 1.92, 2.00, 1.71],
+#     [1.03, 1.74, 2.20, 2.38, 2.19],
+#     [1.11, 1.89, 2.44, 2.69, 2.58],
+#     [1.17, 2.03, 2.64, 2.96, 2.89],]
+
+print(h_table_vbelt_int_pulley_and_speed(2500,3.41,"A"))    
 #print(h_table_vbelt_int_speed(2500, 2.6, "A"))
 
 def hd_vbelt(h_nom, ks, ns):
