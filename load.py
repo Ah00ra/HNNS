@@ -23,6 +23,11 @@ def is_standard_speed(v):
         return True
     return False
 
+def is_htab_error_message(htab):
+    if re.search(r"\bError\b", htab):
+        return True
+        
+
 def is_standard_sheave_d(selected_type, sheave_d):
     sheave_d = float(sheave_d)
     standard_sheave_d_vbelt_A = [2.6, 3, 3.4, 3.8, 4.2, 4.6, 5]
@@ -914,12 +919,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         k2 = self.DoubleSpinBox_97.value()
         speed = self.comboBox_16.currentText()
         selected_type = self.comboBox_9.currentText()
-                        
+        
 
+       
+        
         if selected_type == "A":
             sheave_d = self.comboBox_10.currentText()
-            print(selected_type, type(sheave_d))
-            print("!!!",is_standard_sheave_d(selected_type, sheave_d))
             if is_standard_speed(speed) and is_standard_sheave_d(selected_type,sheave_d):
                 htab = funcs.h_table_vbelt(speed, sheave_d, "A")
                 ans = funcs.ha_vbelt(k1, k2, htab)
@@ -928,9 +933,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 
             elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_speed(speed, sheave_d, selected_type)
-                ans = funcs.ha_vbelt(k1, k2, htab)
-                fans = f"MIMI(bad v) = {ans}"
-                self.textBrowser.setText(fans)
+                if is_htab_error_message(htab):
+                    self.textBrowser.setText(htab)
+                else:
+                    ans = funcs.ha_vbelt(k1, k2, htab)
+                    fans = f"MIMI(bad v) = {ans}"
+                    self.textBrowser.setText(fans)
 
             elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_pulley(speed, sheave_d, selected_type)
@@ -956,9 +964,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 
             elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_speed(speed, sheave_d, selected_type)
-                ans = funcs.ha_vbelt(k1, k2, htab)
-                fans = f"MIMI(bad v) = {ans}"
-                self.textBrowser.setText(fans)
+                if is_htab_error_message(htab):
+                    self.textBrowser.setText(htab)
+                else:
+                    ans = funcs.ha_vbelt(k1, k2, htab)
+                    fans = f"MIMI(bad v) = {ans}"
+                    self.textBrowser.setText(fans)
 
             elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_pulley(speed, sheave_d, selected_type)
@@ -983,9 +994,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 
             elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_speed(speed, sheave_d, selected_type)
-                ans = funcs.ha_vbelt(k1, k2, htab)
-                fans = f"MIMI(bad v) = {ans}"
-                self.textBrowser.setText(fans)
+                if is_htab_error_message(htab):
+                    self.textBrowser.setText(htab)
+                else:
+                    ans = funcs.ha_vbelt(k1, k2, htab)
+                    fans = f"MIMI(bad v) = {ans}"
+                    self.textBrowser.setText(fans)
 
             elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_pulley(speed, sheave_d, selected_type)
@@ -1011,9 +1025,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 
             elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_speed(speed, sheave_d, selected_type)
-                ans = funcs.ha_vbelt(k1, k2, htab)
-                fans = f"MIMI(bad v) = {ans}"
-                self.textBrowser.setText(fans)
+                if is_htab_error_message(htab):
+                    self.textBrowser.setText(htab)
+                else:
+                    ans = funcs.ha_vbelt(k1, k2, htab)
+                    fans = f"MIMI(bad v) = {ans}"
+                    self.textBrowser.setText(fans)
 
             elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_pulley(speed, sheave_d, selected_type)
@@ -1038,9 +1055,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 
             elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_speed(speed, sheave_d, selected_type)
-                ans = funcs.ha_vbelt(k1, k2, htab)
-                fans = f"MIMI(bad v) = {ans}"
-                self.textBrowser.setText(fans)
+                if is_htab_error_message(htab):
+                    self.textBrowser.setText(htab)
+                else:
+                    ans = funcs.ha_vbelt(k1, k2, htab)
+                    fans = f"MIMI(bad v) = {ans}"
+                    self.textBrowser.setText(fans)
 
             elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_pulley(speed, sheave_d, selected_type)

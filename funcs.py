@@ -1438,8 +1438,6 @@ def h_table_vbelt(v,sheave_d,selected_type):
             hp = table_vbelt_standard_hp_type_E[row][(v//1000)-1]
             return hp
 
-print(h_table_vbelt(4000, 17, "D"))
-print(h_table_vbelt(4000, 19, "D"))
 
 def linear_int_speed(speed1, speed2, v, hp1, hp2):
     ans = ((hp2-hp1)*((v-speed1)/(speed2-speed1)))+hp1
@@ -1448,9 +1446,9 @@ def linear_int_speed(speed1, speed2, v, hp1, hp2):
 def h_table_vbelt_int_speed(v, sheave_d, selected_type):
     v = int(v)
     sheave_d = float(sheave_d)
+    if v > 5000 or v < 1000:
+        return "Error: speed range should be between 1000 and 5000."
     if selected_type == "A":
-        if v > 5000 or v < 1000:
-            return "Error: speed range should be between 1000 and 5000."
         row = standard_sheave_d_vbelt_A.index(sheave_d)
         for i in range(len(standard_speed_vbelt)):
             if v < standard_speed_vbelt[i]:
@@ -1519,7 +1517,7 @@ def h_table_vbelt_int_speed(v, sheave_d, selected_type):
                 print(hp2, hp1)
 
                 return linear_int_speed(speed1, speed2, v, hp1, hp2)                                    
-
+print(h_table_vbelt_int_speed(300, 2.6, "A"))
 
 def linear_int_pulley(pulley1, pulley2, input_pulley, hp1, hp2):
     ans = (input_pulley-pulley1)/(pulley2-pulley1)*(hp2-hp1)+hp1
