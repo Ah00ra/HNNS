@@ -1,7 +1,8 @@
 import re
 from PyQt5 import QtCore, QtWidgets, uic
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox, QPushButton
+from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox, QPushButton, QComboBox
+from PyQt5.QtGui import QDoubleValidator
 from PyQt5.uic import loadUi
 import funcs
 
@@ -17,13 +18,14 @@ def is_float_value(value):
         return False
 
 def is_standard_speed(v):
-    v = int(v)
+    v = float(v)
     standard_speed_vbelt = [1000,2000,3000,4000,5000]
     if v in standard_speed_vbelt:
         return True
     return False
 
 def is_htab_error_message(htab):
+    htab = str(htab)
     if re.search(r"\bError\b", htab):
         return True
         
@@ -66,7 +68,36 @@ class CustomDoubleSpinBox(QDoubleSpinBox):
         else:
             return f"{value:.3f}".rstrip('0').rstrip('.')
 
+class FloatOnlyComboBox(QComboBox):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setEditable(True)
+        self.setInsertPolicy(QComboBox.NoInsert)  # Prevent adding invalid entries
 
+        self.validator = QDoubleValidator()
+        self.validator.setNotation(QDoubleValidator.StandardNotation)
+        self.lineEdit().setValidator(self.validator)
+
+        # Regular expression to match valid float inputs (including partial)
+        self.float_regex = re.compile(r'^-?(\d+)?(\.\d*)?$')
+
+        self.lineEdit().textEdited.connect(self.on_text_edited)
+
+    def on_text_edited(self, text):
+        # Allow empty string (user clearing input)
+        if text == '':
+            return
+
+        # Check if text matches float regex (allows partial input)
+        if self.float_regex.match(text):
+            # Further check with validator for stricter validation
+            state, _, _ = self.validator.validate(text, 0)
+            if state == self.validator.Invalid:
+                # Invalid float input, revert to previous valid text
+                self.lineEdit().undo()
+        else:
+            # Not matching float pattern, revert
+            self.lineEdit().undo()
 
 
 class Wire_Rope_Tables(QWidget):
@@ -199,8 +230,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
 
         self.comboBox_16.setEditable(True)
+        validator = QDoubleValidator()
+        validator.setNotation(QDoubleValidator.StandardNotation)
         self.comboBox_16.lineEdit().setPlaceholderText("Select or Insert Speed")
         self.comboBox_16.setCurrentIndex(-1)
+        self.comboBox_16.lineEdit().setValidator(validator)
 
         self.treeWidget.itemClicked['QTreeWidgetItem*','int'].connect(self.item_clicked)
 
@@ -933,6 +967,9 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 
             elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
                 htab = funcs.h_table_vbelt_int_speed(speed, sheave_d, selected_type)
+                print("------------")
+                print(htab)
+                print("------------")
                 if is_htab_error_message(htab):
                     self.textBrowser.setText(htab)
                 else:

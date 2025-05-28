@@ -5973,7 +5973,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </widget>
        <widget class="QWidget" name="ha_vbelt">
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>21</x>
@@ -6093,7 +6093,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_3">
             <item>
-             <widget class="QComboBox" name="comboBox_10">
+             <widget class="FloatOnlyComboBox" name="comboBox_10">
               <property name="insertPolicy">
                <enum>QComboBox::NoInsert</enum>
               </property>
@@ -6120,7 +6120,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_11">
+             <widget class="FloatOnlyComboBox" name="comboBox_11">
               <property name="insertPolicy">
                <enum>QComboBox::NoInsert</enum>
               </property>
@@ -6147,7 +6147,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_12">
+             <widget class="FloatOnlyComboBox" name="comboBox_12">
               <property name="insertPolicy">
                <enum>QComboBox::NoInsert</enum>
               </property>
@@ -6174,7 +6174,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_13">
+             <widget class="FloatOnlyComboBox" name="comboBox_13">
               <property name="insertPolicy">
                <enum>QComboBox::NoInsert</enum>
               </property>
@@ -6201,7 +6201,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox_14">
+             <widget class="FloatOnlyComboBox" name="comboBox_14">
               <property name="insertPolicy">
                <enum>QComboBox::NoInsert</enum>
               </property>
@@ -6230,7 +6230,7 @@ p, li { white-space: pre-wrap; }
            </layout>
           </item>
           <item>
-           <widget class="QComboBox" name="comboBox_16">
+           <widget class="FloatOnlyComboBox" name="comboBox_16">
             <property name="editable">
              <bool>true</bool>
             </property>
@@ -6654,6 +6654,11 @@ p, li { white-space: pre-wrap; }
    <class>CustomDoubleSpinBox</class>
    <extends>QDoubleSpinBox</extends>
    <header location="global">load</header>
+  </customwidget>
+  <customwidget>
+   <class>FloatOnlyComboBox</class>
+   <extends>QComboBox</extends>
+   <header>load</header>
   </customwidget>
  </customwidgets>
  <tabstops>
