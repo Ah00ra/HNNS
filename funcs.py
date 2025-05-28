@@ -1531,7 +1531,7 @@ def h_table_vbelt_int_pulley(v, sheave_d, selected_type):
     if selected_type == "A":
         if sheave_d < 2.6:
             # TODO: Edit message error d>5
-            return "Error: selected Sheave Pitch Diameter is not allowable."
+            return "Error: selected Sheave Pitch Diameter is not allowable; in 'A' Belt Section "
         if sheave_d > 5:
             return "Error:For Sheave Pitch Diameters larger than (5 in) in 'A' Belt Section;" \
             "Use Standard (5 in) Sheave Pitch Diameter or use another belt section."
