@@ -1446,6 +1446,8 @@ def linear_int_speed(speed1, speed2, v, hp1, hp2):
     return ans
 
 def h_table_vbelt_int_speed(v, sheave_d, selected_type):
+    v = int(v)
+    sheave_d = float(sheave_d)
     if selected_type == "A":
         if v > 5000 or v < 1000:
             return "Error: speed range should be between 1000 and 5000."
@@ -1524,7 +1526,8 @@ def linear_int_pulley(pulley1, pulley2, input_pulley, hp1, hp2):
     return ans
 
 def h_table_vbelt_int_pulley(v, sheave_d, selected_type):
-    # TODO: edit error messages replace "" with ''
+    v = int(v)
+    sheave_d = float(sheave_d)
     #TODO: out of the range not found!
     vind = (v//1000)-1
     if selected_type == "A":

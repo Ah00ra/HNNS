@@ -17,14 +17,42 @@ def is_float_value(value):
         return False
 
 def is_standard_speed(v):
-    standard_speed_vbelt = [999,2000,3000,4000,5000]
+    v = int(v)
+    standard_speed_vbelt = [1000,2000,3000,4000,5000]
     if v in standard_speed_vbelt:
         return True
     return False
 
 def is_standard_sheave_d(selected_type, sheave_d):
-    pass
-        
+    sheave_d = float(sheave_d)
+    standard_sheave_d_vbelt_A = [2.6, 3, 3.4, 3.8, 4.2, 4.6, 5]
+    standard_sheave_d_vbelt_B = [4.2, 4.6, 5, 5.4, 5.8, 6.2, 6.6, 7]
+    standard_sheave_d_vbelt_C = [6, 7, 8, 9, 10, 11, 12]
+    standard_sheave_d_vbelt_D = [10, 11, 12, 13, 14, 15, 16, 17]
+    standard_sheave_d_vbelt_E = [16, 18 ,20, 22, 24, 26, 28]
+
+    if selected_type == "A":
+        if sheave_d in standard_sheave_d_vbelt_A:
+            return True
+        return False
+    elif selected_type == "B":
+        if sheave_d in standard_sheave_d_vbelt_B:
+            return True
+        return False
+    elif selected_type == "C":
+        if sheave_d in standard_sheave_d_vbelt_C:
+            return True
+        return False
+    elif selected_type == "D":
+        if sheave_d in standard_sheave_d_vbelt_D:
+            return True
+        return False
+    elif selected_type == "E":
+        if sheave_d in standard_sheave_d_vbelt_E:
+            return True
+        return False
+
+
 
 class CustomDoubleSpinBox(QDoubleSpinBox):
     def textFromValue(self, value):
@@ -886,15 +914,30 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         k2 = self.DoubleSpinBox_97.value()
         speed = self.comboBox_16.currentText()
         selected_type = self.comboBox_9.currentText()
+                        
 
-        
-        print(is_standard_speed(speed))
         if selected_type == "A":
             sheave_d = self.comboBox_10.currentText()
-            htab = funcs.h_table_vbelt(speed, sheave_d, "A")
-            ans = funcs.ha_vbelt(k1, k2, htab)
-            fans = f"MIMI = {ans}"
-            self.textBrowser.setText(fans)
+            print(selected_type, type(sheave_d))
+            print("!!!",is_standard_sheave_d(selected_type, sheave_d))
+            if is_standard_speed(speed) and is_standard_sheave_d(selected_type,sheave_d):
+                htab = funcs.h_table_vbelt(speed, sheave_d, "A")
+                ans = funcs.ha_vbelt(k1, k2, htab)
+                fans = f"MIMI = {ans}"
+                self.textBrowser.setText(fans)
+                
+            elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
+                htab = funcs.h_table_vbelt_int_speed(speed, sheave_d, selected_type)
+                ans = funcs.ha_vbelt(k1, k2, htab)
+                fans = f"MIMI(bad v) = {ans}"
+                self.textBrowser.setText(fans)
+
+            elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
+                htab = funcs.h_table_vbelt_int_pulley(speed, sheave_d, selected_type)
+                ans = funcs.ha_vbelt(k1, k2, htab)
+                fans = f"MIMI(bad sheave_d) = {ans}"
+                self.textBrowser.setText(fans)
+
         elif selected_type == "B":
             sheave_d = self.comboBox_11.currentText()
             htab = funcs.h_table_vbelt(speed, sheave_d, "B")
@@ -923,6 +966,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             fans = f"MIMI = {ans}"
             self.textBrowser.setText(fans)
 
+        print(sheave_d)
     def dynamic_combo_ha_vbelt(self):
         selected_type = self.comboBox_9.currentText()
         if selected_type == "A":
