@@ -129,6 +129,36 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.comboBox_7.setHidden(True)
         self.comboBox_8.setHidden(True)
 
+        self.comboBox_11.setHidden(True)
+        self.comboBox_12.setHidden(True)
+        self.comboBox_13.setHidden(True)
+        self.comboBox_14.setHidden(True)
+
+
+        self.comboBox_10.setEditable(True)
+        self.comboBox_10.lineEdit().setPlaceholderText("Select or Insert Sheave Pitch Diameter(in)")
+        self.comboBox_10.setCurrentIndex(-1)
+
+        self.comboBox_11.setEditable(True)
+        self.comboBox_11.lineEdit().setPlaceholderText("Select or Insert Sheave Pitch Diameter(in)")
+        self.comboBox_11.setCurrentIndex(-1)
+
+        self.comboBox_12.setEditable(True)
+        self.comboBox_12.lineEdit().setPlaceholderText("Select or Insert Sheave Pitch Diameter(in)")
+        self.comboBox_12.setCurrentIndex(-1)
+
+        self.comboBox_13.setEditable(True)
+        self.comboBox_13.lineEdit().setPlaceholderText("Select or Insert Sheave Pitch Diameter(in)")
+        self.comboBox_13.setCurrentIndex(-1)
+
+        self.comboBox_14.setEditable(True)
+        self.comboBox_14.lineEdit().setPlaceholderText("Select or Insert Sheave Pitch Diameter(in)")
+        self.comboBox_14.setCurrentIndex(-1)
+
+
+        self.comboBox_16.setEditable(True)
+        self.comboBox_16.lineEdit().setPlaceholderText("Select or Insert Speed")
+        self.comboBox_16.setCurrentIndex(-1)
 
         self.treeWidget.itemClicked['QTreeWidgetItem*','int'].connect(self.item_clicked)
 
@@ -145,6 +175,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         # dynamic combo for LP vbelt
         self.comboBox_2.currentIndexChanged.connect(self.dynamic_combo_lp)
+        # dynamic combo for HA vbelt
+        self.comboBox_9.currentIndexChanged.connect(self.dynamic_combo_ha_vbelt)
     
 
     def clear_table_and_history(self):
@@ -298,6 +330,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if item.text(column) == "Center Distance":
             self.stackedWidget.setCurrentIndex(27)
             self.pushButton_38.clicked.connect(self.cente_distance_vbelt)
+
+        if item.text(column) == "Ha Vbelt":
+            print("IN")
+            self.stackedWidget.setCurrentIndex(28)
 
 
 
@@ -834,6 +870,38 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             fans = f"lengh of pitch (E{value}) = {ans}"
             self.textBrowser.setText(fans)
 
+    def dynamic_combo_ha_vbelt(self):
+        selected_type = self.comboBox_9.currentText()
+        if selected_type == "A":
+            self.comboBox_10.show()
+            self.comboBox_11.hide()
+            self.comboBox_12.hide()
+            self.comboBox_13.hide()
+            self.comboBox_14.hide()
+        elif selected_type == "B":
+            self.comboBox_10.hide()
+            self.comboBox_11.show()
+            self.comboBox_12.hide()
+            self.comboBox_13.hide()
+            self.comboBox_14.hide()
+        elif selected_type == "C":
+            self.comboBox_10.hide()
+            self.comboBox_11.hide()
+            self.comboBox_12.show()
+            self.comboBox_13.hide()
+            self.comboBox_14.hide()
+        elif selected_type == "D":
+            self.comboBox_10.hide()
+            self.comboBox_11.hide()
+            self.comboBox_12.hide()
+            self.comboBox_13.show()
+            self.comboBox_14.hide()
+        elif selected_type == "E":
+            self.comboBox_10.hide()
+            self.comboBox_11.hide()
+            self.comboBox_12.hide()
+            self.comboBox_13.hide()
+            self.comboBox_14.show()
 
     def dynamic_combo_lp(self):
         selected_type = self.comboBox_2.currentText()

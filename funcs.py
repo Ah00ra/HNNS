@@ -1626,7 +1626,7 @@ def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
             return "Error:For Sheave Pitch Diameter larger than '5'(in) Use Standard '5'(in) in 'A' Belt Section"
 
 
-            pulley_index = 0
+        pulley_index = 0
         for ind in range(len(standard_sheave_d_vbelt_A)):
             if sheave_d > standard_sheave_d_vbelt_A[ind]:
                 pulley_index = ind
