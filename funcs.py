@@ -1388,6 +1388,8 @@ table_vbelt_standard_hp_type_E = [
     [13.4, 23.7, 31.8, 37.1, 39.1]]
 
 def h_table_vbelt(v,sheave_d,selected_type):
+    v = int(v)
+    sheave_d = float(sheave_d)
     # TODO NOT found handle error
     vind = (v//1000)-1
     if selected_type == "A" :
@@ -1435,6 +1437,9 @@ def h_table_vbelt(v,sheave_d,selected_type):
             row = standard_sheave_d_vbelt_E.index(sheave_d)
             hp = table_vbelt_standard_hp_type_E[row][(v//1000)-1]
             return hp
+
+print(h_table_vbelt(4000, 17, "D"))
+print(h_table_vbelt(4000, 19, "D"))
 
 def linear_int_speed(speed1, speed2, v, hp1, hp2):
     ans = ((hp2-hp1)*((v-speed1)/(speed2-speed1)))+hp1
@@ -1820,8 +1825,6 @@ def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
         return final_answer
     
 
-print(h_table_vbelt_int_pulley_and_speed(1500,3.1,"A"))    
-
 def hd_vbelt(h_nom, ks, ns):
     ans = h_nom*ks*ns
     return ans
@@ -1888,7 +1891,7 @@ def np_vbelt(k, t1, t2, b):
 def t_vbelt(np, lp, v):
 #combobox,hide np if np>10e9
     if np > 10e9:
-        ans = (10e9*lp)/(720*v)
+        ans = ((10e9)*lp)/(720*v)
 
     else:
         ans = (np*lp)/(720*v)

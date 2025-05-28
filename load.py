@@ -16,6 +16,15 @@ def is_float_value(value):
     except ValueError:
         return False
 
+def is_standard_speed(v):
+    standard_speed_vbelt = [999,2000,3000,4000,5000]
+    if v in standard_speed_vbelt:
+        return True
+    return False
+
+def is_standard_sheave_d(selected_type, sheave_d):
+    pass
+        
 
 class CustomDoubleSpinBox(QDoubleSpinBox):
     def textFromValue(self, value):
@@ -332,7 +341,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_38.clicked.connect(self.cente_distance_vbelt)
 
         if item.text(column) == "Ha Vbelt":
-            print("IN")
+            self.pushButton_40.clicked.connect(self.cal_ha_vbelt)
             self.stackedWidget.setCurrentIndex(28)
 
 
@@ -868,6 +877,50 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             value = int(value)
             ans = 4.5 + value
             fans = f"lengh of pitch (E{value}) = {ans}"
+            self.textBrowser.setText(fans)
+
+
+
+    def cal_ha_vbelt(self):
+        k1 = self.DoubleSpinBox_96.value()
+        k2 = self.DoubleSpinBox_97.value()
+        speed = self.comboBox_16.currentText()
+        selected_type = self.comboBox_9.currentText()
+
+        
+        print(is_standard_speed(speed))
+        if selected_type == "A":
+            sheave_d = self.comboBox_10.currentText()
+            htab = funcs.h_table_vbelt(speed, sheave_d, "A")
+            ans = funcs.ha_vbelt(k1, k2, htab)
+            fans = f"MIMI = {ans}"
+            self.textBrowser.setText(fans)
+        elif selected_type == "B":
+            sheave_d = self.comboBox_11.currentText()
+            htab = funcs.h_table_vbelt(speed, sheave_d, "B")
+            ans = funcs.ha_vbelt(k1, k2, htab)
+            fans = f"MIMI = {ans}"
+            self.textBrowser.setText(fans)
+
+        elif selected_type == "C":
+            sheave_d = self.comboBox_12.currentText()
+            htab = funcs.h_table_vbelt(speed, sheave_d, "C")
+            ans = funcs.ha_vbelt(k1, k2, htab)
+            fans = f"MIMI = {ans}"
+            self.textBrowser.setText(fans)
+
+        elif selected_type == "D":
+            sheave_d = self.comboBox_13.currentText()
+            htab = funcs.h_table_vbelt(speed, sheave_d, "D")
+            ans = funcs.ha_vbelt(k1, k2, htab)
+            fans = f"MIMI = {ans}"
+            self.textBrowser.setText(fans)
+
+        elif selected_type == "E":
+            sheave_d = self.comboBox_14.currentText()
+            htab = funcs.h_table_vbelt(speed, sheave_d, "D")
+            ans = funcs.ha_vbelt(k1, k2, htab)
+            fans = f"MIMI = {ans}"
             self.textBrowser.setText(fans)
 
     def dynamic_combo_ha_vbelt(self):
