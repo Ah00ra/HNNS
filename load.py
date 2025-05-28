@@ -938,6 +938,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 fans = f"MIMI(bad sheave_d) = {ans}"
                 self.textBrowser.setText(fans)
 
+            elif not is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
+                htab = funcs.h_table_vbelt_int_pulley_and_speed(speed, sheave_d, selected_type)
+                ans = funcs.ha_vbelt(k1, k2, htab)
+                fans = f"MIMI(both_bad) = {ans}"
+                self.textBrowser.setText(fans)
+
+
+
         elif selected_type == "B":
             sheave_d = self.comboBox_11.currentText()
             htab = funcs.h_table_vbelt(speed, sheave_d, "B")
