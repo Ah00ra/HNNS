@@ -2314,7 +2314,7 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>430</x>
-           <y>430</y>
+           <y>350</y>
            <width>71</width>
            <height>31</height>
           </rect>
@@ -5977,7 +5977,7 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>20</y>
+           <y>10</y>
            <width>340</width>
            <height>243</height>
           </rect>
@@ -6382,9 +6382,356 @@ p, li { white-space: pre-wrap; }
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_39">
+         <property name="geometry">
+          <rect>
+           <x>380</x>
+           <y>350</y>
+           <width>361</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </widget>
+        <widget class="QTableWidget" name="tableWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>380</x>
+           <y>10</y>
+           <width>751</width>
+           <height>331</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="autoScroll">
+          <bool>false</bool>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="tabKeyNavigation">
+          <bool>true</bool>
+         </property>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Length Factor</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>'A' Belt section</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>'B' Belt section</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>'C' Belt section</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>'D' Belt section</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>'E' Belt section</string>
+          </property>
+         </column>
+         <item row="0" column="0">
+          <property name="text">
+           <string>0.85</string>
+          </property>
+         </item>
+         <item row="0" column="1">
+          <property name="text">
+           <string>Up to 35</string>
+          </property>
+         </item>
+         <item row="0" column="2">
+          <property name="text">
+           <string>Up to 46</string>
+          </property>
+         </item>
+         <item row="0" column="3">
+          <property name="text">
+           <string>Up to 75</string>
+          </property>
+         </item>
+         <item row="0" column="4">
+          <property name="text">
+           <string>Up to 128</string>
+          </property>
+         </item>
+         <item row="1" column="0">
+          <property name="text">
+           <string>0.90</string>
+          </property>
+         </item>
+         <item row="1" column="1">
+          <property name="text">
+           <string>38-46</string>
+          </property>
+         </item>
+         <item row="1" column="2">
+          <property name="text">
+           <string>48-60</string>
+          </property>
+         </item>
+         <item row="1" column="3">
+          <property name="text">
+           <string>81-96</string>
+          </property>
+         </item>
+         <item row="1" column="4">
+          <property name="text">
+           <string>144-162</string>
+          </property>
+         </item>
+         <item row="1" column="5">
+          <property name="text">
+           <string>Up to 195</string>
+          </property>
+         </item>
+         <item row="2" column="0">
+          <property name="text">
+           <string>0.95</string>
+          </property>
+         </item>
+         <item row="2" column="1">
+          <property name="text">
+           <string>48-55</string>
+          </property>
+         </item>
+         <item row="2" column="2">
+          <property name="text">
+           <string>62-75</string>
+          </property>
+         </item>
+         <item row="2" column="3">
+          <property name="text">
+           <string>105-120</string>
+          </property>
+         </item>
+         <item row="2" column="4">
+          <property name="text">
+           <string>173-210</string>
+          </property>
+         </item>
+         <item row="2" column="5">
+          <property name="text">
+           <string>210-240</string>
+          </property>
+         </item>
+         <item row="3" column="0">
+          <property name="text">
+           <string>1.00</string>
+          </property>
+         </item>
+         <item row="3" column="1">
+          <property name="text">
+           <string>60-75</string>
+          </property>
+         </item>
+         <item row="3" column="2">
+          <property name="text">
+           <string>78-97</string>
+          </property>
+         </item>
+         <item row="3" column="3">
+          <property name="text">
+           <string>128-158</string>
+          </property>
+         </item>
+         <item row="3" column="4">
+          <property name="text">
+           <string>240</string>
+          </property>
+         </item>
+         <item row="3" column="5">
+          <property name="text">
+           <string>270-300</string>
+          </property>
+         </item>
+         <item row="4" column="0">
+          <property name="text">
+           <string>1.05</string>
+          </property>
+         </item>
+         <item row="4" column="1">
+          <property name="text">
+           <string>78-90</string>
+          </property>
+         </item>
+         <item row="4" column="2">
+          <property name="text">
+           <string>105-120</string>
+          </property>
+         </item>
+         <item row="4" column="3">
+          <property name="text">
+           <string>162-195</string>
+          </property>
+         </item>
+         <item row="4" column="4">
+          <property name="text">
+           <string>270-330</string>
+          </property>
+         </item>
+         <item row="4" column="5">
+          <property name="text">
+           <string>330-390</string>
+          </property>
+         </item>
+         <item row="5" column="0">
+          <property name="text">
+           <string>1.10</string>
+          </property>
+         </item>
+         <item row="5" column="1">
+          <property name="text">
+           <string>96-112</string>
+          </property>
+         </item>
+         <item row="5" column="2">
+          <property name="text">
+           <string>128-144</string>
+          </property>
+         </item>
+         <item row="5" column="3">
+          <property name="text">
+           <string>210-240</string>
+          </property>
+         </item>
+         <item row="5" column="4">
+          <property name="text">
+           <string>360-420</string>
+          </property>
+         </item>
+         <item row="5" column="5">
+          <property name="text">
+           <string>420-480</string>
+          </property>
+         </item>
+         <item row="6" column="0">
+          <property name="text">
+           <string>1.15</string>
+          </property>
+         </item>
+         <item row="6" column="1">
+          <property name="text">
+           <string>120 and up</string>
+          </property>
+         </item>
+         <item row="6" column="2">
+          <property name="text">
+           <string>158-180</string>
+          </property>
+         </item>
+         <item row="6" column="3">
+          <property name="text">
+           <string>270-300</string>
+          </property>
+         </item>
+         <item row="6" column="4">
+          <property name="text">
+           <string>480</string>
+          </property>
+         </item>
+         <item row="6" column="5">
+          <property name="text">
+           <string>540-600</string>
+          </property>
+         </item>
+         <item row="7" column="0">
+          <property name="text">
+           <string>1.20</string>
+          </property>
+         </item>
+         <item row="7" column="2">
+          <property name="text">
+           <string>195 an up</string>
+          </property>
+         </item>
+         <item row="7" column="3">
+          <property name="text">
+           <string>330 and up</string>
+          </property>
+         </item>
+         <item row="7" column="4">
+          <property name="text">
+           <string>540 and up</string>
+          </property>
+         </item>
+         <item row="7" column="5">
+          <property name="text">
+           <string>660</string>
+          </property>
+         </item>
+        </widget>
        </widget>
        <widget class="QWidget" name="page_3">
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>20</x>
