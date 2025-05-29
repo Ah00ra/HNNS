@@ -1,7 +1,7 @@
 import re
 from PyQt5 import QtCore, QtWidgets, uic
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox, QPushButton, QComboBox
+from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox, QComboBox,QHeaderView
 from PyQt5.QtGui import QDoubleValidator
 from PyQt5.uic import loadUi
 import funcs
@@ -108,7 +108,7 @@ class Wire_Rope_Tables(QWidget):
         self.tabWidget.setTabText(1, "nf")
         self.tabWidget.setTabText(2, "fb")
         self.tabWidget.setTabText(3, "ff")
-
+       
         #self.table_widget = QtWidgets.QTableWidget(self)
         #self.table_widget.setRowCount(5)  
         #self.table_widget.setColumnCount(3) 
@@ -235,6 +235,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.comboBox_16.lineEdit().setPlaceholderText("Select or Insert Speed")
         self.comboBox_16.setCurrentIndex(-1)
         self.comboBox_16.lineEdit().setValidator(validator)
+
+
+        self.tableWidget_5.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
+        self.tableWidget_4.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
+        self.tableWidget_4.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
 
         self.treeWidget.itemClicked['QTreeWidgetItem*','int'].connect(self.item_clicked)
 
