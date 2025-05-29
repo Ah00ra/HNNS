@@ -29,6 +29,12 @@ def is_htab_error_message(htab):
     if re.search(r"\bError\b", htab):
         return True
         
+def is_numeric_string(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
 
 def is_standard_sheave_d(selected_type, sheave_d):
     sheave_d = float(sheave_d)
@@ -196,6 +202,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.DoubleSpinBox_159.setHidden(True)
         self.DoubleSpinBox_160.setHidden(True)
         self.DoubleSpinBox_161.setHidden(True)
+        # nfs_...
+
+        self.tableWidget_10.setHidden(True)
+        self.pushButton_53.setHidden(True)
 
         self.comboBox_5.setHidden(True)
         self.comboBox_6.setHidden(True)
@@ -282,8 +292,9 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             split_text = text.split("=")
 
             formula_name_unit = split_text[0]
-            if 
-            value = str(round(float(split_text[1]), 3))  
+            value = str(split_text[1])
+            if is_numeric_string(split_text[1]):
+                value = str(round(float(split_text[1]), 3))  
 
             item_to_add = [formula_name_unit, value]
 
@@ -452,6 +463,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         if item.text(column) == "Fb1, Fb2":
             self.pushButton_52.clicked.connect(self.fb12_vbelt_load)
+            self.pushButton_53.clicked.connect(self.get_selected_data_fb1fb2)
             self.stackedWidget.setCurrentIndex(37)
 
         if item.parent() is not None:
@@ -850,7 +862,16 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 k2 = items[row]
                 self.DoubleSpinBox_97.setValue(k2)
 
-
+    def get_selected_data_fb1fb2 (self):
+        selected_items = self.tableWidget_10.selectedItems()
+        if len(selected_items) != 0 :
+            col = selected_items[0].column()
+            row = selected_items[0].row()
+            data= self.tableWidget_10.item(row, col)
+            value = data.text()
+            if is_numeric_string(value):
+                self.DoubleSpinBox_124.setValue(float(value))
+        
     def get_selected_data(self):
         selected_items = self.tableWidget_2.selectedItems()
         #row = selected_items[0].row()
@@ -1343,8 +1364,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         kb = self.DoubleSpinBox_124.value()
         c_d = self.DoubleSpinBox_125.value()
         ans1 = funcs.fb1_vbelt(kb, c_d)
+        ans1 = round(ans1,3)
         d = self.DoubleSpinBox_126.value()
         ans2 = funcs.fb2_vbelt(kb, d)
+        ans2 = round(ans2, 3)
         fans = f"Maximum Tensile Stress vBelt = fb:1{ans1} , fb2:{ans2}"
         self.textBrowser.setText(fans)
 

@@ -97,8 +97,8 @@
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; font-weight:600;&quot;&gt;HNNS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:72pt; font-weight:600;&quot;&gt;HNNS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </widget>
@@ -5978,8 +5978,8 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>20</x>
            <y>10</y>
-           <width>340</width>
-           <height>243</height>
+           <width>343</width>
+           <height>258</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -6343,7 +6343,7 @@ p, li { white-space: pre-wrap; }
             <property name="insertPolicy">
              <enum>QComboBox::NoInsert</enum>
             </property>
-            <property name="placeholderText" stdset="0">
+            <property name="placeholderText">
              <string>select speed</string>
             </property>
             <item>
@@ -6736,8 +6736,8 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>20</x>
            <y>20</y>
-           <width>352</width>
-           <height>152</height>
+           <width>354</width>
+           <height>165</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -7284,16 +7284,10 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>Belt Section</string>
           </property>
-          <property name="textAlignment">
-           <set>AlignCenter</set>
-          </property>
          </column>
          <column>
           <property name="text">
            <string>Kc</string>
-          </property>
-          <property name="textAlignment">
-           <set>AlignCenter</set>
           </property>
          </column>
          <item row="0" column="0">
@@ -7452,7 +7446,7 @@ p, li { white-space: pre-wrap; }
            <x>30</x>
            <y>20</y>
            <width>352</width>
-           <height>158</height>
+           <height>172</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -7636,7 +7630,7 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>40</x>
            <y>20</y>
-           <width>355</width>
+           <width>356</width>
            <height>158</height>
           </rect>
          </property>
@@ -8141,26 +8135,13 @@ p, li { white-space: pre-wrap; }
           </property>
          </item>
         </widget>
-        <widget class="QPushButton" name="pushButton_50">
-         <property name="geometry">
-          <rect>
-           <x>410</x>
-           <y>220</y>
-           <width>361</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Select</string>
-         </property>
-        </widget>
         <widget class="QWidget" name="layoutWidget_11">
          <property name="geometry">
           <rect>
            <x>30</x>
            <y>30</y>
            <width>352</width>
-           <height>183</height>
+           <height>200</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_20">
@@ -8325,13 +8306,6 @@ p, li { white-space: pre-wrap; }
            </layout>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBox_19">
-            <property name="text">
-             <string>CheckBox</string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QPushButton" name="pushButton_51">
             <property name="text">
              <string>PushButton</string>
@@ -8348,7 +8322,7 @@ p, li { white-space: pre-wrap; }
            <x>40</x>
            <y>30</y>
            <width>355</width>
-           <height>158</height>
+           <height>167</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_22">
@@ -8392,6 +8366,13 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
              </layout>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_18">
+              <property name="text">
+               <string>CheckBox</string>
+              </property>
+             </widget>
             </item>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_39">
@@ -8523,6 +8504,9 @@ p, li { white-space: pre-wrap; }
          <property name="editTriggers">
           <set>QAbstractItemView::NoEditTriggers</set>
          </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
          <attribute name="horizontalHeaderHighlightSections">
           <bool>true</bool>
          </attribute>
@@ -8573,16 +8557,10 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>Belt Section</string>
           </property>
-          <property name="textAlignment">
-           <set>AlignCenter</set>
-          </property>
          </column>
          <column>
           <property name="text">
            <string>Kb</string>
-          </property>
-          <property name="textAlignment">
-           <set>AlignCenter</set>
           </property>
          </column>
          <item row="0" column="0">
@@ -9126,7 +9104,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1681</width>
-     <height>26</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
@@ -9832,6 +9810,38 @@ p, li { white-space: pre-wrap; }
     <hint type="destinationlabel">
      <x>652</x>
      <y>240</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_18</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>tableWidget_10</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>452</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>785</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_18</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pushButton_53</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>452</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>785</x>
+     <y>417</y>
     </hint>
    </hints>
   </connection>
