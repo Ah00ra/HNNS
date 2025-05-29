@@ -75,7 +75,7 @@
         <bool>true</bool>
        </property>
        <property name="currentIndex">
-        <number>28</number>
+        <number>30</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -6841,6 +6841,259 @@ p, li { white-space: pre-wrap; }
             </item>
             <item>
              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_100">
+              <property name="minimumSize">
+               <size>
+                <width>300</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="buttonSymbols">
+               <enum>QAbstractSpinBox::NoButtons</enum>
+              </property>
+              <property name="specialValueText">
+               <string>0</string>
+              </property>
+              <property name="decimals">
+               <number>3</number>
+              </property>
+              <property name="minimum">
+               <double>0.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1000000000000.000000000000000</double>
+              </property>
+              <property name="value">
+               <double>0.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QTableWidget" name="tableWidget_7">
+         <property name="geometry">
+          <rect>
+           <x>145</x>
+           <y>231</y>
+           <width>381</width>
+           <height>191</height>
+          </rect>
+         </property>
+         <attribute name="horizontalHeaderHighlightSections">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Driven Machinery </string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Normal Torque Characteristic</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>High or Nonuniform Torque</string>
+          </property>
+         </column>
+         <item row="0" column="0">
+          <property name="text">
+           <string>Uniform</string>
+          </property>
+         </item>
+         <item row="0" column="1">
+          <property name="text">
+           <string>1.0 to 1.2</string>
+          </property>
+         </item>
+         <item row="0" column="2">
+          <property name="text">
+           <string>1.1 to 1.3</string>
+          </property>
+         </item>
+         <item row="1" column="0">
+          <property name="text">
+           <string>Light shock</string>
+          </property>
+         </item>
+         <item row="1" column="1">
+          <property name="text">
+           <string>1.1 to 1.3</string>
+          </property>
+         </item>
+         <item row="1" column="2">
+          <property name="text">
+           <string>1.2 to 1.4</string>
+          </property>
+         </item>
+         <item row="2" column="0">
+          <property name="text">
+           <string>Medium shock</string>
+          </property>
+         </item>
+         <item row="2" column="1">
+          <property name="text">
+           <string>1.2 to 1.4</string>
+          </property>
+         </item>
+         <item row="2" column="2">
+          <property name="text">
+           <string>1.4 to 1.6</string>
+          </property>
+         </item>
+         <item row="3" column="0">
+          <property name="text">
+           <string>Heavy shock</string>
+          </property>
+         </item>
+         <item row="3" column="1">
+          <property name="text">
+           <string>1.3 to 1.5</string>
+          </property>
+         </item>
+         <item row="3" column="2">
+          <property name="text">
+           <string>1.5 to 1.8</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_4">
+        <widget class="QWidget" name="layoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>260</y>
+           <width>352</width>
+           <height>117</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <item>
+               <widget class="QLabel" name="htext_148">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;h_nom&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_101">
+                <property name="minimumSize">
+                 <size>
+                  <width>300</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::NoButtons</enum>
+                </property>
+                <property name="specialValueText">
+                 <string>0</string>
+                </property>
+                <property name="decimals">
+                 <number>3</number>
+                </property>
+                <property name="minimum">
+                 <double>0.000000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>1000000000000.000000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QLabel" name="htext_149">
+                <property name="text">
+                 <string>K_s</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_102">
+                <property name="minimumSize">
+                 <size>
+                  <width>300</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::NoButtons</enum>
+                </property>
+                <property name="specialValueText">
+                 <string>0</string>
+                </property>
+                <property name="decimals">
+                 <number>3</number>
+                </property>
+                <property name="minimum">
+                 <double>0.000000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>1000000000000.000000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_18">
+              <property name="text">
+               <string>CheckBox</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <widget class="QLabel" name="htext_150">
+              <property name="text">
+               <string>nd</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_103">
               <property name="minimumSize">
                <size>
                 <width>300</width>
