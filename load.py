@@ -277,7 +277,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
     def append_text_to_history(self):
         text = self.textBrowser.toPlainText()
-        
+        print("LOG: ",text) 
         if not re.search(r"\bError\b", text):
             split_text = text.split("=")
 
@@ -814,7 +814,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if is_float_value(value):
             self.fDoubleSpinBox_14.setValue(float(value))
         else:
-            self.textBrowser.setText("INVALID ITEM YOU SELECT")
+            self.textBrowser.setText("Error: INVALID ITEM YOU SELECT")
 
 
     def get_selected_data_f1a(self):
@@ -826,7 +826,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if is_float_value(value):
             self.fDoubleSpinBox_10.setValue(float(value))
         else:
-            self.textBrowser.setText("INVALID ITEM YOU SELECT")
+            self.textBrowser.setText("Error: INVALID ITEM YOU SELECT")
             
     
     def Torque_Belt(self):
