@@ -1,4 +1,5 @@
 from decimal import ROUND_UP
+from encodings.punycode import selective_find
 import math
 from operator import index
 
@@ -1329,8 +1330,55 @@ def lengh_pitch_vbelt(c, capd, d):
 
 @error_handling_decorator
 def ha_vbelt(k1, k2, h_tab):
-    ans = k1 *k2 *h_tab
+    ans =k1* k2 *h_tab
     return ans 
+
+#lis_k1_vbelt:
+lis_theta = [180, 174.3, 166.5, 162.7, 156.9, 151, 145.1, 139, 132.8, 126.5, 120, 113.3, 106.3, 98.9, 91.1, 82.8]
+k1_vv = [1, .99, .97, .96, .94, .93, .91, .89, .87, .85, .82, .80, .77, .73, .70, .65]
+k1_vflat = [.75, .76, .78, .79, .80, .81, .83, .84, .85, .85, .82, .80, .77, .73, .70, .65]
+
+def k1_vbelt(theta,selected_type):
+    if theta > 180 or theta < 82.2:
+        return "Error: Range for θ is (82.2-180)"
+    else:
+        if selected_type == "VV" :   
+            for item in lis_theta:
+                if item == theta:
+                    index = lis_theta.index(item)
+                    vv_belt = k1_vv[index] 
+                    return vv_belt
+            
+                else:
+                    for i in range(len(lis_theta) - 1):
+                        if lis_theta[i] >= theta > lis_theta[i + 1]:
+                            t1 = lis_theta[i]
+                            t2 = lis_theta[i + 1]
+                            k1= k1_vv[i] 
+                            k2 = k1_vv[i + 1]
+                            vv_belt = (k1 + (k2 - k1)) * ((theta - t1) / (t2 - t1))
+                            return vv_belt
+                    return k1_vv[-1]
+            
+        else:
+            for item in lis_theta:
+                if item == theta:
+                    index = lis_theta.index(item)
+                    vflat_belt = k1_vflat[index] 
+                    return vflat_belt
+            
+            else:
+                for i in range(len(lis_theta) - 1):
+                    if lis_theta[i] >= theta > lis_theta[i + 1]:
+                        t1 = lis_theta[i]
+                        t2 = lis_theta[i + 1]
+                        k1= k1_vflat[i] 
+                        k2 = k1_vflat[i + 1]
+                        vflat_belt = k1 + (k2 - k1) * (theta - t1) / (t2 - t1)
+                        return vflat_belt
+                return k1_vv[-1]      
+                
+print(k1_vbelt(121,"vv"))
 
 standard_speed_vbelt = [1000,2000,3000,4000,5000]
 
@@ -1858,10 +1906,10 @@ def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
         
         final_answer = linear_int_pulley(pulley1, pulley3, sheave_d, hp12, hp34)
         return final_answer
-    
 
-def hd_vbelt(h_nom, ks, ns):
-    ans = h_nom*ks*ns
+
+def hd_vbelt(h_nom, ks, nd):
+    ans = h_nom*ks*nd
     return ans
 
 def nb_vbelt(ha, hd):

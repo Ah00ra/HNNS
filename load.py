@@ -946,10 +946,13 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             fans = f"lengh of pitch (E{value}) = {ans}"
             self.textBrowser.setText(fans)
 
-
+    
+    
 
     def cal_ha_vbelt(self):
-        k1 = self.DoubleSpinBox_96.value()
+        theta = self.DoubleSpinBox_96.value()
+        k_selected_type = self.comboBox_15.currentText()
+        k1 = funcs.k1_vbelt(theta, k_selected_type)
         k2 = self.DoubleSpinBox_97.value()
         speed = self.comboBox_16.currentText()
         selected_type = self.comboBox_9.currentText()
@@ -1210,7 +1213,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.comboBox_7.hide()
             self.comboBox_8.show()
 
-
+    
     def cente_distance_vbelt(self):
         # dont write center_dist.... fullname!
         lp = self.DoubleSpinBox_93.value()
