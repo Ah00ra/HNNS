@@ -414,6 +414,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         if item.text(column) == "Ha Vbelt":
             self.pushButton_40.clicked.connect(self.cal_ha_vbelt)
+            self.pushButton_39.clicked.connect(self.get_selected_data_ha_vbelt)
+       
             self.stackedWidget.setCurrentIndex(28)
 
 
@@ -801,6 +803,18 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         data = float(data)
 
         self.fDoubleSpinBox.setValue(data)
+    
+    def get_selected_data_ha_vbelt(self):
+        selected_items = self.tableWidget_5.selectedItems()
+        if len(selected_items) != 0:
+            row = selected_items[0].row()
+            column = selected_items[0].column()
+            if row == 0 and column ==5 or (row == 7 and column == 1):
+                pass
+            else:
+                items = [0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.20]
+                k2 = items[row]
+                self.DoubleSpinBox_97.setValue(k2)
 
 
     def get_selected_data(self):
@@ -826,7 +840,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if is_float_value(value):
             self.fDoubleSpinBox_10.setValue(float(value))
         else:
-            self.textBrowser.setText("Error: INVALID ITEM YOU SELECT")
+            self.textBrowser.setText("INVALID ITEM YOU SELECT")
             
     
     def Torque_Belt(self):
