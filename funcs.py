@@ -1907,77 +1907,80 @@ def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
         final_answer = linear_int_pulley(pulley1, pulley3, sheave_d, hp12, hp34)
         return final_answer
 
-
+@error_handling_decorator
 def hd_vbelt(h_nom, ks, nd):
     ans = h_nom*ks*nd
     return ans
 
+@error_handling_decorator
 def nb_vbelt(ha, hd):
     nb = hd/ha
     ans = math.ceil(nb)
     return ans
 
+@error_handling_decorator
 def fc_vbelt(kc, v):
     ans = kc * ((v/1000)**2)
     return ans
-#print(fc_vbelt(.965, 3390))
 
-
+@error_handling_decorator
 def delta_f_vbelt(hd, nb, n , d):
     ans = (63025*hd/nb)/(n*(d/2))
     return ans
-#print(delta_f_vbelt(13,3,1750,7.4))
 
+@error_handling_decorator
 def f1_vbelt(fc, detaf, exp):
     ans = fc + ((detaf*exp)/(exp-1))
     return ans
-#print(f1_vbelt(11.1, 42.2, 4.788))
 
+@error_handling_decorator
 def f2_vbelt(f1, deltaf):
     ans = f1 - deltaf
     return ans 
 
+@error_handling_decorator
 def fi_vbelt(f1, f2, fc):
     ans = ((f1+f2)/2)-fc
     return ans
-#print(fi_vbelt(64.4,22.2,11.1))
 
+@error_handling_decorator
 def nfs_vbelt(ha, nb, hnom, ks):
     ans = (ha*nb)/(hnom*ks)
     return ans
-#print(nfs_vbelt(4.878,3,10,1.3))
 
+@error_handling_decorator
 def fb1_vbelt(kb, d):
     ans = kb/d
     return ans
 
+@error_handling_decorator
 def fb2_vbelt(kb, cd):
     ans = kb/cd
     return ans
 
+@error_handling_decorator
 def t1_vbelt(f1,fb1):
     ans = f1+fb1
     return ans
 
+@error_handling_decorator
 def t2_vbelt(f2,fb2):
     ans = f2 + fb2
     return ans
 
+@error_handling_decorator
 def np_vbelt(k, t1, t2, b):
     a = (k/t1)**(-b)
     b = (k/t2)**(-b)
     ans = ((a+b)**-1)
     fans = "{:.3e}".format(ans)
     return fans
-#print(np_vbelt(1193,142,116.8,10.926))
 
+@error_handling_decorator
 def t_vbelt(np, lp, v):
-#combobox,hide np if np>10e9
     if np > 10e9:
         ans = ((10e9)*lp)/(720*v)
-
     else:
         ans = (np*lp)/(720*v)
-
     return ans            
 

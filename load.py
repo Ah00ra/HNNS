@@ -282,6 +282,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             split_text = text.split("=")
 
             formula_name_unit = split_text[0]
+            if 
             value = str(round(float(split_text[1]), 3))  
 
             item_to_add = [formula_name_unit, value]
@@ -403,7 +404,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_35.clicked.connect(self.open_wire_rope_tables)
             self.pushButton_35.clicked.connect(self.wire_rope)
         
-        if item.text(column) == "LP":
+        if item.text(column) == "Length of Pitch":
             self.stackedWidget.setCurrentIndex(26)
             self.pushButton_36.clicked.connect(self.lengh_pitch_vbelt)
             self.pushButton_37.clicked.connect(self.combo_lengh_pitch_vbelt)
@@ -412,13 +413,46 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.stackedWidget.setCurrentIndex(27)
             self.pushButton_38.clicked.connect(self.cente_distance_vbelt)
 
-        if item.text(column) == "Ha Vbelt":
+        if item.text(column) == "Hp allowable":
             self.pushButton_40.clicked.connect(self.cal_ha_vbelt)
             self.pushButton_39.clicked.connect(self.get_selected_data_ha_vbelt)
-       
             self.stackedWidget.setCurrentIndex(28)
 
+        if item.text(column) == "Hp design":
+            self.pushButton_41.clicked.connect(self.hd_vbelt_load)
+            self.stackedWidget.setCurrentIndex(29)
 
+        if item.text(column) == "MIN Number of Belt":
+            self.pushButton_43.clicked.connect(self.nb_vbelt_load)
+            self.stackedWidget.setCurrentIndex(30)
+
+        if item.text(column) == "'Fc' Centrifugal Tension":
+            self.pushButton_44.clicked.connect(self.fc_vbelt_load)
+            self.stackedWidget.setCurrentIndex(31)
+
+        if item.text(column) == "ΔF":
+            self.pushButton_46.clicked.connect(self.deltaf_vebelt_load)
+            self.stackedWidget.setCurrentIndex(32)
+
+        if item.text(column) == "'F1' Largest Tension vBelt":
+            self.pushButton_47.clicked.connect(self.f1_vebelt_load)
+            self.stackedWidget.setCurrentIndex(33)
+
+        if item.text(column) == "'F2' Least Tension vBelt":
+            self.pushButton_48.clicked.connect(self.f2_vbelt_load)
+            self.stackedWidget.setCurrentIndex(34)
+
+        if item.text(column) == "'Fi' initial Tension":
+            self.pushButton_49.clicked.connect(self.fi_vbelt_load)
+            self.stackedWidget.setCurrentIndex(35)
+
+        if item.text(column) == "η_fs":
+            self.pushButton_51.clicked.connect(self.nfs_vbelt_load)
+            self.stackedWidget.setCurrentIndex(36)
+
+        if item.text(column) == "Fb1, Fb2":
+            self.pushButton_52.clicked.connect(self.fb12_vbelt_load)
+            self.stackedWidget.setCurrentIndex(37)
 
         if item.parent() is not None:
             parent = item.parent()
@@ -1239,7 +1273,79 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         capd = self.DoubleSpinBox_94.value()
         d = self.DoubleSpinBox_95.value() 
         ans = funcs.center_distance_vbelt(lp, capd, d)
-        fans = f"Center to center pulley = {ans}"
+        fans = f"Center to center pulley vBelt = {ans}"
+        self.textBrowser.setText(fans)
+
+    def hd_vbelt_load(self):
+        h_nom = self.DoubleSpinBox_99.value()
+        k_s = self.DoubleSpinBox_98.value()
+        n_d = self.DoubleSpinBox_100.value()
+        ans = funcs.hd_vbelt(h_nom, k_s, n_d)
+        fans = f"Design Hp vBelt = {ans}"
+        self.textBrowser.setText(fans)
+
+    def nb_vbelt_load(self):
+        h_d = self.DoubleSpinBox_105.value()
+        h_a = self.DoubleSpinBox_104.value()
+        ans = funcs.nb_vbelt(h_a , h_d)
+        fans = f"min number of vBelts = {ans}"
+        self.textBrowser.setText(fans)
+
+    def fc_vbelt_load(self):
+        k_c = self.DoubleSpinBox_106.value()
+        v = self.DoubleSpinBox_107.value()
+        ans = funcs.fc_vbelt(k_c, v)
+        fans = f"Fc vBelt = {ans}"
+        self.textBrowser.setText(fans)
+
+    def deltaf_vebelt_load(self):
+        h_d = self.DoubleSpinBox_108.value()
+        n_b = self.DoubleSpinBox_109.value()
+        n = self.DoubleSpinBox_111.value()
+        d = self.DoubleSpinBox_110.value()
+        ans = funcs.delta_f_vbelt(h_d, n_b, n, d)
+        fans = f"ΔF vBelt = {ans}"
+        self.textBrowser.setText(fans)
+
+    def f1_vebelt_load(self):
+        f_c = self.DoubleSpinBox_112.value()
+        deltaf = self.DoubleSpinBox_113.value()
+        exp = self.DoubleSpinBox_114.value()
+        ans = funcs.f1_vbelt(f_c, deltaf, exp)
+        fans = f"F1 vBelt = {ans}"
+        self.textBrowser.setText(fans)
+
+    def f2_vbelt_load(self):
+        deltaf = self.DoubleSpinBox_115.value()
+        exp = self.DoubleSpinBox_116.value()
+        ans = funcs.f2_vbelt(deltaf, exp)
+        fans = f"F2 vBelt = {ans}"
+        self.textBrowser.setText(fans)    
+
+    def fi_vbelt_load(self):
+        f_1 = self.DoubleSpinBox_117.value()
+        f_2 = self.DoubleSpinBox_118.value()
+        f_c = self.DoubleSpinBox_119.value()
+        ans = funcs.fi_vbelt(f_1, f_2, f_c)
+        fans = f"Fi vBelt = {ans}"
+        self.textBrowser.setText(fans)
+
+    def nfs_vbelt_load(self):
+        h_a = self.DoubleSpinBox_120.value()
+        n_b = self.DoubleSpinBox_121.value()
+        h_nom = self.DoubleSpinBox_122.value()
+        k_s = self.DoubleSpinBox_123.value()
+        ans = funcs.nfs_vbelt(h_a, n_b, h_nom, k_s)
+        fans = f"'η_fs' factor of safety vBelt = {ans}"
+        self.textBrowser.setText(fans)
+
+    def fb12_vbelt_load(self):
+        kb = self.DoubleSpinBox_124.value()
+        c_d = self.DoubleSpinBox_125.value()
+        ans1 = funcs.fb1_vbelt(kb, c_d)
+        d = self.DoubleSpinBox_126.value()
+        ans2 = funcs.fb2_vbelt(kb, d)
+        fans = f"Maximum Tensile Stress vBelt = fb:1{ans1} , fb2:{ans2}"
         self.textBrowser.setText(fans)
 
 
