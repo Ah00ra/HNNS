@@ -5,10 +5,11 @@ from PyQt5.QtWidgets import QTableWidgetItem, QWidget, QDoubleSpinBox, QComboBox
 from PyQt5.QtGui import QDoubleValidator
 from PyQt5.uic import loadUi
 import funcs
-
+from PyQt5.QtWidgets import QApplication, QStyleFactory
+from qt_material import apply_stylesheet
 
 history = []
-
+print(QStyleFactory.keys())
 
 def is_float_value(value):
     try:
@@ -1414,7 +1415,19 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
 if __name__ == "__main__":
     import sys
+    import qdarktheme
+
     app = QtWidgets.QApplication(sys.argv)
+    # app.setStyle('Windows')
+    # def load_stylesheet(app, qss_file_path):
+    #     with open(qss_file_path, "r") as file:
+    #         app.setStyleSheet(file.read())
+    # load_stylesheet(app, "theme/Takezo.qss")  
+    
+    stylesheet = qdarktheme.load_stylesheet("dark")
+    app.setStyleSheet(stylesheet)
     MainWindow = Ui_MainWindow()
+      
+
     MainWindow.show()
     sys.exit(app.exec_())
