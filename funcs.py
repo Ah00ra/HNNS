@@ -1964,12 +1964,12 @@ def t1_vbelt(f1,fb1):
     return ans
 
 @error_handling_decorator
-def t2_vbelt(f2,fb2):
-    ans = f2 + fb2
+def t2_vbelt(f1,fb2):
+    ans = f1 + fb2
     return ans
 
 @error_handling_decorator
-def np_vbelt(k, t1, t2, b):
+def np_vbelt(k, b, t1, t2):
     a = (k/t1)**(-b)
     b = (k/t2)**(-b)
     ans = ((a+b)**-1)

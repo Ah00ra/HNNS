@@ -466,6 +466,18 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_53.clicked.connect(self.get_selected_data_fb1fb2)
             self.stackedWidget.setCurrentIndex(37)
 
+        if item.text(column) == "T1, T2":
+            self.pushButton_54.clicked.connect(self.t12_vbelt_load)
+            self.stackedWidget.setCurrentIndex(38)
+
+        if item.text(column) == "'Np' Number of Passes":
+            self.pushButton_55.clicked.connect(self.np_vbelt_load)
+            self.stackedWidget.setCurrentIndex(39)    
+
+        if item.text(column) == "'t' Lifetime ":
+            self.pushButton_56.clicked.connect(self.t_vbelt_load)
+            self.stackedWidget.setCurrentIndex(40)
+
         if item.parent() is not None:
             parent = item.parent()
             parent_name = parent.text(0)
@@ -1368,9 +1380,37 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         d = self.DoubleSpinBox_126.value()
         ans2 = funcs.fb2_vbelt(kb, d)
         ans2 = round(ans2, 3)
-        fans = f"Maximum Tensile Stress vBelt = fb:1{ans1} , fb2:{ans2}"
+        fans = f"Max Tensile Stress vBelt = fb1:{ans1} , fb2:{ans2}"
         self.textBrowser.setText(fans)
 
+    def t12_vbelt_load(self):
+        fb1 = self.DoubleSpinBox_127.value()
+        fb2 = self.DoubleSpinBox_128.value()
+        f1 = self.DoubleSpinBox_129.value()
+        ans1 = funcs.t1_vbelt(f1, fb1)
+        ans1 = round(ans1,3)
+        ans2 = funcs.t2_vbelt(f1, fb2)
+        ans2 = round(ans2, 3)
+        fans = f"Maximum Tensile Stress vBelt = T1:{ans1} , T2:{ans2}"
+        self.textBrowser.setText(fans)
+
+    def np_vbelt_load(self):
+        k = self.DoubleSpinBox_130.value()
+        b = self.DoubleSpinBox_131.value()
+        t1 = self.DoubleSpinBox_132.value()
+        t2 = self.DoubleSpinBox_133.value()
+        ans = funcs.np_vbelt(k, b, t1, t2)
+        fans = f"'Np' Number of Passes = {ans}"
+        self.textBrowser.setText(fans)
+
+    def t_vbelt_load(self):
+        n_p = self.DoubleSpinBox_134.value()
+        l_p = self.DoubleSpinBox_135.value()
+        v = self.DoubleSpinBox_136.value()
+        ans = funcs.t_vbelt(n_p, l_p, v)
+        ans = round(ans, 3)
+        fans = f"'t' Lifetime of vBelt (hour) = {ans}"
+        self.textBrowser.setText(fans)
 
 if __name__ == "__main__":
     import sys
