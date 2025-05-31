@@ -179,7 +179,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         # wire_rope Ft
         #self.widget.setHidden(True)
-        self.htext_152.setHidden(True)
+        #self.htext_152.setHidden(True)
         self.htext_153.setHidden(True)
         self.htext_154.setHidden(True)
         self.htext_154.setHidden(True)
