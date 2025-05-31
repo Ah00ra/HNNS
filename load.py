@@ -1418,14 +1418,14 @@ if __name__ == "__main__":
     import qdarktheme
 
     app = QtWidgets.QApplication(sys.argv)
-    # app.setStyle('Windows')
+    app.setStyle('Windows')
     # def load_stylesheet(app, qss_file_path):
     #     with open(qss_file_path, "r") as file:
     #         app.setStyleSheet(file.read())
     # load_stylesheet(app, "theme/Takezo.qss")  
     
     stylesheet = qdarktheme.load_stylesheet("dark")
-    app.setStyleSheet(stylesheet)
+    app.setStyleSheet(stylesheet)   
     MainWindow = Ui_MainWindow()
       
 
