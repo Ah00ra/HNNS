@@ -6,7 +6,7 @@ from PyQt5.QtGui import QDoubleValidator
 from PyQt5.uic import loadUi
 import funcs
 from PyQt5.QtWidgets import QApplication, QStyleFactory
-from qt_material import apply_stylesheet
+#from qt_material import apply_stylesheet
 
 history = []
 print(QStyleFactory.keys())
