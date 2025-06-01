@@ -75,36 +75,6 @@ class CustomDoubleSpinBox(QDoubleSpinBox):
         else:
             return f"{value:.3f}".rstrip('0').rstrip('.')
 
-# class FloatOnlyComboBox(QComboBox):
-#     def __init__(self, parent=None):
-#         super().__init__(parent)
-#         self.setEditable(True)
-#         self.setInsertPolicy(QComboBox.NoInsert)  # Prevent adding invalid entries
-
-#         self.validator = QDoubleValidator()
-#         self.validator.setNotation(QDoubleValidator.StandardNotation)
-#         self.lineEdit().setValidator(self.validator)
-
-#         # Regular expression to match valid float inputs (including partial)
-#         self.float_regex = re.compile(r'^-?(\d+)?(\.\d*)?$')
-
-#         self.lineEdit().textEdited.connect(self.on_text_edited)
-
-#     def on_text_edited(self, text):
-#         # Allow empty string (user clearing input)
-#         if text == '':
-#             return
-
-#         # Check if text matches float regex (allows partial input)
-#         if self.float_regex.match(text):
-#             # Further check with validator for stricter validation
-#             state, _, _ = self.validator.validate(text, 0)
-#             if state == self.validator.Invalid:
-#                 # Invalid float input, revert to previous valid text
-#                 self.lineEdit().undo()
-#         else:
-#             # Not matching float pattern, revert
-#             self.lineEdit().undo()
 class FloatOnlyComboBox(QComboBox):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -135,17 +105,6 @@ class FloatOnlyComboBox(QComboBox):
         else:
             # Not matching float pattern, revert
             self.lineEdit().undo()
-
-    def getValue(self):
-        text = self.currentText()
-        if text == '':
-            return 0.0
-        try:
-            return float(text)
-        except ValueError:
-            # In case of unexpected invalid input, fallback to 0
-            return 0.0
-
 
 class Wire_Rope_Tables(QWidget):
     def __init__(self):
@@ -514,6 +473,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         if item.text(column) == "'Np' Number of Passes":
             self.pushButton_55.clicked.connect(self.np_vbelt_load)
+            self.pushButton_57.clicked.connect(self.get_selected_data_np_vbelt)
             self.stackedWidget.setCurrentIndex(39)    
 
         if item.text(column) == "'t' Lifetime ":
@@ -935,7 +895,25 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             value = data.text()
             if is_numeric_string(value):
                 self.DoubleSpinBox_124.setValue(float(value))
+
+    def get_selected_data_np_vbelt(self):
+        selected_items = self.tableWidget_11.selectedItems()
+        if len(selected_items) != 0:
+            col = selected_items[0].column()
+            row = selected_items[0].row()
+
+            data= self.tableWidget_11.item(row, col)
+            if col == 1 or col == 3:
+                k = data.text()
+                k = float(k)
+                self.DoubleSpinBox_130.setValue(k)
+            if col == 2 or col == 4:
+                b = data.text()
+                b = float(b)
+                self.DoubleSpinBox_131.setValue(b)
         
+
+
     def get_selected_data(self):
         selected_items = self.tableWidget_2.selectedItems()
         #row = selected_items[0].row()
