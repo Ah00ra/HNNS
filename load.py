@@ -141,26 +141,26 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         self.stackedWidget.setCurrentIndex(0)
 
-        self.tableWidget.setHidden(True) 
-        self.pushButton_10.setHidden(True)
+        # self.tableWidget.setHidden(True) 
+        # self.pushButton_10.setHidden(True)
 
-        self.tableWidget_3.setHidden(True)
-        self.pushButton_21.setHidden(True)
+        # self.tableWidget_3.setHidden(True)
+        # self.pushButton_21.setHidden(True)
         # set hidden F2 form layout_9
-        self.tableWidget_2.setHidden(True)
-        self.pushButton_11.setHidden(True)
-        self.DoubleSpinBox_11.setHidden(True)
-        self.fDoubleSpinBox_13.setHidden(True)
-        self.checkBox_14.setHidden(True)
-        self.checkBox_15.setHidden(True)
-        self.fDoubleSpinBox_14.setHidden(True)
-        self.fDoubleSpinBox_15.setHidden(True)
-        self.pushButton_16.setHidden(True)
+        # self.tableWidget_2.setHidden(True)
+        # self.pushButton_11.setHidden(True)
+        # self.DoubleSpinBox_11.setHidden(True)
+        # self.fDoubleSpinBox_13.setHidden(True)
+        # self.checkBox_14.setHidden(True)
+        # self.checkBox_15.setHidden(True)
+        # self.fDoubleSpinBox_14.setHidden(True)
+        # self.fDoubleSpinBox_15.setHidden(True)
+        # self.pushButton_16.setHidden(True)
 
-        self.htext_44.setHidden(True)
-        self.htext_45.setHidden(True)
-        self.htext_46.setHidden(True)
-        self.htext_47.setHidden(True)
+        # self.htext_44.setHidden(True)
+        # self.htext_45.setHidden(True)
+        # self.htext_46.setHidden(True)
+        # self.htext_47.setHidden(True)
         
         # fc belt
         self.DoubleSpinBox_87.setHidden(True)
@@ -286,17 +286,25 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
 
     def append_text_to_history(self):
+        def split_text(text):
+            name_expl, value = text.split("=")
+    
+            name = name_expl.split(";")[0]
+            return name, value
+            
+
         text = self.textBrowser.toPlainText()
         print("LOG: ",text) 
         if not re.search(r"\bError\b", text):
-            split_text = text.split("=")
+            name, value= split_text(text)
 
-            formula_name_unit = split_text[0]
-            value = str(split_text[1])
-            if is_numeric_string(split_text[1]):
-                value = str(round(float(split_text[1]), 3))  
+            # formula_name_unit = split_text[0]
+            # value = str(split_text[1])
+           
+            if is_numeric_string(value):
+                value = str(round(float(value), 3))  
 
-            item_to_add = [formula_name_unit, value]
+            item_to_add = [name, value]
 
             if len(history) == 0:
                 history.append(item_to_add)
@@ -358,8 +366,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         
         if item.text(column) == "F2":
             self.pushButton_12.clicked.connect(self.f2)
-            self.pushButton_16.clicked.connect(self.f1a_fromf2)
-            self.pushButton_11.clicked.connect(self.get_selected_data)
+            # self.pushButton_16.clicked.connect(self.f1a_fromf2)
+            # self.pushButton_11.clicked.connect(self.get_selected_data)
             self.stackedWidget.setCurrentIndex(10)
 
         
@@ -446,11 +454,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_46.clicked.connect(self.deltaf_vebelt_load)
             self.stackedWidget.setCurrentIndex(32)
 
-        if item.text(column) == "'F1' Largest Tension vBelt":
+        if item.text(column) == "'F1' Largest Tension ":
             self.pushButton_47.clicked.connect(self.f1_vebelt_load)
             self.stackedWidget.setCurrentIndex(33)
 
-        if item.text(column) == "'F2' Least Tension vBelt":
+        if item.text(column) == "'F2' Least Tension ":
             self.pushButton_48.clicked.connect(self.f2_vbelt_load)
             self.stackedWidget.setCurrentIndex(34)
 
@@ -752,9 +760,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         t = self.DoubleSpinBox_23.value()
         f = self.DoubleSpinBox_25.value()
         phi = self.DoubleSpinBox_26.value()
-        
-
         ans = funcs.minibi(sf, et, nu, dcap, tcap, t,f,phi)
+        fans = f"Minimum = {ans} "
         self.textBrowser.setText(ans)
 
 
@@ -1016,7 +1023,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         w = self.fDoubleSpinBox_20.value()
         fi_p = self.fDoubleSpinBox_21.value()
         ans = funcs.dip(c,w,fi_p)
-        fans = f"dip Belt = {ans}"
+        fans = f"dip Belt; dip belt is somehthing blah blah blah = {ans}"
         self.textBrowser.setText(fans)
 
 
