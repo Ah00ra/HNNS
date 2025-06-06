@@ -164,7 +164,6 @@ def f1pa(sf, et, nu, dcap, t, b):
 @error_handling_decorator
 def deltaf(capt, capd):
     ans = 2*capt/capd
-    ans =f"{ans} N" 
     return ans 
 
 @error_handling_decorator
@@ -173,7 +172,6 @@ def f2metalbelt(sf,et,nu,dcap,tcap,t,b):
     ab = (sf - x)*t*b
     delf = 2*tcap/dcap
     ans = ab - delf
-    ans =f"{ans} N" 
     return ans
 
 @error_handling_decorator
@@ -1340,7 +1338,7 @@ k1_vflat = [.75, .76, .78, .79, .80, .81, .83, .84, .85, .85, .82, .80, .77, .73
 
 def k1_vbelt(theta,selected_type):
     if theta > 180 or theta < 82.2:
-        return "Error: Range for θ is (82.2-180)"
+        return "Error: Range for θ is (82.2 < θ < 180) degree"
     else:
         if selected_type == "VV" :   
             for item in lis_theta:

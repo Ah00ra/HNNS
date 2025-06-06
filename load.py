@@ -6,6 +6,8 @@ from PyQt5.QtGui import QDoubleValidator
 from PyQt5.uic import loadUi
 import funcs
 from PyQt5.QtWidgets import QApplication, QStyleFactory
+import reoureces_rc
+
 #from qt_material import apply_stylesheet
 
 history = []
@@ -310,7 +312,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 history.append(item_to_add)
             elif history[-1][1] != value:
                 print(history[-1])
-                if len(history) == 10:
+                if len(history) == 20:
                     history.pop(0)
                 history.append(item_to_add)
                             
@@ -672,7 +674,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         p = self.DoubleSpinBox_64.value()
         c = self.DoubleSpinBox_65.value()
         ans = str(funcs.np_rc(n1, n2, p, c))
-        self.textBrowser.setText(ans)
+        fans = f"L RollerChain;Length of the chain = {ans}"
+        self.textBrowser.setText(fans)
 
     def center_distance(self):
         n1 = self.DoubleSpinBox_58.value()
@@ -680,14 +683,17 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         p = self.DoubleSpinBox_60.value()
         L = self.DoubleSpinBox_61.value()
         ans = str(funcs.center_distance(n1, n2, p, L))
-        self.textBrowser.setText(ans)
+        fans = f"C RollerChain(in); center-to-center distance Sprocket RollerChain = {ans}"
+        self.textBrowser.setText(fans)
 
     def h_link_plate(self):
         N = self.DoubleSpinBox_55.value()
         n = self.DoubleSpinBox_56.value()
         p = self.DoubleSpinBox_57.value()
         ans = str(funcs.h_link_plate(N, n, p,))
-        self.textBrowser.setText(ans)
+        fans = f"Hp1 RollerChain(Hp); Maximum Power transmission capacity of  chain,\
+             limited by the strength of the link plates = {ans}"
+        self.textBrowser.setText(fans)
 
 
 
@@ -701,6 +707,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         b = self.DoubleSpinBox_53.value()
         phi = self.DoubleSpinBox_54.value()
         ans = str(funcs.fprime2(sf, et, nu, dcap, tcap, t, b, phi))
+        fans = f"f' Metalbelt; Effective coefficient of friction between the belt and the pulley = {ans}"
         self.textBrowser.setText(ans)
 
 
@@ -713,8 +720,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         t = self.DoubleSpinBox_44.value()
         b = self.DoubleSpinBox_46.value()
         ans = str(funcs.fi_2(sf, et, nu, dcap, tcap, t, b))
-
-        self.textBrowser.setText(ans)
+        fans = f"Fi Metalbelt(Ibf); Tension in the slack side of the MetalBelt = {ans}"
+        self.textBrowser.setText(fans)
 
 
     def f2metalbelt(self):
@@ -726,7 +733,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         t = self.DoubleSpinBox_38.value()
         b = self.DoubleSpinBox_45.value()
         ans = funcs.f2metalbelt(sf, et, nu, dcap, tcap, t, b)
-        fans = f"F_2 Metalbelt = {ans}"
+        fans = f"F2 Metalbelt(Ibf); Tension in the slack side of the MetalBelt = {ans}"
         self.textBrowser.setText(fans)
 
 
@@ -735,7 +742,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         capt = self.DoubleSpinBox_4.value()
         capd = self.fDoubleSpinBox_6.value() 
         ans = str(funcs.deltaf(capt, capd))
-        fans = f"ΔF Belt = {ans}"
+        fans = f"ΔF Belt (Ibf)= {ans}"
         self.textBrowser.setText(fans)
         
 
@@ -746,9 +753,9 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         dcap = self.DoubleSpinBox_30.value()
         t = self.DoubleSpinBox_32.value()
         b = self.DoubleSpinBox_33.value()
-
         ans = str(funcs.f1pa(sf, et, nu, dcap, t, b))
-        self.textBrowser.setText(ans)
+        fans = f"(f1)a MetalBelt(Ibf); Allowable tension  = {ans} "
+        self.textBrowser.setText(fans)
 
 
     def minibi(self):
@@ -761,33 +768,35 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         f = self.DoubleSpinBox_25.value()
         phi = self.DoubleSpinBox_26.value()
         ans = funcs.minibi(sf, et, nu, dcap, tcap, t,f,phi)
-        fans = f"Minimum = {ans} "
+        fans = f"Min b MetalBelt(in); Minimum  Belt Thicknes = {ans} "
         self.textBrowser.setText(ans)
 
 
     def sfnp(self):
         np = self.DoubleSpinBox_17.value()
         ans = str(funcs.sfnp(np))
-        self.textBrowser.setText(ans)
+        fans = f"Sf MetalBelt(psi); Endurance Strength = {ans}"
+        self.textBrowser.setText(fans)
 
          
     def sfsy(self):
         sy = self.DoubleSpinBox_16.value()
         ans = str(funcs.sfsy(sy))
-        self.textBrowser.setText(ans)
+        fans = f"Sf MetalBelt(psi); Endurance Strength = {ans}"
+        self.textBrowser.setText(fans)
 
 
-    def open_belt(self):
-        cd = self.htext_6.value()
-        c = self.htext_7.value()
-        d = self.htext_8.value()
+    # def open_belt(self):
+    #     cd = self.htext_6.value()
+    #     c = self.htext_7.value()
+    #     d = self.htext_8.value()
 
-        pass
-    def super_gear(self):
-        # h = self.HdoubleSpinBox.valDdoubleSpinBox_10ue()
+    #     pass
+    # def super_gear(self):
+    #     # h = self.HdoubleSpinBox.valDdoubleSpinBox_10ue()
 
-        # ans = funcs.spur_gear(h,n,d)
-        # self.textBrowser.setText(ans)
+    #     # ans = funcs.spur_gear(h,n,d)
+    #     # self.textBrowser.setText(ans)
         
         pass
 
@@ -795,7 +804,6 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         cd = self.DoubleSpinBox_18.value()
         d = self.fDoubleSpinBox_22.value()
         c = self.fDoubleSpinBox_23.value()
-
         ans= funcs.open_belt(cd,d,c)
         self.textBrowser.setText(ans)
 
@@ -815,7 +823,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         cd = self.fDoubleSpinBox_26.value()
         d = self.fDoubleSpinBox_27.value()
         bs= funcs.belt_speed(cd, d)
-        ans = f"Speed Belt = {bs}"
+        ans = f"Speed Belt (ft/min)= {bs}"
         self.textBrowser.setText(ans)
 
     def omg(self):
@@ -848,7 +856,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         w = self.DoubleSpinBox_86.value()
         v = self.fDoubleSpinBox_28.value()
         ans = funcs.fc_belt(w,v) 
-        fans = f"Fc belt = {ans}"
+        fans = f"Fc belt(Ibf); hoop Tension due to Centrifugal Force = {ans}"
         self.textBrowser.setText(fans)
         pass
 
@@ -954,7 +962,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         n = self.fDoubleSpinBox_4.value()
         ans = funcs.TorqueBelt(H_nom,K_s,n_d,n)
         ans = str(ans)
-        fans = f"Torque Belt = {ans}"  
+        fans = f"Torque Belt(Hp); Necessary Torque = {ans}"  
         self.textBrowser.setText(fans)
        
     def f1a_f2(self):
@@ -962,7 +970,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         d = self.fDoubleSpinBox_5.value()   
         ans = funcs.f1a_f2(T,d)
         ans = str(ans)
-        fans = f"(F_1)_a - F_2 Belt = {ans}"
+        fans = f"(F1)a - F2 Belt = {ans}"
         self.textBrowser.setText(fans)
 
 
@@ -974,7 +982,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         phi = self.DoubleSpinBox_8.value()  
         ans = funcs.fi(t,d,f,phi)
         ans = str(ans)
-        fans = f"F_i Belt = {ans}"
+        fans = f"Fi Belt(Ibf); Initial Tension in the belt = {ans}"
         self.textBrowser.setText(fans)
 
     def fi2(self):
@@ -983,7 +991,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         f1a_p = self.DoubleSpinBox_12.value()
         ans = funcs.fi2(fc,f2_p,f1a_p)
         ans = str(ans)
-        fans = f"F_i Belt = {ans}"
+        fans = f"Fi Belt(Ibf); Initial Tension in the belt = {ans}"
         self.textBrowser.setText(fans)
 
     def f2(self):
@@ -991,7 +999,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         f1a_f2 = self.fDoubleSpinBox_7.value()
         ans = funcs.f2(f1a,f1a_f2)  
         ans = str(ans)
-        fans = f"F_2 Belt = {ans}"
+        fans = f"F2 Belt(Ibf); Tension in the slack side of the belt = {ans}"
         self.textBrowser.setText(fans)
 
 
@@ -1002,7 +1010,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         cv = self.fDoubleSpinBox_11.value()
         ans = funcs.f1a(b,fa,cp,cv)
         ans = str(ans)
-        fans = f"(F_1)_a Belt = {ans}"
+        fans = f"(F1)a Belt(Ibf); allowable largest tension = {ans}"
         self.textBrowser.setText(fans)
 
 
@@ -1014,7 +1022,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         fc = self.fDoubleSpinBox_19.value()
         ans = funcs.f_prime(phi,f1a_p,fc,f_2)
         ans = str(ans)
-        fans = f"f' Belt = {ans}"
+        fans = f"f' Belt; Effective coefficient of friction between the belt and the pulley. = {ans}"
         self.textBrowser.setText(fans)
 
 
@@ -1023,17 +1031,17 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         w = self.fDoubleSpinBox_20.value()
         fi_p = self.fDoubleSpinBox_21.value()
         ans = funcs.dip(c,w,fi_p)
-        fans = f"dip Belt; dip belt is somehthing blah blah blah = {ans}"
+        fans = f"Dip Belt(in); vertical sag or deflection of the belt between the pulleys\
+        due to the belt's own weight and tension = {ans}"
         self.textBrowser.setText(fans)
 
 
     def lengh_pitch_vbelt(self):
-        print("IM IN")
         c = self.DoubleSpinBox_90.value()
         capd = self.DoubleSpinBox_91.value()
         d = self.DoubleSpinBox_92.value()
         ans = funcs.lengh_pitch_vbelt(c, capd, d)
-        fans = f"Lengh of pitch = {ans}"
+        fans = f"Lp vBelt(in); Lengh of pitch = {ans}"
         self.textBrowser.setText(fans)
 
     def combo_lengh_pitch_vbelt(self):
@@ -1042,31 +1050,31 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             value = self.comboBox_4.currentText()
             value = int(value)
             ans = 1.3 + value
-            fans = f"lengh of pitch (A{value}) = {ans}"
+            fans = f"Lp vBelt(in); Lengh of pitch (A{value}) = {ans}"
             self.textBrowser.setText(fans)
         elif selected_type == "B":
             value = self.comboBox_5 .currentText()
             value = int(value)
             ans = 1.8 + value
-            fans = f"lengh of pitch (B{value}) = {ans}"
+            fans = f"Lp vBelt(in); Lengh of pitch (B{value}) = {ans}"
             self.textBrowser.setText(fans)
         elif selected_type == "C":
             value = self.comboBox_6 .currentText()
             value = int(value)
             ans = 2.9 + value
-            fans = f"lengh of pitch (C{value}) = {ans}"
+            fans = f"Lp vBelt(in); Lengh of pitch (C{value}) = {ans}"
             self.textBrowser.setText(fans)
         elif selected_type == "D":
             value = self.comboBox_7 .currentText()
             value = int(value)
             ans = 3.3 + value
-            fans = f"lengh of pitch (D{value}) = {ans}"
+            fans = f"Lp vBelt(in); Lengh of pitch (D{value}) = {ans}"
             self.textBrowser.setText(fans)
         elif selected_type == "E":
             value = self.comboBox_8.currentText()
             value = int(value)
             ans = 4.5 + value
-            fans = f"lengh of pitch (E{value}) = {ans}"
+            fans = f"Lp vBelt(in); Lengh of pitch (E{value}) = {ans}"
             self.textBrowser.setText(fans)
 
     
@@ -1359,7 +1367,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         capd = self.DoubleSpinBox_94.value()
         d = self.DoubleSpinBox_95.value() 
         ans = funcs.center_distance_vbelt(lp, capd, d)
-        fans = f"Center to center pulley vBelt = {ans}"
+        fans = f"C vBelt(in); center-to-center distance pulley vBelt = {ans}"
         self.textBrowser.setText(fans)
 
     def hd_vbelt_load(self):
@@ -1367,21 +1375,21 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         k_s = self.DoubleSpinBox_98.value()
         n_d = self.DoubleSpinBox_100.value()
         ans = funcs.hd_vbelt(h_nom, k_s, n_d)
-        fans = f"Design Hp vBelt = {ans}"
+        fans = f"Hd vBelt; Design Power vBelt = {ans}"
         self.textBrowser.setText(fans)
 
     def nb_vbelt_load(self):
         h_d = self.DoubleSpinBox_105.value()
         h_a = self.DoubleSpinBox_104.value()
         ans = funcs.nb_vbelt(h_a , h_d)
-        fans = f"min number of vBelts = {ans}"
+        fans = f"Nb vBelt; Minimum number of vBelts = {ans}"
         self.textBrowser.setText(fans)
 
     def fc_vbelt_load(self):
         k_c = self.DoubleSpinBox_106.value()
         v = self.DoubleSpinBox_107.value()
         ans = funcs.fc_vbelt(k_c, v)
-        fans = f"Fc vBelt = {ans}"
+        fans = f"Fc vBelt(Ibf); Centrifugal Tension = {ans}"
         self.textBrowser.setText(fans)
 
     def deltaf_vebelt_load(self):
@@ -1390,7 +1398,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         n = self.DoubleSpinBox_111.value()
         d = self.DoubleSpinBox_110.value()
         ans = funcs.delta_f_vbelt(h_d, n_b, n, d)
-        fans = f"ΔF vBelt = {ans}"
+        fans = f"ΔF vBelt(Ibf); Power that is transmitted per vBelt = {ans}"
         self.textBrowser.setText(fans)
 
     def f1_vebelt_load(self):
@@ -1398,14 +1406,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         deltaf = self.DoubleSpinBox_113.value()
         exp = self.DoubleSpinBox_114.value()
         ans = funcs.f1_vbelt(f_c, deltaf, exp)
-        fans = f"F1 vBelt = {ans}"
+        fans = f"F1 vBelt(Ibf); Largest Tension = {ans}"
         self.textBrowser.setText(fans)
 
     def f2_vbelt_load(self):
         deltaf = self.DoubleSpinBox_115.value()
         exp = self.DoubleSpinBox_116.value()
         ans = funcs.f2_vbelt(deltaf, exp)
-        fans = f"F2 vBelt = {ans}"
+        fans = f"F2 vBelt; Least Tension = {ans}"
         self.textBrowser.setText(fans)    
 
     def fi_vbelt_load(self):
@@ -1413,7 +1421,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         f_2 = self.DoubleSpinBox_118.value()
         f_c = self.DoubleSpinBox_119.value()
         ans = funcs.fi_vbelt(f_1, f_2, f_c)
-        fans = f"Fi vBelt = {ans}"
+        fans = f"Fi vBelt(Ibf); Initial Tension = {ans}"
         self.textBrowser.setText(fans)
 
     def nfs_vbelt_load(self):
@@ -1422,7 +1430,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         h_nom = self.DoubleSpinBox_122.value()
         k_s = self.DoubleSpinBox_123.value()
         ans = funcs.nfs_vbelt(h_a, n_b, h_nom, k_s)
-        fans = f"'η_fs' factor of safety vBelt = {ans}"
+        fans = f"η_fs vBelt; factor of safety vBelt = {ans}"
         self.textBrowser.setText(fans)
 
     def fb12_vbelt_load(self):
@@ -1433,7 +1441,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         d = self.DoubleSpinBox_126.value()
         ans2 = funcs.fb2_vbelt(kb, d)
         ans2 = round(ans2, 3)
-        fans = f"Max Tensile Stress vBelt = fb1:{ans1} , fb2:{ans2}"
+        fans = f"Fb1,Fb2 vBelt(Ibf); Maximum tensile stress\
+        at the driving sheave(Fb1) & at driven pulley(Fb2) = {ans1}, {ans2}"
         self.textBrowser.setText(fans)
 
     def t12_vbelt_load(self):
@@ -1444,7 +1453,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         ans1 = round(ans1,3)
         ans2 = funcs.t2_vbelt(f1, fb2)
         ans2 = round(ans2, 3)
-        fans = f"Maximum Tensile Stress vBelt = T1:{ans1} , T2:{ans2}"
+        fans = f"T1,T2 vBelt(Ibf); Maximum Tensile Stress vBelt = {ans1}, {ans2}"
         self.textBrowser.setText(fans)
 
     def np_vbelt_load(self):
@@ -1453,7 +1462,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         t1 = self.DoubleSpinBox_132.value()
         t2 = self.DoubleSpinBox_133.value()
         ans = funcs.np_vbelt(k, b, t1, t2)
-        fans = f"'Np' Number of Passes = {ans}"
+        fans = f"Np vBelt; Number of Passes = {ans}"
         self.textBrowser.setText(fans)
 
     def t_vbelt_load(self):
@@ -1462,7 +1471,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         v = self.DoubleSpinBox_136.value()
         ans = funcs.t_vbelt(n_p, l_p, v)
         ans = round(ans, 3)
-        fans = f"'t' Lifetime of vBelt (hour) = {ans}"
+        fans = f"t vBelt; Lifetime of vBelt (hour) = {ans}"
         self.textBrowser.setText(fans)
 
 if __name__ == "__main__":

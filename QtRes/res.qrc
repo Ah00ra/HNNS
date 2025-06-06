@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="desc">
+    <file>images/torque belt.png</file>
+    <file>images/Artboard 1.png</file>
+    <file>images/rollerchain.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>images/submit.png</file>
+  </qresource>
+</RCC>
