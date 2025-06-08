@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="desc">
+    <file>images/theta dd open belt.png</file>
+    <file>images/thetad open belt.png</file>
     <file>images/torque belt.png</file>
     <file>images/Artboard 1.png</file>
     <file>images/rollerchain.png</file>

@@ -1676,10 +1676,11 @@ def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
 
     if selected_type == "A":
         if v > 5000 or v < 1000 and sheave_d<2.6:
-            return "Error : goh v sheave_d < 2.6"
+            return "Error : Speed range is 1000-5000 and Sheave Pitch Diameter should be larger than '2.6'(in)"
         
         elif v > 5000 or v < 1000 and sheave_d>5:
-            return "Error goh v sheave_d > 5"
+            return " Error: Speed range is 1000-5000 and \
+                For Sheave Pitch Diameter larger than '5'(in); Use Standard '5'(in) in 'A' Belt Section "
 
         elif v > 5000 or v < 1000 :
             return "Error:Speed is out of the range; Speed Range (1000 < V < 5000) ft/min"
@@ -1723,10 +1724,12 @@ def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
 
     elif selected_type == "B":
         if v > 5000 or v < 1000 and sheave_d<4.2:
-            return "Error : goh v sheave_d < 4.2"
+            return "Error : Speed range is 1000-5000 and \
+                Sheave Pitch Diameter should be larger than '4.2'(in); in 'B' Belt Section "
         
         elif v > 5000 or v < 1000 and sheave_d>7:
-            return "Error goh v sheave_d > 7"
+            return "Error:Speed range is 1000-5000 \
+                and For Sheave Pitch Diameter larger than '7'(in); Use Standard '7'(in) in 'B' Belt Section"
 
         elif v > 5000 or v < 1000 :
             return "Error:Speed is out of the range; Speed Range (1000 < V < 5000) ft/min"
@@ -1769,10 +1772,12 @@ def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
 
     elif selected_type == "C":
         if v > 5000 or v < 1000 and sheave_d<6:
-            return "Error : goh v sheave_d < 6"
+            return "Error : Speed range is 1000-5000 and \
+                Sheave Pitch Diameter should be larger than '6'(in); in 'C' Belt Section"
         
         elif v > 5000 or v < 1000 and sheave_d>12:
-            return "Error goh v sheave_d > 12"
+            return "Speed range is 1000-5000 and \
+                  For Sheave Pitch Diameter larger than '12'(in); Use Standard '12'(in) in 'C' Belt Section  "
 
         elif v > 5000 or v < 1000 :
             return "Error:Speed is out of the range; Speed Range (1000 < V < 5000) ft/min"
@@ -1815,10 +1820,12 @@ def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
 
     elif selected_type == "D":
         if v > 5000 or v < 1000 and sheave_d<10:
-            return "Error : goh v sheave_d < 10"
+            return "Error : Speed range is 1000-5000 and \
+                Sheave Pitch Diameter should be larger than '10'(in); in 'D' Belt Section "
         
         elif v > 5000 or v < 1000 and sheave_d>17:
-            return "Error goh v sheave_d > 17"
+            return "Speed range is 1000-5000 and \
+                        For Sheave Pitch Diameter larger than '17'(in); Use Standard '17'(in) in 'D' Belt Section"
         elif v > 5000 or v < 1000 :
             return "Error:Speed is out of the range; Speed Range (1000 < V < 5000) ft/min"
         elif sheave_d < 10 :
@@ -1861,10 +1868,12 @@ def h_table_vbelt_int_pulley_and_speed(v, sheave_d, selected_type):
 
     elif selected_type == "E":
         if v > 5000 or v < 1000 and sheave_d<16:
-            return "Error : goh v sheave_d < 16"
+            return "Error: Speed range is 1000-5000 and \
+                Sheave Pitch Diameter should be larger than '16'(in); in 'E' Belt Section"
         
         elif v > 5000 or v < 1000 and sheave_d>28:
-            return "Error goh v sheave_d > 28"
+            return "Error: Speed range is 1000-5000 and \
+                For Sheave Pitch Diameter larger than '28'(in) Use Standard '28'(in); in 'E' Belt Section"
 
         elif v > 5000 or v < 1000 :
             return "Error:Speed is out of the range; Speed Range (1000 < V < 5000) ft/min"
