@@ -448,7 +448,7 @@ QTreeWidget::item:focus {
         <set>Qt::ImhHiddenText</set>
        </property>
        <property name="currentIndex">
-        <number>15</number>
+        <number>7</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -1627,45 +1627,17 @@ QPushButton:default {
        </widget>
        <widget class="QWidget" name="DONOTdelete"/>
        <widget class="QWidget" name="Open_Belt">
-        <widget class="QLabel" name="htext_363">
-         <property name="geometry">
-          <rect>
-           <x>430</x>
-           <y>459</y>
-           <width>590</width>
-           <height>190</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>MS Shell Dlg 2</family>
-           <pointsize>11</pointsize>
-           <weight>50</weight>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="pixmap">
-          <pixmap resource="QtRes/res.qrc">:/desc/images/theta dd open belt.png</pixmap>
-         </property>
-         <property name="scaledContents">
-          <bool>true</bool>
-         </property>
-        </widget>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>10</x>
-           <y>10</y>
-           <width>1141</width>
+           <x>11</x>
+           <y>11</y>
+           <width>1150</width>
            <height>243</height>
           </rect>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
+         <layout class="QGridLayout" name="gridLayout_109">
+          <item row="0" column="0">
            <widget class="QGroupBox" name="groupBox_4">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -1817,6 +1789,40 @@ QComboBox {
                   </property>
                  </widget>
                 </item>
+                <item row="2" column="1">
+                 <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_23">
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="specialValueText">
+                   <string>0</string>
+                  </property>
+                  <property name="decimals">
+                   <number>3</number>
+                  </property>
+                  <property name="minimum">
+                   <double>-1000000000000.000000000000000</double>
+                  </property>
+                  <property name="maximum">
+                   <double>1000000000000.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
                 <item row="0" column="1">
                  <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_18">
                   <property name="maximumSize">
@@ -1854,19 +1860,6 @@ QComboBox {
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="htext_63">
-                  <property name="font">
-                   <font>
-                    <family>Segoe UI Semibold</family>
-                    <pointsize>12</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>d</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="2" column="0">
                  <widget class="QLabel" name="htext_64">
                   <property name="font">
@@ -1896,37 +1889,16 @@ QComboBox {
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="1">
-                 <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_23">
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="htext_63">
                   <property name="font">
                    <font>
                     <family>Segoe UI Semibold</family>
-                    <pointsize>10</pointsize>
+                    <pointsize>12</pointsize>
                    </font>
                   </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::NoButtons</enum>
-                  </property>
-                  <property name="specialValueText">
-                   <string>0</string>
-                  </property>
-                  <property name="decimals">
-                   <number>3</number>
-                  </property>
-                  <property name="minimum">
-                   <double>-1000000000000.000000000000000</double>
-                  </property>
-                  <property name="maximum">
-                   <double>1000000000000.000000000000000</double>
-                  </property>
-                  <property name="value">
-                   <double>0.000000000000000</double>
+                  <property name="text">
+                   <string>d</string>
                   </property>
                  </widget>
                 </item>
@@ -1965,23 +1937,7 @@ QComboBox {
             </layout>
            </widget>
           </item>
-          <item>
-           <spacer name="horizontalSpacer_4">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>35</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
+          <item row="0" column="2">
            <widget class="QGroupBox" name="groupBox_40">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -1991,13 +1947,13 @@ QComboBox {
             </property>
             <property name="minimumSize">
              <size>
-              <width>336</width>
+              <width>350</width>
               <height>0</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>471</width>
+              <width>350</width>
               <height>241</height>
              </size>
             </property>
@@ -2070,6 +2026,18 @@ QComboBox {
                 <layout class="QGridLayout" name="gridLayout_64">
                  <item row="0" column="0">
                   <layout class="QGridLayout" name="gridLayout_63">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_5">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>C</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="0" column="0">
                     <widget class="QLabel" name="label_3">
                      <property name="font">
@@ -2106,19 +2074,7 @@ QComboBox {
                       </font>
                      </property>
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= smaller pulley diameter&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="label_5">
-                     <property name="font">
-                      <font>
-                       <pointsize>11</pointsize>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>C</string>
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= Smaller pulley diameter&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
                     </widget>
                    </item>
@@ -2134,7 +2090,7 @@ QComboBox {
                       </font>
                      </property>
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= center-to-center distance pulley&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Center-to-center distance pulley&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
                     </widget>
                    </item>
@@ -2150,7 +2106,7 @@ QComboBox {
                       </font>
                      </property>
                      <property name="text">
-                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= larger pulley diameter&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= Larger pulley diameter&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                      </property>
                     </widget>
                    </item>
@@ -2163,7 +2119,23 @@ QComboBox {
             </layout>
            </widget>
           </item>
-          <item>
+          <item row="0" column="1">
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>35</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="3">
            <spacer name="horizontalSpacer_3">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -2179,7 +2151,7 @@ QComboBox {
             </property>
            </spacer>
           </item>
-          <item>
+          <item row="0" column="4">
            <widget class="QGroupBox" name="groupBox_39">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -2189,13 +2161,13 @@ QComboBox {
             </property>
             <property name="minimumSize">
              <size>
-              <width>427</width>
+              <width>450</width>
               <height>0</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>500</width>
+              <width>450</width>
               <height>241</height>
              </size>
             </property>
@@ -2252,35 +2224,12 @@ QComboBox {
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>389</width>
-                  <height>176</height>
+                  <width>558</width>
+                  <height>233</height>
                  </rect>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_65">
                  <item row="0" column="0">
-                  <widget class="QLabel" name="htext_362">
-                   <property name="font">
-                    <font>
-                     <family>MS Shell Dlg 2</family>
-                     <pointsize>11</pointsize>
-                     <weight>50</weight>
-                     <italic>false</italic>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>&lt;span style=&quot;font-family: 'Segoe UI Semibold'; font-size: 16pt;&quot;&gt;
-θ&lt;sub&gt;D&lt;/sub&gt; = π + 2 sin&lt;sup&gt;-1&lt;/sup&gt;
-&lt;sup&gt;D - d&lt;/sup&gt;/&lt;sub&gt;2C&lt;/sub&gt;
-&lt;/span&gt;
-</string>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
                   <widget class="QLabel" name="htext_364">
                    <property name="font">
                     <font>
@@ -2292,11 +2241,45 @@ QComboBox {
                     </font>
                    </property>
                    <property name="text">
-                    <string>&lt;span style=&quot;font-family: 'Segoe UI Semibold'; font-size: 16pt;&quot;&gt;
-θ&lt;sub&gt;D&lt;/sub&gt; = π + 2 sin&lt;sup&gt;-1&lt;/sup&gt;
-&lt;sup&gt;D - d&lt;/sup&gt;/&lt;sub&gt;2C&lt;/sub&gt;
-&lt;/span&gt;
-</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/open belt theta d.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="htext_365">
+                   <property name="font">
+                    <font>
+                     <family>MS Shell Dlg 2</family>
+                     <pointsize>11</pointsize>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/open belt theta dd.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="htext_366">
+                   <property name="font">
+                    <font>
+                     <family>MS Shell Dlg 2</family>
+                     <pointsize>11</pointsize>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/open belt L.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -2314,75 +2297,233 @@ QComboBox {
         </widget>
        </widget>
        <widget class="QWidget" name="Cross_Belt">
-        <widget class="QGroupBox" name="groupBox_5">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>10</x>
-           <y>10</y>
-           <width>250</width>
+           <x>11</x>
+           <y>11</y>
+           <width>1150</width>
            <height>243</height>
           </rect>
          </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>250</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>250</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Segoe UI</family>
-           <pointsize>20</pointsize>
-           <weight>50</weight>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="title">
-          <string>Input</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_56">
-          <item row="0" column="0">
-           <spacer name="verticalSpacer_14">
+         <layout class="QGridLayout" name="gridLayout_108">
+          <item row="0" column="3">
+           <spacer name="horizontalSpacer_6">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Horizontal</enum>
             </property>
             <property name="sizeType">
              <enum>QSizePolicy::Fixed</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>20</width>
+              <width>35</width>
               <height>20</height>
              </size>
             </property>
            </spacer>
           </item>
-          <item row="1" column="0">
-           <widget class="QFrame" name="frame_10">
+          <item row="0" column="1">
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>35</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="4">
+           <widget class="QGroupBox" name="groupBox_42">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>450</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>450</width>
+              <height>241</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <family>Segoe UI Variable Text Semibold</family>
-              <pointsize>10</pointsize>
-              <weight>75</weight>
+              <family>Segoe UI</family>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
+              <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true">QFrame {
+            <property name="title">
+             <string>Formula</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_106">
+             <item row="1" column="0">
+              <widget class="QScrollArea" name="scrollArea_8">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAsNeeded</enum>
+               </property>
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents_8">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>507</width>
+                  <height>160</height>
+                 </rect>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_107">
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="htext_373">
+                   <property name="font">
+                    <font>
+                     <family>MS Shell Dlg 2</family>
+                     <pointsize>11</pointsize>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/crossed belt L.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="htext_372">
+                   <property name="font">
+                    <font>
+                     <family>MS Shell Dlg 2</family>
+                     <pointsize>11</pointsize>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/crossed belt theta.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <spacer name="verticalSpacer_50">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="groupBox_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>250</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>250</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Input</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_56">
+             <item row="0" column="0">
+              <spacer name="verticalSpacer_14">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="0">
+              <widget class="QFrame" name="frame_10">
+               <property name="font">
+                <font>
+                 <family>Segoe UI Variable Text Semibold</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QFrame {
     /* Optional: add frame background or border if needed */
 }
 
@@ -2447,145 +2588,330 @@ QComboBox {
     color: black;
 }
 </string>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_20">
-             <item row="0" column="0">
-              <widget class="QLabel" name="htext_116">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
                </property>
-               <property name="text">
-                <string>D</string>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
                </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_20">
+                <item row="2" column="0">
+                 <widget class="QLabel" name="htext_126">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>C</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_24">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="specialValueText">
+                   <string>0</string>
+                  </property>
+                  <property name="decimals">
+                   <number>3</number>
+                  </property>
+                  <property name="minimum">
+                   <double>-1000000000000.000000000000000</double>
+                  </property>
+                  <property name="maximum">
+                   <double>1000000000000.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_25">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="specialValueText">
+                   <string>0</string>
+                  </property>
+                  <property name="decimals">
+                   <number>3</number>
+                  </property>
+                  <property name="minimum">
+                   <double>-1000000000000.000000000000000</double>
+                  </property>
+                  <property name="maximum">
+                   <double>1000000000000.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QPushButton" name="pushButton_4">
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="htext_116">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>D</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_76">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="specialValueText">
+                   <string comment="0">0</string>
+                  </property>
+                  <property name="accelerated">
+                   <bool>false</bool>
+                  </property>
+                  <property name="decimals">
+                   <number>3</number>
+                  </property>
+                  <property name="minimum">
+                   <double>-1000000000000.000000000000000</double>
+                  </property>
+                  <property name="maximum">
+                   <double>1000000000000.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="htext_125">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>d</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
-             <item row="0" column="1">
-              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_76">
-               <property name="maximumSize">
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QGroupBox" name="groupBox_41">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>350</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>241</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Description</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_102">
+             <item row="0" column="0">
+              <spacer name="verticalSpacer_49">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
                 <size>
-                 <width>300</width>
-                 <height>16777215</height>
+                 <width>20</width>
+                 <height>20</height>
                 </size>
                </property>
-               <property name="buttonSymbols">
-                <enum>QAbstractSpinBox::NoButtons</enum>
-               </property>
-               <property name="specialValueText">
-                <string comment="0">0</string>
-               </property>
-               <property name="accelerated">
-                <bool>false</bool>
-               </property>
-               <property name="decimals">
-                <number>3</number>
-               </property>
-               <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
-               </property>
-               <property name="maximum">
-                <double>1000000000000.000000000000000</double>
-               </property>
-               <property name="value">
-                <double>0.000000000000000</double>
-               </property>
-              </widget>
+              </spacer>
              </item>
              <item row="1" column="0">
-              <widget class="QLabel" name="htext_125">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
+              <widget class="QScrollArea" name="scrollArea_7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
                </property>
-               <property name="text">
-                <string>d</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_24">
                <property name="maximumSize">
                 <size>
                  <width>300</width>
-                 <height>16777215</height>
+                 <height>361</height>
                 </size>
                </property>
-               <property name="buttonSymbols">
-                <enum>QAbstractSpinBox::NoButtons</enum>
-               </property>
-               <property name="specialValueText">
-                <string>0</string>
-               </property>
-               <property name="decimals">
-                <number>3</number>
-               </property>
-               <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
-               </property>
-               <property name="maximum">
-                <double>1000000000000.000000000000000</double>
-               </property>
-               <property name="value">
-                <double>0.000000000000000</double>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="htext_126">
                <property name="font">
                 <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
+                 <pointsize>15</pointsize>
                 </font>
                </property>
-               <property name="text">
-                <string>C</string>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAsNeeded</enum>
                </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_25">
-               <property name="maximumSize">
-                <size>
-                 <width>300</width>
-                 <height>16777215</height>
-                </size>
+               <property name="horizontalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
                </property>
-               <property name="buttonSymbols">
-                <enum>QAbstractSpinBox::NoButtons</enum>
+               <property name="widgetResizable">
+                <bool>true</bool>
                </property>
-               <property name="specialValueText">
-                <string>0</string>
-               </property>
-               <property name="decimals">
-                <number>3</number>
-               </property>
-               <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
-               </property>
-               <property name="maximum">
-                <double>1000000000000.000000000000000</double>
-               </property>
-               <property name="value">
-                <double>0.000000000000000</double>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="1">
-              <widget class="QPushButton" name="pushButton_4">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents_7">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>298</width>
+                  <height>176</height>
+                 </rect>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_103">
+                 <item row="0" column="0">
+                  <layout class="QGridLayout" name="gridLayout_105">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_14">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>C</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_15">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>D</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_16">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>d</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLabel" name="htext_363">
+                     <property name="font">
+                      <font>
+                       <family>MS Shell Dlg 2</family>
+                       <pointsize>11</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= Smaller pulley diameter&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLabel" name="htext_370">
+                     <property name="font">
+                      <font>
+                       <family>MS Shell Dlg 2</family>
+                       <pointsize>10</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Center-to-center distance pulley&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="htext_371">
+                     <property name="font">
+                      <font>
+                       <family>MS Shell Dlg 2</family>
+                       <pointsize>11</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= Larger pulley diameter&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
               </widget>
              </item>
             </layout>
@@ -2595,59 +2921,216 @@ QComboBox {
         </widget>
        </widget>
        <widget class="QWidget" name="Belt_Speed">
-        <widget class="QGroupBox" name="groupBox_6">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>10</x>
            <y>10</y>
-           <width>250</width>
-           <height>201</height>
+           <width>1150</width>
+           <height>203</height>
           </rect>
          </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>250</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>250</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Segoe UI</family>
-           <pointsize>20</pointsize>
-           <weight>50</weight>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="title">
-          <string>Input</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_21">
-          <item row="1" column="0">
-           <widget class="QFrame" name="frame_11">
+         <layout class="QGridLayout" name="gridLayout_115">
+          <item row="0" column="2">
+           <widget class="QGroupBox" name="groupBox_43">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>350</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>241</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <family>Segoe UI Variable Small Semibol</family>
-              <pointsize>13</pointsize>
-              <weight>75</weight>
+              <family>Segoe UI</family>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
               <italic>false</italic>
-              <bold>true</bold>
+              <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true">QFrame {
+            <property name="title">
+             <string>Description</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_110">
+             <item row="1" column="0">
+              <widget class="QScrollArea" name="scrollArea_9">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>361</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAsNeeded</enum>
+               </property>
+               <property name="horizontalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents_9">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>298</width>
+                  <height>136</height>
+                 </rect>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_111">
+                 <item row="0" column="0">
+                  <layout class="QGridLayout" name="gridLayout_112">
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_21">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>n</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_18">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>d</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLabel" name="htext_375">
+                     <property name="font">
+                      <font>
+                       <family>MS Shell Dlg 2</family>
+                       <pointsize>11</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= &lt;/span&gt;Rotational speed, in rev/min&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="htext_377">
+                     <property name="font">
+                      <font>
+                       <family>MS Shell Dlg 2</family>
+                       <pointsize>11</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= &lt;/span&gt;diameter, in inches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <spacer name="verticalSpacer_51">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="groupBox_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>250</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>250</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Input</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_21">
+             <item row="1" column="0">
+              <widget class="QFrame" name="frame_11">
+               <property name="font">
+                <font>
+                 <family>Segoe UI Variable Small Semibol</family>
+                 <pointsize>13</pointsize>
+                 <weight>75</weight>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QFrame {
     /* Optional: add frame background or border if needed */
 }
 
@@ -2712,111 +3195,250 @@ QComboBox {
     color: black;
 }
 </string>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_57">
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_57">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="htext_129">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>d</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_26">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="specialValueText">
+                   <string>0</string>
+                  </property>
+                  <property name="decimals">
+                   <number>3</number>
+                  </property>
+                  <property name="minimum">
+                   <double>-1000000000000.000000000000000</double>
+                  </property>
+                  <property name="maximum">
+                   <double>1000000000000.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="htext_130">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>n</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_27">
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="specialValueText">
+                   <string>0</string>
+                  </property>
+                  <property name="decimals">
+                   <number>3</number>
+                  </property>
+                  <property name="minimum">
+                   <double>-1000000000000.000000000000000</double>
+                  </property>
+                  <property name="maximum">
+                   <double>1000000000000.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="pushButton_5">
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
              <item row="0" column="0">
-              <widget class="QLabel" name="htext_129">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
                </property>
-               <property name="text">
-                <string>d</string>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
                </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_26">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>10</pointsize>
-                </font>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
                </property>
-               <property name="buttonSymbols">
-                <enum>QAbstractSpinBox::NoButtons</enum>
-               </property>
-               <property name="specialValueText">
-                <string>0</string>
-               </property>
-               <property name="decimals">
-                <number>3</number>
-               </property>
-               <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
-               </property>
-               <property name="maximum">
-                <double>1000000000000.000000000000000</double>
-               </property>
-               <property name="value">
-                <double>0.000000000000000</double>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="htext_130">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>n</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox_27">
-               <property name="buttonSymbols">
-                <enum>QAbstractSpinBox::NoButtons</enum>
-               </property>
-               <property name="specialValueText">
-                <string>0</string>
-               </property>
-               <property name="decimals">
-                <number>3</number>
-               </property>
-               <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
-               </property>
-               <property name="maximum">
-                <double>1000000000000.000000000000000</double>
-               </property>
-               <property name="value">
-                <double>0.000000000000000</double>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QPushButton" name="pushButton_5">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
+              </spacer>
              </item>
             </layout>
            </widget>
           </item>
-          <item row="0" column="0">
-           <spacer name="verticalSpacer_2">
+          <item row="0" column="4">
+           <widget class="QGroupBox" name="groupBox_44">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>450</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>450</width>
+              <height>241</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Formula</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_113">
+             <item row="1" column="0">
+              <widget class="QScrollArea" name="scrollArea_10">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAsNeeded</enum>
+               </property>
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents_10">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>412</width>
+                  <height>136</height>
+                 </rect>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_114">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="htext_380">
+                   <property name="font">
+                    <font>
+                     <family>MS Shell Dlg 2</family>
+                     <pointsize>11</pointsize>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/belt speed.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <spacer name="verticalSpacer_52">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <spacer name="horizontalSpacer_8">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Horizontal</enum>
             </property>
             <property name="sizeType">
              <enum>QSizePolicy::Fixed</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>20</width>
+              <width>35</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="1">
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>35</width>
               <height>20</height>
              </size>
             </property>
@@ -2866,6 +3488,22 @@ QComboBox {
           <string>Input</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_22">
+          <item row="0" column="0">
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
           <item row="1" column="0">
            <widget class="QFrame" name="frame_7">
             <property name="font">
@@ -2950,12 +3588,6 @@ QComboBox {
             <layout class="QGridLayout" name="gridLayout_40">
              <item row="0" column="0">
               <widget class="QLabel" name="htext_128">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
                <property name="text">
                 <string>w</string>
                </property>
@@ -3249,8 +3881,457 @@ QComboBox {
             </layout>
            </widget>
           </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_45">
+         <property name="geometry">
+          <rect>
+           <x>690</x>
+           <y>10</y>
+           <width>450</width>
+           <height>201</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>450</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>450</width>
+           <height>241</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>20</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Formula</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_116">
+          <item row="1" column="0">
+           <widget class="QScrollArea" name="scrollArea_11">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_11">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>447</width>
+               <height>179</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_98">
+              <item row="0" column="0">
+               <widget class="QLabel" name="htext_381">
+                <property name="font">
+                 <font>
+                  <family>MS Shell Dlg 2</family>
+                  <pointsize>11</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/Fc belt.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="htext_389">
+                <property name="font">
+                 <font>
+                  <family>MS Shell Dlg 2</family>
+                  <pointsize>11</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/weight belt.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="htext_390">
+                <property name="font">
+                 <font>
+                  <family>MS Shell Dlg 2</family>
+                  <pointsize>11</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/belt speed.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
           <item row="0" column="0">
-           <spacer name="verticalSpacer_3">
+           <spacer name="verticalSpacer_53">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_46">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>10</y>
+           <width>350</width>
+           <height>201</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>350</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>350</width>
+           <height>241</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>20</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Description</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_118">
+          <item row="1" column="0">
+           <widget class="QScrollArea" name="scrollArea_12">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>361</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_12">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>300</width>
+               <height>232</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_97">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_23">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Display Semib</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;w&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="htext_378">
+                <property name="font">
+                 <font>
+                  <family>MS Shell Dlg 2</family>
+                  <pointsize>11</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= W&lt;/span&gt;eight per length, lbf/ft&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_25">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>V</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="htext_379">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <italic>false</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= &lt;/span&gt;belt speed, in ft/min&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_22">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Display Semib</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>γ</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="htext_376">
+                <property name="font">
+                 <font>
+                  <family>MS Shell Dlg 2</family>
+                  <pointsize>11</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= &lt;/span&gt;Specific weight, in lbf/in&lt;span style=&quot; vertical-align:super;&quot;&gt;3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_29">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>b</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLabel" name="htext_385">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <italic>false</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= &lt;/span&gt;belt width, in in&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_30">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>t</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QLabel" name="htext_386">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <italic>false</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= &lt;/span&gt;belt thickness, in in&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_33">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>d</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLabel" name="htext_387">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <italic>false</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= &lt;/span&gt;diameter, in inches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_34">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>n</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QLabel" name="htext_388">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <italic>false</italic>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= &lt;/span&gt;Rotational speed, in rev/min&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <spacer name="verticalSpacer_54">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
@@ -3269,220 +4350,6 @@ QComboBox {
         </widget>
        </widget>
        <widget class="QWidget" name="Exp_Fphi">
-        <widget class="QGroupBox" name="groupBox_8">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>10</y>
-           <width>250</width>
-           <height>201</height>
-          </rect>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>250</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>250</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Segoe UI</family>
-           <pointsize>20</pointsize>
-           <weight>50</weight>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="title">
-          <string>Input</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_23">
-          <item row="1" column="0">
-           <widget class="QFrame" name="frame_14">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-              <italic>false</italic>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QFrame {
-    /* Optional: add frame background or border if needed */
-}
-
-/* QPushButton style copied from your original */
-QPushButton {
-    border: 2px solid #8f8f91;
-    border-radius: 6px;
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                                      stop:0 #f6f7fa, stop:1 #dadbde);
-    min-width: 80px;
-    font: 9pt &quot;Segoe UI Semibold&quot;;
-    padding: 5px 15px;
-    color: black;
-}
-
-QPushButton:pressed {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                                      stop:0 #dadbde, stop:1 #f6f7fa);
-    border-style: inset;
-}
-
-QPushButton:flat {
-    border: none;
-}
-
-QPushButton:default {
-    border-color: navy;
-}
-
-/* QLabel style */
-QLabel {
-    font-family: &quot;Segoe UI Semibold&quot;;
-    font-size: 12pt;
-    border: none; /* no border */
-}
-
-/* QDoubleSpinBox style */
-QDoubleSpinBox {
-    font-family: &quot;Segoe UI Semibold&quot;;
-    font-size: 10pt;
-    border: 2px solid #8f8f91;
-    border-radius: 6px;
-    padding: 2px 6px;
-    background-color: white;
-    color: black;
-}
-
-/* QCheckBox style */
-QCheckBox {
-    font-family: &quot;Segoe UI Semibold&quot;;
-    font-size: 10pt;
-    /* no border by default */
-}
-
-/* QComboBox style */
-QComboBox {
-    font-family: &quot;Segoe UI Semibold&quot;;
-    font-size: 10pt;
-    border: none; /* no border */
-    background-color: white;
-    padding: 2px 6px;
-    color: black;
-}
-</string>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_2">
-             <item row="0" column="0">
-              <widget class="QLabel" name="htext_22">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Φ</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox">
-               <property name="buttonSymbols">
-                <enum>QAbstractSpinBox::NoButtons</enum>
-               </property>
-               <property name="specialValueText">
-                <string>0</string>
-               </property>
-               <property name="decimals">
-                <number>3</number>
-               </property>
-               <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
-               </property>
-               <property name="value">
-                <double>0.000000000000000</double>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="htext_23">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>f</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox">
-               <property name="buttonSymbols">
-                <enum>QAbstractSpinBox::NoButtons</enum>
-               </property>
-               <property name="specialValueText">
-                <string>0</string>
-               </property>
-               <property name="decimals">
-                <number>3</number>
-               </property>
-               <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
-               </property>
-               <property name="value">
-                <double>0.000000000000000</double>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QPushButton" name="pushButton_19">
-               <property name="text">
-                <string>PushButton</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <spacer name="verticalSpacer_4">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </widget>
         <widget class="QFrame" name="frame_34">
          <property name="geometry">
           <rect>
@@ -3928,6 +4795,540 @@ of Friction</string>
             <property name="text">
              <string>Select</string>
             </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>1150</width>
+           <height>203</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_99">
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="groupBox_8">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>250</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>250</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Input</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_23">
+             <item row="1" column="0">
+              <widget class="QFrame" name="frame_14">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <italic>false</italic>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QFrame {
+    /* Optional: add frame background or border if needed */
+}
+
+/* QPushButton style copied from your original */
+QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 9pt &quot;Segoe UI Semibold&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+
+/* QLabel style */
+QLabel {
+    font-family: &quot;Segoe UI Semibold&quot;;
+    font-size: 12pt;
+    border: none; /* no border */
+}
+
+/* QDoubleSpinBox style */
+QDoubleSpinBox {
+    font-family: &quot;Segoe UI Semibold&quot;;
+    font-size: 10pt;
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    padding: 2px 6px;
+    background-color: white;
+    color: black;
+}
+
+/* QCheckBox style */
+QCheckBox {
+    font-family: &quot;Segoe UI Semibold&quot;;
+    font-size: 10pt;
+    /* no border by default */
+}
+
+/* QComboBox style */
+QComboBox {
+    font-family: &quot;Segoe UI Semibold&quot;;
+    font-size: 10pt;
+    border: none; /* no border */
+    background-color: white;
+    padding: 2px 6px;
+    color: black;
+}
+</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_2">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="htext_22">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Φ</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="CustomDoubleSpinBox" name="DoubleSpinBox">
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="specialValueText">
+                   <string>0</string>
+                  </property>
+                  <property name="decimals">
+                   <number>3</number>
+                  </property>
+                  <property name="minimum">
+                   <double>-1000000000000.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="htext_23">
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>f</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="CustomDoubleSpinBox" name="fDoubleSpinBox">
+                  <property name="buttonSymbols">
+                   <enum>QAbstractSpinBox::NoButtons</enum>
+                  </property>
+                  <property name="specialValueText">
+                   <string>0</string>
+                  </property>
+                  <property name="decimals">
+                   <number>3</number>
+                  </property>
+                  <property name="minimum">
+                   <double>-1000000000000.000000000000000</double>
+                  </property>
+                  <property name="value">
+                   <double>0.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="pushButton_19">
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <spacer name="verticalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>35</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="2">
+           <widget class="QGroupBox" name="groupBox_48">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>350</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>241</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Description</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_120">
+             <item row="1" column="0">
+              <widget class="QScrollArea" name="scrollArea_14">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>361</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAsNeeded</enum>
+               </property>
+               <property name="horizontalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents_14">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>298</width>
+                  <height>136</height>
+                 </rect>
+                </property>
+                <widget class="QLabel" name="label_40">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>10</y>
+                   <width>16</width>
+                   <height>24</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Segoe UI Variable Display Semib</family>
+                   <pointsize>11</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Φ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="htext_394">
+                 <property name="geometry">
+                  <rect>
+                   <x>40</x>
+                   <y>10</y>
+                   <width>221</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>MS Shell Dlg 2</family>
+                   <pointsize>11</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= A&lt;/span&gt;ngle of wrap, tight side&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="htext_395">
+                 <property name="geometry">
+                  <rect>
+                   <x>40</x>
+                   <y>60</y>
+                   <width>180</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>MS Shell Dlg 2</family>
+                   <pointsize>11</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= &lt;/span&gt;Coefficient of Friction&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_45">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>60</y>
+                   <width>16</width>
+                   <height>24</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Segoe UI Variable Display Semib</family>
+                   <pointsize>11</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;f&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </widget>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <spacer name="verticalSpacer_56">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>35</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="4">
+           <widget class="QGroupBox" name="groupBox_47">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>450</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>450</width>
+              <height>241</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>20</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Formula</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_117">
+             <item row="1" column="0">
+              <widget class="QScrollArea" name="scrollArea_13">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>15</pointsize>
+                </font>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAsNeeded</enum>
+               </property>
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents_13">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>412</width>
+                  <height>136</height>
+                 </rect>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_119">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="htext_391">
+                   <property name="font">
+                    <font>
+                     <family>MS Shell Dlg 2</family>
+                     <pointsize>11</pointsize>
+                     <weight>50</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/exp(f.phi).png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <spacer name="verticalSpacer_55">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>
@@ -9983,7 +11384,7 @@ QComboBox {
           <string>Output Table</string>
          </property>
          <layout class="QFormLayout" name="formLayout_24">
-          <item row="0" column="0">
+          <item row="1" column="0">
            <widget class="QFrame" name="frame_67">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -10189,6 +11590,22 @@ QComboBox {
              </item>
             </layout>
            </widget>
+          </item>
+          <item row="0" column="0">
+           <spacer name="verticalSpacer_46">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
