@@ -403,9 +403,13 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_24.clicked.connect(self.delltaf)
             self.stackedWidget.setCurrentIndex(17)
 
-        if item.text(column) == "H(link-plate limited)":
-            self.pushButton_30.clicked.connect(self.h_link_plate)
+        if item.text(column) == "Hp(link-plate limited)":
+            self.pushButton_30.clicked.connect(self.hp_link_plate)
             self.stackedWidget.setCurrentIndex(21)
+
+        if item.text(column) == "Hp(Roller Limited)":
+            self.pushButton_58.clicked.connect(self.hp_roller_limited)
+            self.stackedWidget.setCurrentIndex(41)
 
         if item.text(column) == "C":
             self.pushButton_31.clicked.connect(self.center_distance)
@@ -686,16 +690,24 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         fans = f"C RollerChain(in); center-to-center distance Sprocket RollerChain = {ans}"
         self.textBrowser.setText(fans)
 
-    def h_link_plate(self):
+    def hp_link_plate(self):
         N = self.DoubleSpinBox_55.value()
         n = self.DoubleSpinBox_56.value()
         p = self.DoubleSpinBox_57.value()
-        ans = str(funcs.h_link_plate(N, n, p,))
-        fans = f"Hp1 RollerChain(Hp); Maximum Power transmission capacity of  chain,\
-             limited by the strength of the link plates = {ans}"
+        ans = str(funcs.hp_link_plate(N, n, p),)
+        fans = f"Hp1; Maximum Power transmission capacity of  chain,\
+        limited by the strength of the link plates = {ans}"
         self.textBrowser.setText(fans)
 
-
+    def hp_roller_limited(self):
+        kr = self.DoubleSpinBox_137.value()
+        cn = self.DoubleSpinBox_138.value()
+        n = self.DoubleSpinBox_139.value()
+        p = self.DoubleSpinBox_140.value()
+        ans = str(funcs.hp_roller_limited(kr ,cn, n, p))
+        fans = f"Hp1 RollerChain(Hp); Maximum Power transmission capacity of chain,\
+        limited by the strength of the Rollers = {ans}"
+        self.textBrowser.setText(fans)
 
     def fprime2(self):
         sf = self.DoubleSpinBox_47.value()

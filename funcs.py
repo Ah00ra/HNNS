@@ -193,13 +193,19 @@ def fprime2(sf,et,nu,dcap,tcap,t,b, phi):
 
 
 @error_handling_decorator
-def h_link_plate(N,n,p):
+def hp_link_plate(N,n,p):
     a = N**1.08
     b = (n**0.9)
     c = 3-(0.07*p)
     ans = 0.004*a*b*(p**c)
-    ans =f"{ans} Hp" 
     return ans
+
+@error_handling_decorator
+def hp_roller_limited(kr,cn,n,p):
+    ans = (1000*kr*(cn**1.5)*(n**0.8))/((n**1,5))
+    return ans
+
+    
 
 @error_handling_decorator
 def center_distance(n1,n2,p,l):
@@ -216,6 +222,14 @@ def np_rc(n1,n2,p,c):
     ans = round(d)
     return ans
 
+@error_handling_decorator
+def max_rotational_speed(n, p, f):
+    a = (82.5/((7.95**p)*(1.0278**n)*((1.323)**(f/1000))))
+    b = 1/((1.59*math.log(p , 10)) + (1.873))
+    ans = 1000* (a**b)
+    return ans
+print("****")
+print(max_rotational_speed(17, 1.75 , 200))
 
 ansi_chain_number = [25, 35, 40, 41, 50, 60, 80, 100, 120, 140, 160, 180, 200, 240]                                                             
 speed = [50, 100, 150, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1400, 1600, 1800, 2000, 2500, 3000]   
