@@ -424,6 +424,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_34.clicked.connect(self.ha_roller_chain)
             self.stackedWidget.setCurrentIndex(24)
 
+        if item.text(column) == "Max Rotational Speed":
+            self.pushButton_158.clicked.connect(self.max_rotational_speed)
+            self.stackedWidget.setCurrentIndex(42)
+
         if item.text(column) == "Ft":
             self.stackedWidget.setCurrentIndex(25)
             self.pushButton_35.clicked.connect(self.open_wire_rope_tables)
@@ -459,6 +463,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if item.text(column) == "ΔF":
             self.pushButton_46.clicked.connect(self.deltaf_vebelt_load)
             self.stackedWidget.setCurrentIndex(32)
+
+        if item.text(column) == "Exp(fΦ)":
+            self.pushButton_214.clicked.connect(self.expphi_vbelt)
+            self.stackedWidget.setCurrentIndex(43)
 
         if item.text(column) == "'F1' Largest Tension ":
             self.pushButton_47.clicked.connect(self.f1_vebelt_load)
@@ -668,10 +676,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.tableWidget_4.setItem(ind,2, item1)
             self.tableWidget_4.setItem(ind,3, item2)
 
-
-    #self.textBrowser.setText(ans)
-
-
+    def max_rotational_speed(self):
+        p = self.DoubleSpinBox_436.value()
+        n = self.DoubleSpinBox_437.value()
+        f = self.DoubleSpinBox_438.value()
+        ans = str(funcs.max_rotational_speed(p , n, f))
+        fans = f"L RollerChain;Length of the chain = {ans}"
+        self.textBrowser.setText(fans)
+        
     def np_rc(self):
         n1 = self.DoubleSpinBox_62.value()
         n2 = self.DoubleSpinBox_63.value()
@@ -700,11 +712,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.textBrowser.setText(fans)
 
     def hp_roller_limited(self):
-        kr = self.DoubleSpinBox_137.value()
+        chain_number = self.comboBox_17.currentText()
         cn = self.DoubleSpinBox_138.value()
         n = self.DoubleSpinBox_139.value()
         p = self.DoubleSpinBox_140.value()
-        ans = str(funcs.hp_roller_limited(kr ,cn, n, p))
+        ans = str(funcs.hp_roller_limited(chain_number ,cn, n, p))
         fans = f"Hp1 RollerChain(Hp); Maximum Power transmission capacity of chain,\
         limited by the strength of the Rollers = {ans}"
         self.textBrowser.setText(fans)
@@ -1413,6 +1425,13 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         fans = f"ΔF vBelt(Ibf); Power that is transmitted per vBelt = {ans}"
         self.textBrowser.setText(fans)
 
+
+    def expphi_vbelt(self):
+        theta = self.DoubleSpinBox_593.value()
+        ans = funcs.expophi_vbelt(theta)
+        fans = f"ΔF vBelt(Ibf); Power that is transmitted per vBelt = {ans}"
+        self.textBrowser.setText(fans)    
+
     def f1_vebelt_load(self):
         f_c = self.DoubleSpinBox_112.value()
         deltaf = self.DoubleSpinBox_113.value()
@@ -1497,8 +1516,8 @@ if __name__ == "__main__":
     #         app.setStyleSheet(file.read())
     # load_stylesheet(app, "theme/Takezo.qss")  
     
-    # stylesheet = qdarktheme.load_stylesheet("dark")
-    # app.setStyleSheet(stylesheet)   
+    #stylesheet = qdarktheme.load_stylesheet("dark")
+    #app.setStyleSheet(stylesheet)   
     MainWindow = Ui_MainWindow()
       
 

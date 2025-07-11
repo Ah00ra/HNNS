@@ -201,10 +201,20 @@ def hp_link_plate(N,n,p):
     return ans
 
 @error_handling_decorator
-def hp_roller_limited(kr,cn,n,p):
-    ans = (1000*kr*(cn**1.5)*(n**0.8))/((n**1,5))
-    return ans
-
+def hp_roller_limited(chain_number,cn,n,p):
+    if chain_number == 25 or chain_number == 35 :
+        kr = 29 
+        ans = (1000*kr*(cn**1.5)*(p**0.8))/((n**1.5))
+        return ans
+    
+    elif chain_number == 41:
+        kr = 3.4 
+        ans = (1000*kr*(cn**1.5)*(p**0.8))/((n**1.5))
+        return ans
+    else:
+        kr = 17
+        ans = (1000*kr*(cn**1.5)*(p**0.8))/((n**1.5))
+        return ans
     
 
 @error_handling_decorator
@@ -228,8 +238,7 @@ def max_rotational_speed(n, p, f):
     b = 1/((1.59*math.log(p , 10)) + (1.873))
     ans = 1000* (a**b)
     return ans
-print("****")
-print(max_rotational_speed(17, 1.75 , 200))
+
 
 ansi_chain_number = [25, 35, 40, 41, 50, 60, 80, 100, 120, 140, 160, 180, 200, 240]                                                             
 speed = [50, 100, 150, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1200, 1400, 1600, 1800, 2000, 2500, 3000]   
@@ -1947,6 +1956,11 @@ def fc_vbelt(kc, v):
 @error_handling_decorator
 def delta_f_vbelt(hd, nb, n , d):
     ans = (63025*hd/nb)/(n*(d/2))
+    return ans
+
+@error_handling_decorator
+def expophi_vbelt(theta):
+    ans = math.exp(theta*0.5123)
     return ans
 
 @error_handling_decorator
