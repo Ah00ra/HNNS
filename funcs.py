@@ -32,6 +32,15 @@ def spur_gear(h, d, n):
 
 @error_handling_decorator
 def open_belt(cd, d, c):
+    val1 = (cd - d) / (2 * c) 
+    val2 = (cd + d) / (2 * c) 
+
+    if not -1 <= val1 <= 1:
+        return f"Error: (D - d)/(2*c) = {val1} out of asin domain [-1,1]"
+    if not -1 <= val2 <= 1:
+        return f"Error: (D + d)/(2*c) = {val2} out of asin domain [-1,1]"
+
+
     tcd = math.pi - math.asin((cd-d)/(2*c))
     td = math.pi + math.asin((cd+d)/(2*c))
     l = math.sqrt(4*cd ** 2 - (cd - d) ** 2) + 1/2 * (cd*tcd + d*td)
@@ -39,14 +48,16 @@ def open_belt(cd, d, c):
     tcd = round(tcd,3)
     td = round(td,3)
     l = round(l,3)
-    ans = f"""theta D = {tcd}
-θd = ϕ = {td}  
-L = {l}
-"""
+    ans = f"theta D, θd(ϕ), L = {tcd},{td},{l} "
     return ans
+
 
 @error_handling_decorator
 def crossed_belt(cd, d, c):
+    val = (cd + d) / (2 * c) 
+    if val < -1 or val > 1:
+        return f"Error: (cd + d)/(2*c) = {val} out of asin domain [-1,1]"
+
     td = math.pi + math.asin((cd+d)/(2*c))
     l = math.sqrt(4*cd ** 2 - (cd - d) ** 2) + 1/2 * ((cd + d)*td)
     td = round(td,3)
@@ -54,7 +65,6 @@ def crossed_belt(cd, d, c):
     ans = f"θ,L = {td}, {l}"
 
     return ans
-
 
 @error_handling_decorator
 def belt_speed(d, n):
