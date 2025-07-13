@@ -238,7 +238,7 @@ def np_rc(n1,n2,p,c):
     a = (n2-n1)**2
     b = (4*(math.pi**2))*(c/p) 
     d = (2*c/p)+((n1+n2)/2)+(a/b)
-    ans = round(d)
+    ans = d
     return ans
 
 @error_handling_decorator

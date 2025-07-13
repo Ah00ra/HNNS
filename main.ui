@@ -85,10 +85,10 @@ QGroupBox::title {
          </property>
          <property name="styleSheet">
           <string notr="true">QTreeWidget {
-    border: 2px solid #8f8f91;
+    border: 2px solid navy;
     border-radius: 6px;
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    stop:0 #f6f7fa, stop:1 #dadbde);
     font: 14pt &quot;Times New Roman&quot;;
     color: black;
     padding: 5px;
@@ -97,11 +97,13 @@ QGroupBox::title {
 /* Style the header */
 QHeaderView::section {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                                      stop:0 #f6f7fa, stop:1 #dadbde);
-    border: 1px solid #8f8f91;
+    stop:0 #f6f7fa, stop:1 #dadbde);
     padding: 4px;
     font-weight: bold;
+    font-family: &quot;Times New Roman&quot;;
+    font-size: 14pt;
     color: black;
+    border-radius: 4px; /* optional rounded corners */
 }
 
 /* Style the items */
@@ -113,8 +115,8 @@ QTreeWidget::item {
 /* Highlight selected item */
 QTreeWidget::item:selected {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                                      stop:0 #dadbde, stop:1 #f6f7fa);
-    color: black;
+    stop:0 #dadbde, stop:1 #f6f7fa);
+    color: Black;
 }
 
 /* Optional: remove focus rectangle */
@@ -132,6 +134,9 @@ QTreeWidget::item:focus {
          <property name="animated">
           <bool>true</bool>
          </property>
+         <attribute name="headerVisible">
+          <bool>true</bool>
+         </attribute>
          <column>
           <property name="text">
            <string>Chapters</string>
@@ -519,7 +524,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
         <set>Qt::ImhHiddenText</set>
        </property>
        <property name="currentIndex">
-        <number>4</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -553,7 +558,7 @@ p, li { white-space: pre-wrap; }
            <x>10</x>
            <y>10</y>
            <width>250</width>
-           <height>195</height>
+           <height>196</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -895,24 +900,47 @@ QComboBox {
                </property>
                <property name="font">
                 <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>9</pointsize>
+                 <family>Popins</family>
+                 <pointsize>10</pointsize>
                  <weight>50</weight>
                  <italic>false</italic>
                  <bold>false</bold>
                 </font>
                </property>
-               <property name="text">
-                <string>wd</string>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
                </property>
-               <property name="icon">
-                <iconset resource="QtRes/res.qrc">
-                 <normaloff>:/icons/images/noun-cogwheel-4416182.png</normaloff>:/icons/images/noun-cogwheel-4416182.png</iconset>
+               <property name="text">
+                <string>Calculate</string>
                </property>
                <property name="iconSize">
                 <size>
-                 <width>25</width>
-                 <height>30</height>
+                 <width>45</width>
+                 <height>25</height>
                 </size>
                </property>
               </widget>
@@ -1871,8 +1899,8 @@ QComboBox {
               <widget class="QPushButton" name="pushButton">
                <property name="font">
                 <font>
-                 <family>Segoe UI</family>
-                 <pointsize>9</pointsize>
+                 <family>Popins</family>
+                 <pointsize>10</pointsize>
                  <weight>50</weight>
                  <italic>false</italic>
                  <bold>false</bold>
@@ -1885,7 +1913,7 @@ QComboBox {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #f6f7fa, stop:1 #dadbde);
     min-width: 80px;
-    font: 9pt &quot;Segoe UI&quot;;
+    font: 10pt &quot;Popins&quot;;
     padding: 5px 15px;
     color: black;
 }
@@ -1906,7 +1934,7 @@ QPushButton:default {
 </string>
                </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
                <property name="icon">
                 <iconset>
@@ -2446,15 +2474,42 @@ QComboBox {
               <widget class="QPushButton" name="pushButton_3">
                <property name="font">
                 <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>9</pointsize>
+                 <family>Popins</family>
+                 <pointsize>10</pointsize>
                  <weight>50</weight>
                  <italic>false</italic>
                  <bold>false</bold>
                 </font>
                </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -2912,7 +2967,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>-74</y>
+               <y>0</y>
                <width>558</width>
                <height>233</height>
               </rect>
@@ -3442,8 +3497,35 @@ QComboBox {
              </item>
              <item row="3" column="1">
               <widget class="QPushButton" name="pushButton_4">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -4135,8 +4217,35 @@ QComboBox {
              </item>
              <item row="2" column="1">
               <widget class="QPushButton" name="pushButton_5">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -4561,8 +4670,35 @@ QComboBox {
              </item>
              <item row="4" column="1">
               <widget class="QPushButton" name="pushButton_6">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -4679,8 +4815,35 @@ QComboBox {
              </item>
              <item row="8" column="1">
               <widget class="QPushButton" name="pushButton_7">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>OK</string>
+                <string>Insert</string>
                </property>
               </widget>
              </item>
@@ -4759,8 +4922,35 @@ QComboBox {
              </item>
              <item row="11" column="1">
               <widget class="QPushButton" name="pushButton_8">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>OK</string>
+                <string>Insert</string>
                </property>
               </widget>
              </item>
@@ -6090,8 +6280,35 @@ QComboBox {
              </item>
              <item row="2" column="1">
               <widget class="QPushButton" name="pushButton_19">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Claculate</string>
                </property>
               </widget>
              </item>
@@ -6795,15 +7012,42 @@ QComboBox {
               <widget class="QPushButton" name="pushButton_13">
                <property name="font">
                 <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>9</pointsize>
+                 <family>Popins</family>
+                 <pointsize>10</pointsize>
                  <weight>50</weight>
                  <italic>false</italic>
                  <bold>false</bold>
                 </font>
                </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -6939,8 +7183,35 @@ QComboBox {
              </item>
              <item row="10" column="1">
               <widget class="QPushButton" name="pushButton_17">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -7718,8 +7989,35 @@ QComboBox {
              </item>
              <item row="2" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_12">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -8408,6 +8706,33 @@ QComboBox {
              </item>
              <item row="4" column="1">
               <widget class="QPushButton" name="pushButton_14">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
                 <string>PushButton</string>
                </property>
@@ -8491,8 +8816,8 @@ QComboBox {
             </property>
             <property name="font">
              <font>
-              <family>Segoe UI</family>
-              <pointsize>9</pointsize>
+              <family>Popins</family>
+              <pointsize>10</pointsize>
               <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
@@ -8505,17 +8830,15 @@ QComboBox {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #f6f7fa, stop:1 #dadbde);
     min-width: 80px;
-    font: 9pt &quot;Segoe UI&quot;;
+    font: 10pt &quot;Popins&quot;;
     padding: 5px 15px;
     color: black;
-    border-style: solid; /* explicitly set border style */
 }
 
 QPushButton:pressed {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #dadbde, stop:1 #f6f7fa);
-    border: 2px solid #8f8f91; /* keep border consistent */
-    border-style: solid; /* avoid inset which may hide border color */
+    border-style: inset;
 }
 
 QPushButton:flat {
@@ -8523,8 +8846,7 @@ QPushButton:flat {
 }
 
 QPushButton:default {
-    border: 2px solid navy; /* explicitly set border width and style */
-    border-radius: 6px;
+    border-color: navy;
 }
 </string>
             </property>
@@ -9897,8 +10219,35 @@ QComboBox {
              </item>
              <item row="4" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_18">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -10537,8 +10886,35 @@ QComboBox {
              </item>
              <item row="2" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_23">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -10592,8 +10968,35 @@ QComboBox {
              </item>
              <item row="5" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_22">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -11455,8 +11858,35 @@ QComboBox {
              </item>
              <item row="8" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_25">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -12265,8 +12695,35 @@ QComboBox {
              </item>
              <item row="3" column="1">
               <widget class="QPushButton" name="pushButton_20">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -13045,8 +13502,35 @@ QComboBox {
              </item>
              <item row="6" column="1">
               <widget class="QPushButton" name="pushButton_26">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -13783,8 +14267,35 @@ QComboBox {
              </item>
              <item row="2" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_24">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -14567,8 +15078,35 @@ QComboBox {
              </item>
              <item row="7" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_27">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -15475,8 +16013,35 @@ QComboBox {
              </item>
              <item row="7" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_28">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -16450,8 +17015,35 @@ QComboBox {
              </item>
              <item row="8" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_29">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -17261,8 +17853,35 @@ QComboBox {
              </item>
              <item row="3" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_30">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -17977,8 +18596,35 @@ QComboBox {
              </item>
              <item row="4" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_31">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -18601,8 +19247,35 @@ QComboBox {
              </item>
              <item row="4" column="1">
               <widget class="QPushButton" name="pushButton_32">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -19617,8 +20290,35 @@ QComboBox QAbstractItemView QScrollBar::sub-page:horizontal {
              </item>
              <item row="6" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_34">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -21435,8 +22135,35 @@ QComboBox QAbstractItemView QScrollBar::sub-page:horizontal {
              </item>
              <item row="10" column="1">
               <widget class="QPushButton" name="pushButton_35">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -22474,16 +23201,37 @@ QComboBox {
                </property>
               </widget>
              </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="htext_139">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
+             <item row="4" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_36">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
                </property>
                <property name="text">
-                <string>d</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -22509,10 +23257,16 @@ QComboBox {
                </property>
               </widget>
              </item>
-             <item row="4" column="0" colspan="2">
-              <widget class="QPushButton" name="pushButton_36">
+             <item row="3" column="0">
+              <widget class="QLabel" name="htext_139">
+               <property name="font">
+                <font>
+                 <family>Segoe UI Semibold</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>d</string>
                </property>
               </widget>
              </item>
@@ -23913,14 +24667,41 @@ QComboBox QAbstractItemView QScrollBar::sub-page:horizontal {
                  </item>
                 </layout>
                </item>
-               <item>
-                <widget class="QPushButton" name="pushButton_37">
-                 <property name="text">
-                  <string>PushButton</string>
-                 </property>
-                </widget>
-               </item>
               </layout>
+             </item>
+             <item row="7" column="0" colspan="2">
+              <widget class="QPushButton" name="pushButton_37">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
+               <property name="text">
+                <string>Calculate</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -24583,8 +25364,35 @@ QComboBox {
              </item>
              <item row="3" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_38">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -25042,7 +25850,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            <x>10</x>
            <y>10</y>
            <width>250</width>
-           <height>347</height>
+           <height>375</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -26564,8 +27372,35 @@ QComboBox QAbstractItemView QScrollBar::sub-page:horizontal {
              </item>
              <item row="6" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_40">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -26594,9 +27429,9 @@ QComboBox QAbstractItemView QScrollBar::sub-page:horizontal {
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>380</y>
+           <y>400</y>
            <width>775</width>
-           <height>344</height>
+           <height>351</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -27210,7 +28045,7 @@ QTableView QScrollBar::add-page:horizontal, QTableView QScrollBar::sub-page:hori
            <widget class="QPushButton" name="pushButton_39">
             <property name="minimumSize">
              <size>
-              <width>200</width>
+              <width>114</width>
               <height>0</height>
              </size>
             </property>
@@ -27222,11 +28057,39 @@ QTableView QScrollBar::add-page:horizontal, QTableView QScrollBar::sub-page:hori
             </property>
             <property name="font">
              <font>
-              <family>Segoe UI Variable Display Semib</family>
+              <family>Popins</family>
               <pointsize>10</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
             </property>
             <property name="text">
              <string>Select</string>
@@ -27925,8 +28788,35 @@ QComboBox {
              </item>
              <item row="3" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_41">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -28854,8 +29744,35 @@ QComboBox {
              </item>
              <item row="2" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_43">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -29470,8 +30387,35 @@ QComboBox {
              </item>
              <item row="2" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_44">
+               <property name="styleSheet">
+                <string>QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -29484,9 +30428,9 @@ QComboBox {
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>210</y>
+           <y>230</y>
            <width>287</width>
-           <height>424</height>
+           <height>431</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -29834,8 +30778,8 @@ QTableView QScrollBar::add-page:horizontal, QTableView QScrollBar::sub-page:hori
             </property>
             <property name="font">
              <font>
-              <family>Segoe UI</family>
-              <pointsize>9</pointsize>
+              <family>Popins</family>
+              <pointsize>10</pointsize>
               <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
@@ -29848,17 +30792,15 @@ QTableView QScrollBar::add-page:horizontal, QTableView QScrollBar::sub-page:hori
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #f6f7fa, stop:1 #dadbde);
     min-width: 80px;
-    font: 9pt &quot;Segoe UI&quot;;
+    font: 10pt &quot;Popins&quot;;
     padding: 5px 15px;
     color: black;
-    border-style: solid; /* explicitly set border style */
 }
 
 QPushButton:pressed {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #dadbde, stop:1 #f6f7fa);
-    border: 2px solid #8f8f91; /* keep border consistent */
-    border-style: solid; /* avoid inset which may hide border color */
+    border-style: inset;
 }
 
 QPushButton:flat {
@@ -29866,8 +30808,7 @@ QPushButton:flat {
 }
 
 QPushButton:default {
-    border: 2px solid navy; /* explicitly set border width and style */
-    border-radius: 6px;
+    border-color: navy;
 }
 </string>
             </property>
@@ -30550,8 +31491,35 @@ QComboBox {
              </item>
              <item row="4" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_46">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -31265,8 +32233,35 @@ QComboBox {
              </item>
              <item row="3" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_47">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -31857,8 +32852,35 @@ QComboBox {
              </item>
              <item row="2" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_48">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -59155,8 +60177,35 @@ QComboBox {
                </item>
                <item row="3" column="0" colspan="2">
                 <widget class="QPushButton" name="pushButton_258">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+                 </property>
                  <property name="text">
-                  <string>PushButton</string>
+                  <string>Calculate</string>
                  </property>
                 </widget>
                </item>
@@ -62654,7 +63703,7 @@ QComboBox {
            <x>10</x>
            <y>10</y>
            <width>250</width>
-           <height>281</height>
+           <height>282</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -62934,8 +63983,35 @@ QComboBox {
              </item>
              <item row="4" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_51">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -63675,7 +64751,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            <x>10</x>
            <y>270</y>
            <width>287</width>
-           <height>424</height>
+           <height>435</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -63717,8 +64793,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             </property>
             <property name="font">
              <font>
-              <family>Segoe UI</family>
-              <pointsize>9</pointsize>
+              <family>Popins</family>
+              <pointsize>10</pointsize>
               <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
@@ -63731,17 +64807,15 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #f6f7fa, stop:1 #dadbde);
     min-width: 80px;
-    font: 9pt &quot;Segoe UI&quot;;
+    font: 10pt &quot;Popins&quot;;
     padding: 5px 15px;
     color: black;
-    border-style: solid; /* explicitly set border style */
 }
 
 QPushButton:pressed {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #dadbde, stop:1 #f6f7fa);
-    border: 2px solid #8f8f91; /* keep border consistent */
-    border-style: solid; /* avoid inset which may hide border color */
+    border-style: inset;
 }
 
 QPushButton:flat {
@@ -63749,8 +64823,7 @@ QPushButton:flat {
 }
 
 QPushButton:default {
-    border: 2px solid navy; /* explicitly set border width and style */
-    border-radius: 6px;
+    border-color: navy;
 }
 </string>
             </property>
@@ -64312,8 +65385,35 @@ QComboBox {
              </item>
              <item row="3" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_52">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -65013,8 +66113,35 @@ QComboBox {
              </item>
              <item row="3" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_54">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -66032,8 +67159,8 @@ b</string>
             </property>
             <property name="font">
              <font>
-              <family>Segoe UI</family>
-              <pointsize>9</pointsize>
+              <family>Popins</family>
+              <pointsize>10</pointsize>
               <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
@@ -66046,17 +67173,15 @@ b</string>
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #f6f7fa, stop:1 #dadbde);
     min-width: 80px;
-    font: 9pt &quot;Segoe UI&quot;;
+    font: 10pt &quot;Popins&quot;;
     padding: 5px 15px;
     color: black;
-    border-style: solid; /* explicitly set border style */
 }
 
 QPushButton:pressed {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #dadbde, stop:1 #f6f7fa);
-    border: 2px solid #8f8f91; /* keep border consistent */
-    border-style: solid; /* avoid inset which may hide border color */
+    border-style: inset;
 }
 
 QPushButton:flat {
@@ -66064,13 +67189,12 @@ QPushButton:flat {
 }
 
 QPushButton:default {
-    border: 2px solid navy; /* explicitly set border width and style */
-    border-radius: 6px;
+    border-color: navy;
 }
 </string>
             </property>
             <property name="text">
-             <string>PushButton</string>
+             <string>Select</string>
             </property>
            </widget>
           </item>
@@ -66388,8 +67512,35 @@ QComboBox {
              </item>
              <item row="4" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_55">
+               <property name="styleSheet">
+                <string>QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -66546,7 +67697,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             <widget class="QWidget" name="scrollAreaWidgetContents_469">
              <property name="geometry">
               <rect>
-               <x>-36</x>
+               <x>0</x>
                <y>0</y>
                <width>438</width>
                <height>159</height>
@@ -66744,7 +67895,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             <widget class="QWidget" name="scrollAreaWidgetContents_470">
              <property name="geometry">
               <rect>
-               <x>-21</x>
+               <x>0</x>
                <y>0</y>
                <width>436</width>
                <height>159</height>
@@ -67023,8 +68174,35 @@ QComboBox {
              </item>
              <item row="3" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_56">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -67478,7 +68656,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            <x>10</x>
            <y>10</y>
            <width>250</width>
-           <height>281</height>
+           <height>285</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -67609,8 +68787,35 @@ QComboBox {
              </item>
              <item row="7" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_58">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -68394,7 +69599,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            <x>10</x>
            <y>10</y>
            <width>250</width>
-           <height>281</height>
+           <height>242</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -68551,8 +69756,35 @@ QComboBox {
              </item>
              <item row="6" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_158">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -68766,7 +69998,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             <widget class="QWidget" name="scrollAreaWidgetContents_143">
              <property name="geometry">
               <rect>
-               <x>-161</x>
+               <x>0</x>
                <y>0</y>
                <width>791</width>
                <height>159</height>
@@ -69186,8 +70418,35 @@ QComboBox {
             <layout class="QGridLayout" name="gridLayout_859">
              <item row="4" column="0" colspan="2">
               <widget class="QPushButton" name="pushButton_214">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+               </property>
                <property name="text">
-                <string>PushButton</string>
+                <string>Calculate</string>
                </property>
               </widget>
              </item>
@@ -69663,7 +70922,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
          </property>
          <property name="styleSheet">
           <string notr="true">QGroupBox {
-    border: 2px solid #8f8f91;
+    border: 2px solid navy;
     border-radius: 6px;
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
         stop:0 #f6f7fa, stop:1 #dadbde);
@@ -69743,11 +71002,14 @@ QGroupBox QScrollBar::add-page:horizontal, QGroupBox QScrollBar::sub-page:horizo
             <property name="font">
              <font>
               <family>Segoe UI</family>
-              <pointsize>9</pointsize>
+              <pointsize>10</pointsize>
               <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton {
@@ -69756,7 +71018,7 @@ QGroupBox QScrollBar::add-page:horizontal, QGroupBox QScrollBar::sub-page:horizo
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #f6f7fa, stop:1 #dadbde);
     min-width: 80px;
-    font: 9pt &quot;Segoe UI&quot;;
+    font: 10pt &quot;Segoe UI&quot;;
     padding: 5px 15px;
     color: black;
 }
@@ -69779,8 +71041,14 @@ QPushButton:default {
             <property name="text">
              <string>Clear</string>
             </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
             <property name="default">
              <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -70095,7 +71363,7 @@ QTableWidget QScrollBar::add-page:horizontal, QTableWidget QScrollBar::sub-page:
          </property>
          <property name="styleSheet">
           <string notr="true">QGroupBox {
-    border: 2px solid #8f8f91;
+    border: 2px solid navy;
     border-radius: 6px;
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #f6f7fa, stop:1 #dadbde);

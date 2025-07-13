@@ -64,6 +64,10 @@
     <file>images/rollerchain.png</file>
   </qresource>
   <qresource prefix="icons">
+    <file>Icons/Untitled-1 copy.svg</file>
+    <file>Icons/noun-clear-7584032.png</file>
+    <file>Icons/noun-clear-7584032.svg</file>
+    <file>Icons/noun-clear-7408386.svg</file>
     <file>images/noun-cogwheel-4416182.png</file>
     <file>images/submit.png</file>
   </qresource>
