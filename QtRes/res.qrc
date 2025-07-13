@@ -1,5 +1,55 @@
 <RCC>
   <qresource prefix="desc">
+    <file>images/F1a - f2.png</file>
+    <file>images/expof phi vbelt.png</file>
+    <file>images/Np vbelt.png</file>
+    <file>images/Fb2 vbelt.png</file>
+    <file>images/Fi vbelt.png</file>
+    <file>images/F2 vbelt.png</file>
+    <file>images/Fc vbelt.png</file>
+    <file>images/fb wirerope.png</file>
+    <file>images/h tab rc.png</file>
+    <file>images/max rotation rc.png</file>
+    <file>images/H2 roller limited.png</file>
+    <file>images/t vbelt.png</file>
+    <file>images/Np vbelt.png</file>
+    <file>images/Fb1 vbelt.png</file>
+    <file>images/T2 vbelt.png</file>
+    <file>images/T1 vbelt.png</file>
+    <file>images/nfs vbelt.png</file>
+    <file>images/Fi vbelt.png</file>
+    <file>images/F1 vbelt.png</file>
+    <file>images/Np rc.png</file>
+    <file>images/deltaF vbelt.png</file>
+    <file>images/Fc vbelt.png</file>
+    <file>images/Nb vbelt.png</file>
+    <file>images/Hd vbelt.png</file>
+    <file>images/Ha vbelt.png</file>
+    <file>images/C vbelt.png</file>
+    <file>images/Lp vbelt.png</file>
+    <file>images/nf wire rope.png</file>
+    <file>images/fb wirerope.png</file>
+    <file>images/Ff wire rope.png</file>
+    <file>images/ft wirerope.png</file>
+    <file>images/h tab rc.png</file>
+    <file>images/C Rc.png</file>
+    <file>images/sfmetal.png</file>
+    <file>images/fprime belt.png</file>
+    <file>images/f1ametalblt.png</file>
+    <file>images/h_link.png</file>
+    <file>images/fprime_metalbelt.png</file>
+    <file>images/Fi_metalbelt.png</file>
+    <file>images/F2_metalbelt.png</file>
+    <file>images/deltaf.png</file>
+    <file>images/bmin.png</file>
+    <file>images/dip.png</file>
+    <file>images/Sf.png</file>
+    <file>images/fprime belt.png</file>
+    <file>images/fprime belt.png</file>
+    <file>images/f1a belt.png</file>
+    <file>images/f2 belt.png</file>
+    <file>images/fi.png</file>
+    <file>images/fi belt.png</file>
     <file>images/exp(f.phi).png</file>
     <file>images/Fc belt.png</file>
     <file>images/belt speed.png</file>
@@ -14,6 +64,7 @@
     <file>images/rollerchain.png</file>
   </qresource>
   <qresource prefix="icons">
+    <file>images/noun-cogwheel-4416182.png</file>
     <file>images/submit.png</file>
   </qresource>
 </RCC>

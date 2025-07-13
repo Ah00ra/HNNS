@@ -772,26 +772,26 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
     def f1pa(self):
         sf = self.DoubleSpinBox_27.value()
-        et = self.DoubleSpinBox_28.value()
+        e = self.DoubleSpinBox_28.value()
         nu = self.DoubleSpinBox_29.value()
         dcap = self.DoubleSpinBox_30.value()
         t = self.DoubleSpinBox_32.value()
         b = self.DoubleSpinBox_33.value()
-        ans = str(funcs.f1pa(sf, et, nu, dcap, t, b))
+        ans = str(funcs.f1pa(sf, e, nu, dcap, t, b))
         fans = f"(f1)a MetalBelt(Ibf); Allowable tension  = {ans} "
         self.textBrowser.setText(fans)
 
 
     def minibi(self):
         sf = self.DoubleSpinBox_19.value()
-        et = self.DoubleSpinBox_20.value()
+        e = self.DoubleSpinBox_20.value()
         nu = self.DoubleSpinBox_21.value()
         dcap = self.DoubleSpinBox_22.value()
         tcap = self.DoubleSpinBox_24.value()
         t = self.DoubleSpinBox_23.value()
         f = self.DoubleSpinBox_25.value()
         phi = self.DoubleSpinBox_26.value()
-        ans = funcs.minibi(sf, et, nu, dcap, tcap, t,f,phi)
+        ans = funcs.minibi(sf, e, nu, dcap, tcap, t,f,phi)
         fans = f"Min b MetalBelt(in); Minimum  Belt Thicknes = {ans} "
         self.textBrowser.setText(ans)
 

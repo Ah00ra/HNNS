@@ -152,22 +152,21 @@ def degrees_to_radians(degrees):
 
 
 @error_handling_decorator
-def minibi(sf,et,nu,dcap,tcap,t,f,phi):
+def minibi(sf,e,nu,dcap,tcap,t,f,phi):
 
     deltaf = (2*tcap)/dcap
-    #a = (sf-(et/((1-(nu**2))*dcap))) * t
-    x = et/((1-nu**2)*dcap)
+    x = (e*t)/((1-nu**2)*dcap)
     a = (sf - x)*t
     radianphi = degrees_to_radians(phi)
     minb = deltaf / a*math.exp(f*radianphi)/(math.exp(f*radianphi)-1)
-    ans =f"{minb} in" 
+    ans = minb 
     return ans
 
 @error_handling_decorator
-def f1pa(sf, et, nu, dcap, t, b):
-    x = et/((1-nu**2)*dcap)
+def f1pa(sf, e, nu, dcap, t, b):
+    x = (e*t)/((1-nu**2)*dcap)
     ab = (sf - x)*t*b
-    ans =f"{ab} N" 
+    ans = ab 
     return ans
 
 
