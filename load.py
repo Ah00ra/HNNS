@@ -383,7 +383,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.stackedWidget.setCurrentIndex(12)
 
         if item.text(column) == "dip":
-            self.pushButton_20.clicked.connect(self.dip)
+            self.pushButton_20.clicked.connect(self.cal_dip)
             self.stackedWidget.setCurrentIndex(15)
         
         if item.text(column) == "Sf":
@@ -508,7 +508,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             ind = parent.indexOfChild(item)
             if parent_name == "Flat Metal Belt":
                 if ind == 5:
-                    self.pushButton_27.clicked.connect(self.f2metalbelt)
+                    self.pushButton_27.clicked.connect(self.cal_f2metalbelt)
                     self.stackedWidget.setCurrentIndex(18)
                 if ind == 6:
                     self.pushButton_28.clicked.connect(self.fi_2)
@@ -748,7 +748,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.textBrowser.setText(fans)
 
 
-    def f2metalbelt(self):
+    def cal_f2metalbelt(self):
         sf = self.DoubleSpinBox_31.value()
         et = self.DoubleSpinBox_34.value()
         nu = self.DoubleSpinBox_35.value()
@@ -1050,7 +1050,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.textBrowser.setText(fans)
 
 
-    def dip(self):   
+    def cal_dip(self):   
         c = self.DoubleSpinBox_15.value()
         w = self.fDoubleSpinBox_20.value()
         fi_p = self.fDoubleSpinBox_21.value()
