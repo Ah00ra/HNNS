@@ -112,6 +112,7 @@ class Wire_Rope_Tables(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('wire_rope_tables.ui', self)
+        self.setWindowTitle("Wire Rope Tables")
         self.tabWidget.setTabText(0, "ft")
         self.tabWidget.setTabText(1, "nf")
         self.tabWidget.setTabText(2, "fb")
@@ -132,6 +133,7 @@ class Ha_Table(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('ha_table.ui', self)
+        self.setWindowTitle("HA Roller Chain Table")
         self.tableWidget_4.setColumnWidth(0, 200)
         self.tableWidget_4.setColumnWidth(1, 200)
         self.tableWidget_4.setColumnWidth(2, 150)
@@ -691,6 +693,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         
         
     def ha_roller_chain(self):
+        # this function is useless you can delete it
         nd = self.DoubleSpinBox_70.value()
         ks = self.DoubleSpinBox_71.value()
         hnom = self.DoubleSpinBox_72.value()
@@ -1565,6 +1568,7 @@ if __name__ == "__main__":
     #app.setStyleSheet(stylesheet)   
     MainWindow = Ui_MainWindow()
       
+    MainWindow.setWindowTitle("HNNS")
 
     MainWindow.show()
     sys.exit(app.exec_())
