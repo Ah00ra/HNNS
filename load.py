@@ -132,7 +132,13 @@ class Ha_Table(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('ha_table.ui', self)
-
+        self.tableWidget_4.setColumnWidth(0, 200)
+        self.tableWidget_4.setColumnWidth(1, 200)
+        self.tableWidget_4.setColumnWidth(2, 150)
+        self.tableWidget_4.setColumnWidth(3, 150)
+        self.tableWidget_4.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
+        self.tableWidget_4.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
+        self.tableWidget_4.resizeColumnsToContents()
 
 class Ui_MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -140,11 +146,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         loadUi('main.ui', self)
         self.txtbrowser = self.textBrowser
         
-        # roller chain table
-        self.tableWidget_4.setColumnWidth(0, 200)
-        self.tableWidget_4.setColumnWidth(1, 200)
-        self.tableWidget_4.setColumnWidth(2, 150)
-        self.tableWidget_4.setColumnWidth(3, 150)
+        
 
         self.stackedWidget.setCurrentIndex(0)
 
@@ -255,8 +257,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
 
         self.tableWidget_5.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
-        self.tableWidget_4.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
-        self.tableWidget_4.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
+       
 
         self.treeWidget.itemClicked['QTreeWidgetItem*','int'].connect(self.item_clicked)
 
@@ -426,7 +427,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         if item.text(column) == "Ha":
 
-            self.pushButton_34.clicked.connect(self.ha_roller_chain)
+           # self.pushButton_34.clicked.connect(self.ha_roller_chain)
             self.pushButton_34.clicked.connect(self.open_ha_table)
             self.stackedWidget.setCurrentIndex(24)
 
