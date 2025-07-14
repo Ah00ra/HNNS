@@ -128,6 +128,11 @@ class Wire_Rope_Tables(QWidget):
         #self.table_widget.setColumnWidth(2, 150)
         #self.table_widget.setColumnWidth(3, 150)
 
+class Ha_Table(QWidget):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi('ha_table.ui', self)
+
 
 class Ui_MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -422,6 +427,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if item.text(column) == "Ha":
 
             self.pushButton_34.clicked.connect(self.ha_roller_chain)
+            self.pushButton_34.clicked.connect(self.open_ha_table)
             self.stackedWidget.setCurrentIndex(24)
 
         if item.text(column) == "Max Rotational Speed":
@@ -517,6 +523,44 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 if ind == 7:
                     self.pushButton_29.clicked.connect(self.fprime2)
                     self.stackedWidget.setCurrentIndex(20)
+
+
+    def open_ha_table(self):
+        self.ha_win = Ha_Table()
+        nd = self.DoubleSpinBox_70.value()
+        ks = self.DoubleSpinBox_71.value()
+        hnom = self.DoubleSpinBox_72.value()
+        ncap = self.DoubleSpinBox_73.value()
+        v = self.DoubleSpinBox_74.value()
+        pre_or_post = self.comboBox.currentText()
+
+        #print(self.tableWidget_4.item(3,4))
+        #print(self.tableWidget_4.row())
+        ans, chain, types = funcs.ha_roller_chain(nd, ks, hnom, ncap, pre_or_post, v)
+        print(types)
+
+        row_count = self.ha_win.tableWidget_4.rowCount()
+        col_count = self.ha_win.tableWidget_4.columnCount() 
+
+        for i in range(row_count): 
+            item = QTableWidgetItem(ans[i])  
+            item.setTextAlignment(Qt.AlignCenter)
+
+            item1 = QTableWidgetItem(chain[i]) 
+            item1.setTextAlignment(Qt.AlignCenter)
+
+            item2 = QTableWidgetItem(types[i]) 
+            item2.setTextAlignment(Qt.AlignCenter)
+
+            ind = i
+
+            self.ha_win.tableWidget_4.setItem(ind,1, item)
+            self.ha_win.tableWidget_4.setItem(ind,2, item1)
+            self.ha_win.tableWidget_4.setItem(ind,3, item2)
+
+        self.ha_win.show()
+
+
     def open_wire_rope_tables(self):
             self.wire_window = Wire_Rope_Tables()
             # Show the second window

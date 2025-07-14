@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>933</width>
+    <height>567</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QGroupBox" name="groupBox_37">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>20</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Output Table</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <spacer name="verticalSpacer_46">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="0">
+          <widget class="QFrame" name="frame_67">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QFormLayout" name="formLayout_23">
+            <item row="0" column="0" colspan="2">
+             <widget class="QTableWidget" name="tableWidget_4">
+              <property name="styleSheet">
+               <string notr="true">QTableView {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    font: 10pt &quot;Roboto&quot;;
+    padding: 5px;
+    color: black;
+    gridline-color: #8f8f91; /* optional: grid lines color */
+}
+
+/* Header sections (horizontal and vertical) */
+QHeaderView::section {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050, stop: 0.6 #434343, stop:1 #656565);
+    color: white;
+    padding-left: 5px;
+    border: 1px solid #6c6c6c;
+    font: bold 14pt &quot;Segoe UI&quot;;
+    height: 30px; /* header height */
+    border-radius: 4px;
+}
+
+/* Vertical header specific */
+QHeaderView:vertical {
+    min-width: 40px; /* ensure vertical header is wide enough */
+    border-right: 1px solid #6c6c6c;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050, stop: 0.6 #434343, stop:1 #656565);
+}
+
+/* Scrollbar background and border */
+QTableView QScrollBar:vertical, QTableView QScrollBar:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    width: 14px;
+    height: 14px;
+    margin: 2px 0 2px 0;
+}
+
+/* Remove bottom button of vertical scrollbar */
+QTableView QScrollBar::add-line:vertical {
+    height: 0px;
+    width: 0px;
+    border: none;
+    background: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Scrollbar handle */
+QTableView QScrollBar::handle:vertical, QTableView QScrollBar::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #8f8f91, stop:1 #6f6f71);
+    min-height: 20px;
+    border-radius: 6px;
+    border: 1px solid #6f6f71;
+}
+
+/* Scrollbar handle hover */
+QTableView QScrollBar::handle:vertical:hover, QTableView QScrollBar::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #6f6f71, stop:1 #4f4f51);
+    border: 1px solid #4f4f51;
+}
+
+/* Scrollbar buttons (sub-line and add-line) */
+QTableView QScrollBar::sub-line:vertical, QTableView QScrollBar::add-line:horizontal, QTableView QScrollBar::sub-line:horizontal {
+    background: #8f8f91;
+    border: none;
+    border-radius: 3px;
+    height: 14px;
+    width: 14px;
+    subcontrol-origin: margin;
+}
+
+/* Scrollbar buttons hover */
+QTableView QScrollBar::sub-line:vertical:hover, QTableView QScrollBar::add-line:horizontal:hover, QTableView QScrollBar::sub-line:horizontal:hover {
+    background: #6f6f71;
+}
+
+/* Scrollbar page areas transparent */
+QTableView QScrollBar::add-page:vertical, QTableView QScrollBar::sub-page:vertical,
+QTableView QScrollBar::add-page:horizontal, QTableView QScrollBar::sub-page:horizontal {
+    background: transparent;
+}
+</string>
+              </property>
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QAbstractScrollArea::AdjustToContents</enum>
+              </property>
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderStretchLastSection">
+               <bool>false</bool>
+              </attribute>
+              <row>
+               <property name="text">
+                <string>1</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>2</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>3</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>4</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>5</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>6</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>8</string>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string>Number of Strands</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Required Horse Power(Hp) </string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>ANSI Chain Number</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Lubrication Type</string>
+               </property>
+              </column>
+              <item row="0" column="0">
+               <property name="text">
+                <string>1</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="0" column="1">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="1" column="0">
+               <property name="text">
+                <string>2</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="1" column="1">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="2" column="0">
+               <property name="text">
+                <string>3</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="2" column="1">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="3" column="0">
+               <property name="text">
+                <string>4</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="3" column="1">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="4" column="0">
+               <property name="text">
+                <string>5</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="4" column="1">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="5" column="0">
+               <property name="text">
+                <string>6</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="5" column="1">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="6" column="0">
+               <property name="text">
+                <string>8</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="6" column="1">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
