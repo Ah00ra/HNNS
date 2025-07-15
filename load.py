@@ -1553,6 +1553,12 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         fans = f"t vBelt; Lifetime of vBelt (hour) = {ans}"
         self.textBrowser.setText(fans)
 
+
+self.tableWidget_3.resizeColumnsToContents()
+self.tableWidget_3.resizeRowsToContents()
+
+
+
 if __name__ == "__main__":
     import sys
     import qdarktheme
