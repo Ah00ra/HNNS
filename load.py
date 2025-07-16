@@ -477,6 +477,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.stackedWidget.setCurrentIndex(28)
 
         if item.text(column) == "Hp design":
+            self.pushButton_33.clicked.connect(lambda: self.show_info_window("ui/vbelthpdesign.ui"))
             self.pushButton_41.clicked.connect(self.hd_vbelt_load)
             self.stackedWidget.setCurrentIndex(29)
 

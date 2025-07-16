@@ -524,7 +524,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
         <set>Qt::ImhHiddenText</set>
        </property>
        <property name="currentIndex">
-        <number>28</number>
+        <number>29</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -29219,6 +29219,19 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_33">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>750</y>
+           <width>88</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>POPUP</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="min_number_vbelt">
