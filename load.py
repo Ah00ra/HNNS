@@ -471,6 +471,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_38.clicked.connect(self.cente_distance_vbelt)
 
         if item.text(column) == "Hp allowable":
+            self.pushButton_16.clicked.connect(lambda: self.show_info_window("ui/vbelthpallow.ui"))
             self.pushButton_40.clicked.connect(self.cal_ha_vbelt)
             self.pushButton_39.clicked.connect(self.get_selected_data_ha_vbelt)
             self.stackedWidget.setCurrentIndex(28)
