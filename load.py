@@ -69,6 +69,14 @@ def is_standard_sheave_d(selected_type, sheave_d):
         return False
 
 
+class InfoWindow(QtWidgets.QMainWindow):
+    def __init__(self, ui_file):
+        super().__init__()
+        uic.loadUi(ui_file, self)
+        self.setWindowTitle("Details")
+
+
+
 
 class CustomDoubleSpinBox(QDoubleSpinBox):
     def textFromValue(self, value):
@@ -147,8 +155,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         super(Ui_MainWindow, self).__init__()
         loadUi('main.ui', self)
         self.txtbrowser = self.textBrowser
-        
-        
+
+
 
         self.stackedWidget.setCurrentIndex(0)
 
@@ -278,8 +286,18 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.comboBox_2.currentIndexChanged.connect(self.dynamic_combo_lp)
         # dynamic combo for HA vbelt
         self.comboBox_9.currentIndexChanged.connect(self.dynamic_combo_ha_vbelt)
+
+
+        # POP UPS!
     
 
+
+    def show_info_window(self, path):
+        self.info_window = InfoWindow(path)
+        self.info_window.show()
+
+
+        
     def clear_table_and_history(self):
         history.clear()
         self.tableWidget_6.clearContents()
@@ -382,6 +400,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         
         if item.text(column) == "F1a":
+            self.pushButton_15.clicked.connect(lambda: self.show_info_window("ui/beltf1a.ui"))
             self.pushButton_14.clicked.connect(self.f1a)
             self.pushButton_21.clicked.connect(self.get_selected_data_f1a)
             self.stackedWidget.setCurrentIndex(11)
@@ -1552,6 +1571,11 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         ans = round(ans, 3)
         fans = f"t vBelt; Lifetime of vBelt (hour) = {ans}"
         self.textBrowser.setText(fans)
+
+
+    ## popups
+
+
 
 if __name__ == "__main__":
     import sys
