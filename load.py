@@ -486,6 +486,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.stackedWidget.setCurrentIndex(30)
 
         if item.text(column) == "'Fc' Centrifugal Tension":
+            self.pushButton_42.clicked.connect(lambda: self.show_info_window("ui/vbeltfc.ui"))
             self.pushButton_45.clicked.connect(self.get_selected_data_fc_tension)
             self.pushButton_44.clicked.connect(self.fc_vbelt_load)
             self.stackedWidget.setCurrentIndex(31)
