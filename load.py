@@ -382,6 +382,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
  #           self.pushButton_2.clicked.connect(self.super_gear)
         if item.text(column) == "exp(fΦ)":
             self.stackedWidget.setCurrentIndex(8)
+            self.pushButton_11.clicked.connect(lambda: self.show_info_window("ui/flatmetalbeltexp.ui"))
             self.pushButton_10.clicked.connect(self.get_selected_row_data)
             self.pushButton_19.clicked.connect(self.expphi)
         
