@@ -524,7 +524,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
         <set>Qt::ImhHiddenText</set>
        </property>
        <property name="currentIndex">
-        <number>8</number>
+        <number>39</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -67733,6 +67733,61 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_59">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>750</y>
+           <width>114</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Popins</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="t_vbelt">

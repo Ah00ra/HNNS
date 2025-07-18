@@ -526,6 +526,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.stackedWidget.setCurrentIndex(38)
 
         if item.text(column) == "'Np' Number of Passes":
+            self.pushButton_59.clicked.connect(lambda: self.show_info_window("ui/vbeltnpnumberof.ui"))
             self.pushButton_55.clicked.connect(self.np_vbelt_load)
             self.pushButton_57.clicked.connect(self.get_selected_data_np_vbelt)
             self.stackedWidget.setCurrentIndex(39)    
