@@ -349,6 +349,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 pass
         if  item.text(column) == "(F1)a-F2":
             self.pushButton_9.clicked.connect(self.f1a_f2)
+            self.pushButton_50.clicked.connect(lambda: self.show_info_window("ui/beltf1a_f2.ui"))
             self.stackedWidget.setCurrentIndex(1) 
 
         if item.text(column) == "Belt":
@@ -356,20 +357,24 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             pass
         if item.text(column) == "Torque":
             self.stackedWidget.setCurrentIndex(2)
+            self.pushButton_60.clicked.connect(lambda: self.show_info_window("ui/belt_torque.ui"))
             # self.pushButton_20.clicked.connect(self.Torque_Belt)
             self.pushButton.clicked.connect(self.Torque_Belt)
 
 
         if item.text(column) == "Open Belt":
             self.pushButton_3.clicked.connect(self.open_belt)
+            self.pushButton_61.clicked.connect(lambda: self.show_info_window("ui/beltgeo_openbelt.ui"))
             self.stackedWidget.setCurrentIndex(4)
 
         if item.text(column) == "Crossed Belt":
             self.pushButton_4.clicked.connect(self.crossed_belt)
+            self.pushButton_62.clicked.connect(lambda: self.show_info_window("ui/beltgeo_crossedbelt.ui"))
             self.stackedWidget.setCurrentIndex(5)
 
         if item.text(column) == "Belt Speed":
             self.pushButton_5.clicked.connect(self.belt_speed)
+            self.pushButton_63.clicked.connect(lambda: self.show_info_window("ui/belt_beltspeed.ui"))
             self.stackedWidget.setCurrentIndex(6)
 
         if item.text(column) == "Fc Belt":
@@ -377,6 +382,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_6.clicked.connect(self.fc_belt)
             self.pushButton_7.clicked.connect(self.omg)
             self.pushButton_8.clicked.connect(self.fc_belt_speed)
+            self.pushButton_64.clicked.connect(lambda: self.show_info_window("ui/belt_fcbelt.ui"))
             self.stackedWidget.setCurrentIndex(7)
 
  #           self.pushButton_2.clicked.connect(self.super_gear)
@@ -389,12 +395,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         
         if item.text(column) == "Fi":
             self.pushButton_13.clicked.connect(self.fi)
+            self.pushButton_65.clicked.connect(lambda: self.show_info_window("ui/belt_fi.ui"))
             self.pushButton_17.clicked.connect(self.fi2)
             self.stackedWidget.setCurrentIndex(9)
 
         
         if item.text(column) == "F2":
             self.pushButton_12.clicked.connect(self.f2)
+            self.pushButton_66.clicked.connect(lambda: self.show_info_window("ui/belt_f2.ui"))
             # self.pushButton_16.clicked.connect(self.f1a_fromf2)
             # self.pushButton_11.clicked.connect(self.get_selected_data)
             self.stackedWidget.setCurrentIndex(10)
@@ -408,49 +416,60 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         if item.text(column) == "f'":
             self.pushButton_18.clicked.connect(self.fprime)
+            self.pushButton_67.clicked.connect(lambda: self.show_info_window("ui/belt_fprime.ui"))
             self.stackedWidget.setCurrentIndex(12)
 
         if item.text(column) == "dip":
             self.pushButton_20.clicked.connect(self.cal_dip)
+            self.pushButton_70.clicked.connect(lambda: self.show_info_window("ui/belt_dip.ui"))
             self.stackedWidget.setCurrentIndex(15)
         
         if item.text(column) == "Sf":
             self.pushButton_23.clicked.connect(self.sfnp)
             self.pushButton_22.clicked.connect(self.sfsy)
+            self.pushButton_68.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_sf.ui"))
             self.stackedWidget.setCurrentIndex(13)
 
         if item.text(column) == "b(min)":
             self.pushButton_25.clicked.connect(self.minibi)
+            self.pushButton_69.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_bmin.ui"))
             self.stackedWidget.setCurrentIndex(14)
 
         if item.text(column) == "(F1)a":
             self.pushButton_26.clicked.connect(self.f1pa)
+            self.pushButton_71.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_f1a.ui"))
             self.stackedWidget.setCurrentIndex(16)
 
         if item.text(column) == "ΔF":
             self.pushButton_24.clicked.connect(self.delltaf)
+            # self.pushButton_72.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_deltaf.ui"))
             self.stackedWidget.setCurrentIndex(17)
 
         if item.text(column) == "Hp(link-plate limited)":
             self.pushButton_30.clicked.connect(self.hp_link_plate)
+            self.pushButton_76.clicked.connect(lambda: self.show_info_window("ui/rollerchain_hplinkplate.ui"))
             self.stackedWidget.setCurrentIndex(21)
 
         if item.text(column) == "Hp(Roller Limited)":
             self.pushButton_58.clicked.connect(self.hp_roller_limited)
+            #self.pushButton_78.clicked.connect(lambda: self.show_info_window("ui/rollerchain_hproller.ui"))
             self.stackedWidget.setCurrentIndex(41)
 
         if item.text(column) == "C":
             self.pushButton_31.clicked.connect(self.center_distance)
+            self.pushButton_77.clicked.connect(lambda: self.show_info_window("ui/rollerchain_c.ui"))
             self.stackedWidget.setCurrentIndex(22)    
 
         if item.text(column) == "L/p:No. Pitches":
             self.pushButton_32.clicked.connect(self.np_rc)
+            self.pushButton_78.clicked.connect(lambda: self.show_info_window("ui/rollerchain_lp.ui"))
             self.stackedWidget.setCurrentIndex(23)
 
         if item.text(column) == "Ha":
 
            # self.pushButton_34.clicked.connect(self.ha_roller_chain)
             self.pushButton_34.clicked.connect(self.open_ha_table)
+            self.pushButton_79.clicked.connect(lambda: self.show_info_window("ui/rollerchain_ha.ui"))
             self.stackedWidget.setCurrentIndex(24)
 
         if item.text(column) == "Max Rotational Speed":
@@ -460,6 +479,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if item.text(column) == "Ft":
             self.stackedWidget.setCurrentIndex(25)
             self.pushButton_35.clicked.connect(self.open_wire_rope_tables)
+            self.pushButton_80.clicked.connect(lambda: self.show_info_window("ui/wirerope_ft.ui"))
             self.pushButton_35.clicked.connect(self.wire_rope)
         
         if item.text(column) == "Length of Pitch":
@@ -542,13 +562,16 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             if parent_name == "Flat Metal Belt":
                 if ind == 5:
                     self.pushButton_27.clicked.connect(self.cal_f2metalbelt)
+                    self.pushButton_73.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_f2.ui"))
                     self.stackedWidget.setCurrentIndex(18)
                 if ind == 6:
                     self.pushButton_28.clicked.connect(self.fi_2)
+                    self.pushButton_74.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_fi.ui"))
                     self.stackedWidget.setCurrentIndex(19)
 
                 if ind == 7:
                     self.pushButton_29.clicked.connect(self.fprime2)
+                    self.pushButton_75.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_fprime.ui"))
                     self.stackedWidget.setCurrentIndex(20)
 
 

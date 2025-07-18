@@ -524,7 +524,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
         <set>Qt::ImhHiddenText</set>
        </property>
        <property name="currentIndex">
-        <number>39</number>
+        <number>25</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -1368,6 +1368,73 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_50">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>320</y>
+           <width>148</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Popins</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Popup</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>45</width>
+           <height>25</height>
+          </size>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="Torque">
@@ -2224,6 +2291,59 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_60">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>350</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Popins</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/images/images/submit.png</normaloff>:/images/images/submit.png</iconset>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="DONOTdelete"/>
        <widget class="QWidget" name="Open_Belt">
@@ -3036,6 +3156,55 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_61">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>370</y>
+           <width>148</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Popins</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="Cross_Belt">
         <widget class="QGroupBox" name="groupBox_42">
@@ -3788,6 +3957,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_62">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>450</y>
+           <width>148</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="Belt_Speed">
         <widget class="QGroupBox" name="groupBox_43">
@@ -4440,6 +4649,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_63">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>290</y>
+           <width>148</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="Fc_Belt">
@@ -5522,6 +5771,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_64">
+         <property name="geometry">
+          <rect>
+           <x>560</x>
+           <y>360</y>
+           <width>148</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="Exp_Fphi">
@@ -7839,6 +8128,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_65">
+         <property name="geometry">
+          <rect>
+           <x>470</x>
+           <y>400</y>
+           <width>144</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="F2">
         <widget class="QGroupBox" name="groupBox_10">
@@ -8485,6 +8814,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_66">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>470</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="F1a">
@@ -10789,6 +11158,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_67">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>420</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="Sfmetalbelt">
         <widget class="QGroupBox" name="groupBox_25">
@@ -11528,6 +11937,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_68">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>440</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="bmin_metalbelt">
@@ -12541,6 +12990,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_69">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>610</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="dip">
         <widget class="QGroupBox" name="groupBox_27">
@@ -13242,6 +13731,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_70">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>390</y>
+           <width>148</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="f1ametalbelt">
@@ -14145,6 +14674,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           <string>RadioButton</string>
          </property>
         </widget>
+        <widget class="QPushButton" name="pushButton_71">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>410</y>
+           <width>148</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="deltaf">
         <widget class="QGroupBox" name="groupBox_29">
@@ -14780,6 +15349,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_72">
+         <property name="geometry">
+          <rect>
+           <x>270</x>
+           <y>370</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="f2metalbelt">
@@ -15732,6 +16341,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_73">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>500</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="Fi_metalbelt">
         <widget class="QGroupBox" name="groupBox_31">
@@ -16682,6 +17331,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_74">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>370</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="fprime_2">
@@ -17696,6 +18385,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_75">
+         <property name="geometry">
+          <rect>
+           <x>730</x>
+           <y>390</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="H_link_plate">
         <widget class="QGroupBox" name="groupBox_33">
@@ -18397,6 +19126,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_76">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>370</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="Center_d">
@@ -19173,6 +19942,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_77">
+         <property name="geometry">
+          <rect>
+           <x>380</x>
+           <y>350</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="Np">
         <widget class="QGroupBox" name="groupBox_35">
@@ -19941,6 +20750,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_78">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>330</y>
+           <width>148</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Calculate</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="Ha_roller_chain">
@@ -20913,6 +21762,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_79">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>400</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="Ft_wire_rope">
@@ -22729,6 +23618,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_80">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>580</y>
+           <width>151</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="LP_vbelt">
