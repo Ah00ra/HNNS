@@ -452,7 +452,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         if item.text(column) == "Hp(Roller Limited)":
             self.pushButton_58.clicked.connect(self.hp_roller_limited)
-            #self.pushButton_78.clicked.connect(lambda: self.show_info_window("ui/rollerchain_hproller.ui"))
+            self.pushButton_87.clicked.connect(lambda: self.show_info_window("ui/rollerchain_hproller.ui"))
             self.stackedWidget.setCurrentIndex(41)
 
         if item.text(column) == "C":
@@ -474,6 +474,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         if item.text(column) == "Max Rotational Speed":
             self.pushButton_158.clicked.connect(self.max_rotational_speed)
+            self.pushButton_159.clicked.connect(lambda: self.show_info_window("ui/rollerchain_maxrot.ui"))
             self.stackedWidget.setCurrentIndex(42)
 
         if item.text(column) == "Ft":
@@ -484,11 +485,13 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         
         if item.text(column) == "Length of Pitch":
             self.stackedWidget.setCurrentIndex(26)
+            self.pushButton_81.clicked.connect(lambda: self.show_info_window("ui/vbelt_lengthofpitch.ui"))
             self.pushButton_36.clicked.connect(self.lengh_pitch_vbelt)
             self.pushButton_37.clicked.connect(self.combo_lengh_pitch_vbelt)
 
         if item.text(column) == "Center Distance":
             self.stackedWidget.setCurrentIndex(27)
+            self.pushButton_82.clicked.connect(lambda: self.show_info_window("ui/vbelt_centerdistance.ui"))
             self.pushButton_38.clicked.connect(self.cente_distance_vbelt)
 
         if item.text(column) == "Hp allowable":
@@ -503,6 +506,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.stackedWidget.setCurrentIndex(29)
 
         if item.text(column) == "MIN Number of Belt":
+            self.pushButton_83.clicked.connect(lambda: self.show_info_window("ui/vbelt_minnumberofbelt.ui"))
             self.pushButton_43.clicked.connect(self.nb_vbelt_load)
             self.stackedWidget.setCurrentIndex(30)
 
@@ -513,36 +517,44 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.stackedWidget.setCurrentIndex(31)
 
         if item.text(column) == "ΔF":
+            self.pushButton_84.clicked.connect(lambda: self.show_info_window("ui/vbelt_deltaf.ui"))
             self.pushButton_46.clicked.connect(self.deltaf_vebelt_load)
             self.stackedWidget.setCurrentIndex(32)
 
         if item.text(column) == "Exp(fΦ)":
             self.pushButton_214.clicked.connect(self.expphi_vbelt)
+            self.pushButton_270.clicked.connect(lambda: self.show_info_window("ui/vbelt_expf.ui"))
             self.stackedWidget.setCurrentIndex(43)
 
         if item.text(column) == "'F1' Largest Tension ":
             self.pushButton_47.clicked.connect(self.f1_vebelt_load)
+            self.pushButton_85.clicked.connect(lambda: self.show_info_window("ui/vbelt_f1largest.ui"))
             self.stackedWidget.setCurrentIndex(33)
 
         if item.text(column) == "'F2' Least Tension ":
             self.pushButton_48.clicked.connect(self.f2_vbelt_load)
+            self.pushButton_86.clicked.connect(lambda: self.show_info_window("ui/vbelt_f2leastten.ui"))
             self.stackedWidget.setCurrentIndex(34)
 
         if item.text(column) == "'Fi' initial Tension":
-            self.pushButton_49.clicked.connect(self.fi_vbelt_load)
+            self.pushButton_258.clicked.connect(self.fi_vbelt_load)
+            self.pushButton_269.clicked.connect(lambda: self.show_info_window("ui/vbelt_fiinit.ui"))
             self.stackedWidget.setCurrentIndex(35)
 
         if item.text(column) == "η_fs":
             self.pushButton_51.clicked.connect(self.nfs_vbelt_load)
+            self.pushButton_90.clicked.connect(lambda: self.show_info_window("ui/vbelt_nfs.ui"))
             self.stackedWidget.setCurrentIndex(36)
 
         if item.text(column) == "Fb1, Fb2":
             self.pushButton_52.clicked.connect(self.fb12_vbelt_load)
             self.pushButton_53.clicked.connect(self.get_selected_data_fb1fb2)
+            self.pushButton_91.clicked.connect(lambda: self.show_info_window("ui/vbelt_fb1fb2.ui"))
             self.stackedWidget.setCurrentIndex(37)
 
         if item.text(column) == "T1, T2":
             self.pushButton_54.clicked.connect(self.t12_vbelt_load)
+            self.pushButton_89.clicked.connect(lambda: self.show_info_window("ui/vbelt_t1t2.ui"))
             self.stackedWidget.setCurrentIndex(38)
 
         if item.text(column) == "'Np' Number of Passes":
@@ -553,6 +565,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         if item.text(column) == "'t' Lifetime ":
             self.pushButton_56.clicked.connect(self.t_vbelt_load)
+            self.pushButton_88.clicked.connect(lambda: self.show_info_window("ui/vbelt_tlifetime.ui"))
             self.stackedWidget.setCurrentIndex(40)
 
         if item.parent() is not None:

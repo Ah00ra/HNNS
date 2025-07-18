@@ -524,7 +524,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
         <set>Qt::ImhHiddenText</set>
        </property>
        <property name="currentIndex">
-        <number>25</number>
+        <number>37</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -5334,7 +5334,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                <x>0</x>
                <y>0</y>
                <width>443</width>
-               <height>173</height>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_98">
@@ -16295,8 +16295,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>476</width>
-               <height>164</height>
+               <width>414</width>
+               <height>178</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_260">
@@ -16930,8 +16930,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>440</width>
-               <height>164</height>
+               <width>414</width>
+               <height>178</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_262">
@@ -20705,8 +20705,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>483</width>
-               <height>164</height>
+               <width>414</width>
+               <height>178</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_503">
@@ -23516,8 +23516,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>400</width>
-               <height>315</height>
+               <width>414</width>
+               <height>178</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_511">
@@ -25768,8 +25768,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>469</width>
-               <height>164</height>
+               <width>414</width>
+               <height>178</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_517">
@@ -25813,6 +25813,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_81">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>400</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="center_distance_vbelt">
@@ -26223,8 +26263,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>941</width>
-               <height>164</height>
+               <width>414</width>
+               <height>178</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_519">
@@ -26522,6 +26562,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_82">
+         <property name="geometry">
+          <rect>
+           <x>420</x>
+           <y>380</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="ha_vbelt">
@@ -30882,6 +30962,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_83">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>540</y>
+           <width>114</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="fc_vbelt">
         <widget class="QGroupBox" name="groupBox_69">
@@ -32069,91 +32189,8 @@ QComboBox {
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_77">
-             <item row="0" column="0">
-              <widget class="QLabel" name="htext_165">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;H&lt;span style=&quot; vertical-align:sub;&quot;&gt;d&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_108">
-               <property name="buttonSymbols">
-                <enum>QAbstractSpinBox::NoButtons</enum>
-               </property>
-               <property name="specialValueText">
-                <string>0</string>
-               </property>
-               <property name="decimals">
-                <number>3</number>
-               </property>
-               <property name="minimum">
-                <double>0.000000000000000</double>
-               </property>
-               <property name="maximum">
-                <double>1000000000000.000000000000000</double>
-               </property>
-               <property name="value">
-                <double>0.000000000000000</double>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="htext_166">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; font-size:14pt; vertical-align:sub;&quot;&gt;b&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_109">
-               <property name="buttonSymbols">
-                <enum>QAbstractSpinBox::NoButtons</enum>
-               </property>
-               <property name="specialValueText">
-                <string>0</string>
-               </property>
-               <property name="decimals">
-                <number>3</number>
-               </property>
-               <property name="minimum">
-                <double>0.000000000000000</double>
-               </property>
-               <property name="maximum">
-                <double>1000000000000.000000000000000</double>
-               </property>
-               <property name="value">
-                <double>0.000000000000000</double>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="htext_168">
-               <property name="font">
-                <font>
-                 <family>Segoe UI Semibold</family>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>n</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_111">
+             <item row="3" column="1">
+              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_110">
                <property name="buttonSymbols">
                 <enum>QAbstractSpinBox::NoButtons</enum>
                </property>
@@ -32187,8 +32224,91 @@ QComboBox {
                </property>
               </widget>
              </item>
-             <item row="3" column="1">
-              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_110">
+             <item row="1" column="0">
+              <widget class="QLabel" name="htext_166">
+               <property name="font">
+                <font>
+                 <family>Segoe UI Semibold</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; font-size:14pt; vertical-align:sub;&quot;&gt;b&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_111">
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::NoButtons</enum>
+               </property>
+               <property name="specialValueText">
+                <string>0</string>
+               </property>
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="minimum">
+                <double>0.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>1000000000000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>0.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="htext_168">
+               <property name="font">
+                <font>
+                 <family>Segoe UI Semibold</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>n</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_109">
+               <property name="buttonSymbols">
+                <enum>QAbstractSpinBox::NoButtons</enum>
+               </property>
+               <property name="specialValueText">
+                <string>0</string>
+               </property>
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="minimum">
+                <double>0.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>1000000000000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>0.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="htext_165">
+               <property name="font">
+                <font>
+                 <family>Segoe UI Semibold</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;H&lt;span style=&quot; vertical-align:sub;&quot;&gt;d&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="CustomDoubleSpinBox" name="DoubleSpinBox_108">
                <property name="buttonSymbols">
                 <enum>QAbstractSpinBox::NoButtons</enum>
                </property>
@@ -32699,6 +32819,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </spacer>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_84">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>380</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="f1_vbelt">
@@ -33376,6 +33536,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_85">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>360</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="f2_vbelt">
         <widget class="QGroupBox" name="groupBox_72">
@@ -34010,6 +34210,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_86">
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>330</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="fi_vbelt">
@@ -34941,7 +35181,7 @@ QComboBox {
                  <x>0</x>
                  <y>0</y>
                  <width>443</width>
-                 <height>173</height>
+                 <height>144</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_869">
@@ -36330,8 +36570,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>554</width>
-                 <height>227</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_880">
@@ -36480,8 +36720,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>503</width>
-                 <height>164</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_882">
@@ -38006,8 +38246,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_896">
@@ -39840,8 +40080,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_910">
@@ -40516,8 +40756,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>139</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_916">
@@ -41711,8 +41951,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_923">
@@ -42403,8 +42643,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_929">
@@ -43194,8 +43434,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_937">
@@ -43774,8 +44014,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_941">
@@ -44500,8 +44740,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_947">
@@ -45196,8 +45436,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_953">
@@ -45989,8 +46229,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>139</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_961">
@@ -46829,8 +47069,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_967">
@@ -47374,8 +47614,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_971">
@@ -48249,8 +48489,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_977">
@@ -48976,8 +49216,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_983">
@@ -49826,8 +50066,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_991">
@@ -50688,8 +50928,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_997">
@@ -51432,8 +51672,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1001">
@@ -53000,8 +53240,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1009">
@@ -54345,8 +54585,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1015">
@@ -54750,8 +54990,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1019">
@@ -56495,8 +56735,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1029">
@@ -57291,8 +57531,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1036">
@@ -57829,8 +58069,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1042">
@@ -58475,8 +58715,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1046">
@@ -59293,8 +59533,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1054">
@@ -59920,8 +60160,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>443</width>
-                 <height>173</height>
+                 <width>414</width>
+                 <height>178</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1060">
@@ -60352,7 +60592,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                  <x>0</x>
                  <y>0</y>
                  <width>443</width>
-                 <height>173</height>
+                 <height>164</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1064">
@@ -61346,6 +61586,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
              </spacer>
             </item>
            </layout>
+          </widget>
+          <widget class="QPushButton" name="pushButton_269">
+           <property name="geometry">
+            <rect>
+             <x>330</x>
+             <y>400</y>
+             <width>198</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>popup</string>
+           </property>
           </widget>
          </widget>
          <widget class="QWidget" name="n_fs_vbelt_5">
@@ -65463,6 +65743,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_90">
+         <property name="geometry">
+          <rect>
+           <x>780</x>
+           <y>490</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="fb1_fb2_vbelt">
         <widget class="QFrame" name="frame_112">
@@ -66586,6 +66906,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_91">
+         <property name="geometry">
+          <rect>
+           <x>520</x>
+           <y>420</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="t1_t1_vbelt">
         <widget class="QGroupBox" name="groupBox_76">
@@ -67313,6 +67673,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_89">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>530</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="np_vbelt">
@@ -68617,8 +69017,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>432</width>
-               <height>164</height>
+               <width>414</width>
+               <height>178</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_1573">
@@ -69422,6 +69822,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_88">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>350</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="h_roller_limit">
@@ -70366,6 +70806,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_87">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>340</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="max_ro_speed_rollerchain">
         <widget class="QGroupBox" name="groupBox_250">
@@ -71067,6 +71547,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           </item>
          </layout>
         </widget>
+        <widget class="QPushButton" name="pushButton_159">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>300</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="page_17">
         <widget class="QGroupBox" name="groupBox_421">
@@ -71655,6 +72175,46 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QPushButton" name="pushButton_270">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>310</y>
+           <width>198</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #dadbde, stop:1 #f6f7fa);
+    border-style: inset;
+}
+
+QPushButton:flat {
+    border: none;
+}
+
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>popup</string>
+         </property>
         </widget>
        </widget>
       </widget>

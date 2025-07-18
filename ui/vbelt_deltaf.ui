@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>862</width>
-    <height>618</height>
+    <width>1049</width>
+    <height>622</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="groupBox_267">
+   <widget class="QGroupBox" name="groupBox_263">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>50</y>
+      <x>30</x>
+      <y>20</y>
       <width>350</width>
       <height>240</height>
      </rect>
@@ -53,9 +53,9 @@
     <property name="title">
      <string>Description</string>
     </property>
-    <layout class="QGridLayout" name="gridLayout_544">
+    <layout class="QGridLayout" name="gridLayout_537">
      <item row="0" column="0">
-      <spacer name="verticalSpacer_267">
+      <spacer name="verticalSpacer_263">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -71,7 +71,7 @@
       </spacer>
      </item>
      <item row="1" column="0">
-      <widget class="QScrollArea" name="scrollArea_141">
+      <widget class="QScrollArea" name="scrollArea_137">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
          <horstretch>0</horstretch>
@@ -163,18 +163,18 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
        <property name="widgetResizable">
         <bool>true</bool>
        </property>
-       <widget class="QWidget" name="scrollAreaWidgetContents_141">
+       <widget class="QWidget" name="scrollAreaWidgetContents_137">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>299</width>
-          <height>139</height>
+          <width>296</width>
+          <height>146</height>
          </rect>
         </property>
-        <layout class="QGridLayout" name="gridLayout_545">
-         <item row="1" column="1">
-          <widget class="QLabel" name="htext_1009">
+        <layout class="QGridLayout" name="gridLayout_128">
+         <item row="4" column="1">
+          <widget class="QLabel" name="htext_1174">
            <property name="font">
             <font>
              <family>MS Shell Dlg 2</family>
@@ -185,24 +185,12 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             </font>
            </property>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Number of teeth in the smaller sprocket&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QLabel" name="htext_405">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Sprocket speed, rev/min&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= &lt;/span&gt;Rotational speed, in rev/min&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLabel" name="htext_404">
+          <widget class="QLabel" name="htext_403">
            <property name="font">
             <font>
              <family>MS Shell Dlg 2</family>
@@ -213,12 +201,12 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             </font>
            </property>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= Larger pulley diameter, in inches&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= design power, in hp&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_58">
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_421">
            <property name="font">
             <font>
              <family>Segoe UI Variable Small Semibol</family>
@@ -228,12 +216,12 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             </font>
            </property>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;K&lt;span style=&quot; font-size:14pt; vertical-align:sub;&quot;&gt;r&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>n</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_57">
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_53">
            <property name="font">
             <font>
              <family>Segoe UI Variable Small Semibol</family>
@@ -243,39 +231,24 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             </font>
            </property>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;n&lt;span style=&quot; font-size:14pt; vertical-align:sub;&quot;&gt;1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; font-size:14pt; vertical-align:sub;&quot;&gt;b&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_334">
-           <property name="font">
-            <font>
-             <family>Segoe UI Variable Small Semibol</family>
-             <pointsize>11</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;N&lt;span style=&quot; font-size:14pt; vertical-align:sub;&quot;&gt;1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QLabel" name="htext_406">
+         <item row="2" column="1">
+          <widget class="QLabel" name="htext_401">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
             </font>
            </property>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Pitch of the chain, in inches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Number of belts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_59">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_332">
            <property name="font">
             <font>
              <family>Segoe UI Variable Small Semibol</family>
@@ -285,7 +258,38 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             </font>
            </property>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;p&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;H&lt;span style=&quot; vertical-align:sub;&quot;&gt;d&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLabel" name="htext_1560">
+           <property name="font">
+            <font>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>11</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;= Smaller pulley diameter, in inches&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_564">
+           <property name="font">
+            <font>
+             <family>Segoe UI Variable Small Semibol</family>
+             <pointsize>11</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>d</string>
            </property>
           </widget>
          </item>
@@ -295,10 +299,10 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
      </item>
     </layout>
    </widget>
-   <widget class="QGroupBox" name="groupBox_268">
+   <widget class="QGroupBox" name="groupBox_264">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>420</x>
       <y>50</y>
       <width>450</width>
       <height>240</height>
@@ -334,9 +338,9 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
     <property name="title">
      <string>Formula</string>
     </property>
-    <layout class="QGridLayout" name="gridLayout_546">
+    <layout class="QGridLayout" name="gridLayout_538">
      <item row="1" column="0">
-      <widget class="QScrollArea" name="scrollArea_142">
+      <widget class="QScrollArea" name="scrollArea_138">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
          <horstretch>0</horstretch>
@@ -419,7 +423,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
        <property name="widgetResizable">
         <bool>true</bool>
        </property>
-       <widget class="QWidget" name="scrollAreaWidgetContents_142">
+       <widget class="QWidget" name="scrollAreaWidgetContents_138">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -428,9 +432,9 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           <height>146</height>
          </rect>
         </property>
-        <layout class="QGridLayout" name="gridLayout_547">
+        <layout class="QGridLayout" name="gridLayout_539">
          <item row="0" column="0">
-          <widget class="QLabel" name="htext_1011">
+          <widget class="QLabel" name="htext_1004">
            <property name="font">
             <font>
              <family>MS Shell Dlg 2</family>
@@ -441,7 +445,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             </font>
            </property>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/H2 roller limited.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/desc/images/deltaF vbelt.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -453,7 +457,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
       </widget>
      </item>
      <item row="0" column="0">
-      <spacer name="verticalSpacer_268">
+      <spacer name="verticalSpacer_264">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -476,7 +480,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>862</width>
+     <width>1049</width>
      <height>24</height>
     </rect>
    </property>
