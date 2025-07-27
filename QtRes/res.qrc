@@ -63,6 +63,9 @@
     <file>images/Artboard 1.png</file>
     <file>images/rollerchain.png</file>
   </qresource>
+  <qresource prefix="info">
+    <file>info/openbeltgeo.png</file>
+  </qresource>
   <qresource prefix="icons">
     <file>Icons/Untitled-1 copy.svg</file>
     <file>Icons/noun-clear-7584032.png</file>

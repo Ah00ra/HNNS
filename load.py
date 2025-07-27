@@ -7,8 +7,7 @@ from PyQt5.uic import loadUi
 import funcs
 from PyQt5.QtWidgets import QApplication, QStyleFactory
 import reoureces_rc
-
-#from qt_material import apply_stylesheet
+import reoureces_rc_information
 
 history = []
 print(QStyleFactory.keys())

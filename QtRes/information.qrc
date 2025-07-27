@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="info">
+    <file>info/Cv velocity factor belt 2.png</file>
+    <file>info/Cv velocity factor belt.png</file>
+    <file>info/F1a-f2 belt.png</file>
+    <file>info/force and torque on pulley.png</file>
+    <file>info/crossed belt.png</file>
+    <file>info/openbeltgeo.png</file>
+  </qresource>
+</RCC>

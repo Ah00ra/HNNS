@@ -73,7 +73,7 @@ QGroupBox::title {
         <widget class="QTreeWidget" name="treeWidget">
          <property name="font">
           <font>
-           <family>Times New Roman</family>
+           <family>Segoe UI</family>
            <pointsize>14</pointsize>
            <weight>50</weight>
            <italic>false</italic>
@@ -85,43 +85,82 @@ QGroupBox::title {
          </property>
          <property name="styleSheet">
           <string notr="true">QTreeWidget {
-    border: 2px solid navy;
-    border-radius: 6px;
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #f6f7fa, stop:1 #dadbde);
-    font: 14pt &quot;Times New Roman&quot;;
-    color: black;
-    padding: 5px;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 #f9fafc, stop:1 #dcdfe6);
+  font: 14pt &quot;Segoe UI&quot;, &quot;Times New Roman&quot;;
+  color: #333333;
+  padding: 8px;
+  alternate-background-color: #f0f2f5;
 }
 
-/* Style the header */
+/* Header section */
 QHeaderView::section {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #f6f7fa, stop:1 #dadbde);
-    padding: 4px;
-    font-weight: bold;
-    font-family: &quot;Times New Roman&quot;;
-    font-size: 14pt;
-    color: black;
-    border-radius: 4px; /* optional rounded corners */
+  background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 #e2e6f0, stop:1 #cfd4e6);
+  padding: 6px;
+  font-weight: bold;
+  font-family: &quot;Segoe UI&quot;, &quot;Times New Roman&quot;;
+  font-size: 13pt;
+  color: #222;
+  border-radius: 4px;
+  border: 1px solid #aaa;
 }
 
-/* Style the items */
+/* Items default */
 QTreeWidget::item {
-    border: none;
-    padding: 5px 15px;
+  padding: 6px 16px;
+  border: none;
+  background-color: transparent;
 }
 
-/* Highlight selected item */
+/* Hovered item */
+QTreeWidget::item:hover {
+  background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+    stop:0 #6f8bd6, stop:1 #466ab6);
+  color: white;
+  border-radius: 4px;
+}
+
+/* Selected item */
 QTreeWidget::item:selected {
-    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-    stop:0 #dadbde, stop:1 #f6f7fa);
-    color: Black;
+  background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+    stop:0 #395fb3, stop:1 #284d99);
+  color: white;
+  border: 1px solid #1e4db7;
+  border-radius: 5px;
 }
 
-/* Optional: remove focus rectangle */
+/* Focused item */
 QTreeWidget::item:focus {
-    outline: none;
+  outline: none;
+  border: 2px solid #1e4db7;
+  border-radius: 6px;
+}
+
+/* Scrollbars (Qt-compatible) */
+QScrollBar:vertical, QScrollBar:horizontal {
+  background: transparent;
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+}
+
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+  background: #aaa;
+  border-radius: 5px;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+QScrollBar::handle:hover {
+  background: #888;
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+  height: 0;
+  width: 0;
 }
 </string>
          </property>
@@ -460,63 +499,86 @@ QTreeWidget::item:focus {
         <bool>true</bool>
        </property>
        <property name="styleSheet">
-        <string notr="true">QScrollArea {
-    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                               stop:0 #f6f7fa, stop:1 #dadbde);
-    border: 2px solid #8f8f91;
-    border-radius: 6px;
+        <string notr="true">/* Main Table */
+QTableWidget {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f5f7fb, stop:1 #e0e4ec);
+    border: 2px solid #4a6ea9;
+    border-radius: 8px;
+    gridline-color: #c0c4cc;
+    font: 10pt &quot;Segoe UI&quot;, &quot;Arial&quot;;
+    color: #2c3e50;
+    alternate-background-color: #f0f2f5;
+    selection-background-color: transparent; /* handled manually */
 }
 
-QScrollArea QScrollBar:vertical, QScrollArea QScrollBar:horizontal {
-    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                               stop:0 #f6f7fa, stop:1 #dadbde);
-    border: 2px solid #8f8f91;
-    border-radius: 6px;
-    width: 14px;
-    height: 14px;
-    margin: 2px 0 2px 0;
+/* Cells */
+QTableWidget::item {
+    border: none;
+    padding: 6px;
+    background-color: transparent;
 }
 
-/* Completely remove the bottom button of the vertical scrollbar */
-QScrollArea QScrollBar::add-line:vertical {
+/* Hovered Cell */
+QTableWidget::item:hover {
+    background-color: rgba(100, 149, 237, 0.2); /* soft cornflower blue */
+    border-radius: 4px;
+}
+
+/* Selected Cell */
+QTableWidget::item:selected {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #4a90e2, stop:1 #357ab7);
+    color: white;
+    border-radius: 5px;
+}
+
+/* Headers */
+QHeaderView::section {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #dbe3f0, stop:1 #c1c9d9);
+    color: #2c3e50;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    padding: 6px;
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+}
+
+/* Scrollbars */
+QTableWidget QScrollBar:vertical, QTableWidget QScrollBar:horizontal {
+    background: #f0f2f5;
+    border: none;
+    border-radius: 6px;
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+}
+
+QTableWidget QScrollBar::handle:vertical, QTableWidget QScrollBar::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #b0b0b0, stop:1 #909090);
+    border-radius: 6px;
+    border: 1px solid #888;
+    min-height: 20px;
+    min-width: 20px;
+}
+
+QTableWidget QScrollBar::handle:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #999, stop:1 #777);
+}
+
+QTableWidget QScrollBar::add-line,
+QTableWidget QScrollBar::sub-line {
+    background: none;
+    border: none;
     height: 0px;
     width: 0px;
-    border: none;
+}
+
+QTableWidget QScrollBar::add-page,
+QTableWidget QScrollBar::sub-page {
     background: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-QScrollArea QScrollBar::handle:vertical, QScrollArea QScrollBar::handle:horizontal {
-    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                               stop:0 #8f8f91, stop:1 #6f6f71);
-    min-height: 20px;
-    border-radius: 6px;
-    border: 1px solid #6f6f71;
-}
-
-QScrollArea QScrollBar::handle:vertical:hover, QScrollArea QScrollBar::handle:horizontal:hover {
-    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
-                               stop:0 #6f6f71, stop:1 #4f4f51);
-    border: 1px solid #4f4f51;
-}
-
-QScrollArea QScrollBar::sub-line:vertical, QScrollArea QScrollBar::add-line:horizontal, QScrollArea QScrollBar::sub-line:horizontal {
-    background: #8f8f91;
-    border: none;
-    border-radius: 3px;
-    height: 14px;
-    width: 14px;
-    subcontrol-origin: margin;
-}
-
-QScrollArea QScrollBar::sub-line:vertical:hover, QScrollArea QScrollBar::add-line:horizontal:hover, QScrollArea QScrollBar::sub-line:horizontal:hover {
-    background: #6f6f71;
-}
-
-QScrollArea QScrollBar::add-page:vertical, QScrollArea QScrollBar::sub-page:vertical,
-QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:horizontal {
-    background: transparent;
 }
 </string>
        </property>
@@ -524,7 +586,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
         <set>Qt::ImhHiddenText</set>
        </property>
        <property name="currentIndex">
-        <number>37</number>
+        <number>8</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -546,7 +608,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; font-weight:600;&quot;&gt;HNNS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
@@ -2852,7 +2914,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>302</width>
+               <width>366</width>
                <height>164</height>
               </rect>
              </property>
@@ -3853,7 +3915,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>303</width>
+               <width>367</width>
                <height>164</height>
               </rect>
              </property>
@@ -5334,7 +5396,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                <x>0</x>
                <y>0</y>
                <width>443</width>
-               <height>164</height>
+               <height>173</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_98">
@@ -5551,8 +5613,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>282</width>
-               <height>208</height>
+               <width>297</width>
+               <height>222</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_97">
@@ -5819,7 +5881,7 @@ QPushButton:default {
           <rect>
            <x>10</x>
            <y>230</y>
-           <width>411</width>
+           <width>581</width>
            <height>468</height>
           </rect>
          </property>
@@ -5983,7 +6045,7 @@ QTableView QScrollBar::add-page:horizontal, QTableView QScrollBar::sub-page:hori
              <enum>QAbstractItemView::SelectRows</enum>
             </property>
             <attribute name="horizontalHeaderVisible">
-             <bool>false</bool>
+             <bool>true</bool>
             </attribute>
             <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
              <bool>false</bool>
@@ -5992,7 +6054,7 @@ QTableView QScrollBar::add-page:horizontal, QTableView QScrollBar::sub-page:hori
              <bool>false</bool>
             </attribute>
             <attribute name="verticalHeaderVisible">
-             <bool>false</bool>
+             <bool>true</bool>
             </attribute>
             <row>
              <property name="text">
@@ -6756,8 +6818,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>296</width>
-               <height>138</height>
+               <width>319</width>
+               <height>124</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_105">
@@ -7907,8 +7969,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>323</width>
-               <height>218</height>
+               <width>397</width>
+               <height>236</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_229">
@@ -8734,8 +8796,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>296</width>
-               <height>139</height>
+               <width>317</width>
+               <height>125</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_233">
@@ -10207,7 +10269,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>296</width>
+               <width>340</width>
                <height>179</height>
               </rect>
              </property>
@@ -11023,7 +11085,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>325</width>
+               <width>399</width>
                <height>165</height>
               </rect>
              </property>
@@ -12758,8 +12820,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>282</width>
-               <height>236</height>
+               <width>317</width>
+               <height>252</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_109">
@@ -13619,7 +13681,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>304</width>
+               <width>368</width>
                <height>164</height>
               </rect>
              </property>
@@ -14483,7 +14545,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                <x>0</x>
                <y>0</y>
                <width>282</width>
-               <height>180</height>
+               <height>192</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_92">
@@ -15965,7 +16027,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                <x>0</x>
                <y>0</y>
                <width>282</width>
-               <height>208</height>
+               <height>222</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_122">
@@ -16295,8 +16357,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>476</width>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_260">
@@ -16930,8 +16992,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>440</width>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_262">
@@ -17127,7 +17189,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                <x>0</x>
                <y>0</y>
                <width>282</width>
-               <height>208</height>
+               <height>222</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_123">
@@ -18152,8 +18214,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>282</width>
-               <height>236</height>
+               <width>317</width>
+               <height>252</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_124">
@@ -19030,7 +19092,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>299</width>
+               <width>356</width>
                <height>164</height>
               </rect>
              </property>
@@ -19642,7 +19704,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>299</width>
+               <width>358</width>
                <height>164</height>
               </rect>
              </property>
@@ -20451,7 +20513,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>351</width>
+               <width>424</width>
                <height>164</height>
               </rect>
              </property>
@@ -20705,8 +20767,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>483</width>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_503">
@@ -21603,8 +21665,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>318</width>
-               <height>167</height>
+               <width>381</width>
+               <height>183</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_507">
@@ -22998,8 +23060,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>482</width>
-               <height>373</height>
+               <width>590</width>
+               <height>407</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_509">
@@ -23516,8 +23578,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>400</width>
+               <height>315</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_511">
@@ -25539,7 +25601,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>325</width>
+               <width>394</width>
                <height>164</height>
               </rect>
              </property>
@@ -25768,8 +25830,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>469</width>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_517">
@@ -26263,8 +26325,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>941</width>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_519">
@@ -26459,8 +26521,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>296</width>
-               <height>178</height>
+               <width>308</width>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_521">
@@ -28101,7 +28163,7 @@ QComboBox QAbstractItemView QScrollBar::sub-page:horizontal {
                <property name="insertPolicy">
                 <enum>QComboBox::NoInsert</enum>
                </property>
-               <property name="placeholderText">
+               <property name="placeholderText" stdset="0">
                 <string>select speed</string>
                </property>
                <item>
@@ -31967,7 +32029,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>482</width>
+               <width>593</width>
                <height>164</height>
               </rect>
              </property>
@@ -32518,8 +32580,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>296</width>
-               <height>178</height>
+               <width>313</width>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_128">
@@ -33300,7 +33362,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>306</width>
+               <width>383</width>
                <height>164</height>
               </rect>
              </property>
@@ -34146,8 +34208,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>296</width>
-               <height>178</height>
+               <width>360</width>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_863">
@@ -34564,7 +34626,7 @@ QComboBox {
             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:72pt; font-weight:600;&quot;&gt;HNNS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
@@ -35050,8 +35112,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>129</height>
+                 <width>298</width>
+                 <height>131</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_867">
@@ -35181,7 +35243,7 @@ QComboBox {
                  <x>0</x>
                  <y>0</y>
                  <width>443</width>
-                 <height>144</height>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_869">
@@ -35346,8 +35408,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>416</width>
+                 <height>180</height>
                 </rect>
                </property>
                <widget class="QLabel" name="label_572">
@@ -35870,8 +35932,8 @@ QPushButton:default {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>178</height>
+                 <width>298</width>
+                 <height>180</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_874">
@@ -36395,8 +36457,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>302</width>
-                 <height>164</height>
+                 <width>366</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_878">
@@ -36570,8 +36632,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>554</width>
+                 <height>227</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_880">
@@ -36720,8 +36782,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>503</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_882">
@@ -37137,8 +37199,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>303</width>
-                 <height>164</height>
+                 <width>367</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_886">
@@ -37316,8 +37378,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>138</height>
+                 <width>298</width>
+                 <height>140</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_888">
@@ -37699,8 +37761,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>138</height>
+                 <width>416</width>
+                 <height>140</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_892">
@@ -38246,8 +38308,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_896">
@@ -38403,8 +38465,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>282</width>
-                 <height>208</height>
+                 <width>297</width>
+                 <height>222</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_898">
@@ -38680,7 +38742,11 @@ QComboBox {
               </property>
               <property name="font">
                <font>
+                <family>Segoe UI</family>
                 <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
                </font>
               </property>
               <property name="cursor" stdset="0">
@@ -39362,8 +39428,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>138</height>
+                 <width>319</width>
+                 <height>119</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_903">
@@ -39519,8 +39585,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>138</height>
+                 <width>416</width>
+                 <height>140</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_906">
@@ -40080,8 +40146,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_910">
@@ -40237,8 +40303,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>323</width>
-                 <height>218</height>
+                 <width>397</width>
+                 <height>236</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_912">
@@ -40756,8 +40822,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>139</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_916">
@@ -40913,8 +40979,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>139</height>
+                 <width>317</width>
+                 <height>120</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_918">
@@ -41364,8 +41430,10 @@ QComboBox {
               </property>
               <property name="font">
                <font>
-                <pointsize>9</pointsize>
+                <family>Segoe UI</family>
+                <pointsize>10</pointsize>
                 <weight>50</weight>
+                <italic>false</italic>
                 <bold>false</bold>
                </font>
               </property>
@@ -41951,8 +42019,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_923">
@@ -42108,8 +42176,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>179</height>
+                 <width>340</width>
+                 <height>181</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_925">
@@ -42643,8 +42711,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_929">
@@ -42800,8 +42868,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>325</width>
-                 <height>165</height>
+                 <width>399</width>
+                 <height>160</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_931">
@@ -43289,8 +43357,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>178</height>
+                 <width>298</width>
+                 <height>180</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_935">
@@ -43434,8 +43502,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_937">
@@ -44014,8 +44082,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_941">
@@ -44187,8 +44255,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>282</width>
-                 <height>236</height>
+                 <width>317</width>
+                 <height>252</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_943">
@@ -44740,8 +44808,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_947">
@@ -44897,8 +44965,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>304</width>
-                 <height>164</height>
+                 <width>368</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_949">
@@ -45436,8 +45504,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_953">
@@ -45609,8 +45677,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>282</width>
-                 <height>180</height>
+                 <width>277</width>
+                 <height>192</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_955">
@@ -46099,8 +46167,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>139</height>
+                 <width>298</width>
+                 <height>141</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_959">
@@ -46229,8 +46297,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>139</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_961">
@@ -46799,8 +46867,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>282</width>
-                 <height>208</height>
+                 <width>277</width>
+                 <height>222</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_965">
@@ -47069,8 +47137,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_967">
@@ -47614,8 +47682,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_971">
@@ -47787,8 +47855,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>282</width>
-                 <height>208</height>
+                 <width>277</width>
+                 <height>222</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_973">
@@ -48489,8 +48557,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_977">
@@ -48662,8 +48730,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>282</width>
-                 <height>236</height>
+                 <width>317</width>
+                 <height>252</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_979">
@@ -49216,8 +49284,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_983">
@@ -49389,8 +49457,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>299</width>
-                 <height>164</height>
+                 <width>356</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_985">
@@ -49873,8 +49941,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>299</width>
-                 <height>164</height>
+                 <width>358</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_989">
@@ -50066,8 +50134,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_991">
@@ -50704,8 +50772,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>351</width>
-                 <height>164</height>
+                 <width>424</width>
+                 <height>176</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_995">
@@ -50928,8 +50996,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_997">
@@ -51672,8 +51740,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1001">
@@ -51845,8 +51913,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>318</width>
-                 <height>167</height>
+                 <width>381</width>
+                 <height>183</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1003">
@@ -53000,8 +53068,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>318</width>
-                 <height>167</height>
+                 <width>381</width>
+                 <height>183</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1007">
@@ -53240,8 +53308,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1009">
@@ -54417,8 +54485,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>325</width>
-                 <height>164</height>
+                 <width>394</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1013">
@@ -54585,8 +54653,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1015">
@@ -54990,8 +55058,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1019">
@@ -55163,8 +55231,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>178</height>
+                 <width>303</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1021">
@@ -55869,7 +55937,7 @@ QComboBox {
                  <property name="insertPolicy">
                   <enum>QComboBox::NoInsert</enum>
                  </property>
-                 <property name="placeholderText">
+                 <property name="placeholderText" stdset="0">
                   <string>select speed</string>
                  </property>
                  <item>
@@ -56567,8 +56635,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>178</height>
+                 <width>298</width>
+                 <height>180</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1027">
@@ -56735,8 +56803,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1029">
@@ -57363,8 +57431,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>178</height>
+                 <width>298</width>
+                 <height>180</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1034">
@@ -57531,8 +57599,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1036">
@@ -57932,8 +58000,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>178</height>
+                 <width>298</width>
+                 <height>180</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1040">
@@ -58069,8 +58137,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1042">
@@ -58715,8 +58783,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1046">
@@ -58888,8 +58956,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>494</width>
-                 <height>164</height>
+                 <width>609</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1048">
@@ -59338,8 +59406,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>178</height>
+                 <width>313</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1052">
@@ -59533,8 +59601,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1054">
@@ -59969,8 +60037,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>306</width>
-                 <height>164</height>
+                 <width>383</width>
+                 <height>159</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1058">
@@ -60160,8 +60228,8 @@ QComboBox {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>178</height>
+                 <width>443</width>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1060">
@@ -60592,7 +60660,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                  <x>0</x>
                  <y>0</y>
                  <width>443</width>
-                 <height>164</height>
+                 <height>173</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1064">
@@ -60825,8 +60893,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>296</width>
-                 <height>178</height>
+                 <width>360</width>
+                 <height>164</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_1066">
@@ -61324,7 +61392,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>306</width>
+                 <width>379</width>
                  <height>164</height>
                 </rect>
                </property>
@@ -66802,7 +66870,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>388</width>
+               <width>464</width>
                <height>164</height>
               </rect>
              </property>
@@ -67570,7 +67638,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>573</width>
+               <width>691</width>
                <height>164</height>
               </rect>
              </property>
@@ -68819,7 +68887,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>360</width>
+               <width>433</width>
                <height>164</height>
               </rect>
              </property>
@@ -69017,8 +69085,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>432</width>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_1573">
@@ -69723,8 +69791,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>296</width>
-               <height>178</height>
+               <width>305</width>
+               <height>164</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_543">
@@ -70508,7 +70576,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>299</width>
+               <width>356</width>
                <height>164</height>
               </rect>
              </property>
@@ -71451,7 +71519,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>299</width>
+               <width>356</width>
                <height>164</height>
               </rect>
              </property>
@@ -72528,100 +72596,160 @@ QTableWidget QScrollBar::add-page:horizontal, QTableWidget QScrollBar::sub-page:
              <property name="text">
               <string>1</string>
              </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
             </row>
             <row>
              <property name="text">
               <string>2</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </row>
             <row>
              <property name="text">
               <string>3</string>
              </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
             </row>
             <row>
              <property name="text">
               <string>4</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </row>
             <row>
              <property name="text">
               <string>5</string>
              </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
             </row>
             <row>
              <property name="text">
               <string>6</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </row>
             <row>
              <property name="text">
               <string>7</string>
              </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
             </row>
             <row>
              <property name="text">
               <string>8</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </row>
             <row>
              <property name="text">
               <string>9</string>
              </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
             </row>
             <row>
              <property name="text">
               <string>10</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </row>
             <row>
              <property name="text">
               <string>11</string>
              </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
             </row>
             <row>
              <property name="text">
               <string>12</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </row>
             <row>
              <property name="text">
               <string>13</string>
              </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
             </row>
             <row>
              <property name="text">
               <string>14</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </row>
             <row>
              <property name="text">
               <string>15</string>
              </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
             </row>
             <row>
              <property name="text">
               <string>16</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </row>
             <row>
              <property name="text">
               <string>17</string>
              </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
             </row>
             <row>
              <property name="text">
               <string>18</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </row>
             <row>
              <property name="text">
               <string>19</string>
              </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
             </row>
             <row>
              <property name="text">
               <string>20</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
              </property>
             </row>
             <column>
@@ -72803,7 +72931,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1867</width>
-     <height>24</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
