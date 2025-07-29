@@ -1,5 +1,19 @@
 <RCC>
   <qresource prefix="info">
+    <file>info/vbelt circumference.png</file>
+    <file>info/vbelt section.png</file>
+    <file>info/vnelt pitch.png</file>
+    <file>info/v belt section.png</file>
+    <file>info/drive types3.png</file>
+    <file>info/drive types.png</file>
+    <file>info/drive types2.png</file>
+    <file>info/Variable-speed belt drives.2.png</file>
+    <file>info/Variable-speed belt drives..png</file>
+    <file>info/belt types.png</file>
+    <file>info/metalbelt tension2.png</file>
+    <file>info/metal belt tension.png</file>
+    <file>info/flat belt tensions.png</file>
+    <file>info/dip.png</file>
     <file>info/Cv velocity factor belt 2.png</file>
     <file>info/Cv velocity factor belt.png</file>
     <file>info/F1a-f2 belt.png</file>

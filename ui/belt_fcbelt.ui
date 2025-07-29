@@ -16,19 +16,13 @@
     <height>930</height>
    </size>
   </property>
-  <property name="maximumSize">
-   <size>
-    <width>900</width>
-    <height>930</height>
-   </size>
-  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="1">
-     <spacer name="verticalSpacer_23">
+    <item row="0" column="1">
+     <spacer name="verticalSpacer_26">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -43,10 +37,10 @@
       </property>
      </spacer>
     </item>
-    <item row="0" column="1">
+    <item row="1" column="1">
      <widget class="QGroupBox" name="groupBox_125">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -244,7 +238,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>754</width>
+            <width>762</width>
             <height>212</height>
            </rect>
           </property>
@@ -266,7 +260,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <enum>QFrame::NoFrame</enum>
              </property>
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#3d3d3d;&quot;&gt;F&lt;/span&gt;&lt;span style=&quot; color:#3d3d3d; vertical-align:sub;&quot;&gt;c&lt;/span&gt;&lt;span style=&quot; color:#3d3d3d;&quot;&gt;: the centrifugal force per unit length of belt,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#3d3d3d;&quot;&gt;caused by the belt mass moving at high speed&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#3d3d3d;&quot;&gt;F&lt;/span&gt;&lt;span style=&quot; color:#3d3d3d; vertical-align:sub;&quot;&gt;c&lt;/span&gt;&lt;span style=&quot; color:#3d3d3d;&quot;&gt;: Centrifugal force per unit length of belt,&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#3d3d3d;&quot;&gt;caused by the belt mass moving at high speed&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
@@ -277,10 +271,10 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
       </layout>
      </widget>
     </item>
-    <item row="2" column="1">
-     <widget class="QGroupBox" name="groupBox_41">
+    <item row="3" column="1">
+     <widget class="QGroupBox" name="groupBox_42">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -289,12 +283,6 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
        <size>
         <width>822</width>
         <height>350</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>922</width>
-        <height>16777215</height>
        </size>
       </property>
       <property name="font">
@@ -402,9 +390,41 @@ QGroupBox QScrollArea QScrollBar::add-page:horizontal, QGroupBox QScrollArea QSc
       <property name="title">
        <string>Figures</string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_62">
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="1">
+        <spacer name="verticalSpacer_41">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>30</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_39">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>10</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
        <item row="1" column="1">
-        <widget class="QScrollArea" name="scrollArea_2">
+        <widget class="QScrollArea" name="scrollArea_3">
          <property name="styleSheet">
           <string notr="true">/* GroupBox styling */
 QGroupBox {
@@ -501,17 +521,38 @@ QGroupBox QScrollArea QScrollBar::add-page:horizontal, QGroupBox QScrollArea QSc
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
-         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+         <widget class="QWidget" name="scrollAreaWidgetContents_3">
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
-            <width>733</width>
-            <height>494</height>
+            <y>-58</y>
+            <width>870</width>
+            <height>1207</height>
            </rect>
           </property>
-          <layout class="QGridLayout" name="gridLayout_2">
-           <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>18</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>ArrowCursor</cursorShape>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/info/info/flat belt tensions.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
             <widget class="QLabel" name="label_4">
              <property name="font">
               <font>
@@ -532,7 +573,7 @@ QGroupBox QScrollArea QScrollBar::add-page:horizontal, QGroupBox QScrollArea QSc
              </property>
             </widget>
            </item>
-           <item row="1" column="0">
+           <item row="5" column="0">
             <widget class="QLabel" name="label_3">
              <property name="font">
               <font>
@@ -553,12 +594,49 @@ QGroupBox QScrollArea QScrollBar::add-page:horizontal, QGroupBox QScrollArea QSc
              </property>
             </widget>
            </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>18</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>ArrowCursor</cursorShape>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flat-belt tensions:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </widget>
        </item>
+       <item row="1" column="2">
+        <spacer name="verticalSpacer_40">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>10</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
        <item row="2" column="1">
-        <spacer name="verticalSpacer_31">
+        <spacer name="verticalSpacer_38">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -573,59 +651,11 @@ QGroupBox QScrollArea QScrollBar::add-page:horizontal, QGroupBox QScrollArea QSc
          </property>
         </spacer>
        </item>
-       <item row="1" column="2">
-        <spacer name="verticalSpacer_33">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>10</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="0">
-        <spacer name="verticalSpacer_32">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>10</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="1">
-        <spacer name="verticalSpacer_21">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>30</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
       </layout>
      </widget>
     </item>
-    <item row="1" column="0">
-     <spacer name="verticalSpacer_24">
+    <item row="3" column="2">
+     <spacer name="verticalSpacer_29">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -640,10 +670,26 @@ QGroupBox QScrollArea QScrollBar::add-page:horizontal, QGroupBox QScrollArea QSc
       </property>
      </spacer>
     </item>
-    <item row="2" column="2">
-     <spacer name="verticalSpacer_25">
+    <item row="3" column="0">
+     <spacer name="verticalSpacer_28">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="1">
+     <spacer name="verticalSpacer_23">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
       </property>
       <property name="sizeType">
        <enum>QSizePolicy::Fixed</enum>

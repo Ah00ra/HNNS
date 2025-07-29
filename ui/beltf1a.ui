@@ -11,18 +11,12 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
   <property name="minimumSize">
-   <size>
-    <width>900</width>
-    <height>930</height>
-   </size>
-  </property>
-  <property name="maximumSize">
    <size>
     <width>900</width>
     <height>930</height>
@@ -52,18 +46,12 @@
     <item row="1" column="1">
      <widget class="QGroupBox" name="groupBox_125">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
       <property name="minimumSize">
-       <size>
-        <width>822</width>
-        <height>300</height>
-       </size>
-      </property>
-      <property name="maximumSize">
        <size>
         <width>822</width>
         <height>300</height>
@@ -208,7 +196,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>740</width>
+            <width>741</width>
             <height>276</height>
            </rect>
           </property>
@@ -333,12 +321,6 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
        <size>
         <width>822</width>
         <height>350</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>350</width>
-        <height>16777215</height>
        </size>
       </property>
       <property name="font">
