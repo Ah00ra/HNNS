@@ -439,10 +439,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_71.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_f1a.ui"))
             self.stackedWidget.setCurrentIndex(16)
 
-        if item.text(column) == "ΔF":
-            self.pushButton_24.clicked.connect(self.delltaf)
+        #if item.text(column) == "ΔF":
+        #    self.pushButton_24.clicked.connect(self.delltaf)
             # self.pushButton_72.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_deltaf.ui"))
-            self.stackedWidget.setCurrentIndex(17)
+        #    self.stackedWidget.setCurrentIndex(17)
 
         if item.text(column) == "Hp(link-plate limited)":
             self.pushButton_30.clicked.connect(self.hp_link_plate)
@@ -572,6 +572,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             parent_name = parent.text(0)
             ind = parent.indexOfChild(item)
             if parent_name == "Flat Metal Belt":
+                if ind ==4:
+                    self.pushButton_24.clicked.connect(self.delltaf)
+                    self.pushButton_72.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_deltaf.ui"))
+                    self.stackedWidget.setCurrentIndex(17)
                 if ind == 5:
                     self.pushButton_27.clicked.connect(self.cal_f2metalbelt)
                     self.pushButton_73.clicked.connect(lambda: self.show_info_window("ui/flatmetalbelt_f2.ui"))
