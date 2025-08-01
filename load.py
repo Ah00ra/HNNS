@@ -1,3 +1,4 @@
+from logging import config
 import re
 from PyQt5 import QtCore, QtWidgets, uic
 from PyQt5.QtCore import Qt
@@ -10,6 +11,11 @@ import reoureces_rc
 import reoureces_rc_information
 
 history = []
+
+
+from PyQt5.QtWidgets import QTableWidget
+
+
 print(QStyleFactory.keys())
 
 def is_float_value(value):
@@ -149,6 +155,17 @@ class Ha_Table(QWidget):
         self.tableWidget_4.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
         self.tableWidget_4.resizeColumnsToContents()
 
+
+
+def configure_table(tableWidget):
+    tableWidget.resizeColumnsToContents()
+    tableWidget.resizeRowsToContents()
+    
+    tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+    tableWidget.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
+
+    
 class Ui_MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(Ui_MainWindow, self).__init__()
@@ -287,8 +304,44 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.comboBox_9.currentIndexChanged.connect(self.dynamic_combo_ha_vbelt)
 
 
-        # POP UPS!
-    
+        # self.tableWidget_3.resizeColumnsToContents()
+        # self.tableWidget_3.horizontalHeader().setStretchLastSection(True)
+
+        # self.tableWidget_3.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        # self.tableWidget_3.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
+        # self.tableWidget_5.resizeColumnsToContents()
+        # self.tableWidget_5.resizeRowsToContents()
+
+        # self.tableWidget_5.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        # self.tableWidget_5.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
+        configure_table(self.tableWidget_11)
+        configure_table(self.tableWidget_10)
+        configure_table(self.tableWidget_9)
+        configure_table(self.tableWidget_46)
+        configure_table(self.tableWidget_45)
+        configure_table(self.tableWidget_44)
+        configure_table(self.tableWidget_43)
+        configure_table(self.tableWidget_42)
+        configure_table(self.tableWidget_41)
+        configure_table(self.tableWidget_40)
+        configure_table(self.tableWidget_39)
+        configure_table(self.tableWidget_38)
+        configure_table(self.tableWidget_8)
+        configure_table(self.tableWidget_7)
+        configure_table(self.tableWidget_5)
+        configure_table(self.tableWidget)
+        configure_table(self.tableWidget_3)
+        configure_table(self.tableWidget_6)
+
+    def list_all_tablewidgets(parent_widget):
+        # Find all children that are QTableWidget instances
+        tables = parent_widget.findChildren(QTableWidget)
+        for table in tables:
+            # Print the objectName (the name used in Designer) of each table
+            print(table.objectName())
+        return [table.objectName() for table in tables]
 
 
     def show_info_window(self, path):
