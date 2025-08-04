@@ -586,7 +586,7 @@ QTableWidget QScrollBar::sub-page {
         <set>Qt::ImhHiddenText</set>
        </property>
        <property name="currentIndex">
-        <number>7</number>
+        <number>21</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QTextBrowser" name="textBrowser_2">
@@ -877,7 +877,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -936,7 +936,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -2610,7 +2610,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -2644,7 +2644,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -2681,7 +2681,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -2980,7 +2980,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             <widget class="QWidget" name="scrollAreaWidgetContents_4">
              <property name="geometry">
               <rect>
-               <x>0</x>
+               <x>-70</x>
                <y>0</y>
                <width>366</width>
                <height>125</height>
@@ -7597,7 +7597,10 @@ QComboBox {
                 <double>0.000000000000000</double>
                </property>
                <property name="maximum">
-                <double>1000000000000.000000000000000</double>
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
                </property>
                <property name="value">
                 <double>0.000000000000000</double>
@@ -8649,7 +8652,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -8690,7 +8693,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -9356,7 +9359,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -9391,7 +9394,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -9432,7 +9435,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -9473,7 +9476,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -10592,10 +10595,89 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                <x>0</x>
                <y>0</y>
                <width>340</width>
-               <height>176</height>
+               <height>146</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_100">
+              <item row="1" column="1">
+               <widget class="QLabel" name="htext_440">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Manufacturer’s allowed tension, lbf/in&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLabel" name="htext_443">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Velocity correction factor&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="htext_442">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Pulley correction factor&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="htext_439">
+                <property name="font">
+                 <font>
+                  <family>MS Shell Dlg 2</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Belt width, in inches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_90">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;C&lt;span style=&quot; font-size:14pt; vertical-align:sub;&quot;&gt;p&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_91">
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Variable Small Semibol</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;C&lt;span style=&quot; vertical-align:sub;&quot;&gt;v&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
               <item row="0" column="0">
                <widget class="QLabel" name="label_87">
                 <property name="font">
@@ -10623,116 +10705,6 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                 </property>
                 <property name="text">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;F&lt;span style=&quot; font-size:14pt; vertical-align:sub;&quot;&gt;a&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLabel" name="htext_440">
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Manufacturer’s allowed tension, lbf/in&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QLabel" name="label_89">
-                <property name="font">
-                 <font>
-                  <family>Segoe UI Variable Small Semibol</family>
-                  <pointsize>11</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;f&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QLabel" name="htext_441">
-                <property name="font">
-                 <font>
-                  <family>MS Shell Dlg 2</family>
-                  <pointsize>10</pointsize>
-                  <weight>50</weight>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Coefficient of Friction&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLabel" name="htext_439">
-                <property name="font">
-                 <font>
-                  <family>MS Shell Dlg 2</family>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Belt width, in inches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_90">
-                <property name="font">
-                 <font>
-                  <family>Segoe UI Variable Small Semibol</family>
-                  <pointsize>11</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;C&lt;span style=&quot; font-size:14pt; vertical-align:sub;&quot;&gt;p&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="0">
-               <widget class="QLabel" name="label_91">
-                <property name="font">
-                 <font>
-                  <family>Segoe UI Variable Small Semibol</family>
-                  <pointsize>11</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;C&lt;span style=&quot; vertical-align:sub;&quot;&gt;v&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="1">
-               <widget class="QLabel" name="htext_443">
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Velocity correction factor&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <widget class="QLabel" name="htext_442">
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;= Pulley correction factor&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -10944,7 +10916,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -10985,7 +10957,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -11076,10 +11048,10 @@ QPushButton:default {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
-                <double>1000000000000.000000000000000</double>
+                <double>360.000000000000000</double>
                </property>
                <property name="value">
                 <double>0.000000000000000</double>
@@ -11124,7 +11096,7 @@ QPushButton:default {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -11159,10 +11131,13 @@ QPushButton:default {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
                </property>
                <property name="value">
                 <double>0.000000000000000</double>
@@ -11510,7 +11485,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>0</y>
+               <y>-50</y>
                <width>399</width>
                <height>176</height>
               </rect>
@@ -11711,6 +11686,588 @@ QPushButton:default {
           </item>
          </layout>
         </widget>
+        <widget class="QFrame" name="frame_36">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>260</y>
+           <width>421</width>
+           <height>501</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_129">
+          <item row="1" column="0">
+           <widget class="QTableWidget" name="tableWidget_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>400</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Roboto</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="cursor" stdset="0">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTableView {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    font: 10pt &quot;Roboto&quot;;
+    padding: 5px;
+    color: black;
+    gridline-color: #8f8f91; /* optional: grid lines color */
+}
+
+/* Header sections (horizontal and vertical) */
+QHeaderView::section {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050, stop: 0.6 #434343, stop:1 #656565);
+    color: white;
+    padding-left: 5px;
+    border: 1px solid #6c6c6c;
+    font: bold 10pt &quot;Segoe UI&quot;;
+    height: 30px; /* header height */
+    border-radius: 4px;
+}
+
+/* Vertical header specific */
+QHeaderView:vertical {
+    min-width: 40px; /* ensure vertical header is wide enough */
+    border-right: 1px solid #6c6c6c;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #616161, stop: 0.5 #505050, stop: 0.6 #434343, stop:1 #656565);
+}
+
+/* Scrollbar background and border */
+QTableView QScrollBar:vertical, QTableView QScrollBar:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    width: 14px;
+    height: 14px;
+    margin: 2px 0 2px 0;
+}
+
+/* Remove bottom button of vertical scrollbar */
+QTableView QScrollBar::add-line:vertical {
+    height: 0px;
+    width: 0px;
+    border: none;
+    background: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Scrollbar handle */
+QTableView QScrollBar::handle:vertical, QTableView QScrollBar::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #8f8f91, stop:1 #6f6f71);
+    min-height: 20px;
+    border-radius: 6px;
+    border: 1px solid #6f6f71;
+}
+
+/* Scrollbar handle hover */
+QTableView QScrollBar::handle:vertical:hover, QTableView QScrollBar::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #6f6f71, stop:1 #4f4f51);
+    border: 1px solid #4f4f51;
+}
+
+/* Scrollbar buttons (sub-line and add-line) */
+QTableView QScrollBar::sub-line:vertical, QTableView QScrollBar::add-line:horizontal, QTableView QScrollBar::sub-line:horizontal {
+    background: #8f8f91;
+    border: none;
+    border-radius: 3px;
+    height: 14px;
+    width: 14px;
+    subcontrol-origin: margin;
+}
+
+/* Scrollbar buttons hover */
+QTableView QScrollBar::sub-line:vertical:hover, QTableView QScrollBar::add-line:horizontal:hover, QTableView QScrollBar::sub-line:horizontal:hover {
+    background: #6f6f71;
+}
+
+/* Scrollbar page areas transparent */
+QTableView QScrollBar::add-page:vertical, QTableView QScrollBar::sub-page:vertical,
+QTableView QScrollBar::add-page:horizontal, QTableView QScrollBar::sub-page:horizontal {
+    background: transparent;
+}
+</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::AdjustIgnored</enum>
+            </property>
+            <property name="autoScroll">
+             <bool>false</bool>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::SingleSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectRows</enum>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <row>
+             <property name="text">
+              <string>Leather</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Leather</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>Urethane^d</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>Material</string>
+             </property>
+             <property name="background">
+              <color>
+               <red>85</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </property>
+             <property name="foreground">
+              <brush brushstyle="NoBrush">
+               <color alpha="255">
+                <red>85</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Specification</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Coefficient
+of Friction</string>
+             </property>
+            </column>
+            <item row="0" column="0">
+             <property name="text">
+              <string>Leather</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="0" column="1">
+             <property name="text">
+              <string>1ply</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+             <property name="background">
+              <brush brushstyle="NoBrush">
+               <color alpha="255">
+                <red>255</red>
+                <green>170</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </property>
+            </item>
+            <item row="0" column="2">
+             <property name="text">
+              <string>0.4</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="1" column="0">
+             <property name="text">
+              <string>Leather</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="1" column="1">
+             <property name="text">
+              <string>2ply</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="1" column="2">
+             <property name="text">
+              <string>0.4</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="2" column="0">
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="2" column="1">
+             <property name="text">
+              <string>F–0^c</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="2" column="2">
+             <property name="text">
+              <string>0.5</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="3" column="0">
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="3" column="1">
+             <property name="text">
+              <string>F–1^c</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="3" column="2">
+             <property name="text">
+              <string>0.5</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="4" column="0">
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="4" column="1">
+             <property name="text">
+              <string>F–2^c</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="4" column="2">
+             <property name="text">
+              <string>0.5</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="5" column="0">
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="5" column="1">
+             <property name="text">
+              <string>A–2^c</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="5" column="2">
+             <property name="text">
+              <string>0.8</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="6" column="0">
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="6" column="1">
+             <property name="text">
+              <string>A–3^c</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="6" column="2">
+             <property name="text">
+              <string>0.8</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="7" column="0">
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="7" column="1">
+             <property name="text">
+              <string>A–4^c</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="7" column="2">
+             <property name="text">
+              <string>0.8</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="8" column="0">
+             <property name="text">
+              <string>Polyamide^b</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="8" column="1">
+             <property name="text">
+              <string>A–5^c</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="8" column="2">
+             <property name="text">
+              <string>0.8</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="9" column="0">
+             <property name="text">
+              <string>Urethane^d</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="9" column="1">
+             <property name="text">
+              <string>All Type</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+            <item row="9" column="2">
+             <property name="text">
+              <string>0.7</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_11">
+            <property name="font">
+             <font>
+              <family>Segoe UI Variable Display Semib</family>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Coefficient of Friction,  f&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="pushButton_92">
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Popins</family>
+              <pointsize>10</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                     stop:0 #f6f7fa, stop:1 #dadbde);
+    min-width: 80px;
+    font: 10pt &quot;Popins&quot;;
+    padding: 5px 15px;
+    color: black;
+}
+
+/* Hover state: blue ring */
+QPushButton:hover {
+    border-color: #3399FF;
+}
+
+/* Focus state: blue ring + light background */
+QPushButton:focus {
+    border-color: #3399FF;
+    background-color: #e6f0ff;
+}
+
+/* Pressed state: softened inset and subtle gradient */
+QPushButton:pressed {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                     stop:0 #cfd6e0, stop:1 #b0b8c8);
+    border-color: #2672d2; /* a deeper blue for pressed border */
+    border-style: inset;
+    color: #1a3d7c; /* a darker text color for pressed */
+}
+
+/* Flat button style */
+QPushButton:flat {
+    border: none;
+}
+
+/* Default button style */
+QPushButton:default {
+    border-color: navy;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Select</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
        <widget class="QWidget" name="Sfmetalbelt">
         <widget class="QGroupBox" name="groupBox_25">
@@ -11873,7 +12430,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -11955,7 +12512,7 @@ QPushButton:default {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -12666,7 +13223,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -12701,7 +13258,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -12736,10 +13293,13 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>-1.000000000000000</double>
                </property>
                <property name="maximum">
-                <double>1000000000000.000000000000000</double>
+                <double>0.500000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
                </property>
                <property name="value">
                 <double>0.000000000000000</double>
@@ -12771,7 +13331,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -12806,7 +13366,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -12841,7 +13401,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -12876,7 +13436,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -12911,7 +13471,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -13115,7 +13675,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             <widget class="QWidget" name="scrollAreaWidgetContents_35">
              <property name="geometry">
               <rect>
-               <x>0</x>
+               <x>-135</x>
                <y>0</y>
                <width>549</width>
                <height>164</height>
@@ -13744,7 +14304,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -13779,7 +14339,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -13814,7 +14374,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -14512,7 +15072,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -14547,7 +15107,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -14582,10 +15142,13 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>-1.000000000000000</double>
                </property>
                <property name="maximum">
-                <double>1000000000000.000000000000000</double>
+                <double>0.500000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
                </property>
                <property name="value">
                 <double>0.000000000000000</double>
@@ -14617,7 +15180,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -14652,7 +15215,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -14687,7 +15250,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -15483,7 +16046,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -15518,7 +16081,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -16185,7 +16748,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -16220,7 +16783,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -16255,10 +16818,13 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>-1.000000000000000</double>
                </property>
                <property name="maximum">
-                <double>1000000000000.000000000000000</double>
+                <double>0.500000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
                </property>
                <property name="value">
                 <double>0.000000000000000</double>
@@ -16290,7 +16856,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -16325,7 +16891,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -16360,7 +16926,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -16395,7 +16961,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -17186,7 +17752,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -17221,7 +17787,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -17256,10 +17822,10 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>-1.000000000000000</double>
                </property>
                <property name="maximum">
-                <double>1000000000000.000000000000000</double>
+                <double>0.500000000000000</double>
                </property>
                <property name="value">
                 <double>0.000000000000000</double>
@@ -17291,7 +17857,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -17326,7 +17892,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -17361,7 +17927,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -17396,7 +17962,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -18245,7 +18811,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -18267,10 +18833,10 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
-                <double>1000000000000.000000000000000</double>
+                <double>360.000000000000000</double>
                </property>
                <property name="value">
                 <double>0.000000000000000</double>
@@ -18289,10 +18855,10 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>-1.000000000000000</double>
                </property>
                <property name="maximum">
-                <double>1000000000000.000000000000000</double>
+                <double>0.500000000000000</double>
                </property>
                <property name="value">
                 <double>0.000000000000000</double>
@@ -18324,7 +18890,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -18435,7 +19001,7 @@ QPushButton:default {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -18483,7 +19049,7 @@ QPushButton:default {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -18505,7 +19071,7 @@ QPushButton:default {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -18527,7 +19093,7 @@ QPushButton:default {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -18549,10 +19115,13 @@ QPushButton:default {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
                </property>
                <property name="value">
                 <double>0.000000000000000</double>
@@ -19364,7 +19933,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -19399,7 +19968,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
@@ -19434,7 +20003,7 @@ QComboBox {
                 <number>3</number>
                </property>
                <property name="minimum">
-                <double>-1000000000000.000000000000000</double>
+                <double>0.000000000000000</double>
                </property>
                <property name="maximum">
                 <double>1000000000000.000000000000000</double>
