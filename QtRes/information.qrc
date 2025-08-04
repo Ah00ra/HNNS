@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="info">
+    <file>info/flat_rubber_drive_belts.jpg</file>
+    <file>info/V-belt tensions..png</file>
+    <file>info/vbelt circumference.png</file>
+    <file>info/rc prtion.png</file>
+    <file>info/rc portion2.png</file>
+    <file>info/rc side veiw.png</file>
     <file>info/vbelt circumference.png</file>
     <file>info/vbelt section.png</file>
     <file>info/vnelt pitch.png</file>

@@ -894,7 +894,8 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         t = self.DoubleSpinBox_52.value()
         b = self.DoubleSpinBox_53.value()
         phi = self.DoubleSpinBox_54.value()
-        ans = str(funcs.fprime2(sf, et, nu, dcap, tcap, t, b, phi))
+        f = self.DoubleSpinBox_66.value()
+        ans = str(funcs.fprime2(sf, et, nu, dcap, tcap, t, b, phi, f))
         fans = f"f' Metalbelt; Effective coefficient of friction between the belt and the pulley = {ans}"
         self.textBrowser.setText(ans)
 
@@ -1150,7 +1151,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         n = self.fDoubleSpinBox_4.value()
         ans = funcs.TorqueBelt(H_nom,K_s,n_d,n)
         ans = str(ans)
-        fans = f"Torque Belt(Hp); Necessary Torque = {ans}"  
+        fans = f"Torque Belt(Ib.f); Necessary Torque = {ans}"  
         self.textBrowser.setText(fans)
        
     def f1a_f2(self):
@@ -1208,10 +1209,10 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         f1a_p = self.fDoubleSpinBox_17.value()
         f_2 = self.fDoubleSpinBox_18.value()
         fc = self.fDoubleSpinBox_19.value()
-        ans = funcs.f_prime(phi,f1a_p,fc,f_2)
+        f = self.fDoubleSpinBox_31.value()
+        ans = funcs.f_prime(phi,f1a_p,fc,f_2,f)
         ans = str(ans)
-        fans = f"f' Belt; Effective coefficient of friction between the belt and the pulley. = {ans}"
-        self.textBrowser.setText(fans)
+        self.textBrowser.setText(ans)
 
 
     def cal_dip(self):   

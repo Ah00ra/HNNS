@@ -19,6 +19,11 @@ def error_handling_decorator(func):
             return error  # or handle other exceptions as needed
     return wrapper
 
+def degrees_to_radians(degrees):
+    return degrees * (math.pi / 180)
+
+def radians_to_degrees(radian):
+    return radian * (180/math.pi)
 
 def torque(a,b,c,d):
     
@@ -42,13 +47,16 @@ def open_belt(cd, d, c):
 
 
     tcd = math.pi - math.asin((cd-d)/(2*c))
+    tcd_degree = radians_to_degrees(tcd)
+
     td = math.pi + math.asin((cd+d)/(2*c))
+    td_degree = radians_to_degrees(td)
     l = math.sqrt(4*cd ** 2 - (cd - d) ** 2) + 1/2 * (cd*tcd + d*td)
     #TODO: write andis
-    tcd = round(tcd,3)
-    td = round(td,3)
+    tcd_degree = round(tcd_degree,3)
+    td_degree = round(td_degree,3)
     l = round(l,3)
-    ans = f"theta D, θd(ϕ), L = {tcd},{td},{l} "
+    ans = f"theta D, θd(ϕ), L = {tcd_degree},{td_degree},{l} "
     return ans
 
 
@@ -59,10 +67,11 @@ def crossed_belt(cd, d, c):
         return f"Error: (cd + d)/(2*c) = {val} out of asin domain [-1,1]"
 
     td = math.pi + math.asin((cd+d)/(2*c))
+    td_degree = radians_to_degrees(td)
     l = math.sqrt(4*cd ** 2 - (cd - d) ** 2) + 1/2 * ((cd + d)*td)
-    td = round(td,3)
+    td_degree = round(td_degree,3)
     l = round(l,3)
-    ans = f"θ,L = {td}, {l}"
+    ans = f"θ,L = {td_degree}, {l}"
 
     return ans
 
@@ -87,7 +96,8 @@ def omg(y,b,t):
 
 @error_handling_decorator
 def expphi(phi, f):
-    ans = math.exp(phi*f)
+    radian = degrees_to_radians(phi)
+    ans = math.exp(radian*f)
     return ans
 
 @error_handling_decorator
@@ -104,7 +114,8 @@ def f1a_f2(T,d):
 
 @error_handling_decorator
 def fi(t,d,f,phi,):
-    ans = (t/d*(((math.exp(f*phi)+1)/((math.exp(f*phi)-1))))) 
+    phi_in_radian = degrees_to_radians(phi)
+    ans = (t/d*(((math.exp(f*phi_in_radian)+1)/((math.exp(f*phi_in_radian)-1))))) 
     return ans
 
 @error_handling_decorator
@@ -123,8 +134,16 @@ def f1a(b,fa,cv,cp):
     return ans
 
 @error_handling_decorator
-def f_prime(phi,f1a_p,fc,f2):
-    ans =((1/phi)*(math.log((f1a_p-fc)/(f2-fc))))    
+def f_prime(phi,f1a_p,fc,f2,f):
+    phi_in_radian = degrees_to_radians(phi)
+    fprimebelt =((1/phi_in_radian)*(math.log((f1a_p-fc)/(f2-fc))))
+    fprimebelt = round(fprimebelt, 3)
+    if fprimebelt < f :
+        check = f"(f'={fprimebelt}) < (f={f}) ; Selected Belt work Properly "
+    else:
+        check = f"(f'={fprimebelt})>(f={f}) ; Selected Belt with this specification Do Not work Properly"
+
+    ans = f"f'= {fprimebelt},{check}"    
     return ans
 
 
@@ -147,13 +166,9 @@ def sfsy(sy):
     ans =f"{ans} Psi" 
     return ans
 
-def degrees_to_radians(degrees):
-    return degrees * (math.pi / 180)
-
 
 @error_handling_decorator
 def minibi(sf,e,nu,dcap,tcap,t,f,phi):
-
     deltaf = (2*tcap)/dcap
     x = (e*t)/((1-nu**2)*dcap)
     a = (sf - x)*t
@@ -193,11 +208,18 @@ def fi_2(sf,et,nu,dcap,tcap,t,b):
 
 
 @error_handling_decorator
-def fprime2(sf,et,nu,dcap,tcap,t,b, phi):
+def fprime2(sf,et,nu,dcap,tcap,t,b, phi, f):
     f1a = f1pa(sf,et,nu,dcap,t,b) 
     f2 = f2metalbelt(sf,et,nu,dcap,tcap,t,b)
     radian_phi = degrees_to_radians(phi)
-    ans = (1/radian_phi)*math.log(f1a/f2)
+    fprime_metalbelt = (1/radian_phi)*math.log(f1a/f2)
+    fprime_metalbelt = round(fprime_metalbelt, 3)
+    if fprime_metalbelt < f :
+            check = f"(f'={fprime_metalbelt}) < (f={f}) ; Selected Belt work Properly "
+    else:
+          check = f"(f'={fprime_metalbelt})>(f={f}) ; Selected Belt with this specification Do Not work Properly"
+
+    ans = f"f'= {fprime_metalbelt},{check}"
     return ans
 
 
