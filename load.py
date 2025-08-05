@@ -334,6 +334,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         configure_table(self.tableWidget)
         configure_table(self.tableWidget_3)
         configure_table(self.tableWidget_6)
+        configure_table(self.tableWidget_2)
 
     def list_all_tablewidgets(parent_widget):
         # Find all children that are QTableWidget instances
