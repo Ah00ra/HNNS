@@ -469,6 +469,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if item.text(column) == "f'":
             self.pushButton_18.clicked.connect(self.fprime)
             self.pushButton_67.clicked.connect(lambda: self.show_info_window("ui/belt_fprime.ui"))
+            self.pushButton_92.clicked.connect(self.get_selected_data_fprime)
             self.stackedWidget.setCurrentIndex(12)
 
         if item.text(column) == "dip":
@@ -1068,6 +1069,16 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             data = float(data)
 
             self.fDoubleSpinBox.setValue(data)
+
+    def get_selected_data_fprime(self):
+        selected_items = self.tableWidget_2.selectedItems()
+        if len(selected_items) != 0:
+            row = selected_items[0].row()
+            data_org = [self.tableWidget_2.item(row, col).text() for col in range(self.tableWidget_2.columnCount())]
+            data = data_org[-1]
+            data = float(data)
+
+            self.fDoubleSpinBox_31.setValue(data)
 
     def get_selected_data_fc_tension(self):
         selected_items = self.tableWidget_8.selectedItems()
