@@ -1,3 +1,4 @@
+from ast import pattern
 from logging import config
 import re
 from PyQt5 import QtCore, QtWidgets, uic
@@ -377,11 +378,18 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         text = self.textBrowser.toPlainText()
         print("LOG: ",text) 
         if not re.search(r"\bError\b", text):
+            if text[:2] == "f'":
+                print("**IM IN THIS CONDITION**")
+                #pattern = r"(f'=\s*\d+(\.\d+)?)"
+                pattern = r"(f'=\s*-?\d+(\.\d+)?)"
+                match = re.search(pattern, text)
+                text = match.group(1)
+
             name, value= split_text(text)
 
             # formula_name_unit = split_text[0]
             # value = str(split_text[1])
-           
+        
             if is_numeric_string(value):
                 value = str(round(float(value), 3))  
 
@@ -1153,7 +1161,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         if is_float_value(value):
             self.fDoubleSpinBox_10.setValue(float(value))
         else:
-            self.textBrowser.setText("INVALID ITEM YOU SELECT")
+            self.textBrowser.setText("Error: INVALID ITEM YOU SELECT")
             
     
     def Torque_Belt(self):
