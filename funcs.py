@@ -135,7 +135,6 @@ def f1a(b,fa,cv,cp):
 
 @error_handling_decorator
 def f_prime(phi,f1a_p,fc,f2,f):
-    # BUG: message formate will occure an error
     phi_in_radian = degrees_to_radians(phi)
     fprimebelt =((1/phi_in_radian)*(math.log((f1a_p-fc)/(f2-fc))))
     fprimebelt = round(fprimebelt, 3)
