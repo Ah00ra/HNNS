@@ -563,7 +563,7 @@ Elements</string>
            </property>
            <item>
             <property name="text">
-             <string>Ft</string>
+             <string>All Parameter</string>
             </property>
            </item>
           </item>
@@ -10535,8 +10535,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>259</width>
+               <height>50</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_235">
@@ -11411,8 +11411,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>291</width>
+               <height>92</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_238">
@@ -12876,8 +12876,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>296</width>
-               <height>139</height>
+               <width>228</width>
+               <height>79</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_108">
@@ -13132,8 +13132,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>345</width>
+               <height>131</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_242">
@@ -13798,7 +13798,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
             <widget class="QWidget" name="scrollAreaWidgetContents_35">
              <property name="geometry">
               <rect>
-               <x>-25</x>
+               <x>0</x>
                <y>0</y>
                <width>549</width>
                <height>164</height>
@@ -14703,8 +14703,8 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>414</width>
-               <height>178</height>
+               <width>166</width>
+               <height>92</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_247">
@@ -14884,7 +14884,7 @@ QScrollArea QScrollBar::add-page:horizontal, QScrollArea QScrollBar::sub-page:ho
                <x>0</x>
                <y>0</y>
                <width>368</width>
-               <height>125</height>
+               <height>102</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_111">

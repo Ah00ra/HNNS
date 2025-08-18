@@ -539,7 +539,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.pushButton_159.clicked.connect(lambda: self.show_info_window("ui/rollerchain_maxrot.ui"))
             self.stackedWidget.setCurrentIndex(42)
 
-        if item.text(column) == "Ft":
+        if item.text(column) == "All Parameter":
             self.stackedWidget.setCurrentIndex(25)
             self.pushButton_35.clicked.connect(self.open_wire_rope_tables)
             self.pushButton_80.clicked.connect(lambda: self.show_info_window("ui/wirerope_ft.ui"))
@@ -1295,7 +1295,6 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         k_selected_type = self.comboBox_15.currentText()
         k1 = funcs.k1_vbelt(theta, k_selected_type)
         if not is_numeric_string(k1):
-            print("NOT OK")
             self.textBrowser.setText(k1)
         
         
@@ -1313,19 +1312,16 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 if is_standard_speed(speed) and is_standard_sheave_d(selected_type,sheave_d):
                     htab = funcs.h_table_vbelt(speed, sheave_d, "A")
                     ans = funcs.ha_vbelt(k1, k2, htab)
-                    fans = f"A = {ans}"
+                    fans = f"Hp vBelt = {ans}"
                     self.textBrowser.setText(fans)
                     
                 elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
                     htab = funcs.h_table_vbelt_int_speed(speed, sheave_d, selected_type)
-                    print("------------")
-                    print(htab)
-                    print("------------")
                     if is_htab_error_message(htab):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"A(bad v) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
                 elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
@@ -1334,7 +1330,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"A(bad sheave_d) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
                 elif not is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
@@ -1343,7 +1339,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"A(both_bad) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
 
@@ -1355,7 +1351,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 if is_standard_speed(speed) and is_standard_sheave_d(selected_type,sheave_d):
                     htab = funcs.h_table_vbelt(speed, sheave_d, selected_type)
                     ans = funcs.ha_vbelt(k1, k2, htab)
-                    fans = f"B = {ans}"
+                    fans = f"Hp vBelt = {ans}"
                     self.textBrowser.setText(fans)
                     
                 elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
@@ -1364,7 +1360,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"B(bad v) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
                 elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
@@ -1373,7 +1369,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"B(bad sheave_d) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
                 elif not is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
@@ -1382,7 +1378,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"B(both_bad) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
             elif selected_type == "C":
@@ -1393,7 +1389,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 if is_standard_speed(speed) and is_standard_sheave_d(selected_type,sheave_d):
                     htab = funcs.h_table_vbelt(speed, sheave_d, selected_type)
                     ans = funcs.ha_vbelt(k1, k2, htab)
-                    fans = f"C = {ans}"
+                    fans = f"Hp vBelt = {ans}"
                     self.textBrowser.setText(fans)
                     
                 elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
@@ -1402,7 +1398,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"C(bad v) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
                 elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
@@ -1411,7 +1407,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"C(bad sheave_d) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
                 elif not is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
@@ -1420,7 +1416,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"C(both_bad) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
 
@@ -1432,7 +1428,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                 if is_standard_speed(speed) and is_standard_sheave_d(selected_type,sheave_d):
                     htab = funcs.h_table_vbelt(speed, sheave_d, selected_type)
                     ans = funcs.ha_vbelt(k1, k2, htab)
-                    fans = f"D = {ans}"
+                    fans = f"Hp vBelt = {ans}"
                     self.textBrowser.setText(fans)
                     
                 elif not is_standard_speed(speed) and is_standard_sheave_d(selected_type, sheave_d):
@@ -1441,7 +1437,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"D(bad v) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
                 elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
@@ -1450,7 +1446,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"D (bad sheave_d) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
                 elif not is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
@@ -1459,7 +1455,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"D(both_bad) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
             elif selected_type == "E":
@@ -1479,7 +1475,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"E (bad v) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
                 elif is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
@@ -1488,7 +1484,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else:
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"E (bad sheave_d) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
                 elif not is_standard_speed(speed) and not is_standard_sheave_d(selected_type, sheave_d):
@@ -1497,7 +1493,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
                         self.textBrowser.setText(htab)
                     else: 
                         ans = funcs.ha_vbelt(k1, k2, htab)
-                        fans = f"E(both_bad) = {ans}"
+                        fans = f"Hp vBelt = {ans}"
                         self.textBrowser.setText(fans)
 
 
@@ -1614,7 +1610,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
     def expphi_vbelt(self):
         theta = self.DoubleSpinBox_593.value()
         ans = funcs.expophi_vbelt(theta)
-        fans = f"ΔF vBelt(Ibf); Power that is transmitted per vBelt = {ans}"
+        fans = f"Expo vBelt; = {ans}"
         self.textBrowser.setText(fans)    
 
     def f1_vebelt_load(self):
@@ -1633,9 +1629,9 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.textBrowser.setText(fans)    
 
     def fi_vbelt_load(self):
-        f_1 = self.DoubleSpinBox_117.value()
-        f_2 = self.DoubleSpinBox_118.value()
-        f_c = self.DoubleSpinBox_119.value()
+        f_1 = self.DoubleSpinBox_715.value()
+        f_2 = self.DoubleSpinBox_716.value()
+        f_c = self.DoubleSpinBox_717.value()
         ans = funcs.fi_vbelt(f_1, f_2, f_c)
         fans = f"Fi vBelt(Ibf); Initial Tension = {ans}"
         self.textBrowser.setText(fans)

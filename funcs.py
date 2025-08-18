@@ -46,8 +46,8 @@ def open_belt(cd, d, c):
         return f"Error: (D + d)/(2*c) = {val2} out of asin domain [-1,1]"
 
 
-    td = math.pi - math.asin((cd-d)/(2*c))
-    tcd = math.pi + math.asin((cd+d)/(2*c))
+    td = math.pi - (2*math.asin((cd-d)/(2*c)))
+    tcd = math.pi +(2* math.asin((cd+d)/(2*c)))
     l = math.sqrt(4*cd ** 2 - (cd - d) ** 2) + 1/2 * (cd*tcd + d*td)
 
     #TODO: write andis
