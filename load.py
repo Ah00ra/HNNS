@@ -122,6 +122,16 @@ class FloatOnlyComboBox(QComboBox):
             # Not matching float pattern, revert
             self.lineEdit().undo()
 
+def configure_table(tableWidget):
+    tableWidget.resizeColumnsToContents()
+    tableWidget.resizeRowsToContents()
+    
+    tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+    tableWidget.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
+   
+
+    
+
 class Wire_Rope_Tables(QWidget):
     def __init__(self):
         super().__init__()
@@ -143,12 +153,15 @@ class Wire_Rope_Tables(QWidget):
         #self.table_widget.setColumnWidth(2, 150)
         #self.table_widget.setColumnWidth(3, 150)
 
-def configure_table(tableWidget):
-    tableWidget.resizeColumnsToContents()
-    tableWidget.resizeRowsToContents()
-    
-    tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-    tableWidget.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        # print(col_count, row_count)
+        # if col_count != 1 and row_count != 1:
+        for i in range(self.tabWidget.count()):
+            tab = self.tabWidget.widget(i)
+            table = tab.findChild(QTableWidget)
+            # assuming each tab widget IS a QTableWidget
+            configure_table(table)        
+
+
 
 class Ha_Table(QWidget):
     def __init__(self):
