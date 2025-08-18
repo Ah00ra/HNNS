@@ -143,6 +143,13 @@ class Wire_Rope_Tables(QWidget):
         #self.table_widget.setColumnWidth(2, 150)
         #self.table_widget.setColumnWidth(3, 150)
 
+def configure_table(tableWidget):
+    tableWidget.resizeColumnsToContents()
+    tableWidget.resizeRowsToContents()
+    
+    tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+    tableWidget.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
 class Ha_Table(QWidget):
     def __init__(self):
         super().__init__()
@@ -156,14 +163,8 @@ class Ha_Table(QWidget):
         self.tableWidget_4.horizontalHeader().setSectionResizeMode(QHeaderView.Fixed)
         self.tableWidget_4.resizeColumnsToContents()
 
+        configure_table(self.tableWidget_4)
 
-
-def configure_table(tableWidget):
-    tableWidget.resizeColumnsToContents()
-    tableWidget.resizeRowsToContents()
-    
-    tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-    tableWidget.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
 
     
