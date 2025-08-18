@@ -25,8 +25,89 @@
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
        <widget class="QTabWidget" name="tabWidget">
+        <property name="styleSheet">
+         <string notr="true">QTableWidget {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 2px solid #8f8f91; /* same border color as group box */
+    border-radius: 6px;
+    gridline-color: #8f8f91; /* color of cell grid lines */
+    font: 9pt &quot;Segoe UI&quot;;
+}
+
+QTableWidget::item {
+    border: none; /* avoid double borders inside cells */
+}
+
+/* Add this block for selected item style */
+QTableWidget::item:selected {
+    background-color: #3399FF; /* nice visible blue */
+    color: black; /* text color for contrast */
+}
+
+/* Optional: hover effect for better UX */
+QTableWidget::item:hover {
+    background-color: #a8c5f7;
+}
+
+QHeaderView::section {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 #e1e1e1, stop:1 #cfcfcf);
+    border: 1px solid #8f8f91;
+    padding: 0px;
+    font-weight: bold;
+    font: 9pt &quot;Segoe UI&quot;;
+}
+
+/* Scrollbar styling */
+QTableWidget QScrollBar:vertical, QTableWidget QScrollBar:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    width: 14px;
+    height: 14px;
+    margin: 2px 0 2px 0;
+}
+
+QTableWidget QScrollBar::handle:vertical, QTableWidget QScrollBar::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #8f8f91, stop:1 #6f6f71);
+    min-height: 20px;
+    border-radius: 6px;
+    border: 1px solid #6f6f71;
+}
+
+QTableWidget QScrollBar::handle:vertical:hover, QTableWidget QScrollBar::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #6f6f71, stop:1 #4f4f51);
+    border: 1px solid #4f4f51;
+}
+
+QTableWidget QScrollBar::add-line:vertical, QTableWidget QScrollBar::sub-line:vertical,
+QTableWidget QScrollBar::add-line:horizontal, QTableWidget QScrollBar::sub-line:horizontal {
+    background: #8f8f91;
+    border: none;
+    border-radius: 3px;
+    height: 14px;
+    width: 14px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QTableWidget QScrollBar::add-line:vertical:hover, QTableWidget QScrollBar::sub-line:vertical:hover,
+QTableWidget QScrollBar::add-line:horizontal:hover, QTableWidget QScrollBar::sub-line:horizontal:hover {
+    background: #6f6f71;
+}
+
+QTableWidget QScrollBar::add-page:vertical, QTableWidget QScrollBar::sub-page:vertical,
+QTableWidget QScrollBar::add-page:horizontal, QTableWidget QScrollBar::sub-page:horizontal {
+    background: transparent;
+}
+</string>
+        </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
@@ -35,6 +116,87 @@
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="0" column="0">
            <widget class="QTableWidget" name="tableWidget">
+            <property name="styleSheet">
+             <string notr="true">QTableWidget {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 2px solid #8f8f91; /* same border color as group box */
+    border-radius: 6px;
+    gridline-color: #8f8f91; /* color of cell grid lines */
+    font: 9pt &quot;Segoe UI&quot;;
+}
+
+QTableWidget::item {
+    border: none; /* avoid double borders inside cells */
+}
+
+/* Add this block for selected item style */
+QTableWidget::item:selected {
+    background-color: #3399FF; /* nice visible blue */
+    color: black; /* text color for contrast */
+}
+
+/* Optional: hover effect for better UX */
+QTableWidget::item:hover {
+    background-color: #a8c5f7;
+}
+
+QHeaderView::section {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 #e1e1e1, stop:1 #cfcfcf);
+    border: 1px solid #8f8f91;
+    padding: 0px;
+    font-weight: bold;
+    font: 9pt &quot;Segoe UI&quot;;
+}
+
+/* Scrollbar styling */
+QTableWidget QScrollBar:vertical, QTableWidget QScrollBar:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    width: 14px;
+    height: 14px;
+    margin: 2px 0 2px 0;
+}
+
+QTableWidget QScrollBar::handle:vertical, QTableWidget QScrollBar::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #8f8f91, stop:1 #6f6f71);
+    min-height: 20px;
+    border-radius: 6px;
+    border: 1px solid #6f6f71;
+}
+
+QTableWidget QScrollBar::handle:vertical:hover, QTableWidget QScrollBar::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #6f6f71, stop:1 #4f4f51);
+    border: 1px solid #4f4f51;
+}
+
+QTableWidget QScrollBar::add-line:vertical, QTableWidget QScrollBar::sub-line:vertical,
+QTableWidget QScrollBar::add-line:horizontal, QTableWidget QScrollBar::sub-line:horizontal {
+    background: #8f8f91;
+    border: none;
+    border-radius: 3px;
+    height: 14px;
+    width: 14px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QTableWidget QScrollBar::add-line:vertical:hover, QTableWidget QScrollBar::sub-line:vertical:hover,
+QTableWidget QScrollBar::add-line:horizontal:hover, QTableWidget QScrollBar::sub-line:horizontal:hover {
+    background: #6f6f71;
+}
+
+QTableWidget QScrollBar::add-page:vertical, QTableWidget QScrollBar::sub-page:vertical,
+QTableWidget QScrollBar::add-page:horizontal, QTableWidget QScrollBar::sub-page:horizontal {
+    background: transparent;
+}
+</string>
+            </property>
             <row>
              <property name="text">
               <string>1</string>
@@ -56,6 +218,87 @@
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
            <widget class="QTableWidget" name="tableWidget_2">
+            <property name="styleSheet">
+             <string notr="true">QTableWidget {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 2px solid #8f8f91; /* same border color as group box */
+    border-radius: 6px;
+    gridline-color: #8f8f91; /* color of cell grid lines */
+    font: 9pt &quot;Segoe UI&quot;;
+}
+
+QTableWidget::item {
+    border: none; /* avoid double borders inside cells */
+}
+
+/* Add this block for selected item style */
+QTableWidget::item:selected {
+    background-color: #3399FF; /* nice visible blue */
+    color: black; /* text color for contrast */
+}
+
+/* Optional: hover effect for better UX */
+QTableWidget::item:hover {
+    background-color: #a8c5f7;
+}
+
+QHeaderView::section {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 #e1e1e1, stop:1 #cfcfcf);
+    border: 1px solid #8f8f91;
+    padding: 0px;
+    font-weight: bold;
+    font: 9pt &quot;Segoe UI&quot;;
+}
+
+/* Scrollbar styling */
+QTableWidget QScrollBar:vertical, QTableWidget QScrollBar:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    width: 14px;
+    height: 14px;
+    margin: 2px 0 2px 0;
+}
+
+QTableWidget QScrollBar::handle:vertical, QTableWidget QScrollBar::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #8f8f91, stop:1 #6f6f71);
+    min-height: 20px;
+    border-radius: 6px;
+    border: 1px solid #6f6f71;
+}
+
+QTableWidget QScrollBar::handle:vertical:hover, QTableWidget QScrollBar::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #6f6f71, stop:1 #4f4f51);
+    border: 1px solid #4f4f51;
+}
+
+QTableWidget QScrollBar::add-line:vertical, QTableWidget QScrollBar::sub-line:vertical,
+QTableWidget QScrollBar::add-line:horizontal, QTableWidget QScrollBar::sub-line:horizontal {
+    background: #8f8f91;
+    border: none;
+    border-radius: 3px;
+    height: 14px;
+    width: 14px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QTableWidget QScrollBar::add-line:vertical:hover, QTableWidget QScrollBar::sub-line:vertical:hover,
+QTableWidget QScrollBar::add-line:horizontal:hover, QTableWidget QScrollBar::sub-line:horizontal:hover {
+    background: #6f6f71;
+}
+
+QTableWidget QScrollBar::add-page:vertical, QTableWidget QScrollBar::sub-page:vertical,
+QTableWidget QScrollBar::add-page:horizontal, QTableWidget QScrollBar::sub-page:horizontal {
+    background: transparent;
+}
+</string>
+            </property>
             <row>
              <property name="text">
               <string>1</string>
@@ -100,6 +343,86 @@
            <widget class="QTableWidget" name="tableWidget_4">
             <property name="contextMenuPolicy">
              <enum>Qt::DefaultContextMenu</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTableWidget {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 2px solid #8f8f91; /* same border color as group box */
+    border-radius: 6px;
+    gridline-color: #8f8f91; /* color of cell grid lines */
+    font: 9pt &quot;Segoe UI&quot;;
+}
+
+QTableWidget::item {
+    border: none; /* avoid double borders inside cells */
+}
+
+/* Add this block for selected item style */
+QTableWidget::item:selected {
+    background-color: #3399FF; /* nice visible blue */
+    color: black; /* text color for contrast */
+}
+
+/* Optional: hover effect for better UX */
+QTableWidget::item:hover {
+    background-color: #a8c5f7;
+}
+
+QHeaderView::section {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+    stop:0 #e1e1e1, stop:1 #cfcfcf);
+    border: 1px solid #8f8f91;
+    padding: 0px;
+    font-weight: bold;
+    font: 9pt &quot;Segoe UI&quot;;
+}
+
+/* Scrollbar styling */
+QTableWidget QScrollBar:vertical, QTableWidget QScrollBar:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 2px solid #8f8f91;
+    border-radius: 6px;
+    width: 14px;
+    height: 14px;
+    margin: 2px 0 2px 0;
+}
+
+QTableWidget QScrollBar::handle:vertical, QTableWidget QScrollBar::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #8f8f91, stop:1 #6f6f71);
+    min-height: 20px;
+    border-radius: 6px;
+    border: 1px solid #6f6f71;
+}
+
+QTableWidget QScrollBar::handle:vertical:hover, QTableWidget QScrollBar::handle:horizontal:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #6f6f71, stop:1 #4f4f51);
+    border: 1px solid #4f4f51;
+}
+
+QTableWidget QScrollBar::add-line:vertical, QTableWidget QScrollBar::sub-line:vertical,
+QTableWidget QScrollBar::add-line:horizontal, QTableWidget QScrollBar::sub-line:horizontal {
+    background: #8f8f91;
+    border: none;
+    border-radius: 3px;
+    height: 14px;
+    width: 14px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QTableWidget QScrollBar::add-line:vertical:hover, QTableWidget QScrollBar::sub-line:vertical:hover,
+QTableWidget QScrollBar::add-line:horizontal:hover, QTableWidget QScrollBar::sub-line:horizontal:hover {
+    background: #6f6f71;
+}
+
+QTableWidget QScrollBar::add-page:vertical, QTableWidget QScrollBar::sub-page:vertical,
+QTableWidget QScrollBar::add-page:horizontal, QTableWidget QScrollBar::sub-page:horizontal {
+    background: transparent;
+}</string>
             </property>
             <property name="dragDropMode">
              <enum>QAbstractItemView::DragOnly</enum>

@@ -46,17 +46,15 @@ def open_belt(cd, d, c):
         return f"Error: (D + d)/(2*c) = {val2} out of asin domain [-1,1]"
 
 
-    tcd = math.pi - math.asin((cd-d)/(2*c))
-    tcd_degree = radians_to_degrees(tcd)
-
-    td = math.pi + math.asin((cd+d)/(2*c))
-    td_degree = radians_to_degrees(td)
+    td = math.pi - math.asin((cd-d)/(2*c))
+    tcd = math.pi + math.asin((cd+d)/(2*c))
     l = math.sqrt(4*cd ** 2 - (cd - d) ** 2) + 1/2 * (cd*tcd + d*td)
+
     #TODO: write andis
-    tcd_degree = round(tcd_degree,3)
-    td_degree = round(td_degree,3)
+    tcd = round(tcd,3)
+    td = round(td,3)
     l = round(l,3)
-    ans = f"theta D, θd(ϕ), L = {tcd_degree},{td_degree},{l} "
+    ans = f"θ(D), θ(d), L = {tcd},{td},{l} "
     return ans
 
 
@@ -67,11 +65,9 @@ def crossed_belt(cd, d, c):
         return f"Error: (cd + d)/(2*c) = {val} out of asin domain [-1,1]"
 
     td = math.pi + math.asin((cd+d)/(2*c))
-    td_degree = radians_to_degrees(td)
     l = math.sqrt(4*cd ** 2 - (cd - d) ** 2) + 1/2 * ((cd + d)*td)
-    td_degree = round(td_degree,3)
     l = round(l,3)
-    ans = f"θ,L = {td_degree}, {l}"
+    ans = f"θ,L = {td}, {l}"
 
     return ans
 
@@ -96,8 +92,7 @@ def omg(y,b,t):
 
 @error_handling_decorator
 def expphi(phi, f):
-    radian = degrees_to_radians(phi)
-    ans = math.exp(radian*f)
+    ans = math.exp(phi*f)
     return ans
 
 @error_handling_decorator
@@ -113,10 +108,10 @@ def f1a_f2(T,d):
 
 
 @error_handling_decorator
-def fi(t,d,f,phi,):
-    phi_in_radian = degrees_to_radians(phi)
-    ans = (t/d*(((math.exp(f*phi_in_radian)+1)/((math.exp(f*phi_in_radian)-1))))) 
+def fi(t,d,f,phi):
+    ans = (t/d)*(((math.exp(f*phi)+1)/((math.exp(f*phi)-1))))
     return ans
+print(fi(742.8,6,.8,3.079))
 
 @error_handling_decorator
 def fi2(fc,f2_p,f1a_p):
@@ -135,8 +130,7 @@ def f1a(b,fa,cv,cp):
 
 @error_handling_decorator
 def f_prime(phi,f1a_p,fc,f2,f):
-    phi_in_radian = degrees_to_radians(phi)
-    fprimebelt =((1/phi_in_radian)*(math.log((f1a_p-fc)/(f2-fc))))
+    fprimebelt =((1/phi)*(math.log((f1a_p-fc)/(f2-fc))))
     fprimebelt = round(fprimebelt, 3)
     if fprimebelt < f :
         check = f"(f'={fprimebelt}) < (f={f}) ; Selected Belt work Properly "
@@ -156,6 +150,7 @@ def dip(c,w,fi_p,):
 error_handling_decorator
 def sfnp(np):
     ans = 14.17*1000000*(1000000)**-0.407
+    ans = round(ans, 3)
     ans =f"{ans} Psi" 
     return ans
 
@@ -169,12 +164,9 @@ def sfsy(sy):
 
 @error_handling_decorator
 def minibi(sf,e,nu,dcap,tcap,t,f,phi):
-    deltaf = (2*tcap)/dcap
-    x = (e*t)/((1-nu**2)*dcap)
-    a = (sf - x)*t
-    radianphi = degrees_to_radians(phi)
-    minb = deltaf / a*math.exp(f*radianphi)/(math.exp(f*radianphi)-1)
-    ans = minb 
+    deltaf = ((2*tcap)/dcap)
+    a = (sf - ((e*t)/((1-(nu**2))*dcap)))*t
+    ans = ((deltaf/a)*((math.exp(f*phi))/((math.exp(f*phi))-1)))
     return ans
 
 @error_handling_decorator
@@ -191,28 +183,28 @@ def deltaf(capt, capd):
     return ans 
 
 @error_handling_decorator
-def f2metalbelt(sf,et,nu,dcap,tcap,t,b):
-    x = et/((1-nu**2)*dcap)
+def f2metalbelt(sf,e,nu,dcap,tcap,t,b):
+    x = (e*t)/((1-nu**2)*dcap)
     ab = (sf - x)*t*b
-    delf = 2*tcap/dcap
+    delf = (2*tcap)/dcap
     ans = ab - delf
     return ans
 
+
 @error_handling_decorator
-def fi_2(sf,et,nu,dcap,tcap,t,b):
-    x = et/((1-nu**2)*dcap)
+def fi_2(sf,e,nu,dcap,tcap,t,b):
+    x = e*t/((1-nu**2)*dcap)
     ab = (sf - x)*t*b
     delf = 2*tcap/dcap
     ans = ab - (delf/2)
     return ans
-
+print(fi_2(51211.778, 28000000, .285, 4, 30, .003, .75))
 
 @error_handling_decorator
-def fprime2(sf,et,nu,dcap,tcap,t,b, phi, f):
-    f1a = f1pa(sf,et,nu,dcap,t,b) 
-    f2 = f2metalbelt(sf,et,nu,dcap,tcap,t,b)
-    radian_phi = degrees_to_radians(phi)
-    fprime_metalbelt = (1/radian_phi)*math.log(f1a/f2)
+def fprime2(sf,e,nu,dcap,tcap,t,b, phi, f):
+    f1a = f1pa(sf,e,nu,dcap,t,b) 
+    f2 = f2metalbelt(sf,e,nu,dcap,tcap,t,b)
+    fprime_metalbelt = (1/phi)*(math.log(f1a/f2))
     fprime_metalbelt = round(fprime_metalbelt, 3)
     if fprime_metalbelt < f :
             check = f"(f'={fprime_metalbelt}) < (f={f}) ; Selected Belt work Properly "
@@ -1391,6 +1383,7 @@ k1_vv = [1, .99, .97, .96, .94, .93, .91, .89, .87, .85, .82, .80, .77, .73, .70
 k1_vflat = [.75, .76, .78, .79, .80, .81, .83, .84, .85, .85, .82, .80, .77, .73, .70, .65]
 
 def k1_vbelt(theta,selected_type):
+    theta = radians_to_degrees(theta)
     if theta > 180 or theta < 82.2:
         return "Error: Range for θ is (82.2 < θ < 180) degree"
     else:
@@ -1430,8 +1423,6 @@ def k1_vbelt(theta,selected_type):
                         return vflat_belt
                 return k1_vv[-1]      
                 
-print(k1_vbelt(121,"vv"))
-
 standard_speed_vbelt = [1000,2000,3000,4000,5000]
 
 standard_sheave_d_vbelt_A = [2.6, 3, 3.4, 3.8, 4.2, 4.6, 5]

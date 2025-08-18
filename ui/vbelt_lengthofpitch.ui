@@ -458,7 +458,7 @@ QGroupBox QScrollArea QScrollBar::add-page:horizontal, QGroupBox QScrollArea QSc
 </string>
       </property>
       <property name="title">
-       <string>Figures</string>
+       <string>Figures, Tables</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="1">

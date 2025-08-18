@@ -925,13 +925,13 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
     def cal_f2metalbelt(self):
         sf = self.DoubleSpinBox_31.value()
-        et = self.DoubleSpinBox_34.value()
+        e = self.DoubleSpinBox_34.value()
         nu = self.DoubleSpinBox_35.value()
         dcap = self.DoubleSpinBox_36.value()
         tcap = self.DoubleSpinBox_37.value()
         t = self.DoubleSpinBox_38.value()
         b = self.DoubleSpinBox_45.value()
-        ans = funcs.f2metalbelt(sf, et, nu, dcap, tcap, t, b)
+        ans = funcs.f2metalbelt(sf, e, nu, dcap, tcap, t, b)
         fans = f"F2 Metalbelt(Ibf); Tension in the slack side of the MetalBelt = {ans}"
         self.textBrowser.setText(fans)
 
@@ -968,7 +968,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         phi = self.DoubleSpinBox_26.value()
         ans = funcs.minibi(sf, e, nu, dcap, tcap, t,f,phi)
         fans = f"Min b MetalBelt(in); Minimum  Belt Thicknes = {ans} "
-        self.textBrowser.setText(ans)
+        self.textBrowser.setText(fans)
 
 
     def sfnp(self):
