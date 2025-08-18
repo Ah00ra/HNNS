@@ -1554,7 +1554,7 @@ def h_table_vbelt_int_speed(v, sheave_d, selected_type):
                 return linear_int_speed(speed1, speed2, v, hp1, hp2)
         
     if selected_type == "B":
-        row = standard_sheave_d_vbelt_A.index(sheave_d)
+        row = standard_sheave_d_vbelt_B.index(sheave_d)
         for i in range(len(standard_speed_vbelt)):
             if v < standard_speed_vbelt[i]:
                 speed2 = standard_speed_vbelt[i]
