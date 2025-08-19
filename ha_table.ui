@@ -34,6 +34,28 @@
           <bold>false</bold>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox {
+    border: 2px solid navy;
+    border-radius: 6px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #f6f7fa, stop:1 #dadbde);
+    font: 20pt &quot;Segoe UI&quot;;
+    padding: 5px; /* add padding inside the group box */
+    color: black;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding-left: 0px;
+    padding-right: 5px;
+    padding-top: 0px;
+    margin-top: -20px;  /* shift title up */
+    color: navy;
+    font-weight: bold;
+}
+</string>
+        </property>
         <property name="title">
          <string>Output Table</string>
         </property>

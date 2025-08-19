@@ -803,17 +803,14 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         dw = self.DoubleSpinBox_84.value()
         am = self.DoubleSpinBox_85.value()
         no_d = self.comboBox_3.currentText()
-        #m = self.comboBox_2.currentText()
 
         d_values = []
         for i in range(int(no_d)):
                 ind = 152+i
                 d_values.append(getattr(self, f'DoubleSpinBox_{ind}').value())
 
-        #ans = wcap, w,lcap, a, psu, dcap, er, dw, am, m, no_d, d_values
         ans = funcs.f_t_wire_rope(cap_w=wcap, w=w, l=lcap, a=a, d=d_values)
-        ###ans = str(ans)
-        ###self.textBrowser.setText(ans)
+
 
 
     def number_of_d(self):

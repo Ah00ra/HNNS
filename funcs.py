@@ -1315,13 +1315,14 @@ def chain_selection_int_speed(v, hps):
 
         chain_answers, type_answers = selection(ansi_chain_hp_int_speed, hps)
         return chain_answers, type_answers
+    
 def f_t_wire_rope(cap_w, w, l, a, d):
-    # m = 1..10
+
     ans = []
     for this_d in d:
         row_ans = []
         for this_m in range(1, 11):
-            row_ans.append(((cap_w/this_m) +(w*l*this_d**2))*(1+(a/32.2)))
+            row_ans.append(((cap_w/this_m) +(w*l*(this_d**2)))*(1+(a/32.2)))
         ans.append(row_ans)
     return ans
 
@@ -1337,7 +1338,7 @@ def f_f_wire_rope(ps, s, cap_d, d):
 def f_b_wire_rope(er, dw, am, cap_d, d): 
     ans = []
     for this_d in d:
-        this_ans = round((er*dw*this_d*am*this_d**2)/(cap_d), 3)
+        this_ans = round((er*dw*this_d*am*(this_d**2))/(cap_d), 3)
         ans.append(this_ans)
     return ans 
 
