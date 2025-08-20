@@ -557,7 +557,7 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             self.stackedWidget.setCurrentIndex(25)
             self.pushButton_35.clicked.connect(self.open_wire_rope_tables)
             self.pushButton_80.clicked.connect(lambda: self.show_info_window("ui/wirerope_ft.ui"))
-            self.pushButton_35.clicked.connect(self.wire_rope)
+            # self.pushButton_35.clicked.connect(self.wire_rope)
         
         if item.text(column) == "Length of Pitch":
             self.stackedWidget.setCurrentIndex(26)
@@ -758,15 +758,17 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
             am = self.DoubleSpinBox_85.value()
             no_d = self.comboBox_3.currentText()
             #m = self.comboBox_2.currentText()
-            
+            print(wcap,w,lcap,a,psu, d_values, dcap, er ,dw, am ,su)
             table_of_ans_ft = funcs.f_t_wire_rope(cap_w=wcap, w=w, l=lcap, a=a, d=d_values)
 
             table_of_ans_nf = funcs.nf_wire_rope(cap_w=wcap, w=w, l=lcap,
                                                 a=a, ps=psu, d=d_values, 
                                                 cap_d=dcap, 
                                                 er=er, dw=dw, am=am, su=su)
+            print(table_of_ans_nf) 
             table_of_ans_fb = funcs.f_b_wire_rope(er=er, dw=dw, am=am, cap_d=dcap, d=d_values)
             table_of_ans_ff = funcs.f_f_wire_rope(ps=psu, s=su,cap_d=dcap, d=d_values)
+            
 
             # write
             for i in range(int(no_d)):
